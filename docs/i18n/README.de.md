@@ -22,8 +22,8 @@ Sprache wird in Echtzeit als übersetzter Untertitel angezeigt. Die KI-Modelle l
 ### Screenshots
 
 <p>
-  <img src="../assets/screenshots/de/main.png" width="245" alt="Hauptbildschirm auf Deutsch" />
-  <img src="../assets/screenshots/de/caption-style.png" width="245" alt="Einstellungen für schwebende Untertitel auf Deutsch" />
+  <img src="../assets/screenshots/de/main.png" width="45%" alt="Hauptbildschirm auf Deutsch" />
+  <img src="../assets/screenshots/de/caption-style.png" width="45%" alt="Einstellungen für schwebende Untertitel auf Deutsch" />
 </p>
 
 *Deutsche Oberfläche, aufgenommen auf einem Galaxy S25+ mit dem NPU-Entwicklungsbuild. Die Vorschau zeigt die Übersetzung und den englischen Ausgangstext. Das öffentliche APK verwendet CPU-Modelle.*

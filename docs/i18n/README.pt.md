@@ -22,8 +22,8 @@ Transforme a fala em legendas traduzidas em tempo real, com modelos de IA execut
 ### Capturas de tela
 
 <p>
-  <img src="../assets/screenshots/pt/main.png" width="245" alt="Tela principal em português" />
-  <img src="../assets/screenshots/pt/caption-style.png" width="245" alt="Configurações de legendas flutuantes em português" />
+  <img src="../assets/screenshots/pt/main.png" width="45%" alt="Tela principal em português" />
+  <img src="../assets/screenshots/pt/caption-style.png" width="45%" alt="Configurações de legendas flutuantes em português" />
 </p>
 
 *Interface em português, capturada em um Galaxy S25+ com a versão NPU de desenvolvimento. A prévia mostra a tradução e o texto original em inglês. O APK público usa modelos de CPU.*

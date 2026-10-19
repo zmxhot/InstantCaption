@@ -22,8 +22,8 @@
 ### 스크린샷
 
 <p>
-  <img src="../assets/screenshots/ko/main.png" width="245" alt="한국어 메인 화면" />
-  <img src="../assets/screenshots/ko/caption-style.png" width="245" alt="한국어 플로팅 자막 설정" />
+  <img src="../assets/screenshots/ko/main.png" width="45%" alt="한국어 메인 화면" />
+  <img src="../assets/screenshots/ko/caption-style.png" width="45%" alt="한국어 플로팅 자막 설정" />
 </p>
 
 *Galaxy S25+의 NPU 개발 버전에서 촬영한 한국어 화면입니다. 미리보기에는 번역문과 영어 원문이 표시됩니다. 공개 APK는 CPU 모델을 사용합니다.*

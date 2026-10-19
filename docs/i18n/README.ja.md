@@ -22,8 +22,8 @@
 ### スクリーンショット
 
 <p>
-  <img src="../assets/screenshots/ja/main.png" width="245" alt="日本語のメイン画面" />
-  <img src="../assets/screenshots/ja/caption-style.png" width="245" alt="日本語のフローティング字幕設定" />
+  <img src="../assets/screenshots/ja/main.png" width="45%" alt="日本語のメイン画面" />
+  <img src="../assets/screenshots/ja/caption-style.png" width="45%" alt="日本語のフローティング字幕設定" />
 </p>
 
 *Galaxy S25+ の NPU 開発版で撮影した日本語の実機画面です。プレビューには翻訳文と英語の原文が表示されます。公開 APK は CPU モデルを使用します。*

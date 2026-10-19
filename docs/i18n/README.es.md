@@ -22,8 +22,8 @@ Convierte la voz en subtítulos traducidos en tiempo real con IA ejecutada en tu
 ### Capturas de pantalla
 
 <p>
-  <img src="../assets/screenshots/es/main.png" width="245" alt="Pantalla principal en español" />
-  <img src="../assets/screenshots/es/caption-style.png" width="245" alt="Ajustes de subtítulos flotantes en español" />
+  <img src="../assets/screenshots/es/main.png" width="45%" alt="Pantalla principal en español" />
+  <img src="../assets/screenshots/es/caption-style.png" width="45%" alt="Ajustes de subtítulos flotantes en español" />
 </p>
 
 *Interfaz en español, capturada en un Galaxy S25+ con la versión NPU de desarrollo. La vista previa muestra la traducción y el texto original en inglés. El APK público utiliza modelos de CPU.*

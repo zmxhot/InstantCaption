@@ -22,8 +22,8 @@
 ### Снимки экрана
 
 <p>
-  <img src="../assets/screenshots/ru/main.png" width="245" alt="Главный экран на русском языке" />
-  <img src="../assets/screenshots/ru/caption-style.png" width="245" alt="Настройки плавающих субтитров на русском языке" />
+  <img src="../assets/screenshots/ru/main.png" width="45%" alt="Главный экран на русском языке" />
+  <img src="../assets/screenshots/ru/caption-style.png" width="45%" alt="Настройки плавающих субтитров на русском языке" />
 </p>
 
 *Русский интерфейс, снятый на Galaxy S25+ в сборке для разработки с NPU. В предпросмотре показаны перевод и английский оригинал. Опубликованный APK использует модели для CPU.*

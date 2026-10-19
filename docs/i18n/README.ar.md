@@ -22,8 +22,8 @@
 ### لقطات الشاشة
 
 <p>
-  <img src="../assets/screenshots/ar/main.png" width="245" alt="الشاشة الرئيسية باللغة العربية" />
-  <img src="../assets/screenshots/ar/caption-style.png" width="245" alt="إعدادات الترجمة العائمة باللغة العربية" />
+  <img src="../assets/screenshots/ar/main.png" width="45%" alt="الشاشة الرئيسية باللغة العربية" />
+  <img src="../assets/screenshots/ar/caption-style.png" width="45%" alt="إعدادات الترجمة العائمة باللغة العربية" />
 </p>
 
 *واجهة عربية ملتقطة على Galaxy S25+ باستخدام نسخة التطوير التي تدعم NPU. تعرض المعاينة الترجمة والنص الأصلي بالإنجليزية. يستخدم ملف APK المنشور نماذج CPU.*

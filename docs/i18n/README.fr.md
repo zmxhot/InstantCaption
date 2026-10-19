@@ -22,8 +22,8 @@ Transformez la parole en sous-titres traduits en temps réel grâce à des modè
 ### Captures d’écran
 
 <p>
-  <img src="../assets/screenshots/fr/main.png" width="245" alt="Écran principal en français" />
-  <img src="../assets/screenshots/fr/caption-style.png" width="245" alt="Réglages des sous-titres flottants en français" />
+  <img src="../assets/screenshots/fr/main.png" width="45%" alt="Écran principal en français" />
+  <img src="../assets/screenshots/fr/caption-style.png" width="45%" alt="Réglages des sous-titres flottants en français" />
 </p>
 
 *Interface en français, capturée sur un Galaxy S25+ avec la version NPU de développement. L’aperçu affiche la traduction et le texte source en anglais. L’APK public utilise des modèles CPU.*
