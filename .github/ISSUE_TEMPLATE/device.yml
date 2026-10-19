@@ -1,0 +1,11 @@
+name: Device compatibility / 机型兼容反馈
+description: Record actual tested hardware and model results.
+body:
+  - type: textarea
+    id: environment
+    attributes: {label: Device and software, description: "Phone, SoC, RAM, Android version, app build, page size if known. No serial numbers."}
+    validations: {required: true}
+  - type: textarea
+    id: evidence
+    attributes: {label: Models and measured results, description: "Model IDs, languages, load/inference success, caption delay, audio source, duration, thermal behavior. Mark untested items explicitly."}
+    validations: {required: true}

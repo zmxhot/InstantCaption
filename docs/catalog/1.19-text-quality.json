@@ -1,0 +1,4758 @@
+{
+  "scope": "Authored short regression cases; not a general accuracy benchmark or native-speaker certification. Input risk checks were expanded after manual review.",
+  "models": [
+    {
+      "summary": {
+        "model": "gemma4-e2b-npu",
+        "device": "SM-S936U",
+        "cases": 94,
+        "runtimePassed": true,
+        "medianMs": 324,
+        "p95Ms": 444,
+        "maxMs": 477,
+        "flaggedCases": 1,
+        "flags": [
+          {
+            "id": "zh-en-3",
+            "reasons": [
+              "proximity_requires_review"
+            ],
+            "input": "最近的火车站在哪里？",
+            "output": "Where is the train station recently?",
+            "reference": "Where is the nearest train station?"
+          }
+        ],
+        "chrFpp": 87.53,
+        "scope": "94 short authored cases in 10 languages. chrF++ measures similarity to one reference, not general accuracy. Risk flags require review. Times are text inference, excluding ASR, load and streaming segmentation.",
+        "pairs": {
+          "en-zh": {
+            "cases": 5,
+            "chrFpp": 56.42,
+            "medianMs": 330
+          },
+          "zh-en": {
+            "cases": 5,
+            "chrFpp": 84.73,
+            "medianMs": 276
+          },
+          "en-ja": {
+            "cases": 5,
+            "chrFpp": 95.0,
+            "medianMs": 302
+          },
+          "ja-en": {
+            "cases": 5,
+            "chrFpp": 87.13,
+            "medianMs": 289
+          },
+          "en-ko": {
+            "cases": 5,
+            "chrFpp": 80.31,
+            "medianMs": 382
+          },
+          "ko-en": {
+            "cases": 5,
+            "chrFpp": 92.23,
+            "medianMs": 269
+          },
+          "en-es": {
+            "cases": 5,
+            "chrFpp": 88.55,
+            "medianMs": 389
+          },
+          "es-en": {
+            "cases": 5,
+            "chrFpp": 95.16,
+            "medianMs": 254
+          },
+          "en-fr": {
+            "cases": 5,
+            "chrFpp": 78.08,
+            "medianMs": 339
+          },
+          "fr-en": {
+            "cases": 5,
+            "chrFpp": 89.96,
+            "medianMs": 280
+          },
+          "en-de": {
+            "cases": 5,
+            "chrFpp": 95.07,
+            "medianMs": 375
+          },
+          "de-en": {
+            "cases": 5,
+            "chrFpp": 95.02,
+            "medianMs": 273
+          },
+          "en-pt": {
+            "cases": 5,
+            "chrFpp": 83.08,
+            "medianMs": 379
+          },
+          "pt-en": {
+            "cases": 5,
+            "chrFpp": 100.0,
+            "medianMs": 279
+          },
+          "en-ru": {
+            "cases": 5,
+            "chrFpp": 72.02,
+            "medianMs": 345
+          },
+          "ru-en": {
+            "cases": 5,
+            "chrFpp": 91.51,
+            "medianMs": 298
+          },
+          "en-ar": {
+            "cases": 5,
+            "chrFpp": 71.14,
+            "medianMs": 324
+          },
+          "ar-en": {
+            "cases": 5,
+            "chrFpp": 95.05,
+            "medianMs": 253
+          },
+          "ja-zh": {
+            "cases": 2,
+            "chrFpp": 79.81,
+            "medianMs": 342
+          },
+          "ko-zh": {
+            "cases": 2,
+            "chrFpp": 83.43,
+            "medianMs": 330
+          }
+        }
+      },
+      "translations": [
+        {
+          "id": "en-zh-0",
+          "source": "en",
+          "target": "zh",
+          "input": "Please speak slowly.",
+          "reference": "请慢一点说。",
+          "category": "slow_speech",
+          "checks": {
+            "noLatinWords": true
+          },
+          "output": "请慢慢说。",
+          "ms": 359,
+          "referenceChrFpp": 18.44,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-zh-1",
+          "source": "en",
+          "target": "zh",
+          "input": "Please do not cancel my reservation.",
+          "reference": "请不要取消我的预订。",
+          "category": "negation",
+          "checks": {
+            "mustMatch": "不|别|勿",
+            "noLatinWords": true
+          },
+          "output": "请不要取消我的预订。",
+          "ms": 300,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-zh-2",
+          "source": "en",
+          "target": "zh",
+          "input": "The access code is 7890.",
+          "reference": "访问代码是7890。",
+          "category": "access_code",
+          "checks": {
+            "digits": [
+              "7890"
+            ],
+            "noLatinWords": true
+          },
+          "output": "访问代码是 7890。",
+          "ms": 333,
+          "referenceChrFpp": 85.71,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-zh-3",
+          "source": "en",
+          "target": "zh",
+          "input": "Where is the nearest train station?",
+          "reference": "最近的火车站在哪里？",
+          "category": "question",
+          "checks": {
+            "mustMatch": "哪|何处",
+            "noLatinWords": true
+          },
+          "output": "最近的火车站是哪里？",
+          "ms": 303,
+          "referenceChrFpp": 46.64,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-zh-4",
+          "source": "en",
+          "target": "zh",
+          "input": "The meeting was moved from Monday to Wednesday.",
+          "reference": "会议从星期一改到了星期三。",
+          "category": "reschedule",
+          "checks": {
+            "noLatinWords": true
+          },
+          "output": "会议从周一改到了周三。",
+          "ms": 330,
+          "referenceChrFpp": 23.13,
+          "reviewFlags": []
+        },
+        {
+          "id": "zh-en-0",
+          "source": "zh",
+          "target": "en",
+          "input": "请慢一点说。",
+          "reference": "Please speak slowly.",
+          "category": "slow_speech",
+          "checks": {},
+          "output": "Please speak slower.",
+          "ms": 188,
+          "referenceChrFpp": 74.54,
+          "reviewFlags": []
+        },
+        {
+          "id": "zh-en-1",
+          "source": "zh",
+          "target": "en",
+          "input": "请不要取消我的预订。",
+          "reference": "Please do not cancel my reservation.",
+          "category": "negation",
+          "checks": {
+            "mustMatch": "\\b(?:not|never|no)\\b|don['’]t"
+          },
+          "output": "Please do not cancel my reservation.",
+          "ms": 257,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "zh-en-2",
+          "source": "zh",
+          "target": "en",
+          "input": "访问代码是7890。",
+          "reference": "The access code is 7890.",
+          "category": "access_code",
+          "checks": {
+            "digits": [
+              "7890"
+            ]
+          },
+          "output": "The access code is 7890.",
+          "ms": 363,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "zh-en-3",
+          "source": "zh",
+          "target": "en",
+          "input": "最近的火车站在哪里？",
+          "reference": "Where is the nearest train station?",
+          "category": "question",
+          "checks": {
+            "mustMatch": "\\bwhere\\b"
+          },
+          "output": "Where is the train station recently?",
+          "ms": 276,
+          "referenceChrFpp": 65.94,
+          "reviewFlags": [
+            "proximity_requires_review"
+          ]
+        },
+        {
+          "id": "zh-en-4",
+          "source": "zh",
+          "target": "en",
+          "input": "会议从星期一改到了星期三。",
+          "reference": "The meeting was moved from Monday to Wednesday.",
+          "category": "reschedule",
+          "checks": {},
+          "output": "The meeting has been moved from Monday to Wednesday.",
+          "ms": 384,
+          "referenceChrFpp": 83.43,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-ja-0",
+          "source": "en",
+          "target": "ja",
+          "input": "Please speak slowly.",
+          "reference": "ゆっくり話してください。",
+          "category": "slow_speech",
+          "checks": {
+            "noLatinWords": true
+          },
+          "output": "ゆっくり話してください。",
+          "ms": 195,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-ja-1",
+          "source": "en",
+          "target": "ja",
+          "input": "Please do not cancel my reservation.",
+          "reference": "私の予約をキャンセルしないでください。",
+          "category": "negation",
+          "checks": {
+            "mustMatch": "ない|ません|ず",
+            "noLatinWords": true
+          },
+          "output": "予約をキャンセルしないでください。",
+          "ms": 288,
+          "referenceChrFpp": 77.1,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-ja-2",
+          "source": "en",
+          "target": "ja",
+          "input": "The access code is 7890.",
+          "reference": "アクセスコードは7890です。",
+          "category": "access_code",
+          "checks": {
+            "digits": [
+              "7890"
+            ],
+            "noLatinWords": true
+          },
+          "output": "アクセスコードは7890です。",
+          "ms": 347,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-ja-3",
+          "source": "en",
+          "target": "ja",
+          "input": "Where is the nearest train station?",
+          "reference": "最寄りの駅はどこですか？",
+          "category": "question",
+          "checks": {
+            "mustMatch": "どこ|何処",
+            "noLatinWords": true
+          },
+          "output": "最寄りの駅はどこですか？",
+          "ms": 302,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-ja-4",
+          "source": "en",
+          "target": "ja",
+          "input": "The meeting was moved from Monday to Wednesday.",
+          "reference": "会議は月曜日から水曜日に変更されました。",
+          "category": "reschedule",
+          "checks": {
+            "noLatinWords": true
+          },
+          "output": "会議は月曜日から水曜日に変更されました。",
+          "ms": 435,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "ja-en-0",
+          "source": "ja",
+          "target": "en",
+          "input": "ゆっくり話してください。",
+          "reference": "Please speak slowly.",
+          "category": "slow_speech",
+          "checks": {},
+          "output": "Please speak slowly.",
+          "ms": 171,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "ja-en-1",
+          "source": "ja",
+          "target": "en",
+          "input": "私の予約をキャンセルしないでください。",
+          "reference": "Please do not cancel my reservation.",
+          "category": "negation",
+          "checks": {
+            "mustMatch": "\\b(?:not|never|no)\\b|don['’]t"
+          },
+          "output": "Please do not cancel my reservation.",
+          "ms": 289,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "ja-en-2",
+          "source": "ja",
+          "target": "en",
+          "input": "アクセスコードは7890です。",
+          "reference": "The access code is 7890.",
+          "category": "access_code",
+          "checks": {
+            "digits": [
+              "7890"
+            ]
+          },
+          "output": "The access code is 7890.",
+          "ms": 360,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "ja-en-3",
+          "source": "ja",
+          "target": "en",
+          "input": "最寄りの駅はどこですか？",
+          "reference": "Where is the nearest train station?",
+          "category": "question",
+          "checks": {
+            "mustMatch": "\\bwhere\\b"
+          },
+          "output": "Where is the nearest station?",
+          "ms": 242,
+          "referenceChrFpp": 75.87,
+          "reviewFlags": []
+        },
+        {
+          "id": "ja-en-4",
+          "source": "ja",
+          "target": "en",
+          "input": "会議は月曜日から水曜日に変更されました。",
+          "reference": "The meeting was moved from Monday to Wednesday.",
+          "category": "reschedule",
+          "checks": {},
+          "output": "The meeting has been changed from Monday to Wednesday.",
+          "ms": 352,
+          "referenceChrFpp": 74.07,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-ko-0",
+          "source": "en",
+          "target": "ko",
+          "input": "Please speak slowly.",
+          "reference": "천천히 말씀해 주세요.",
+          "category": "slow_speech",
+          "checks": {
+            "noLatinWords": true
+          },
+          "output": "천천히 말해주세요.",
+          "ms": 234,
+          "referenceChrFpp": 43.71,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-ko-1",
+          "source": "en",
+          "target": "ko",
+          "input": "Please do not cancel my reservation.",
+          "reference": "제 예약을 취소하지 말아 주세요.",
+          "category": "negation",
+          "checks": {
+            "mustMatch": "않|말|마세|취소하지",
+            "noLatinWords": true
+          },
+          "output": "예약을 취소하지 말아 주세요.",
+          "ms": 331,
+          "referenceChrFpp": 90.79,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-ko-2",
+          "source": "en",
+          "target": "ko",
+          "input": "The access code is 7890.",
+          "reference": "접속 코드는 7890입니다.",
+          "category": "access_code",
+          "checks": {
+            "digits": [
+              "7890"
+            ],
+            "noLatinWords": true
+          },
+          "output": "접근 코드는 7890입니다.",
+          "ms": 382,
+          "referenceChrFpp": 78.99,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-ko-3",
+          "source": "en",
+          "target": "ko",
+          "input": "Where is the nearest train station?",
+          "reference": "가장 가까운 기차역은 어디인가요?",
+          "category": "question",
+          "checks": {
+            "mustMatch": "어디",
+            "noLatinWords": true
+          },
+          "output": "가장 가까운 기차역은 어디에 있나요?",
+          "ms": 457,
+          "referenceChrFpp": 67.86,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-ko-4",
+          "source": "en",
+          "target": "ko",
+          "input": "The meeting was moved from Monday to Wednesday.",
+          "reference": "회의가 월요일에서 수요일로 변경되었습니다.",
+          "category": "reschedule",
+          "checks": {
+            "noLatinWords": true
+          },
+          "output": "회의가 월요일에서 수요일로 변경되었습니다.",
+          "ms": 399,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "ko-en-0",
+          "source": "ko",
+          "target": "en",
+          "input": "천천히 말씀해 주세요.",
+          "reference": "Please speak slowly.",
+          "category": "slow_speech",
+          "checks": {},
+          "output": "Please speak slowly.",
+          "ms": 174,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "ko-en-1",
+          "source": "ko",
+          "target": "en",
+          "input": "제 예약을 취소하지 말아 주세요.",
+          "reference": "Please do not cancel my reservation.",
+          "category": "negation",
+          "checks": {
+            "mustMatch": "\\b(?:not|never|no)\\b|don['’]t"
+          },
+          "output": "Please do not cancel my reservation.",
+          "ms": 269,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "ko-en-2",
+          "source": "ko",
+          "target": "en",
+          "input": "접속 코드는 7890입니다.",
+          "reference": "The access code is 7890.",
+          "category": "access_code",
+          "checks": {
+            "digits": [
+              "7890"
+            ]
+          },
+          "output": "The access code is 7890.",
+          "ms": 350,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "ko-en-3",
+          "source": "ko",
+          "target": "en",
+          "input": "가장 가까운 기차역은 어디인가요?",
+          "reference": "Where is the nearest train station?",
+          "category": "question",
+          "checks": {
+            "mustMatch": "\\bwhere\\b"
+          },
+          "output": "Where is the nearest train station?",
+          "ms": 269,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "ko-en-4",
+          "source": "ko",
+          "target": "en",
+          "input": "회의가 월요일에서 수요일로 변경되었습니다.",
+          "reference": "The meeting was moved from Monday to Wednesday.",
+          "category": "reschedule",
+          "checks": {},
+          "output": "The meeting has been changed from Monday to Wednesday.",
+          "ms": 349,
+          "referenceChrFpp": 74.07,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-es-0",
+          "source": "en",
+          "target": "es",
+          "input": "Please speak slowly.",
+          "reference": "Por favor, habla despacio.",
+          "category": "slow_speech",
+          "checks": {},
+          "output": "Por favor, hable despacio.",
+          "ms": 310,
+          "referenceChrFpp": 79.49,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-es-1",
+          "source": "en",
+          "target": "es",
+          "input": "Please do not cancel my reservation.",
+          "reference": "Por favor, no canceles mi reserva.",
+          "category": "negation",
+          "checks": {
+            "mustMatch": "\\bno\\b"
+          },
+          "output": "Por favor, no cancelen mi reserva.",
+          "ms": 339,
+          "referenceChrFpp": 84.61,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-es-2",
+          "source": "en",
+          "target": "es",
+          "input": "The access code is 7890.",
+          "reference": "El código de acceso es 7890.",
+          "category": "access_code",
+          "checks": {
+            "digits": [
+              "7890"
+            ]
+          },
+          "output": "El código de acceso es 7890.",
+          "ms": 400,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-es-3",
+          "source": "en",
+          "target": "es",
+          "input": "Where is the nearest train station?",
+          "reference": "¿Dónde está la estación de tren más cercana?",
+          "category": "question",
+          "checks": {
+            "mustMatch": "d[oó]nde"
+          },
+          "output": "¿Dónde está la estación de tren más cercana?",
+          "ms": 396,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-es-4",
+          "source": "en",
+          "target": "es",
+          "input": "The meeting was moved from Monday to Wednesday.",
+          "reference": "La reunión se cambió del lunes al miércoles.",
+          "category": "reschedule",
+          "checks": {},
+          "output": "La reunión se trasladó del lunes al miércoles.",
+          "ms": 389,
+          "referenceChrFpp": 78.63,
+          "reviewFlags": []
+        },
+        {
+          "id": "es-en-0",
+          "source": "es",
+          "target": "en",
+          "input": "Por favor, habla despacio.",
+          "reference": "Please speak slowly.",
+          "category": "slow_speech",
+          "checks": {},
+          "output": "Please speak slowly.",
+          "ms": 183,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "es-en-1",
+          "source": "es",
+          "target": "en",
+          "input": "Por favor, no canceles mi reserva.",
+          "reference": "Please do not cancel my reservation.",
+          "category": "negation",
+          "checks": {
+            "mustMatch": "\\b(?:not|never|no)\\b|don['’]t"
+          },
+          "output": "Please do not cancel my reservation.",
+          "ms": 254,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "es-en-2",
+          "source": "es",
+          "target": "en",
+          "input": "El código de acceso es 7890.",
+          "reference": "The access code is 7890.",
+          "category": "access_code",
+          "checks": {
+            "digits": [
+              "7890"
+            ]
+          },
+          "output": "The access code is 7890.",
+          "ms": 347,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "es-en-3",
+          "source": "es",
+          "target": "en",
+          "input": "¿Dónde está la estación de tren más cercana?",
+          "reference": "Where is the nearest train station?",
+          "category": "question",
+          "checks": {
+            "mustMatch": "\\bwhere\\b"
+          },
+          "output": "Where is the nearest train station?",
+          "ms": 253,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "es-en-4",
+          "source": "es",
+          "target": "en",
+          "input": "La reunión se cambió del lunes al miércoles.",
+          "reference": "The meeting was moved from Monday to Wednesday.",
+          "category": "reschedule",
+          "checks": {},
+          "output": "The meeting was changed from Monday to Wednesday.",
+          "ms": 320,
+          "referenceChrFpp": 83.64,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-fr-0",
+          "source": "en",
+          "target": "fr",
+          "input": "Please speak slowly.",
+          "reference": "Parlez lentement, s’il vous plaît.",
+          "category": "slow_speech",
+          "checks": {},
+          "output": "Veuillez parler lentement.",
+          "ms": 255,
+          "referenceChrFpp": 31.61,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-fr-1",
+          "source": "en",
+          "target": "fr",
+          "input": "Please do not cancel my reservation.",
+          "reference": "Veuillez ne pas annuler ma réservation.",
+          "category": "negation",
+          "checks": {
+            "mustMatch": "\\b(?:ne|pas)\\b"
+          },
+          "output": "Veuillez ne pas annuler ma réservation.",
+          "ms": 339,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-fr-2",
+          "source": "en",
+          "target": "fr",
+          "input": "The access code is 7890.",
+          "reference": "Le code d’accès est 7890.",
+          "category": "access_code",
+          "checks": {
+            "digits": [
+              "7890"
+            ]
+          },
+          "output": "Le code d'accès est 7890.",
+          "ms": 420,
+          "referenceChrFpp": 77.96,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-fr-3",
+          "source": "en",
+          "target": "fr",
+          "input": "Where is the nearest train station?",
+          "reference": "Où est la gare la plus proche ?",
+          "category": "question",
+          "checks": {
+            "mustMatch": "où"
+          },
+          "output": "Où est la gare la plus proche ?",
+          "ms": 329,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-fr-4",
+          "source": "en",
+          "target": "fr",
+          "input": "The meeting was moved from Monday to Wednesday.",
+          "reference": "La réunion a été déplacée de lundi à mercredi.",
+          "category": "reschedule",
+          "checks": {},
+          "output": "La réunion a été reportée de lundi à mercredi.",
+          "ms": 383,
+          "referenceChrFpp": 78.13,
+          "reviewFlags": []
+        },
+        {
+          "id": "fr-en-0",
+          "source": "fr",
+          "target": "en",
+          "input": "Parlez lentement, s’il vous plaît.",
+          "reference": "Please speak slowly.",
+          "category": "slow_speech",
+          "checks": {},
+          "output": "Please speak slowly.",
+          "ms": 195,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "fr-en-1",
+          "source": "fr",
+          "target": "en",
+          "input": "Veuillez ne pas annuler ma réservation.",
+          "reference": "Please do not cancel my reservation.",
+          "category": "negation",
+          "checks": {
+            "mustMatch": "\\b(?:not|never|no)\\b|don['’]t"
+          },
+          "output": "Please do not cancel my reservation.",
+          "ms": 280,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "fr-en-2",
+          "source": "fr",
+          "target": "en",
+          "input": "Le code d’accès est 7890.",
+          "reference": "The access code is 7890.",
+          "category": "access_code",
+          "checks": {
+            "digits": [
+              "7890"
+            ]
+          },
+          "output": "The access code is 7890.",
+          "ms": 353,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "fr-en-3",
+          "source": "fr",
+          "target": "en",
+          "input": "Où est la gare la plus proche ?",
+          "reference": "Where is the nearest train station?",
+          "category": "question",
+          "checks": {
+            "mustMatch": "\\bwhere\\b"
+          },
+          "output": "Where is the nearest station?",
+          "ms": 241,
+          "referenceChrFpp": 75.87,
+          "reviewFlags": []
+        },
+        {
+          "id": "fr-en-4",
+          "source": "fr",
+          "target": "en",
+          "input": "La réunion a été déplacée de lundi à mercredi.",
+          "reference": "The meeting was moved from Monday to Wednesday.",
+          "category": "reschedule",
+          "checks": {},
+          "output": "The meeting has been moved from Monday to Wednesday.",
+          "ms": 357,
+          "referenceChrFpp": 83.43,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-de-0",
+          "source": "en",
+          "target": "de",
+          "input": "Please speak slowly.",
+          "reference": "Bitte sprechen Sie langsam.",
+          "category": "slow_speech",
+          "checks": {},
+          "output": "Bitte sprechen Sie langsam.",
+          "ms": 234,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-de-1",
+          "source": "en",
+          "target": "de",
+          "input": "Please do not cancel my reservation.",
+          "reference": "Bitte stornieren Sie meine Reservierung nicht.",
+          "category": "negation",
+          "checks": {
+            "mustMatch": "\\bnicht\\b"
+          },
+          "output": "Bitte stornieren Sie meine Reservierung nicht.",
+          "ms": 393,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-de-2",
+          "source": "en",
+          "target": "de",
+          "input": "The access code is 7890.",
+          "reference": "Der Zugangscode lautet 7890.",
+          "category": "access_code",
+          "checks": {
+            "digits": [
+              "7890"
+            ]
+          },
+          "output": "Der Zugangscode ist 7890.",
+          "ms": 375,
+          "referenceChrFpp": 67.05,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-de-3",
+          "source": "en",
+          "target": "de",
+          "input": "Where is the nearest train station?",
+          "reference": "Wo ist der nächste Bahnhof?",
+          "category": "question",
+          "checks": {
+            "mustMatch": "\\bwo\\b"
+          },
+          "output": "Wo ist der nächste Bahnhof?",
+          "ms": 281,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-de-4",
+          "source": "en",
+          "target": "de",
+          "input": "The meeting was moved from Monday to Wednesday.",
+          "reference": "Das Treffen wurde von Montag auf Mittwoch verschoben.",
+          "category": "reschedule",
+          "checks": {},
+          "output": "Das Treffen wurde von Montag auf Mittwoch verschoben.",
+          "ms": 442,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "de-en-0",
+          "source": "de",
+          "target": "en",
+          "input": "Bitte sprechen Sie langsam.",
+          "reference": "Please speak slowly.",
+          "category": "slow_speech",
+          "checks": {},
+          "output": "Please speak slowly.",
+          "ms": 175,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "de-en-1",
+          "source": "de",
+          "target": "en",
+          "input": "Bitte stornieren Sie meine Reservierung nicht.",
+          "reference": "Please do not cancel my reservation.",
+          "category": "negation",
+          "checks": {
+            "mustMatch": "\\b(?:not|never|no)\\b|don['’]t"
+          },
+          "output": "Please do not cancel my reservation.",
+          "ms": 273,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "de-en-2",
+          "source": "de",
+          "target": "en",
+          "input": "Der Zugangscode lautet 7890.",
+          "reference": "The access code is 7890.",
+          "category": "access_code",
+          "checks": {
+            "digits": [
+              "7890"
+            ]
+          },
+          "output": "The access code is 7890.",
+          "ms": 363,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "de-en-3",
+          "source": "de",
+          "target": "en",
+          "input": "Wo ist der nächste Bahnhof?",
+          "reference": "Where is the nearest train station?",
+          "category": "question",
+          "checks": {
+            "mustMatch": "\\bwhere\\b"
+          },
+          "output": "Where is the nearest train station?",
+          "ms": 266,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "de-en-4",
+          "source": "de",
+          "target": "en",
+          "input": "Das Treffen wurde von Montag auf Mittwoch verschoben.",
+          "reference": "The meeting was moved from Monday to Wednesday.",
+          "category": "reschedule",
+          "checks": {},
+          "output": "The meeting was postponed from Monday to Wednesday.",
+          "ms": 336,
+          "referenceChrFpp": 83.31,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-pt-0",
+          "source": "en",
+          "target": "pt",
+          "input": "Please speak slowly.",
+          "reference": "Por favor, fale devagar.",
+          "category": "slow_speech",
+          "checks": {},
+          "output": "Por favor, fale devagar.",
+          "ms": 289,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-pt-1",
+          "source": "en",
+          "target": "pt",
+          "input": "Please do not cancel my reservation.",
+          "reference": "Por favor, não cancele a minha reserva.",
+          "category": "negation",
+          "checks": {
+            "mustMatch": "\\bnão\\b"
+          },
+          "output": "Por favor, não cancele minha reserva.",
+          "ms": 352,
+          "referenceChrFpp": 87.57,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-pt-2",
+          "source": "en",
+          "target": "pt",
+          "input": "The access code is 7890.",
+          "reference": "O código de acesso é 7890.",
+          "category": "access_code",
+          "checks": {
+            "digits": [
+              "7890"
+            ]
+          },
+          "output": "O código de acesso é 7890.",
+          "ms": 388,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-pt-3",
+          "source": "en",
+          "target": "pt",
+          "input": "Where is the nearest train station?",
+          "reference": "Onde fica a estação de trem mais próxima?",
+          "category": "question",
+          "checks": {
+            "mustMatch": "onde"
+          },
+          "output": "Onde é a estação de trem mais próxima?",
+          "ms": 379,
+          "referenceChrFpp": 81.36,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-pt-4",
+          "source": "en",
+          "target": "pt",
+          "input": "The meeting was moved from Monday to Wednesday.",
+          "reference": "A reunião foi transferida de segunda-feira para quarta-feira.",
+          "category": "reschedule",
+          "checks": {},
+          "output": "A reunião foi movida de segunda para quarta-feira.",
+          "ms": 442,
+          "referenceChrFpp": 66.59,
+          "reviewFlags": []
+        },
+        {
+          "id": "pt-en-0",
+          "source": "pt",
+          "target": "en",
+          "input": "Por favor, fale devagar.",
+          "reference": "Please speak slowly.",
+          "category": "slow_speech",
+          "checks": {},
+          "output": "Please speak slowly.",
+          "ms": 168,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "pt-en-1",
+          "source": "pt",
+          "target": "en",
+          "input": "Por favor, não cancele a minha reserva.",
+          "reference": "Please do not cancel my reservation.",
+          "category": "negation",
+          "checks": {
+            "mustMatch": "\\b(?:not|never|no)\\b|don['’]t"
+          },
+          "output": "Please do not cancel my reservation.",
+          "ms": 252,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "pt-en-2",
+          "source": "pt",
+          "target": "en",
+          "input": "O código de acesso é 7890.",
+          "reference": "The access code is 7890.",
+          "category": "access_code",
+          "checks": {
+            "digits": [
+              "7890"
+            ]
+          },
+          "output": "The access code is 7890.",
+          "ms": 363,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "pt-en-3",
+          "source": "pt",
+          "target": "en",
+          "input": "Onde fica a estação de trem mais próxima?",
+          "reference": "Where is the nearest train station?",
+          "category": "question",
+          "checks": {
+            "mustMatch": "\\bwhere\\b"
+          },
+          "output": "Where is the nearest train station?",
+          "ms": 279,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "pt-en-4",
+          "source": "pt",
+          "target": "en",
+          "input": "A reunião foi transferida de segunda-feira para quarta-feira.",
+          "reference": "The meeting was moved from Monday to Wednesday.",
+          "category": "reschedule",
+          "checks": {},
+          "output": "The meeting was moved from Monday to Wednesday.",
+          "ms": 313,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-ru-0",
+          "source": "en",
+          "target": "ru",
+          "input": "Please speak slowly.",
+          "reference": "Пожалуйста, говорите медленно.",
+          "category": "slow_speech",
+          "checks": {
+            "noLatinWords": true
+          },
+          "output": "Пожалуйста, говорите медленно.",
+          "ms": 310,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-ru-1",
+          "source": "en",
+          "target": "ru",
+          "input": "Please do not cancel my reservation.",
+          "reference": "Пожалуйста, не отменяйте мою бронь.",
+          "category": "negation",
+          "checks": {
+            "mustMatch": "\\bне\\b",
+            "noLatinWords": true
+          },
+          "output": "Пожалуйста, не отменяйте мое бронирование.",
+          "ms": 414,
+          "referenceChrFpp": 73.51,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-ru-2",
+          "source": "en",
+          "target": "ru",
+          "input": "The access code is 7890.",
+          "reference": "Код доступа — 7890.",
+          "category": "access_code",
+          "checks": {
+            "digits": [
+              "7890"
+            ],
+            "noLatinWords": true
+          },
+          "output": "Код доступа — 7890.",
+          "ms": 345,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-ru-3",
+          "source": "en",
+          "target": "ru",
+          "input": "Where is the nearest train station?",
+          "reference": "Где находится ближайший железнодорожный вокзал?",
+          "category": "question",
+          "checks": {
+            "mustMatch": "где",
+            "noLatinWords": true
+          },
+          "output": "Где ближайшая железнодорожная станция?",
+          "ms": 344,
+          "referenceChrFpp": 37.56,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-ru-4",
+          "source": "en",
+          "target": "ru",
+          "input": "The meeting was moved from Monday to Wednesday.",
+          "reference": "Встречу перенесли с понедельника на среду.",
+          "category": "reschedule",
+          "checks": {
+            "noLatinWords": true
+          },
+          "output": "Встреча была перенесена с понедельника на среду.",
+          "ms": 477,
+          "referenceChrFpp": 72.67,
+          "reviewFlags": []
+        },
+        {
+          "id": "ru-en-0",
+          "source": "ru",
+          "target": "en",
+          "input": "Пожалуйста, говорите медленно.",
+          "reference": "Please speak slowly.",
+          "category": "slow_speech",
+          "checks": {},
+          "output": "Please speak slowly.",
+          "ms": 173,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "ru-en-1",
+          "source": "ru",
+          "target": "en",
+          "input": "Пожалуйста, не отменяйте мою бронь.",
+          "reference": "Please do not cancel my reservation.",
+          "category": "negation",
+          "checks": {
+            "mustMatch": "\\b(?:not|never|no)\\b|don['’]t"
+          },
+          "output": "Please do not cancel my reservation.",
+          "ms": 268,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "ru-en-2",
+          "source": "ru",
+          "target": "en",
+          "input": "Код доступа — 7890.",
+          "reference": "The access code is 7890.",
+          "category": "access_code",
+          "checks": {
+            "digits": [
+              "7890"
+            ]
+          },
+          "output": "Access code is 7890.",
+          "ms": 311,
+          "referenceChrFpp": 76.19,
+          "reviewFlags": []
+        },
+        {
+          "id": "ru-en-3",
+          "source": "ru",
+          "target": "en",
+          "input": "Где находится ближайший железнодорожный вокзал?",
+          "reference": "Where is the nearest train station?",
+          "category": "question",
+          "checks": {
+            "mustMatch": "\\bwhere\\b"
+          },
+          "output": "Where is the nearest train station?",
+          "ms": 298,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "ru-en-4",
+          "source": "ru",
+          "target": "en",
+          "input": "Встречу перенесли с понедельника на среду.",
+          "reference": "The meeting was moved from Monday to Wednesday.",
+          "category": "reschedule",
+          "checks": {},
+          "output": "The meeting has been moved from Monday to Wednesday.",
+          "ms": 366,
+          "referenceChrFpp": 83.43,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-ar-0",
+          "source": "en",
+          "target": "ar",
+          "input": "Please speak slowly.",
+          "reference": "يرجى التحدث ببطء.",
+          "category": "slow_speech",
+          "checks": {
+            "noLatinWords": true
+          },
+          "output": "من فضلك تحدث ببطء.",
+          "ms": 289,
+          "referenceChrFpp": 49.08,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-ar-1",
+          "source": "en",
+          "target": "ar",
+          "input": "Please do not cancel my reservation.",
+          "reference": "يرجى عدم إلغاء حجزي.",
+          "category": "negation",
+          "checks": {
+            "mustMatch": "لا |عدم|ليس|لم |لن ",
+            "noLatinWords": true
+          },
+          "output": "من فضلك لا تلغي حجزي.",
+          "ms": 327,
+          "referenceChrFpp": 24.33,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-ar-2",
+          "source": "en",
+          "target": "ar",
+          "input": "The access code is 7890.",
+          "reference": "رمز الدخول هو 7890.",
+          "category": "access_code",
+          "checks": {
+            "digits": [
+              "7890"
+            ],
+            "noLatinWords": true
+          },
+          "output": "رمز الوصول هو 7890.",
+          "ms": 314,
+          "referenceChrFpp": 64.6,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-ar-3",
+          "source": "en",
+          "target": "ar",
+          "input": "Where is the nearest train station?",
+          "reference": "أين تقع أقرب محطة قطار؟",
+          "category": "question",
+          "checks": {
+            "mustMatch": "أين",
+            "noLatinWords": true
+          },
+          "output": "أين أقرب محطة قطار؟",
+          "ms": 324,
+          "referenceChrFpp": 70.47,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-ar-4",
+          "source": "en",
+          "target": "ar",
+          "input": "The meeting was moved from Monday to Wednesday.",
+          "reference": "تم نقل الاجتماع من يوم الاثنين إلى يوم الأربعاء.",
+          "category": "reschedule",
+          "checks": {
+            "noLatinWords": true
+          },
+          "output": "تم نقل الاجتماع من يوم الاثنين إلى يوم الأربعاء.",
+          "ms": 445,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "ar-en-0",
+          "source": "ar",
+          "target": "en",
+          "input": "يرجى التحدث ببطء.",
+          "reference": "Please speak slowly.",
+          "category": "slow_speech",
+          "checks": {},
+          "output": "Please speak slowly.",
+          "ms": 174,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "ar-en-1",
+          "source": "ar",
+          "target": "en",
+          "input": "يرجى عدم إلغاء حجزي.",
+          "reference": "Please do not cancel my reservation.",
+          "category": "negation",
+          "checks": {
+            "mustMatch": "\\b(?:not|never|no)\\b|don['’]t"
+          },
+          "output": "Please do not cancel my reservation.",
+          "ms": 253,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "ar-en-2",
+          "source": "ar",
+          "target": "en",
+          "input": "رمز الدخول هو 7890.",
+          "reference": "The access code is 7890.",
+          "category": "access_code",
+          "checks": {
+            "digits": [
+              "7890"
+            ]
+          },
+          "output": "The access code is 7890.",
+          "ms": 329,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "ar-en-3",
+          "source": "ar",
+          "target": "en",
+          "input": "أين تقع أقرب محطة قطار؟",
+          "reference": "Where is the nearest train station?",
+          "category": "question",
+          "checks": {
+            "mustMatch": "\\bwhere\\b"
+          },
+          "output": "Where is the nearest train station?",
+          "ms": 246,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "ar-en-4",
+          "source": "ar",
+          "target": "en",
+          "input": "تم نقل الاجتماع من يوم الاثنين إلى يوم الأربعاء.",
+          "reference": "The meeting was moved from Monday to Wednesday.",
+          "category": "reschedule",
+          "checks": {},
+          "output": "The meeting has been moved from Monday to Wednesday.",
+          "ms": 323,
+          "referenceChrFpp": 83.43,
+          "reviewFlags": []
+        },
+        {
+          "id": "direct-ja-90",
+          "source": "ja",
+          "target": "zh",
+          "input": "明日の会議は中止ではなく、午後3時に延期されました。",
+          "reference": "明天的会议没有取消，而是推迟到了下午3点。",
+          "category": "direct_no_bridge",
+          "checks": {
+            "mustMatch": "不|没|未|勿",
+            "noLatinWords": true
+          },
+          "output": "明天的会议没有取消，而是推迟到下午3点。",
+          "ms": 470,
+          "referenceChrFpp": 69.36,
+          "reviewFlags": []
+        },
+        {
+          "id": "direct-ja-91",
+          "source": "ja",
+          "target": "zh",
+          "input": "予約をキャンセルしないでください。",
+          "reference": "请不要取消预订。",
+          "category": "direct_no_bridge",
+          "checks": {
+            "mustMatch": "不|没|未|勿",
+            "noLatinWords": true
+          },
+          "output": "请不要取消预订。",
+          "ms": 213,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "direct-ko-92",
+          "source": "ko",
+          "target": "zh",
+          "input": "내일 회의는 취소된 것이 아니라 오후 3시로 연기되었습니다.",
+          "reference": "明天的会议没有取消，而是推迟到了下午3点。",
+          "category": "direct_no_bridge",
+          "checks": {
+            "mustMatch": "不|没|未|勿",
+            "noLatinWords": true
+          },
+          "output": "明天的会议没有取消，而是推迟到了下午三点。",
+          "ms": 444,
+          "referenceChrFpp": 73.77,
+          "reviewFlags": []
+        },
+        {
+          "id": "direct-ko-93",
+          "source": "ko",
+          "target": "zh",
+          "input": "예약을 취소하지 말아 주세요.",
+          "reference": "请不要取消预订。",
+          "category": "direct_no_bridge",
+          "checks": {
+            "mustMatch": "不|没|未|勿",
+            "noLatinWords": true
+          },
+          "output": "请不要取消预订。",
+          "ms": 217,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "summary": {
+        "model": "hy-mt2-1.8b-cpu",
+        "device": "SM-S936U",
+        "cases": 94,
+        "runtimePassed": true,
+        "medianMs": 1768,
+        "p95Ms": 2216,
+        "maxMs": 2624,
+        "flaggedCases": 4,
+        "flags": [
+          {
+            "id": "en-es-1",
+            "reasons": [
+              "possessive_requires_review"
+            ],
+            "input": "Please do not cancel my reservation.",
+            "output": "Por favor, no cancela su reserva.",
+            "reference": "Por favor, no canceles mi reserva."
+          },
+          {
+            "id": "de-en-3",
+            "reasons": [
+              "proximity_requires_review"
+            ],
+            "input": "Wo ist der nächste Bahnhof?",
+            "output": "Where is the next train station?",
+            "reference": "Where is the nearest train station?"
+          },
+          {
+            "id": "pt-en-4",
+            "reasons": [
+              "weekday_or_direction_requires_review"
+            ],
+            "input": "A reunião foi transferida de segunda-feira para quarta-feira.",
+            "output": "The meeting was moved from Monday to Thursday.",
+            "reference": "The meeting was moved from Monday to Wednesday."
+          },
+          {
+            "id": "en-ar-0",
+            "reasons": [
+              "added_religious_reference"
+            ],
+            "input": "Please speak slowly.",
+            "output": "من فضل الله، تكلم ببطء.",
+            "reference": "يرجى التحدث ببطء."
+          }
+        ],
+        "chrFpp": 84.61,
+        "scope": "94 short authored cases in 10 languages. chrF++ measures similarity to one reference, not general accuracy. Risk flags require review. Times are text inference, excluding ASR, load and streaming segmentation.",
+        "pairs": {
+          "en-zh": {
+            "cases": 5,
+            "chrFpp": 67.44,
+            "medianMs": 1240
+          },
+          "zh-en": {
+            "cases": 5,
+            "chrFpp": 100.0,
+            "medianMs": 1160
+          },
+          "en-ja": {
+            "cases": 5,
+            "chrFpp": 84.4,
+            "medianMs": 1619
+          },
+          "ja-en": {
+            "cases": 5,
+            "chrFpp": 77.99,
+            "medianMs": 1768
+          },
+          "en-ko": {
+            "cases": 5,
+            "chrFpp": 63.22,
+            "medianMs": 2124
+          },
+          "ko-en": {
+            "cases": 5,
+            "chrFpp": 84.79,
+            "medianMs": 1805
+          },
+          "en-es": {
+            "cases": 5,
+            "chrFpp": 77.45,
+            "medianMs": 1706
+          },
+          "es-en": {
+            "cases": 5,
+            "chrFpp": 91.06,
+            "medianMs": 1667
+          },
+          "en-fr": {
+            "cases": 5,
+            "chrFpp": 71.7,
+            "medianMs": 1872
+          },
+          "fr-en": {
+            "cases": 5,
+            "chrFpp": 97.38,
+            "medianMs": 1792
+          },
+          "en-de": {
+            "cases": 5,
+            "chrFpp": 81.97,
+            "medianMs": 1768
+          },
+          "de-en": {
+            "cases": 5,
+            "chrFpp": 90.15,
+            "medianMs": 1723
+          },
+          "en-pt": {
+            "cases": 5,
+            "chrFpp": 85.25,
+            "medianMs": 1811
+          },
+          "pt-en": {
+            "cases": 5,
+            "chrFpp": 90.2,
+            "medianMs": 1770
+          },
+          "en-ru": {
+            "cases": 5,
+            "chrFpp": 93.25,
+            "medianMs": 2040
+          },
+          "ru-en": {
+            "cases": 5,
+            "chrFpp": 88.4,
+            "medianMs": 2052
+          },
+          "en-ar": {
+            "cases": 5,
+            "chrFpp": 66.35,
+            "medianMs": 1822
+          },
+          "ar-en": {
+            "cases": 5,
+            "chrFpp": 91.63,
+            "medianMs": 1793
+          },
+          "ja-zh": {
+            "cases": 2,
+            "chrFpp": 54.05,
+            "medianMs": 2075
+          },
+          "ko-zh": {
+            "cases": 2,
+            "chrFpp": 65.64,
+            "medianMs": 2157
+          }
+        }
+      },
+      "translations": [
+        {
+          "id": "en-zh-0",
+          "source": "en",
+          "target": "zh",
+          "input": "Please speak slowly.",
+          "reference": "请慢一点说。",
+          "category": "slow_speech",
+          "checks": {
+            "noLatinWords": true
+          },
+          "output": "请慢慢说。",
+          "ms": 1188,
+          "referenceChrFpp": 18.44,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-zh-1",
+          "source": "en",
+          "target": "zh",
+          "input": "Please do not cancel my reservation.",
+          "reference": "请不要取消我的预订。",
+          "category": "negation",
+          "checks": {
+            "mustMatch": "不|别|勿",
+            "noLatinWords": true
+          },
+          "output": "请不要取消我的预订。",
+          "ms": 1240,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-zh-2",
+          "source": "en",
+          "target": "zh",
+          "input": "The access code is 7890.",
+          "reference": "访问代码是7890。",
+          "category": "access_code",
+          "checks": {
+            "digits": [
+              "7890"
+            ],
+            "noLatinWords": true
+          },
+          "output": "访问代码是 7890。",
+          "ms": 1317,
+          "referenceChrFpp": 85.71,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-zh-3",
+          "source": "en",
+          "target": "zh",
+          "input": "Where is the nearest train station?",
+          "reference": "最近的火车站在哪里？",
+          "category": "question",
+          "checks": {
+            "mustMatch": "哪|何处",
+            "noLatinWords": true
+          },
+          "output": "最近的火车站在哪里？",
+          "ms": 1197,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-zh-4",
+          "source": "en",
+          "target": "zh",
+          "input": "The meeting was moved from Monday to Wednesday.",
+          "reference": "会议从星期一改到了星期三。",
+          "category": "reschedule",
+          "checks": {
+            "noLatinWords": true
+          },
+          "output": "会议从周一改到了周三。",
+          "ms": 1345,
+          "referenceChrFpp": 23.13,
+          "reviewFlags": []
+        },
+        {
+          "id": "zh-en-0",
+          "source": "zh",
+          "target": "en",
+          "input": "请慢一点说。",
+          "reference": "Please speak slowly.",
+          "category": "slow_speech",
+          "checks": {},
+          "output": "Please speak slowly.",
+          "ms": 1048,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "zh-en-1",
+          "source": "zh",
+          "target": "en",
+          "input": "请不要取消我的预订。",
+          "reference": "Please do not cancel my reservation.",
+          "category": "negation",
+          "checks": {
+            "mustMatch": "\\b(?:not|never|no)\\b|don't"
+          },
+          "output": "Please do not cancel my reservation.",
+          "ms": 1160,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "zh-en-2",
+          "source": "zh",
+          "target": "en",
+          "input": "访问代码是7890。",
+          "reference": "The access code is 7890.",
+          "category": "access_code",
+          "checks": {
+            "digits": [
+              "7890"
+            ]
+          },
+          "output": "The access code is 7890.",
+          "ms": 1232,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "zh-en-3",
+          "source": "zh",
+          "target": "en",
+          "input": "最近的火车站在哪里？",
+          "reference": "Where is the nearest train station?",
+          "category": "question",
+          "checks": {
+            "mustMatch": "\\bwhere\\b"
+          },
+          "output": "Where is the nearest train station?",
+          "ms": 1141,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "zh-en-4",
+          "source": "zh",
+          "target": "en",
+          "input": "会议从星期一改到了星期三。",
+          "reference": "The meeting was moved from Monday to Wednesday.",
+          "category": "reschedule",
+          "checks": {},
+          "output": "The meeting was moved from Monday to Wednesday.",
+          "ms": 1351,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-ja-0",
+          "source": "en",
+          "target": "ja",
+          "input": "Please speak slowly.",
+          "reference": "ゆっくり話してください。",
+          "category": "slow_speech",
+          "checks": {
+            "noLatinWords": true
+          },
+          "output": "ゆっくり話してください。",
+          "ms": 1136,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-ja-1",
+          "source": "en",
+          "target": "ja",
+          "input": "Please do not cancel my reservation.",
+          "reference": "私の予約をキャンセルしないでください。",
+          "category": "negation",
+          "checks": {
+            "mustMatch": "ない|ません|ず",
+            "noLatinWords": true
+          },
+          "output": "お願いです、予約をキャンセルしないでください。",
+          "ms": 1703,
+          "referenceChrFpp": 71.71,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-ja-2",
+          "source": "en",
+          "target": "ja",
+          "input": "The access code is 7890.",
+          "reference": "アクセスコードは7890です。",
+          "category": "access_code",
+          "checks": {
+            "digits": [
+              "7890"
+            ],
+            "noLatinWords": true
+          },
+          "output": "アクセスコードは7890です。",
+          "ms": 1445,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-ja-3",
+          "source": "en",
+          "target": "ja",
+          "input": "Where is the nearest train station?",
+          "reference": "最寄りの駅はどこですか？",
+          "category": "question",
+          "checks": {
+            "mustMatch": "どこ|何処",
+            "noLatinWords": true
+          },
+          "output": "最寄りの駅はどこですか？",
+          "ms": 1619,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-ja-4",
+          "source": "en",
+          "target": "ja",
+          "input": "The meeting was moved from Monday to Wednesday.",
+          "reference": "会議は月曜日から水曜日に変更されました。",
+          "category": "reschedule",
+          "checks": {
+            "noLatinWords": true
+          },
+          "output": "会議は月曜日から水曜日に移動されました。",
+          "ms": 2110,
+          "referenceChrFpp": 62.63,
+          "reviewFlags": []
+        },
+        {
+          "id": "ja-en-0",
+          "source": "ja",
+          "target": "en",
+          "input": "ゆっくり話してください。",
+          "reference": "Please speak slowly.",
+          "category": "slow_speech",
+          "checks": {},
+          "output": "Please talk slowly.",
+          "ms": 1404,
+          "referenceChrFpp": 57.02,
+          "reviewFlags": []
+        },
+        {
+          "id": "ja-en-1",
+          "source": "ja",
+          "target": "en",
+          "input": "私の予約をキャンセルしないでください。",
+          "reference": "Please do not cancel my reservation.",
+          "category": "negation",
+          "checks": {
+            "mustMatch": "\\b(?:not|never|no)\\b|don't"
+          },
+          "output": "Please don’t cancel my reservation.",
+          "ms": 1887,
+          "referenceChrFpp": 81.2,
+          "reviewFlags": []
+        },
+        {
+          "id": "ja-en-2",
+          "source": "ja",
+          "target": "en",
+          "input": "アクセスコードは7890です。",
+          "reference": "The access code is 7890.",
+          "category": "access_code",
+          "checks": {
+            "digits": [
+              "7890"
+            ]
+          },
+          "output": "The access code is 7890.",
+          "ms": 1768,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "ja-en-3",
+          "source": "ja",
+          "target": "en",
+          "input": "最寄りの駅はどこですか？",
+          "reference": "Where is the nearest train station?",
+          "category": "question",
+          "checks": {
+            "mustMatch": "\\bwhere\\b"
+          },
+          "output": "Where is the nearest station?",
+          "ms": 1717,
+          "referenceChrFpp": 75.87,
+          "reviewFlags": []
+        },
+        {
+          "id": "ja-en-4",
+          "source": "ja",
+          "target": "en",
+          "input": "会議は月曜日から水曜日に変更されました。",
+          "reference": "The meeting was moved from Monday to Wednesday.",
+          "category": "reschedule",
+          "checks": {},
+          "output": "The meeting has been changed from Monday to Wednesday.",
+          "ms": 2532,
+          "referenceChrFpp": 74.07,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-ko-0",
+          "source": "en",
+          "target": "ko",
+          "input": "Please speak slowly.",
+          "reference": "천천히 말씀해 주세요.",
+          "category": "slow_speech",
+          "checks": {
+            "noLatinWords": true
+          },
+          "output": "천천히 말해 주세요.",
+          "ms": 1866,
+          "referenceChrFpp": 50.67,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-ko-1",
+          "source": "en",
+          "target": "ko",
+          "input": "Please do not cancel my reservation.",
+          "reference": "제 예약을 취소하지 말아 주세요.",
+          "category": "negation",
+          "checks": {
+            "mustMatch": "않|말|마세|취소하지",
+            "noLatinWords": true
+          },
+          "output": "제 예약을 취소하지 마세요.",
+          "ms": 2130,
+          "referenceChrFpp": 55.88,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-ko-2",
+          "source": "en",
+          "target": "ko",
+          "input": "The access code is 7890.",
+          "reference": "접속 코드는 7890입니다.",
+          "category": "access_code",
+          "checks": {
+            "digits": [
+              "7890"
+            ],
+            "noLatinWords": true
+          },
+          "output": "접속 코드는 7890입니다.",
+          "ms": 2109,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-ko-3",
+          "source": "en",
+          "target": "ko",
+          "input": "Where is the nearest train station?",
+          "reference": "가장 가까운 기차역은 어디인가요?",
+          "category": "question",
+          "checks": {
+            "mustMatch": "어디",
+            "noLatinWords": true
+          },
+          "output": "가장 가까운 기차역은 어디에 있나요?",
+          "ms": 2124,
+          "referenceChrFpp": 67.86,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-ko-4",
+          "source": "en",
+          "target": "ko",
+          "input": "The meeting was moved from Monday to Wednesday.",
+          "reference": "회의가 월요일에서 수요일로 변경되었습니다.",
+          "category": "reschedule",
+          "checks": {
+            "noLatinWords": true
+          },
+          "output": "회의는 월요일에서 수요일로 옮겨졌습니다.",
+          "ms": 2212,
+          "referenceChrFpp": 46.94,
+          "reviewFlags": []
+        },
+        {
+          "id": "ko-en-0",
+          "source": "ko",
+          "target": "en",
+          "input": "천천히 말씀해 주세요.",
+          "reference": "Please speak slowly.",
+          "category": "slow_speech",
+          "checks": {},
+          "output": "Please speak slowly.",
+          "ms": 1522,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "ko-en-1",
+          "source": "ko",
+          "target": "en",
+          "input": "제 예약을 취소하지 말아 주세요.",
+          "reference": "Please do not cancel my reservation.",
+          "category": "negation",
+          "checks": {
+            "mustMatch": "\\b(?:not|never|no)\\b|don't"
+          },
+          "output": "Please don’t cancel my reservation.",
+          "ms": 1805,
+          "referenceChrFpp": 81.2,
+          "reviewFlags": []
+        },
+        {
+          "id": "ko-en-2",
+          "source": "ko",
+          "target": "en",
+          "input": "접속 코드는 7890입니다.",
+          "reference": "The access code is 7890.",
+          "category": "access_code",
+          "checks": {
+            "digits": [
+              "7890"
+            ]
+          },
+          "output": "The connection code is 7890.",
+          "ms": 1688,
+          "referenceChrFpp": 58.02,
+          "reviewFlags": []
+        },
+        {
+          "id": "ko-en-3",
+          "source": "ko",
+          "target": "en",
+          "input": "가장 가까운 기차역은 어디인가요?",
+          "reference": "Where is the nearest train station?",
+          "category": "question",
+          "checks": {
+            "mustMatch": "\\bwhere\\b"
+          },
+          "output": "Where is the nearest train station?",
+          "ms": 1808,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "ko-en-4",
+          "source": "ko",
+          "target": "en",
+          "input": "회의가 월요일에서 수요일로 변경되었습니다.",
+          "reference": "The meeting was moved from Monday to Wednesday.",
+          "category": "reschedule",
+          "checks": {},
+          "output": "The meeting has been moved from Monday to Wednesday.",
+          "ms": 1989,
+          "referenceChrFpp": 83.43,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-es-0",
+          "source": "en",
+          "target": "es",
+          "input": "Please speak slowly.",
+          "reference": "Por favor, habla despacio.",
+          "category": "slow_speech",
+          "checks": {},
+          "output": "Por favor, hable lentamente.",
+          "ms": 1415,
+          "referenceChrFpp": 52.38,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-es-1",
+          "source": "en",
+          "target": "es",
+          "input": "Please do not cancel my reservation.",
+          "reference": "Por favor, no canceles mi reserva.",
+          "category": "negation",
+          "checks": {
+            "mustMatch": "\\bno\\b"
+          },
+          "output": "Por favor, no cancela su reserva.",
+          "ms": 1620,
+          "referenceChrFpp": 73.59,
+          "reviewFlags": [
+            "possessive_requires_review"
+          ]
+        },
+        {
+          "id": "en-es-2",
+          "source": "en",
+          "target": "es",
+          "input": "The access code is 7890.",
+          "reference": "El código de acceso es 7890.",
+          "category": "access_code",
+          "checks": {
+            "digits": [
+              "7890"
+            ]
+          },
+          "output": "El código de acceso es 7890.",
+          "ms": 1706,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-es-3",
+          "source": "en",
+          "target": "es",
+          "input": "Where is the nearest train station?",
+          "reference": "¿Dónde está la estación de tren más cercana?",
+          "category": "question",
+          "checks": {
+            "mustMatch": "d[oó]nde"
+          },
+          "output": "¿Dónde está la estación de tren más cercana?",
+          "ms": 1820,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-es-4",
+          "source": "en",
+          "target": "es",
+          "input": "The meeting was moved from Monday to Wednesday.",
+          "reference": "La reunión se cambió del lunes al miércoles.",
+          "category": "reschedule",
+          "checks": {},
+          "output": "La reunión se trasladó de lunes a miércoles.",
+          "ms": 1999,
+          "referenceChrFpp": 59.12,
+          "reviewFlags": []
+        },
+        {
+          "id": "es-en-0",
+          "source": "es",
+          "target": "en",
+          "input": "Por favor, habla despacio.",
+          "reference": "Please speak slowly.",
+          "category": "slow_speech",
+          "checks": {},
+          "output": "Please speak slowly.",
+          "ms": 1362,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "es-en-1",
+          "source": "es",
+          "target": "en",
+          "input": "Por favor, no canceles mi reserva.",
+          "reference": "Please do not cancel my reservation.",
+          "category": "negation",
+          "checks": {
+            "mustMatch": "\\b(?:not|never|no)\\b|don't"
+          },
+          "output": "Please don’t cancel my reservation.",
+          "ms": 1632,
+          "referenceChrFpp": 81.2,
+          "reviewFlags": []
+        },
+        {
+          "id": "es-en-2",
+          "source": "es",
+          "target": "en",
+          "input": "El código de acceso es 7890.",
+          "reference": "The access code is 7890.",
+          "category": "access_code",
+          "checks": {
+            "digits": [
+              "7890"
+            ]
+          },
+          "output": "The access code is 7890.",
+          "ms": 1667,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "es-en-3",
+          "source": "es",
+          "target": "en",
+          "input": "¿Dónde está la estación de tren más cercana?",
+          "reference": "Where is the nearest train station?",
+          "category": "question",
+          "checks": {
+            "mustMatch": "\\bwhere\\b"
+          },
+          "output": "Where is the nearest train station?",
+          "ms": 1727,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "es-en-4",
+          "source": "es",
+          "target": "en",
+          "input": "La reunión se cambió del lunes al miércoles.",
+          "reference": "The meeting was moved from Monday to Wednesday.",
+          "category": "reschedule",
+          "checks": {},
+          "output": "The meeting was changed from Monday to Wednesday.",
+          "ms": 1911,
+          "referenceChrFpp": 83.64,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-fr-0",
+          "source": "en",
+          "target": "fr",
+          "input": "Please speak slowly.",
+          "reference": "Parlez lentement, s’il vous plaît.",
+          "category": "slow_speech",
+          "checks": {},
+          "output": "Veuillez parler lentement.",
+          "ms": 1558,
+          "referenceChrFpp": 31.61,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-fr-1",
+          "source": "en",
+          "target": "fr",
+          "input": "Please do not cancel my reservation.",
+          "reference": "Veuillez ne pas annuler ma réservation.",
+          "category": "negation",
+          "checks": {
+            "mustMatch": "\\b(?:ne|pas)\\b"
+          },
+          "output": "Veuillez ne pas annuler ma réservation.",
+          "ms": 1872,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-fr-2",
+          "source": "en",
+          "target": "fr",
+          "input": "The access code is 7890.",
+          "reference": "Le code d’accès est 7890.",
+          "category": "access_code",
+          "checks": {
+            "digits": [
+              "7890"
+            ]
+          },
+          "output": "Le code d'accès est 7890.",
+          "ms": 1748,
+          "referenceChrFpp": 77.96,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-fr-3",
+          "source": "en",
+          "target": "fr",
+          "input": "Where is the nearest train station?",
+          "reference": "Où est la gare la plus proche ?",
+          "category": "question",
+          "checks": {
+            "mustMatch": "où"
+          },
+          "output": "Où se trouve la gare ferroviaire la plus proche ?",
+          "ms": 2036,
+          "referenceChrFpp": 66.92,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-fr-4",
+          "source": "en",
+          "target": "fr",
+          "input": "The meeting was moved from Monday to Wednesday.",
+          "reference": "La réunion a été déplacée de lundi à mercredi.",
+          "category": "reschedule",
+          "checks": {},
+          "output": "La réunion a été déplacée du lundi au mercredi.",
+          "ms": 2117,
+          "referenceChrFpp": 76.44,
+          "reviewFlags": []
+        },
+        {
+          "id": "fr-en-0",
+          "source": "fr",
+          "target": "en",
+          "input": "Parlez lentement, s’il vous plaît.",
+          "reference": "Please speak slowly.",
+          "category": "slow_speech",
+          "checks": {},
+          "output": "Please speak slowly, if you can.",
+          "ms": 1815,
+          "referenceChrFpp": 80.65,
+          "reviewFlags": []
+        },
+        {
+          "id": "fr-en-1",
+          "source": "fr",
+          "target": "en",
+          "input": "Veuillez ne pas annuler ma réservation.",
+          "reference": "Please do not cancel my reservation.",
+          "category": "negation",
+          "checks": {
+            "mustMatch": "\\b(?:not|never|no)\\b|don't"
+          },
+          "output": "Please do not cancel my reservation.",
+          "ms": 1792,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "fr-en-2",
+          "source": "fr",
+          "target": "en",
+          "input": "Le code d’accès est 7890.",
+          "reference": "The access code is 7890.",
+          "category": "access_code",
+          "checks": {
+            "digits": [
+              "7890"
+            ]
+          },
+          "output": "The access code is 7890.",
+          "ms": 1765,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "fr-en-3",
+          "source": "fr",
+          "target": "en",
+          "input": "Où est la gare la plus proche ?",
+          "reference": "Where is the nearest train station?",
+          "category": "question",
+          "checks": {
+            "mustMatch": "\\bwhere\\b"
+          },
+          "output": "Where is the nearest train station?",
+          "ms": 1721,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "fr-en-4",
+          "source": "fr",
+          "target": "en",
+          "input": "La réunion a été déplacée de lundi à mercredi.",
+          "reference": "The meeting was moved from Monday to Wednesday.",
+          "category": "reschedule",
+          "checks": {},
+          "output": "The meeting was moved from Monday to Wednesday.",
+          "ms": 2016,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-de-0",
+          "source": "en",
+          "target": "de",
+          "input": "Please speak slowly.",
+          "reference": "Bitte sprechen Sie langsam.",
+          "category": "slow_speech",
+          "checks": {},
+          "output": "Bitte sprechen Sie langsam.",
+          "ms": 1555,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-de-1",
+          "source": "en",
+          "target": "de",
+          "input": "Please do not cancel my reservation.",
+          "reference": "Bitte stornieren Sie meine Reservierung nicht.",
+          "category": "negation",
+          "checks": {
+            "mustMatch": "\\bnicht\\b"
+          },
+          "output": "Bitte kündigen Sie meine Reservierung nicht.",
+          "ms": 1768,
+          "referenceChrFpp": 74.6,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-de-2",
+          "source": "en",
+          "target": "de",
+          "input": "The access code is 7890.",
+          "reference": "Der Zugangscode lautet 7890.",
+          "category": "access_code",
+          "checks": {
+            "digits": [
+              "7890"
+            ]
+          },
+          "output": "Der Zugangscode ist 7890.",
+          "ms": 1755,
+          "referenceChrFpp": 67.05,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-de-3",
+          "source": "en",
+          "target": "de",
+          "input": "Where is the nearest train station?",
+          "reference": "Wo ist der nächste Bahnhof?",
+          "category": "question",
+          "checks": {
+            "mustMatch": "\\bwo\\b"
+          },
+          "output": "Wo ist der nächste Bahnhof?",
+          "ms": 1768,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-de-4",
+          "source": "en",
+          "target": "de",
+          "input": "The meeting was moved from Monday to Wednesday.",
+          "reference": "Das Treffen wurde von Montag auf Mittwoch verschoben.",
+          "category": "reschedule",
+          "checks": {},
+          "output": "Die Besprechung wurde von Montag auf Mittwoch verschoben.",
+          "ms": 2161,
+          "referenceChrFpp": 77.68,
+          "reviewFlags": []
+        },
+        {
+          "id": "de-en-0",
+          "source": "de",
+          "target": "en",
+          "input": "Bitte sprechen Sie langsam.",
+          "reference": "Please speak slowly.",
+          "category": "slow_speech",
+          "checks": {},
+          "output": "Please speak slowly.",
+          "ms": 1485,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "de-en-1",
+          "source": "de",
+          "target": "en",
+          "input": "Bitte stornieren Sie meine Reservierung nicht.",
+          "reference": "Please do not cancel my reservation.",
+          "category": "negation",
+          "checks": {
+            "mustMatch": "\\b(?:not|never|no)\\b|don't"
+          },
+          "output": "Please do not cancel my reservation.",
+          "ms": 1723,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "de-en-2",
+          "source": "de",
+          "target": "en",
+          "input": "Der Zugangscode lautet 7890.",
+          "reference": "The access code is 7890.",
+          "category": "access_code",
+          "checks": {
+            "digits": [
+              "7890"
+            ]
+          },
+          "output": "The access code is 7890.",
+          "ms": 1803,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "de-en-3",
+          "source": "de",
+          "target": "en",
+          "input": "Wo ist der nächste Bahnhof?",
+          "reference": "Where is the nearest train station?",
+          "category": "question",
+          "checks": {
+            "mustMatch": "\\bwhere\\b"
+          },
+          "output": "Where is the next train station?",
+          "ms": 1713,
+          "referenceChrFpp": 77.26,
+          "reviewFlags": [
+            "proximity_requires_review"
+          ]
+        },
+        {
+          "id": "de-en-4",
+          "source": "de",
+          "target": "en",
+          "input": "Das Treffen wurde von Montag auf Mittwoch verschoben.",
+          "reference": "The meeting was moved from Monday to Wednesday.",
+          "category": "reschedule",
+          "checks": {},
+          "output": "The meeting was postponed from Monday to Wednesday.",
+          "ms": 1981,
+          "referenceChrFpp": 83.31,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-pt-0",
+          "source": "en",
+          "target": "pt",
+          "input": "Please speak slowly.",
+          "reference": "Por favor, fale devagar.",
+          "category": "slow_speech",
+          "checks": {},
+          "output": "Por favor, fale lentamente.",
+          "ms": 1496,
+          "referenceChrFpp": 60.66,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-pt-1",
+          "source": "en",
+          "target": "pt",
+          "input": "Please do not cancel my reservation.",
+          "reference": "Por favor, não cancele a minha reserva.",
+          "category": "negation",
+          "checks": {
+            "mustMatch": "\\bnão\\b"
+          },
+          "output": "Por favor, não cancelar minha reserva.",
+          "ms": 1716,
+          "referenceChrFpp": 82.03,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-pt-2",
+          "source": "en",
+          "target": "pt",
+          "input": "The access code is 7890.",
+          "reference": "O código de acesso é 7890.",
+          "category": "access_code",
+          "checks": {
+            "digits": [
+              "7890"
+            ]
+          },
+          "output": "O código de acesso é 7890.",
+          "ms": 1811,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-pt-3",
+          "source": "en",
+          "target": "pt",
+          "input": "Where is the nearest train station?",
+          "reference": "Onde fica a estação de trem mais próxima?",
+          "category": "question",
+          "checks": {
+            "mustMatch": "onde"
+          },
+          "output": "Onde fica a estação de trem mais próxima?",
+          "ms": 1872,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-pt-4",
+          "source": "en",
+          "target": "pt",
+          "input": "The meeting was moved from Monday to Wednesday.",
+          "reference": "A reunião foi transferida de segunda-feira para quarta-feira.",
+          "category": "reschedule",
+          "checks": {},
+          "output": "A reunião foi movida de segunda-feira para quarta-feira.",
+          "ms": 2163,
+          "referenceChrFpp": 81.3,
+          "reviewFlags": []
+        },
+        {
+          "id": "pt-en-0",
+          "source": "pt",
+          "target": "en",
+          "input": "Por favor, fale devagar.",
+          "reference": "Please speak slowly.",
+          "category": "slow_speech",
+          "checks": {},
+          "output": "Please speak slowly.",
+          "ms": 1448,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "pt-en-1",
+          "source": "pt",
+          "target": "en",
+          "input": "Por favor, não cancele a minha reserva.",
+          "reference": "Please do not cancel my reservation.",
+          "category": "negation",
+          "checks": {
+            "mustMatch": "\\b(?:not|never|no)\\b|don't"
+          },
+          "output": "Please don’t cancel my reservation.",
+          "ms": 1770,
+          "referenceChrFpp": 81.2,
+          "reviewFlags": []
+        },
+        {
+          "id": "pt-en-2",
+          "source": "pt",
+          "target": "en",
+          "input": "O código de acesso é 7890.",
+          "reference": "The access code is 7890.",
+          "category": "access_code",
+          "checks": {
+            "digits": [
+              "7890"
+            ]
+          },
+          "output": "The access code is 7890.",
+          "ms": 1767,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "pt-en-3",
+          "source": "pt",
+          "target": "en",
+          "input": "Onde fica a estação de trem mais próxima?",
+          "reference": "Where is the nearest train station?",
+          "category": "question",
+          "checks": {
+            "mustMatch": "\\bwhere\\b"
+          },
+          "output": "Where is the nearest train station?",
+          "ms": 1799,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "pt-en-4",
+          "source": "pt",
+          "target": "en",
+          "input": "A reunião foi transferida de segunda-feira para quarta-feira.",
+          "reference": "The meeting was moved from Monday to Wednesday.",
+          "category": "reschedule",
+          "checks": {},
+          "output": "The meeting was moved from Monday to Thursday.",
+          "ms": 2063,
+          "referenceChrFpp": 80.62,
+          "reviewFlags": [
+            "weekday_or_direction_requires_review"
+          ]
+        },
+        {
+          "id": "en-ru-0",
+          "source": "en",
+          "target": "ru",
+          "input": "Please speak slowly.",
+          "reference": "Пожалуйста, говорите медленно.",
+          "category": "slow_speech",
+          "checks": {
+            "noLatinWords": true
+          },
+          "output": "Пожалуйста, говорите медленно.",
+          "ms": 1764,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-ru-1",
+          "source": "en",
+          "target": "ru",
+          "input": "Please do not cancel my reservation.",
+          "reference": "Пожалуйста, не отменяйте мою бронь.",
+          "category": "negation",
+          "checks": {
+            "mustMatch": "\\bне\\b",
+            "noLatinWords": true
+          },
+          "output": "Пожалуйста, не отменяйте мою бронь.",
+          "ms": 2074,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-ru-2",
+          "source": "en",
+          "target": "ru",
+          "input": "The access code is 7890.",
+          "reference": "Код доступа — 7890.",
+          "category": "access_code",
+          "checks": {
+            "digits": [
+              "7890"
+            ],
+            "noLatinWords": true
+          },
+          "output": "Код доступа — 7890.",
+          "ms": 1660,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-ru-3",
+          "source": "en",
+          "target": "ru",
+          "input": "Where is the nearest train station?",
+          "reference": "Где находится ближайший железнодорожный вокзал?",
+          "category": "question",
+          "checks": {
+            "mustMatch": "где",
+            "noLatinWords": true
+          },
+          "output": "Где находится ближайший железнодорожный вокзал?",
+          "ms": 2216,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-ru-4",
+          "source": "en",
+          "target": "ru",
+          "input": "The meeting was moved from Monday to Wednesday.",
+          "reference": "Встречу перенесли с понедельника на среду.",
+          "category": "reschedule",
+          "checks": {
+            "noLatinWords": true
+          },
+          "output": "Встреча была перенесена с понедельника на среду.",
+          "ms": 2040,
+          "referenceChrFpp": 72.67,
+          "reviewFlags": []
+        },
+        {
+          "id": "ru-en-0",
+          "source": "ru",
+          "target": "en",
+          "input": "Пожалуйста, говорите медленно.",
+          "reference": "Please speak slowly.",
+          "category": "slow_speech",
+          "checks": {},
+          "output": "Please speak slowly.",
+          "ms": 1549,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "ru-en-1",
+          "source": "ru",
+          "target": "en",
+          "input": "Пожалуйста, не отменяйте мою бронь.",
+          "reference": "Please do not cancel my reservation.",
+          "category": "negation",
+          "checks": {
+            "mustMatch": "\\b(?:not|never|no)\\b|don't"
+          },
+          "output": "Please don’t cancel my reservation.",
+          "ms": 2075,
+          "referenceChrFpp": 81.2,
+          "reviewFlags": []
+        },
+        {
+          "id": "ru-en-2",
+          "source": "ru",
+          "target": "en",
+          "input": "Код доступа — 7890.",
+          "reference": "The access code is 7890.",
+          "category": "access_code",
+          "checks": {
+            "digits": [
+              "7890"
+            ]
+          },
+          "output": "Access code — 7890.",
+          "ms": 1674,
+          "referenceChrFpp": 48.33,
+          "reviewFlags": []
+        },
+        {
+          "id": "ru-en-3",
+          "source": "ru",
+          "target": "en",
+          "input": "Где находится ближайший железнодорожный вокзал?",
+          "reference": "Where is the nearest train station?",
+          "category": "question",
+          "checks": {
+            "mustMatch": "\\bwhere\\b"
+          },
+          "output": "Where is the nearest train station?",
+          "ms": 2150,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "ru-en-4",
+          "source": "ru",
+          "target": "en",
+          "input": "Встречу перенесли с понедельника на среду.",
+          "reference": "The meeting was moved from Monday to Wednesday.",
+          "category": "reschedule",
+          "checks": {},
+          "output": "The meeting was moved from Monday to Wednesday.",
+          "ms": 2052,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-ar-0",
+          "source": "en",
+          "target": "ar",
+          "input": "Please speak slowly.",
+          "reference": "يرجى التحدث ببطء.",
+          "category": "slow_speech",
+          "checks": {
+            "noLatinWords": true
+          },
+          "output": "من فضل الله، تكلم ببطء.",
+          "ms": 1813,
+          "referenceChrFpp": 25.69,
+          "reviewFlags": [
+            "added_religious_reference"
+          ]
+        },
+        {
+          "id": "en-ar-1",
+          "source": "en",
+          "target": "ar",
+          "input": "Please do not cancel my reservation.",
+          "reference": "يرجى عدم إلغاء حجزي.",
+          "category": "negation",
+          "checks": {
+            "mustMatch": "لا |عدم|ليس|لم |لن ",
+            "noLatinWords": true
+          },
+          "output": "أرجو ألا تلغي حجزي.",
+          "ms": 1983,
+          "referenceChrFpp": 26.38,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-ar-2",
+          "source": "en",
+          "target": "ar",
+          "input": "The access code is 7890.",
+          "reference": "رمز الدخول هو 7890.",
+          "category": "access_code",
+          "checks": {
+            "digits": [
+              "7890"
+            ],
+            "noLatinWords": true
+          },
+          "output": "كود الوصول هو 7890.",
+          "ms": 1708,
+          "referenceChrFpp": 52.4,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-ar-3",
+          "source": "en",
+          "target": "ar",
+          "input": "Where is the nearest train station?",
+          "reference": "أين تقع أقرب محطة قطار؟",
+          "category": "question",
+          "checks": {
+            "mustMatch": "أين",
+            "noLatinWords": true
+          },
+          "output": "أين أقرب محطة قطار؟",
+          "ms": 1822,
+          "referenceChrFpp": 70.47,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-ar-4",
+          "source": "en",
+          "target": "ar",
+          "input": "The meeting was moved from Monday to Wednesday.",
+          "reference": "تم نقل الاجتماع من يوم الاثنين إلى يوم الأربعاء.",
+          "category": "reschedule",
+          "checks": {
+            "noLatinWords": true
+          },
+          "output": "تم نقل الاجتماع من يوم الاثنين إلى يوم الأربعاء.",
+          "ms": 2216,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "ar-en-0",
+          "source": "ar",
+          "target": "en",
+          "input": "يرجى التحدث ببطء.",
+          "reference": "Please speak slowly.",
+          "category": "slow_speech",
+          "checks": {},
+          "output": "Please speak slowly.",
+          "ms": 1567,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "ar-en-1",
+          "source": "ar",
+          "target": "en",
+          "input": "يرجى عدم إلغاء حجزي.",
+          "reference": "Please do not cancel my reservation.",
+          "category": "negation",
+          "checks": {
+            "mustMatch": "\\b(?:not|never|no)\\b|don't"
+          },
+          "output": "Please do not cancel my reservation.",
+          "ms": 1793,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "ar-en-2",
+          "source": "ar",
+          "target": "en",
+          "input": "رمز الدخول هو 7890.",
+          "reference": "The access code is 7890.",
+          "category": "access_code",
+          "checks": {
+            "digits": [
+              "7890"
+            ]
+          },
+          "output": "The password is 7890.",
+          "ms": 1679,
+          "referenceChrFpp": 40.84,
+          "reviewFlags": []
+        },
+        {
+          "id": "ar-en-3",
+          "source": "ar",
+          "target": "en",
+          "input": "أين تقع أقرب محطة قطار؟",
+          "reference": "Where is the nearest train station?",
+          "category": "question",
+          "checks": {
+            "mustMatch": "\\bwhere\\b"
+          },
+          "output": "Where is the nearest train station?",
+          "ms": 1835,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "ar-en-4",
+          "source": "ar",
+          "target": "en",
+          "input": "تم نقل الاجتماع من يوم الاثنين إلى يوم الأربعاء.",
+          "reference": "The meeting was moved from Monday to Wednesday.",
+          "category": "reschedule",
+          "checks": {},
+          "output": "The meeting was moved from Monday to Wednesday.",
+          "ms": 2095,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "direct-ja-90",
+          "source": "ja",
+          "target": "zh",
+          "input": "明日の会議は中止ではなく、午後3時に延期されました。",
+          "reference": "明天的会议没有取消，而是推迟到了下午3点。",
+          "category": "direct_no_bridge",
+          "checks": {
+            "mustMatch": "不|没|未|勿",
+            "noLatinWords": true
+          },
+          "output": "明天的会议不会取消，而是被推迟到下午3点。",
+          "ms": 2414,
+          "referenceChrFpp": 37.05,
+          "reviewFlags": []
+        },
+        {
+          "id": "direct-ja-91",
+          "source": "ja",
+          "target": "zh",
+          "input": "予約をキャンセルしないでください。",
+          "reference": "请不要取消预订。",
+          "category": "direct_no_bridge",
+          "checks": {
+            "mustMatch": "不|没|未|勿",
+            "noLatinWords": true
+          },
+          "output": "请不要取消预订。",
+          "ms": 1736,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "direct-ko-92",
+          "source": "ko",
+          "target": "zh",
+          "input": "내일 회의는 취소된 것이 아니라 오후 3시로 연기되었습니다.",
+          "reference": "明天的会议没有取消，而是推迟到了下午3点。",
+          "category": "direct_no_bridge",
+          "checks": {
+            "mustMatch": "不|没|未|勿",
+            "noLatinWords": true
+          },
+          "output": "明天的会议并没有被取消，而是被推迟到了下午3点。",
+          "ms": 2624,
+          "referenceChrFpp": 51.96,
+          "reviewFlags": []
+        },
+        {
+          "id": "direct-ko-93",
+          "source": "ko",
+          "target": "zh",
+          "input": "예약을 취소하지 말아 주세요.",
+          "reference": "请不要取消预订。",
+          "category": "direct_no_bridge",
+          "checks": {
+            "mustMatch": "不|没|未|勿",
+            "noLatinWords": true
+          },
+          "output": "请不要取消预订。",
+          "ms": 1690,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        }
+      ]
+    },
+    {
+      "summary": {
+        "model": "qwen3-1.7b-npu",
+        "device": "SM-S936U",
+        "cases": 94,
+        "runtimePassed": true,
+        "medianMs": 392,
+        "p95Ms": 652,
+        "maxMs": 1157,
+        "flaggedCases": 9,
+        "flags": [
+          {
+            "id": "ja-en-3",
+            "reasons": [
+              "critical_concept_not_found"
+            ],
+            "input": "最寄りの駅はどこですか？",
+            "output": "What is the nearest station?",
+            "reference": "Where is the nearest train station?"
+          },
+          {
+            "id": "ja-en-4",
+            "reasons": [
+              "weekday_or_direction_requires_review"
+            ],
+            "input": "会議は月曜日から水曜日に変更されました。",
+            "output": "The meeting was changed to Monday and Tuesday.",
+            "reference": "The meeting was moved from Monday to Wednesday."
+          },
+          {
+            "id": "en-ko-0",
+            "reasons": [
+              "unexpected_latin_words"
+            ],
+            "input": "Please speak slowly.",
+            "output": "please speak slowly.",
+            "reference": "천천히 말씀해 주세요."
+          },
+          {
+            "id": "ko-en-4",
+            "reasons": [
+              "weekday_or_direction_requires_review"
+            ],
+            "input": "회의가 월요일에서 수요일로 변경되었습니다.",
+            "output": "The meeting was changed to Monday from Wednesday.",
+            "reference": "The meeting was moved from Monday to Wednesday."
+          },
+          {
+            "id": "de-en-3",
+            "reasons": [
+              "proximity_requires_review"
+            ],
+            "input": "Wo ist der nächste Bahnhof?",
+            "output": "Where is the next train station?",
+            "reference": "Where is the nearest train station?"
+          },
+          {
+            "id": "pt-en-4",
+            "reasons": [
+              "weekday_or_direction_requires_review"
+            ],
+            "input": "A reunião foi transferida de segunda-feira para quarta-feira.",
+            "output": "The meeting was moved from Tuesday to Thursday.",
+            "reference": "The meeting was moved from Monday to Wednesday."
+          },
+          {
+            "id": "ar-en-4",
+            "reasons": [
+              "weekday_or_direction_requires_review"
+            ],
+            "input": "تم نقل الاجتماع من يوم الاثنين إلى يوم الأربعاء.",
+            "output": "The meeting was moved from Tuesday to Thursday.",
+            "reference": "The meeting was moved from Monday to Wednesday."
+          },
+          {
+            "id": "direct-ja-90",
+            "reasons": [
+              "critical_concept_not_found"
+            ],
+            "input": "明日の会議は中止ではなく、午後3時に延期されました。",
+            "output": "明天的会议取消，推迟到下午3点。",
+            "reference": "明天的会议没有取消，而是推迟到了下午3点。"
+          },
+          {
+            "id": "direct-ko-92",
+            "reasons": [
+              "critical_concept_not_found"
+            ],
+            "input": "내일 회의는 취소된 것이 아니라 오후 3시로 연기되었습니다.",
+            "output": "明天的会议改为下午3点。",
+            "reference": "明天的会议没有取消，而是推迟到了下午3点。"
+          }
+        ],
+        "chrFpp": 75.26,
+        "scope": "94 short authored cases in 10 languages. chrF++ measures similarity to one reference, not general accuracy. Risk flags require review. Times are text inference, excluding ASR, load and streaming segmentation.",
+        "pairs": {
+          "en-zh": {
+            "cases": 5,
+            "chrFpp": 59.12,
+            "medianMs": 296
+          },
+          "zh-en": {
+            "cases": 5,
+            "chrFpp": 82.67,
+            "medianMs": 332
+          },
+          "en-ja": {
+            "cases": 5,
+            "chrFpp": 75.85,
+            "medianMs": 391
+          },
+          "ja-en": {
+            "cases": 5,
+            "chrFpp": 76.46,
+            "medianMs": 321
+          },
+          "en-ko": {
+            "cases": 5,
+            "chrFpp": 41.85,
+            "medianMs": 475
+          },
+          "ko-en": {
+            "cases": 5,
+            "chrFpp": 75.66,
+            "medianMs": 346
+          },
+          "en-es": {
+            "cases": 5,
+            "chrFpp": 78.19,
+            "medianMs": 463
+          },
+          "es-en": {
+            "cases": 5,
+            "chrFpp": 95.16,
+            "medianMs": 343
+          },
+          "en-fr": {
+            "cases": 5,
+            "chrFpp": 63.28,
+            "medianMs": 492
+          },
+          "fr-en": {
+            "cases": 5,
+            "chrFpp": 89.27,
+            "medianMs": 333
+          },
+          "en-de": {
+            "cases": 5,
+            "chrFpp": 60.86,
+            "medianMs": 439
+          },
+          "de-en": {
+            "cases": 5,
+            "chrFpp": 90.15,
+            "medianMs": 327
+          },
+          "en-pt": {
+            "cases": 5,
+            "chrFpp": 76.04,
+            "medianMs": 463
+          },
+          "pt-en": {
+            "cases": 5,
+            "chrFpp": 88.23,
+            "medianMs": 348
+          },
+          "en-ru": {
+            "cases": 5,
+            "chrFpp": 74.99,
+            "medianMs": 606
+          },
+          "ru-en": {
+            "cases": 5,
+            "chrFpp": 85.61,
+            "medianMs": 373
+          },
+          "en-ar": {
+            "cases": 5,
+            "chrFpp": 41.91,
+            "medianMs": 428
+          },
+          "ar-en": {
+            "cases": 5,
+            "chrFpp": 77.32,
+            "medianMs": 366
+          },
+          "ja-zh": {
+            "cases": 2,
+            "chrFpp": 32.87,
+            "medianMs": 372
+          },
+          "ko-zh": {
+            "cases": 2,
+            "chrFpp": 27.26,
+            "medianMs": 320
+          }
+        }
+      },
+      "translations": [
+        {
+          "id": "en-zh-0",
+          "source": "en",
+          "target": "zh",
+          "input": "Please speak slowly.",
+          "reference": "请慢一点说。",
+          "category": "slow_speech",
+          "checks": {
+            "noLatinWords": true
+          },
+          "output": "请慢慢说。",
+          "ms": 243,
+          "referenceChrFpp": 18.44,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-zh-1",
+          "source": "en",
+          "target": "zh",
+          "input": "Please do not cancel my reservation.",
+          "reference": "请不要取消我的预订。",
+          "category": "negation",
+          "checks": {
+            "mustMatch": "不|别|勿",
+            "noLatinWords": true
+          },
+          "output": "请不要取消我的预订。",
+          "ms": 296,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-zh-2",
+          "source": "en",
+          "target": "zh",
+          "input": "The access code is 7890.",
+          "reference": "访问代码是7890。",
+          "category": "access_code",
+          "checks": {
+            "digits": [
+              "7890"
+            ],
+            "noLatinWords": true
+          },
+          "output": "访问码是7890。",
+          "ms": 361,
+          "referenceChrFpp": 55.4,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-zh-3",
+          "source": "en",
+          "target": "zh",
+          "input": "Where is the nearest train station?",
+          "reference": "最近的火车站在哪里？",
+          "category": "question",
+          "checks": {
+            "mustMatch": "哪|何处",
+            "noLatinWords": true
+          },
+          "output": "最近的火车站在哪里？",
+          "ms": 267,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-zh-4",
+          "source": "en",
+          "target": "zh",
+          "input": "The meeting was moved from Monday to Wednesday.",
+          "reference": "会议从星期一改到了星期三。",
+          "category": "reschedule",
+          "checks": {
+            "noLatinWords": true
+          },
+          "output": "会议从周一改为周三。",
+          "ms": 301,
+          "referenceChrFpp": 14.45,
+          "reviewFlags": []
+        },
+        {
+          "id": "zh-en-0",
+          "source": "zh",
+          "target": "en",
+          "input": "请慢一点说。",
+          "reference": "Please speak slowly.",
+          "category": "slow_speech",
+          "checks": {},
+          "output": "Speak more slowly.",
+          "ms": 245,
+          "referenceChrFpp": 41.12,
+          "reviewFlags": []
+        },
+        {
+          "id": "zh-en-1",
+          "source": "zh",
+          "target": "en",
+          "input": "请不要取消我的预订。",
+          "reference": "Please do not cancel my reservation.",
+          "category": "negation",
+          "checks": {
+            "mustMatch": "\\b(?:not|never|no)\\b|don't"
+          },
+          "output": "Do not cancel my reservation.",
+          "ms": 295,
+          "referenceChrFpp": 76.83,
+          "reviewFlags": []
+        },
+        {
+          "id": "zh-en-2",
+          "source": "zh",
+          "target": "en",
+          "input": "访问代码是7890。",
+          "reference": "The access code is 7890.",
+          "category": "access_code",
+          "checks": {
+            "digits": [
+              "7890"
+            ]
+          },
+          "output": "The code is 7890.",
+          "ms": 400,
+          "referenceChrFpp": 61.53,
+          "reviewFlags": []
+        },
+        {
+          "id": "zh-en-3",
+          "source": "zh",
+          "target": "en",
+          "input": "最近的火车站在哪里？",
+          "reference": "Where is the nearest train station?",
+          "category": "question",
+          "checks": {
+            "mustMatch": "\\bwhere\\b"
+          },
+          "output": "Where is the nearest train station?",
+          "ms": 332,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "zh-en-4",
+          "source": "zh",
+          "target": "en",
+          "input": "会议从星期一改到了星期三。",
+          "reference": "The meeting was moved from Monday to Wednesday.",
+          "category": "reschedule",
+          "checks": {},
+          "output": "The meeting was moved from Monday to Wednesday.",
+          "ms": 395,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-ja-0",
+          "source": "en",
+          "target": "ja",
+          "input": "Please speak slowly.",
+          "reference": "ゆっくり話してください。",
+          "category": "slow_speech",
+          "checks": {
+            "noLatinWords": true
+          },
+          "output": "ゆっくり話してください。",
+          "ms": 240,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-ja-1",
+          "source": "en",
+          "target": "ja",
+          "input": "Please do not cancel my reservation.",
+          "reference": "私の予約をキャンセルしないでください。",
+          "category": "negation",
+          "checks": {
+            "mustMatch": "ない|ません|ず",
+            "noLatinWords": true
+          },
+          "output": "私の予約をキャンセルしないでください。",
+          "ms": 426,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-ja-2",
+          "source": "en",
+          "target": "ja",
+          "input": "The access code is 7890.",
+          "reference": "アクセスコードは7890です。",
+          "category": "access_code",
+          "checks": {
+            "digits": [
+              "7890"
+            ],
+            "noLatinWords": true
+          },
+          "output": "アクセスコードは7890です。",
+          "ms": 391,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-ja-3",
+          "source": "en",
+          "target": "ja",
+          "input": "Where is the nearest train station?",
+          "reference": "最寄りの駅はどこですか？",
+          "category": "question",
+          "checks": {
+            "mustMatch": "どこ|何処",
+            "noLatinWords": true
+          },
+          "output": "最近の駅はどこですか？",
+          "ms": 360,
+          "referenceChrFpp": 60.2,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-ja-4",
+          "source": "en",
+          "target": "ja",
+          "input": "The meeting was moved from Monday to Wednesday.",
+          "reference": "会議は月曜日から水曜日に変更されました。",
+          "category": "reschedule",
+          "checks": {
+            "noLatinWords": true
+          },
+          "output": "会議は月曜日に移動しました。",
+          "ms": 422,
+          "referenceChrFpp": 28.12,
+          "reviewFlags": []
+        },
+        {
+          "id": "ja-en-0",
+          "source": "ja",
+          "target": "en",
+          "input": "ゆっくり話してください。",
+          "reference": "Please speak slowly.",
+          "category": "slow_speech",
+          "checks": {},
+          "output": "Please speak slowly.",
+          "ms": 239,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "ja-en-1",
+          "source": "ja",
+          "target": "en",
+          "input": "私の予約をキャンセルしないでください。",
+          "reference": "Please do not cancel my reservation.",
+          "category": "negation",
+          "checks": {
+            "mustMatch": "\\b(?:not|never|no)\\b|don't"
+          },
+          "output": "Please do not cancel my reservation.",
+          "ms": 321,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "ja-en-2",
+          "source": "ja",
+          "target": "en",
+          "input": "アクセスコードは7890です。",
+          "reference": "The access code is 7890.",
+          "category": "access_code",
+          "checks": {
+            "digits": [
+              "7890"
+            ]
+          },
+          "output": "The access code is 7890.",
+          "ms": 421,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "ja-en-3",
+          "source": "ja",
+          "target": "en",
+          "input": "最寄りの駅はどこですか？",
+          "reference": "Where is the nearest train station?",
+          "category": "question",
+          "checks": {
+            "mustMatch": "\\bwhere\\b"
+          },
+          "output": "What is the nearest station?",
+          "ms": 301,
+          "referenceChrFpp": 60.17,
+          "reviewFlags": [
+            "critical_concept_not_found"
+          ]
+        },
+        {
+          "id": "ja-en-4",
+          "source": "ja",
+          "target": "en",
+          "input": "会議は月曜日から水曜日に変更されました。",
+          "reference": "The meeting was moved from Monday to Wednesday.",
+          "category": "reschedule",
+          "checks": {},
+          "output": "The meeting was changed to Monday and Tuesday.",
+          "ms": 400,
+          "referenceChrFpp": 48.78,
+          "reviewFlags": [
+            "weekday_or_direction_requires_review"
+          ]
+        },
+        {
+          "id": "en-ko-0",
+          "source": "en",
+          "target": "ko",
+          "input": "Please speak slowly.",
+          "reference": "천천히 말씀해 주세요.",
+          "category": "slow_speech",
+          "checks": {
+            "noLatinWords": true
+          },
+          "output": "please speak slowly.",
+          "ms": 234,
+          "referenceChrFpp": 4.25,
+          "reviewFlags": [
+            "unexpected_latin_words"
+          ]
+        },
+        {
+          "id": "en-ko-1",
+          "source": "en",
+          "target": "ko",
+          "input": "Please do not cancel my reservation.",
+          "reference": "제 예약을 취소하지 말아 주세요.",
+          "category": "negation",
+          "checks": {
+            "mustMatch": "않|말|마세|취소하지",
+            "noLatinWords": true
+          },
+          "output": "내 예약을 취소하지 마세요.",
+          "ms": 423,
+          "referenceChrFpp": 44.2,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-ko-2",
+          "source": "en",
+          "target": "ko",
+          "input": "The access code is 7890.",
+          "reference": "접속 코드는 7890입니다.",
+          "category": "access_code",
+          "checks": {
+            "digits": [
+              "7890"
+            ],
+            "noLatinWords": true
+          },
+          "output": "접근 코드는 7890입니다.",
+          "ms": 475,
+          "referenceChrFpp": 78.99,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-ko-3",
+          "source": "en",
+          "target": "ko",
+          "input": "Where is the nearest train station?",
+          "reference": "가장 가까운 기차역은 어디인가요?",
+          "category": "question",
+          "checks": {
+            "mustMatch": "어디",
+            "noLatinWords": true
+          },
+          "output": "가까운 지하철 역은 어디에 위치하나요?",
+          "ms": 600,
+          "referenceChrFpp": 21.13,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-ko-4",
+          "source": "en",
+          "target": "ko",
+          "input": "The meeting was moved from Monday to Wednesday.",
+          "reference": "회의가 월요일에서 수요일로 변경되었습니다.",
+          "category": "reschedule",
+          "checks": {
+            "noLatinWords": true
+          },
+          "output": "회의는 월요일에서 수요일로 이동되었습니다.",
+          "ms": 602,
+          "referenceChrFpp": 54.35,
+          "reviewFlags": []
+        },
+        {
+          "id": "ko-en-0",
+          "source": "ko",
+          "target": "en",
+          "input": "천천히 말씀해 주세요.",
+          "reference": "Please speak slowly.",
+          "category": "slow_speech",
+          "checks": {},
+          "output": "Please speak slowly.",
+          "ms": 246,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "ko-en-1",
+          "source": "ko",
+          "target": "en",
+          "input": "제 예약을 취소하지 말아 주세요.",
+          "reference": "Please do not cancel my reservation.",
+          "category": "negation",
+          "checks": {
+            "mustMatch": "\\b(?:not|never|no)\\b|don't"
+          },
+          "output": "Don't cancel my reservation.",
+          "ms": 308,
+          "referenceChrFpp": 66.3,
+          "reviewFlags": []
+        },
+        {
+          "id": "ko-en-2",
+          "source": "ko",
+          "target": "en",
+          "input": "접속 코드는 7890입니다.",
+          "reference": "The access code is 7890.",
+          "category": "access_code",
+          "checks": {
+            "digits": [
+              "7890"
+            ]
+          },
+          "output": "The login code is 7890.",
+          "ms": 436,
+          "referenceChrFpp": 58.32,
+          "reviewFlags": []
+        },
+        {
+          "id": "ko-en-3",
+          "source": "ko",
+          "target": "en",
+          "input": "가장 가까운 기차역은 어디인가요?",
+          "reference": "Where is the nearest train station?",
+          "category": "question",
+          "checks": {
+            "mustMatch": "\\bwhere\\b"
+          },
+          "output": "Where is the nearest train station?",
+          "ms": 346,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "ko-en-4",
+          "source": "ko",
+          "target": "en",
+          "input": "회의가 월요일에서 수요일로 변경되었습니다.",
+          "reference": "The meeting was moved from Monday to Wednesday.",
+          "category": "reschedule",
+          "checks": {},
+          "output": "The meeting was changed to Monday from Wednesday.",
+          "ms": 411,
+          "referenceChrFpp": 63.02,
+          "reviewFlags": [
+            "weekday_or_direction_requires_review"
+          ]
+        },
+        {
+          "id": "en-es-0",
+          "source": "en",
+          "target": "es",
+          "input": "Please speak slowly.",
+          "reference": "Por favor, habla despacio.",
+          "category": "slow_speech",
+          "checks": {},
+          "output": "Por favor, habla despacio.",
+          "ms": 373,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-es-1",
+          "source": "en",
+          "target": "es",
+          "input": "Please do not cancel my reservation.",
+          "reference": "Por favor, no canceles mi reserva.",
+          "category": "negation",
+          "checks": {
+            "mustMatch": "\\bno\\b"
+          },
+          "output": "No cancele mi reserva.",
+          "ms": 338,
+          "referenceChrFpp": 48.24,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-es-2",
+          "source": "en",
+          "target": "es",
+          "input": "The access code is 7890.",
+          "reference": "El código de acceso es 7890.",
+          "category": "access_code",
+          "checks": {
+            "digits": [
+              "7890"
+            ]
+          },
+          "output": "El código de acceso es 7890.",
+          "ms": 463,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-es-3",
+          "source": "en",
+          "target": "es",
+          "input": "Where is the nearest train station?",
+          "reference": "¿Dónde está la estación de tren más cercana?",
+          "category": "question",
+          "checks": {
+            "mustMatch": "d[oó]nde"
+          },
+          "output": "¿Dónde está la estación de tren más cercana?",
+          "ms": 559,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-es-4",
+          "source": "en",
+          "target": "es",
+          "input": "The meeting was moved from Monday to Wednesday.",
+          "reference": "La reunión se cambió del lunes al miércoles.",
+          "category": "reschedule",
+          "checks": {},
+          "output": "La reunión fue movida de lunes a miércoles.",
+          "ms": 558,
+          "referenceChrFpp": 51.32,
+          "reviewFlags": []
+        },
+        {
+          "id": "es-en-0",
+          "source": "es",
+          "target": "en",
+          "input": "Por favor, habla despacio.",
+          "reference": "Please speak slowly.",
+          "category": "slow_speech",
+          "checks": {},
+          "output": "Please speak slowly.",
+          "ms": 244,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "es-en-1",
+          "source": "es",
+          "target": "en",
+          "input": "Por favor, no canceles mi reserva.",
+          "reference": "Please do not cancel my reservation.",
+          "category": "negation",
+          "checks": {
+            "mustMatch": "\\b(?:not|never|no)\\b|don't"
+          },
+          "output": "Please do not cancel my reservation.",
+          "ms": 341,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "es-en-2",
+          "source": "es",
+          "target": "en",
+          "input": "El código de acceso es 7890.",
+          "reference": "The access code is 7890.",
+          "category": "access_code",
+          "checks": {
+            "digits": [
+              "7890"
+            ]
+          },
+          "output": "The access code is 7890.",
+          "ms": 425,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "es-en-3",
+          "source": "es",
+          "target": "en",
+          "input": "¿Dónde está la estación de tren más cercana?",
+          "reference": "Where is the nearest train station?",
+          "category": "question",
+          "checks": {
+            "mustMatch": "\\bwhere\\b"
+          },
+          "output": "Where is the nearest train station?",
+          "ms": 343,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "es-en-4",
+          "source": "es",
+          "target": "en",
+          "input": "La reunión se cambió del lunes al miércoles.",
+          "reference": "The meeting was moved from Monday to Wednesday.",
+          "category": "reschedule",
+          "checks": {},
+          "output": "The meeting was changed from Monday to Wednesday.",
+          "ms": 411,
+          "referenceChrFpp": 83.64,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-fr-0",
+          "source": "en",
+          "target": "fr",
+          "input": "Please speak slowly.",
+          "reference": "Parlez lentement, s’il vous plaît.",
+          "category": "slow_speech",
+          "checks": {},
+          "output": "Parle lentement.",
+          "ms": 276,
+          "referenceChrFpp": 31.94,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-fr-1",
+          "source": "en",
+          "target": "fr",
+          "input": "Please do not cancel my reservation.",
+          "reference": "Veuillez ne pas annuler ma réservation.",
+          "category": "negation",
+          "checks": {
+            "mustMatch": "\\b(?:ne|pas)\\b"
+          },
+          "output": "Ne me cancelez pas ma réservation.",
+          "ms": 434,
+          "referenceChrFpp": 46.4,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-fr-2",
+          "source": "en",
+          "target": "fr",
+          "input": "The access code is 7890.",
+          "reference": "Le code d’accès est 7890.",
+          "category": "access_code",
+          "checks": {
+            "digits": [
+              "7890"
+            ]
+          },
+          "output": "Le code d'accès est 7890.",
+          "ms": 492,
+          "referenceChrFpp": 77.96,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-fr-3",
+          "source": "en",
+          "target": "fr",
+          "input": "Where is the nearest train station?",
+          "reference": "Où est la gare la plus proche ?",
+          "category": "question",
+          "checks": {
+            "mustMatch": "où"
+          },
+          "output": "Où est la gare de train la plus proche ?",
+          "ms": 520,
+          "referenceChrFpp": 83.79,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-fr-4",
+          "source": "en",
+          "target": "fr",
+          "input": "The meeting was moved from Monday to Wednesday.",
+          "reference": "La réunion a été déplacée de lundi à mercredi.",
+          "category": "reschedule",
+          "checks": {},
+          "output": "La réunion a été déplacée du lundi vers le mercredi.",
+          "ms": 686,
+          "referenceChrFpp": 75.12,
+          "reviewFlags": []
+        },
+        {
+          "id": "fr-en-0",
+          "source": "fr",
+          "target": "en",
+          "input": "Parlez lentement, s’il vous plaît.",
+          "reference": "Please speak slowly.",
+          "category": "slow_speech",
+          "checks": {},
+          "output": "Speak slowly, please.",
+          "ms": 282,
+          "referenceChrFpp": 53.2,
+          "reviewFlags": []
+        },
+        {
+          "id": "fr-en-1",
+          "source": "fr",
+          "target": "en",
+          "input": "Veuillez ne pas annuler ma réservation.",
+          "reference": "Please do not cancel my reservation.",
+          "category": "negation",
+          "checks": {
+            "mustMatch": "\\b(?:not|never|no)\\b|don't"
+          },
+          "output": "Please do not cancel my reservation.",
+          "ms": 333,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "fr-en-2",
+          "source": "fr",
+          "target": "en",
+          "input": "Le code d’accès est 7890.",
+          "reference": "The access code is 7890.",
+          "category": "access_code",
+          "checks": {
+            "digits": [
+              "7890"
+            ]
+          },
+          "output": "The access code is 7890.",
+          "ms": 438,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "fr-en-3",
+          "source": "fr",
+          "target": "en",
+          "input": "Où est la gare la plus proche ?",
+          "reference": "Where is the nearest train station?",
+          "category": "question",
+          "checks": {
+            "mustMatch": "\\bwhere\\b"
+          },
+          "output": "Where is the nearest station?",
+          "ms": 309,
+          "referenceChrFpp": 75.87,
+          "reviewFlags": []
+        },
+        {
+          "id": "fr-en-4",
+          "source": "fr",
+          "target": "en",
+          "input": "La réunion a été déplacée de lundi à mercredi.",
+          "reference": "The meeting was moved from Monday to Wednesday.",
+          "category": "reschedule",
+          "checks": {},
+          "output": "The meeting was moved from Monday to Wednesday.",
+          "ms": 405,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-de-0",
+          "source": "en",
+          "target": "de",
+          "input": "Please speak slowly.",
+          "reference": "Bitte sprechen Sie langsam.",
+          "category": "slow_speech",
+          "checks": {},
+          "output": "Spreche langsam.",
+          "ms": 312,
+          "referenceChrFpp": 46.15,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-de-1",
+          "source": "en",
+          "target": "de",
+          "input": "Please do not cancel my reservation.",
+          "reference": "Bitte stornieren Sie meine Reservierung nicht.",
+          "category": "negation",
+          "checks": {
+            "mustMatch": "\\bnicht\\b"
+          },
+          "output": "Bitte nicht meine Reservierung abwenden.",
+          "ms": 439,
+          "referenceChrFpp": 51.84,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-de-2",
+          "source": "en",
+          "target": "de",
+          "input": "The access code is 7890.",
+          "reference": "Der Zugangscode lautet 7890.",
+          "category": "access_code",
+          "checks": {
+            "digits": [
+              "7890"
+            ]
+          },
+          "output": "Der Zugangscode ist 7890.",
+          "ms": 460,
+          "referenceChrFpp": 67.05,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-de-3",
+          "source": "en",
+          "target": "de",
+          "input": "Where is the nearest train station?",
+          "reference": "Wo ist der nächste Bahnhof?",
+          "category": "question",
+          "checks": {
+            "mustMatch": "\\bwo\\b"
+          },
+          "output": "Wo ist der nächsten Bahnhof?",
+          "ms": 369,
+          "referenceChrFpp": 82.56,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-de-4",
+          "source": "en",
+          "target": "de",
+          "input": "The meeting was moved from Monday to Wednesday.",
+          "reference": "Das Treffen wurde von Montag auf Mittwoch verschoben.",
+          "category": "reschedule",
+          "checks": {},
+          "output": "Die Versammlung wurde vom Montag auf den Mittwoch verschoben.",
+          "ms": 681,
+          "referenceChrFpp": 61.05,
+          "reviewFlags": []
+        },
+        {
+          "id": "de-en-0",
+          "source": "de",
+          "target": "en",
+          "input": "Bitte sprechen Sie langsam.",
+          "reference": "Please speak slowly.",
+          "category": "slow_speech",
+          "checks": {},
+          "output": "Please speak slowly.",
+          "ms": 237,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "de-en-1",
+          "source": "de",
+          "target": "en",
+          "input": "Bitte stornieren Sie meine Reservierung nicht.",
+          "reference": "Please do not cancel my reservation.",
+          "category": "negation",
+          "checks": {
+            "mustMatch": "\\b(?:not|never|no)\\b|don't"
+          },
+          "output": "Please do not cancel my reservation.",
+          "ms": 322,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "de-en-2",
+          "source": "de",
+          "target": "en",
+          "input": "Der Zugangscode lautet 7890.",
+          "reference": "The access code is 7890.",
+          "category": "access_code",
+          "checks": {
+            "digits": [
+              "7890"
+            ]
+          },
+          "output": "The access code is 7890.",
+          "ms": 420,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "de-en-3",
+          "source": "de",
+          "target": "en",
+          "input": "Wo ist der nächste Bahnhof?",
+          "reference": "Where is the nearest train station?",
+          "category": "question",
+          "checks": {
+            "mustMatch": "\\bwhere\\b"
+          },
+          "output": "Where is the next train station?",
+          "ms": 327,
+          "referenceChrFpp": 77.26,
+          "reviewFlags": [
+            "proximity_requires_review"
+          ]
+        },
+        {
+          "id": "de-en-4",
+          "source": "de",
+          "target": "en",
+          "input": "Das Treffen wurde von Montag auf Mittwoch verschoben.",
+          "reference": "The meeting was moved from Monday to Wednesday.",
+          "category": "reschedule",
+          "checks": {},
+          "output": "The meeting was postponed from Monday to Wednesday.",
+          "ms": 401,
+          "referenceChrFpp": 83.31,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-pt-0",
+          "source": "en",
+          "target": "pt",
+          "input": "Please speak slowly.",
+          "reference": "Por favor, fale devagar.",
+          "category": "slow_speech",
+          "checks": {},
+          "output": "Por favor, fale devagar.",
+          "ms": 373,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-pt-1",
+          "source": "en",
+          "target": "pt",
+          "input": "Please do not cancel my reservation.",
+          "reference": "Por favor, não cancele a minha reserva.",
+          "category": "negation",
+          "checks": {
+            "mustMatch": "\\bnão\\b"
+          },
+          "output": "Não cancele minha reserva.",
+          "ms": 303,
+          "referenceChrFpp": 53.98,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-pt-2",
+          "source": "en",
+          "target": "pt",
+          "input": "The access code is 7890.",
+          "reference": "O código de acesso é 7890.",
+          "category": "access_code",
+          "checks": {
+            "digits": [
+              "7890"
+            ]
+          },
+          "output": "O código de acesso é 7890.",
+          "ms": 463,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-pt-3",
+          "source": "en",
+          "target": "pt",
+          "input": "Where is the nearest train station?",
+          "reference": "Onde fica a estação de trem mais próxima?",
+          "category": "question",
+          "checks": {
+            "mustMatch": "onde"
+          },
+          "output": "Onde está a estação de trem mais próxima?",
+          "ms": 464,
+          "referenceChrFpp": 80.17,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-pt-4",
+          "source": "en",
+          "target": "pt",
+          "input": "The meeting was moved from Monday to Wednesday.",
+          "reference": "A reunião foi transferida de segunda-feira para quarta-feira.",
+          "category": "reschedule",
+          "checks": {},
+          "output": "A reunião foi movida de segunda-feira para terça-feira.",
+          "ms": 593,
+          "referenceChrFpp": 66.7,
+          "reviewFlags": []
+        },
+        {
+          "id": "pt-en-0",
+          "source": "pt",
+          "target": "en",
+          "input": "Por favor, fale devagar.",
+          "reference": "Please speak slowly.",
+          "category": "slow_speech",
+          "checks": {},
+          "output": "Please speak slowly.",
+          "ms": 231,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "pt-en-1",
+          "source": "pt",
+          "target": "en",
+          "input": "Por favor, não cancele a minha reserva.",
+          "reference": "Please do not cancel my reservation.",
+          "category": "negation",
+          "checks": {
+            "mustMatch": "\\b(?:not|never|no)\\b|don't"
+          },
+          "output": "Please do not cancel my reservation.",
+          "ms": 317,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "pt-en-2",
+          "source": "pt",
+          "target": "en",
+          "input": "O código de acesso é 7890.",
+          "reference": "The access code is 7890.",
+          "category": "access_code",
+          "checks": {
+            "digits": [
+              "7890"
+            ]
+          },
+          "output": "The access code is 7890.",
+          "ms": 411,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "pt-en-3",
+          "source": "pt",
+          "target": "en",
+          "input": "Onde fica a estação de trem mais próxima?",
+          "reference": "Where is the nearest train station?",
+          "category": "question",
+          "checks": {
+            "mustMatch": "\\bwhere\\b"
+          },
+          "output": "Where is the nearest train station located?",
+          "ms": 348,
+          "referenceChrFpp": 91.41,
+          "reviewFlags": []
+        },
+        {
+          "id": "pt-en-4",
+          "source": "pt",
+          "target": "en",
+          "input": "A reunião foi transferida de segunda-feira para quarta-feira.",
+          "reference": "The meeting was moved from Monday to Wednesday.",
+          "category": "reschedule",
+          "checks": {},
+          "output": "The meeting was moved from Tuesday to Thursday.",
+          "ms": 392,
+          "referenceChrFpp": 66.25,
+          "reviewFlags": [
+            "weekday_or_direction_requires_review"
+          ]
+        },
+        {
+          "id": "en-ru-0",
+          "source": "en",
+          "target": "ru",
+          "input": "Please speak slowly.",
+          "reference": "Пожалуйста, говорите медленно.",
+          "category": "slow_speech",
+          "checks": {
+            "noLatinWords": true
+          },
+          "output": "Пожалуйста, говорите медленно.",
+          "ms": 491,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-ru-1",
+          "source": "en",
+          "target": "ru",
+          "input": "Please do not cancel my reservation.",
+          "reference": "Пожалуйста, не отменяйте мою бронь.",
+          "category": "negation",
+          "checks": {
+            "mustMatch": "\\bне\\b",
+            "noLatinWords": true
+          },
+          "output": "Пожалуйста, не отменяйте мою регистрацию.",
+          "ms": 606,
+          "referenceChrFpp": 76.67,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-ru-2",
+          "source": "en",
+          "target": "ru",
+          "input": "The access code is 7890.",
+          "reference": "Код доступа — 7890.",
+          "category": "access_code",
+          "checks": {
+            "digits": [
+              "7890"
+            ],
+            "noLatinWords": true
+          },
+          "output": "Код доступа 7890.",
+          "ms": 422,
+          "referenceChrFpp": 71.86,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-ru-3",
+          "source": "en",
+          "target": "ru",
+          "input": "Where is the nearest train station?",
+          "reference": "Где находится ближайший железнодорожный вокзал?",
+          "category": "question",
+          "checks": {
+            "mustMatch": "где",
+            "noLatinWords": true
+          },
+          "output": "Где находится ближайший железнодорожный станцион?",
+          "ms": 652,
+          "referenceChrFpp": 80.19,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-ru-4",
+          "source": "en",
+          "target": "ru",
+          "input": "The meeting was moved from Monday to Wednesday.",
+          "reference": "Встречу перенесли с понедельника на среду.",
+          "category": "reschedule",
+          "checks": {
+            "noLatinWords": true
+          },
+          "output": "Согласно данным, встреча была перенесена из-за того, что она была перенесена с понедельника на среду.",
+          "ms": 1157,
+          "referenceChrFpp": 56.17,
+          "reviewFlags": []
+        },
+        {
+          "id": "ru-en-0",
+          "source": "ru",
+          "target": "en",
+          "input": "Пожалуйста, говорите медленно.",
+          "reference": "Please speak slowly.",
+          "category": "slow_speech",
+          "checks": {},
+          "output": "Please speak slowly.",
+          "ms": 244,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "ru-en-1",
+          "source": "ru",
+          "target": "en",
+          "input": "Пожалуйста, не отменяйте мою бронь.",
+          "reference": "Please do not cancel my reservation.",
+          "category": "negation",
+          "checks": {
+            "mustMatch": "\\b(?:not|never|no)\\b|don't"
+          },
+          "output": "Please do not cancel my reservation.",
+          "ms": 330,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "ru-en-2",
+          "source": "ru",
+          "target": "en",
+          "input": "Код доступа — 7890.",
+          "reference": "The access code is 7890.",
+          "category": "access_code",
+          "checks": {
+            "digits": [
+              "7890"
+            ]
+          },
+          "output": "Access code - 7890.",
+          "ms": 398,
+          "referenceChrFpp": 48.33,
+          "reviewFlags": []
+        },
+        {
+          "id": "ru-en-3",
+          "source": "ru",
+          "target": "en",
+          "input": "Где находится ближайший железнодорожный вокзал?",
+          "reference": "Where is the nearest train station?",
+          "category": "question",
+          "checks": {
+            "mustMatch": "\\bwhere\\b"
+          },
+          "output": "Where is the nearest railway station located?",
+          "ms": 373,
+          "referenceChrFpp": 69.26,
+          "reviewFlags": []
+        },
+        {
+          "id": "ru-en-4",
+          "source": "ru",
+          "target": "en",
+          "input": "Встречу перенесли с понедельника на среду.",
+          "reference": "The meeting was moved from Monday to Wednesday.",
+          "category": "reschedule",
+          "checks": {},
+          "output": "The meeting was moved from Monday to Wednesday.",
+          "ms": 408,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-ar-0",
+          "source": "en",
+          "target": "ar",
+          "input": "Please speak slowly.",
+          "reference": "يرجى التحدث ببطء.",
+          "category": "slow_speech",
+          "checks": {
+            "noLatinWords": true
+          },
+          "output": "لا تسرع.",
+          "ms": 262,
+          "referenceChrFpp": 8.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-ar-1",
+          "source": "en",
+          "target": "ar",
+          "input": "Please do not cancel my reservation.",
+          "reference": "يرجى عدم إلغاء حجزي.",
+          "category": "negation",
+          "checks": {
+            "mustMatch": "لا |عدم|ليس|لم |لن ",
+            "noLatinWords": true
+          },
+          "output": "لا تقم بإلغاء حجزي.",
+          "ms": 447,
+          "referenceChrFpp": 47.69,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-ar-2",
+          "source": "en",
+          "target": "ar",
+          "input": "The access code is 7890.",
+          "reference": "رمز الدخول هو 7890.",
+          "category": "access_code",
+          "checks": {
+            "digits": [
+              "7890"
+            ],
+            "noLatinWords": true
+          },
+          "output": "الرمز الوصول هو 7890.",
+          "ms": 414,
+          "referenceChrFpp": 60.77,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-ar-3",
+          "source": "en",
+          "target": "ar",
+          "input": "Where is the nearest train station?",
+          "reference": "أين تقع أقرب محطة قطار؟",
+          "category": "question",
+          "checks": {
+            "mustMatch": "أين",
+            "noLatinWords": true
+          },
+          "output": "أين هي محطة القطار الأقرب؟",
+          "ms": 428,
+          "referenceChrFpp": 29.84,
+          "reviewFlags": []
+        },
+        {
+          "id": "en-ar-4",
+          "source": "en",
+          "target": "ar",
+          "input": "The meeting was moved from Monday to Wednesday.",
+          "reference": "تم نقل الاجتماع من يوم الاثنين إلى يوم الأربعاء.",
+          "category": "reschedule",
+          "checks": {
+            "noLatinWords": true
+          },
+          "output": "الاجتماع تم تغيير مواعيده من يوم الأحد إلى يوم الثلاثاء.",
+          "ms": 655,
+          "referenceChrFpp": 48.25,
+          "reviewFlags": []
+        },
+        {
+          "id": "ar-en-0",
+          "source": "ar",
+          "target": "en",
+          "input": "يرجى التحدث ببطء.",
+          "reference": "Please speak slowly.",
+          "category": "slow_speech",
+          "checks": {},
+          "output": "Please speak slowly.",
+          "ms": 240,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "ar-en-1",
+          "source": "ar",
+          "target": "en",
+          "input": "يرجى عدم إلغاء حجزي.",
+          "reference": "Please do not cancel my reservation.",
+          "category": "negation",
+          "checks": {
+            "mustMatch": "\\b(?:not|never|no)\\b|don't"
+          },
+          "output": "Please do not cancel my reservation.",
+          "ms": 334,
+          "referenceChrFpp": 100.0,
+          "reviewFlags": []
+        },
+        {
+          "id": "ar-en-2",
+          "source": "ar",
+          "target": "en",
+          "input": "رمز الدخول هو 7890.",
+          "reference": "The access code is 7890.",
+          "category": "access_code",
+          "checks": {
+            "digits": [
+              "7890"
+            ]
+          },
+          "output": "The login code is 7890.",
+          "ms": 429,
+          "referenceChrFpp": 58.32,
+          "reviewFlags": []
+        },
+        {
+          "id": "ar-en-3",
+          "source": "ar",
+          "target": "en",
+          "input": "أين تقع أقرب محطة قطار؟",
+          "reference": "Where is the nearest train station?",
+          "category": "question",
+          "checks": {
+            "mustMatch": "\\bwhere\\b"
+          },
+          "output": "Where is the closest train station located?",
+          "ms": 366,
+          "referenceChrFpp": 69.24,
+          "reviewFlags": []
+        },
+        {
+          "id": "ar-en-4",
+          "source": "ar",
+          "target": "en",
+          "input": "تم نقل الاجتماع من يوم الاثنين إلى يوم الأربعاء.",
+          "reference": "The meeting was moved from Monday to Wednesday.",
+          "category": "reschedule",
+          "checks": {},
+          "output": "The meeting was moved from Tuesday to Thursday.",
+          "ms": 398,
+          "referenceChrFpp": 66.25,
+          "reviewFlags": [
+            "weekday_or_direction_requires_review"
+          ]
+        },
+        {
+          "id": "direct-ja-90",
+          "source": "ja",
+          "target": "zh",
+          "input": "明日の会議は中止ではなく、午後3時に延期されました。",
+          "reference": "明天的会议没有取消，而是推迟到了下午3点。",
+          "category": "direct_no_bridge",
+          "checks": {
+            "mustMatch": "不|没|未|勿",
+            "noLatinWords": true
+          },
+          "output": "明天的会议取消，推迟到下午3点。",
+          "ms": 472,
+          "referenceChrFpp": 31.95,
+          "reviewFlags": [
+            "critical_concept_not_found"
+          ]
+        },
+        {
+          "id": "direct-ja-91",
+          "source": "ja",
+          "target": "zh",
+          "input": "予約をキャンセルしないでください。",
+          "reference": "请不要取消预订。",
+          "category": "direct_no_bridge",
+          "checks": {
+            "mustMatch": "不|没|未|勿",
+            "noLatinWords": true
+          },
+          "output": "请勿取消预订。",
+          "ms": 272,
+          "referenceChrFpp": 36.51,
+          "reviewFlags": []
+        },
+        {
+          "id": "direct-ko-92",
+          "source": "ko",
+          "target": "zh",
+          "input": "내일 회의는 취소된 것이 아니라 오후 3시로 연기되었습니다.",
+          "reference": "明天的会议没有取消，而是推迟到了下午3点。",
+          "category": "direct_no_bridge",
+          "checks": {
+            "mustMatch": "不|没|未|勿",
+            "noLatinWords": true
+          },
+          "output": "明天的会议改为下午3点。",
+          "ms": 371,
+          "referenceChrFpp": 24.12,
+          "reviewFlags": [
+            "critical_concept_not_found"
+          ]
+        },
+        {
+          "id": "direct-ko-93",
+          "source": "ko",
+          "target": "zh",
+          "input": "예약을 취소하지 말아 주세요.",
+          "reference": "请不要取消预订。",
+          "category": "direct_no_bridge",
+          "checks": {
+            "mustMatch": "不|没|未|勿",
+            "noLatinWords": true
+          },
+          "output": "请勿取消预订。",
+          "ms": 269,
+          "referenceChrFpp": 36.51,
+          "reviewFlags": []
+        }
+      ]
+    }
+  ]
+}

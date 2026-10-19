@@ -1,0 +1,30 @@
+{
+  "id": "gemma4-e2b-npu",
+  "chipset": "Tensor_G5",
+  "runtime": "litert-lm",
+  "entryFile": "model.litertlm",
+  "source": "https://huggingface.co/litert-community/gemma-4-E2B-it-litert-lm/tree/b3ca0d2f076785a8f4b2219ddbd2bdb99954eae1",
+  "revision": "b3ca0d2f076785a8f4b2219ddbd2bdb99954eae1",
+  "files": [
+    {
+      "name": "model.litertlm",
+      "size": 3113545589,
+      "sha256": "af1082986639ecde7db95d91be6fe54f8b6b458104734c5bafc204e69d6852dc"
+    }
+  ],
+  "download": {
+    "format": "raw",
+    "size": 3113545589,
+    "sha256": "af1082986639ecde7db95d91be6fe54f8b6b458104734c5bafc204e69d6852dc",
+    "urls": [
+      {
+        "name": "Hugging Face",
+        "url": "https://huggingface.co/litert-community/gemma-4-E2B-it-litert-lm/resolve/b3ca0d2f076785a8f4b2219ddbd2bdb99954eae1/gemma-4-E2B-it_Google_Tensor_G5.litertlm"
+      },
+      {
+        "name": "HF mirror · hf-mirror.com",
+        "url": "https://hf-mirror.com/litert-community/gemma-4-E2B-it-litert-lm/resolve/b3ca0d2f076785a8f4b2219ddbd2bdb99954eae1/gemma-4-E2B-it_Google_Tensor_G5.litertlm"
+      }
+    ]
+  }
+}

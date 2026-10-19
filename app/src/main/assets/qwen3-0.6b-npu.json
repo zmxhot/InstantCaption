@@ -1,0 +1,69 @@
+{
+  "id": "qwen3-0.6b-npu",
+  "label": "Qwen3-0.6B",
+  "precision": "W4A16",
+  "chipset": "SM8750",
+  "qairt": "2.45",
+  "download": {
+    "size": 641191333,
+    "sha256": "2a1c552799ade9bbb8fec7ba6fb24215a08cebf214d32a6be4d74b511a5be309",
+    "format": "zip",
+    "urls": [
+      {
+        "name": "Qualcomm / AWS US West",
+        "url": "https://qaihub-public-assets.s3.us-west-2.amazonaws.com/qai-hub-models/models/qwen3_0_6b/releases/v0.64.0/qwen3_0_6b-geniex_qairt-w4a16-qualcomm_snapdragon_8_elite_for_galaxy.zip"
+      },
+      {
+        "name": "Qualcomm / AWS global",
+        "url": "https://qaihub-public-assets.s3.amazonaws.com/qai-hub-models/models/qwen3_0_6b/releases/v0.64.0/qwen3_0_6b-geniex_qairt-w4a16-qualcomm_snapdragon_8_elite_for_galaxy.zip"
+      }
+    ]
+  },
+  "files": [
+    {
+      "name": "htp_backend_ext_config.json",
+      "size": 217,
+      "sha256": "09d3b915c784116f96fa4d612d8c1f2fac0e32952e5eb2f1a8f79bf48a9cda94"
+    },
+    {
+      "name": "metadata.json",
+      "size": 52329,
+      "sha256": "8f5f87db74da388203fe3476510ade1134d050912399df30dacda60824d78284"
+    },
+    {
+      "name": "genie_config.json",
+      "size": 1513,
+      "sha256": "46984adf3bb9d7febd6d6217a44297975704ba61c20ed1be953cca45e51a61fd"
+    },
+    {
+      "name": "part2_of_2.bin",
+      "size": 436453376,
+      "sha256": "65b3350820df88eca09b26174a20801721e24b93e5712c9bdc0ac3cc268361f6"
+    },
+    {
+      "name": "sample_prompt.txt",
+      "size": 179,
+      "sha256": "bcba092776d028282fad37d8778d128834a309691f8118c08a762ccd0c4f54ac"
+    },
+    {
+      "name": "tokenizer.json",
+      "size": 11422650,
+      "sha256": "be75606093db2094d7cd20f3c2f385c212750648bd6ea4fb2bf507a6a4c55506"
+    },
+    {
+      "name": "config.json",
+      "size": 1417,
+      "sha256": "1d0b3a8acb0234dcae6781dc67b49020153d3a5beaf5861b4d48d88a73a51239"
+    },
+    {
+      "name": "part1_of_2.bin",
+      "size": 311324672,
+      "sha256": "2728332c94e5fbb6bf8589ae35edc55e68de2a4a827ec7074afb6cff6959dd03"
+    },
+    {
+      "name": "tokenizer_config.json",
+      "size": 5067,
+      "sha256": "9b301a839b6dc74e9cdce131a46482c4975831feb43449514c020505e0dbf290"
+    }
+  ]
+}

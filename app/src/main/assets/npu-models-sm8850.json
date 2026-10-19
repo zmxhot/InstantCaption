@@ -1,0 +1,168 @@
+{
+  "zipformer": {
+    "directory": "qnn-zipformer-sm8850-32",
+    "files": [
+      {
+        "name": "encoder.bin",
+        "size": 150999040,
+        "sha256": "2e56b22dc5641c13464937aae3429f523a465785c388c29181ccdc974025926c"
+      },
+      {
+        "name": "joiner.bin",
+        "size": 6533120,
+        "sha256": "9bb231f944832e9cbe285a2ac3d65dc0f84d25e2a62102ed020759475feac783"
+      },
+      {
+        "name": "tokens.txt",
+        "size": 56317,
+        "sha256": "a8e0e4ec53810e433789b54a5c0134a7eaa2ffca595a6334d54c00da858841d3"
+      },
+      {
+        "name": "decoder.bin",
+        "size": 7053312,
+        "sha256": "180db5053597015c5208d375fa1ad0e2dbaf248afa6d47e78e1b6aa8a0a9712f"
+      }
+    ],
+    "download": {
+      "format": "tar.bz2",
+      "size": 128191590,
+      "sha256": "e7b0b1d738719f1e655012bf5004c4966a77179a60d326a1f7e3ccfbfaf67eb8",
+      "urls": [
+        {
+          "name": "GitHub",
+          "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models-qnn-binary/sherpa-onnx-qnn-SM8850-binary-streaming-zipformer-transducer-zh-en-2023-03-20-chunk-size-32.tar.bz2"
+        },
+        {
+          "name": "GitHub mirror \u00b7 gh-proxy.org",
+          "url": "https://gh-proxy.org/https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models-qnn-binary/sherpa-onnx-qnn-SM8850-binary-streaming-zipformer-transducer-zh-en-2023-03-20-chunk-size-32.tar.bz2"
+        },
+        {
+          "name": "GitHub mirror \u00b7 ghfast.top",
+          "url": "https://ghfast.top/https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models-qnn-binary/sherpa-onnx-qnn-SM8850-binary-streaming-zipformer-transducer-zh-en-2023-03-20-chunk-size-32.tar.bz2"
+        }
+      ]
+    },
+    "chipset": "SM8850"
+  },
+  "sensevoice": {
+    "directory": "qnn-sensevoice-sm8850-5s",
+    "files": [
+      {
+        "name": "model.bin",
+        "size": 252801024,
+        "sha256": "dcd9b963f49235c9c4e8ae3adce265c69332e96a4d6fb02518b61695005c30e9"
+      },
+      {
+        "name": "tokens.txt",
+        "size": 315894,
+        "sha256": "f449eb28dc567533d7fa59be34e2abca8784f771850c78a47fb731a31429a1dc"
+      }
+    ],
+    "download": {
+      "format": "tar.bz2",
+      "size": 161415542,
+      "sha256": "39523cd5139e6105206901c78ec3f74598da523fe6e9731b87261591d4a27c12",
+      "urls": [
+        {
+          "name": "GitHub",
+          "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models-qnn-binary/sherpa-onnx-qnn-SM8850-binary-5-seconds-sense-voice-zh-en-ja-ko-yue-2024-07-17-int8.tar.bz2"
+        },
+        {
+          "name": "GitHub mirror \u00b7 gh-proxy.org",
+          "url": "https://gh-proxy.org/https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models-qnn-binary/sherpa-onnx-qnn-SM8850-binary-5-seconds-sense-voice-zh-en-ja-ko-yue-2024-07-17-int8.tar.bz2"
+        },
+        {
+          "name": "GitHub mirror \u00b7 ghfast.top",
+          "url": "https://ghfast.top/https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models-qnn-binary/sherpa-onnx-qnn-SM8850-binary-5-seconds-sense-voice-zh-en-ja-ko-yue-2024-07-17-int8.tar.bz2"
+        }
+      ]
+    },
+    "chipset": "SM8850"
+  },
+  "x-asr": {
+    "directory": "qnn-x-asr-sm8850-480ms",
+    "files": [
+      {
+        "name": "joiner.bin",
+        "size": 5238784,
+        "sha256": "fc73d24fd2c36d794c246bb510b2cb1c0bbdf51c520d498dd6ac358da05c4d37"
+      },
+      {
+        "name": "encoder.bin",
+        "size": 326111232,
+        "sha256": "d71728acda8f4862bf39738beb149028e3f2eb715f25ca2a92ff04940cbdbded"
+      },
+      {
+        "name": "decoder.bin",
+        "size": 5767168,
+        "sha256": "bdbabf61beae4e15091c0fcf8bdda33faf04d4ba5df08a3f79e9d91a76f0af83"
+      },
+      {
+        "name": "tokens.txt",
+        "size": 58806,
+        "sha256": "b818a60878b9aae978cbb8ad594acbd403d76d1af2e31ef4197c84e2dbdba27c"
+      }
+    ],
+    "download": {
+      "format": "tar.bz2",
+      "size": 277375822,
+      "sha256": "24c2766974687a2331986573a6238d957a597822e49d3c497fe256262e0191c0",
+      "urls": [
+        {
+          "name": "GitHub",
+          "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models-qnn-binary/sherpa-onnx-qnn-SM8850-binary-x-asr-streaming-zipformer-transducer-zh-en-punct-2026-06-05-chunk-size-480ms.tar.bz2"
+        },
+        {
+          "name": "GitHub mirror \u00b7 gh-proxy.org",
+          "url": "https://gh-proxy.org/https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models-qnn-binary/sherpa-onnx-qnn-SM8850-binary-x-asr-streaming-zipformer-transducer-zh-en-punct-2026-06-05-chunk-size-480ms.tar.bz2"
+        },
+        {
+          "name": "GitHub mirror \u00b7 ghfast.top",
+          "url": "https://ghfast.top/https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models-qnn-binary/sherpa-onnx-qnn-SM8850-binary-x-asr-streaming-zipformer-transducer-zh-en-punct-2026-06-05-chunk-size-480ms.tar.bz2"
+        }
+      ]
+    },
+    "chipset": "SM8850"
+  },
+  "nemotron": {
+    "directory": "qnn-nemotron-560ms-sm8850",
+    "files": [
+      {
+        "name": "libdecoder.so",
+        "size": 14888744,
+        "sha256": "0ca1f039dd587702885132a385d1b0c94f535db848e688eaf789bb87779bdde6"
+      },
+      {
+        "name": "libencoder.so",
+        "size": 591964328,
+        "sha256": "4e5ca512ba55ae04820742c60e0f9eb00e7bfe40b0d8901000f4e10e79561d1a"
+      },
+      {
+        "name": "libjoiner.so",
+        "size": 2107784,
+        "sha256": "1cbb21ad138682e6f305947c418005e8c5ef56607c59ad196e6d960d0f5e9e16"
+      },
+      {
+        "name": "tokens.txt",
+        "size": 8952,
+        "sha256": "dc0b4584ab2e4ddbf888425c076c61b736e7356a015250db7d307e6f1a8188ff"
+      }
+    ],
+    "download": {
+      "format": "zip",
+      "size": 482294634,
+      "sha256": "64d37d0e60fb44f78257bf5f3385a8a3797d8eaad5642383b9e30e00a6994d0d",
+      "urls": [
+        {
+          "name": "Hugging Face",
+          "url": "https://huggingface.co/csukuangfj2/sherpa-onnx-apk/resolve/main/qnn-asr/1.13.4/sherpa-onnx-1.13.4-qnn-arm64-v8a-asr-en-nemotron_speech_streaming_en_0.6b_560s.apk"
+        },
+        {
+          "name": "HF mirror \u00b7 hf-mirror.com",
+          "url": "https://hf-mirror.com/csukuangfj2/sherpa-onnx-apk/resolve/main/qnn-asr/1.13.4/sherpa-onnx-1.13.4-qnn-arm64-v8a-asr-en-nemotron_speech_streaming_en_0.6b_560s.apk"
+        }
+      ]
+    },
+    "chipset": "SM8850"
+  }
+}

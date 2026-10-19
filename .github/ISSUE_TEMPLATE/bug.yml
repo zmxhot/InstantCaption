@@ -1,0 +1,22 @@
+name: Bug / 错误报告
+description: Report a reproducible problem without uploading private audio or captions.
+body:
+  - type: input
+    id: version
+    attributes: {label: App version and build, placeholder: "1.14.0-beta.1, portable or NPU"}
+    validations: {required: true}
+  - type: input
+    id: device
+    attributes: {label: Phone / SoC / RAM / Android version}
+    validations: {required: true}
+  - type: input
+    id: models
+    attributes: {label: Speech model / text model / spoken language → subtitle language}
+    validations: {required: true}
+  - type: textarea
+    id: reproduce
+    attributes: {label: Steps, expected result and actual result, description: "Include microphone or device audio, source app, and whether it works after restart. Avoid private content."}
+    validations: {required: true}
+  - type: textarea
+    id: diagnostics
+    attributes: {label: Optional diagnostics, description: "Review Settings → Export diagnostics before attaching. Do not attach recordings, captions, keys or full logs."}

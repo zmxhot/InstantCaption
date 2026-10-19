@@ -1,0 +1,32 @@
+OPUS-MT translation models
+
+Model authors: Language Technology Research Group, University of Helsinki.
+OPUS-MT: Jorg Tiedemann and Santhosh Thottingal, EAMT 2020.
+https://opus.nlpl.eu/
+https://github.com/Helsinki-NLP/Opus-MT
+
+The app downloads ONNX conversions published by Xenova and onnx-community.
+These are converted and encoder-quantized versions of the original weights.
+The app uses an INT8 encoder and FP32 decoder. Models are separate optional
+downloads; their files, source revisions and checksums are listed in the
+translation-models.json catalog. Model quality varies by language.
+
+English to German: Helsinki-NLP/opus-mt-en-de, CC BY 4.0.
+https://huggingface.co/Helsinki-NLP/opus-mt-en-de
+https://creativecommons.org/licenses/by/4.0/
+https://creativecommons.org/licenses/by/4.0/legalcode
+
+The following model cards specify Apache License 2.0 (see OPUS-MT-LICENSE.txt):
+English to Chinese: https://huggingface.co/Helsinki-NLP/opus-mt-en-zh
+English to French: https://huggingface.co/Helsinki-NLP/opus-mt-en-fr
+English to Spanish: https://huggingface.co/Helsinki-NLP/opus-mt-en-es
+English to Russian: https://huggingface.co/Helsinki-NLP/opus-mt-en-ru
+English to Arabic: https://huggingface.co/Helsinki-NLP/opus-mt-en-ar
+English to Hindi: https://huggingface.co/Helsinki-NLP/opus-mt-en-hi
+English to Italian: https://huggingface.co/Helsinki-NLP/opus-mt-en-it
+English to Portuguese: https://huggingface.co/Helsinki-NLP/opus-mt-en-ROMANCE
+
+The Portuguese option selects the >>pt<< target token of the multilingual
+Romance model. The Chinese option selects >>cmn_Hans<< (Simplified Chinese).
+The recognition-to-English speech translation feature is supplied by Whisper,
+not by OPUS-MT. See whisper-MIT.txt for Whisper's license.

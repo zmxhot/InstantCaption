@@ -1,0 +1,872 @@
+{
+  "version": "1.19.0-beta.1",
+  "device": "Samsung Galaxy S25+ SM-S936U / SM8750 / SDK 37 / nominal 12 GB RAM",
+  "requestedItems": {
+    "1": {
+      "status": "improved_and_measured",
+      "work": "94 fixed short text cases per model in ten languages; Gemma4 recommendation on eligible devices, SenseVoice preference for portable direct CJK recognition; tested prompt alternatives rejected after regressions.",
+      "remaining": "Semantic mistakes and ASR errors remain. Native-speaker and broad acoustic evaluations are not complete."
+    },
+    "3": {
+      "status": "implemented",
+      "work": "HY-MT2-1.8B Q4_K_M through a new source-built llama.cpp CPU backend; direct Japanese/Korean captions and multilingual routes without the English bridge.",
+      "requirements": "ARM64, Android 10+, nominal 4 GB RAM (6 GB+ preferred), at least 1.8 GB available at model load, 1.13 GB model file."
+    },
+    "4": {
+      "status": "implemented_for_documented_targets_with_external_limits",
+      "work": "MediaTek LiteRT runtime + official Gemma3 authorization/file import for MT6989/MT6991; additional Gemma3 SM8550/SM8650/SM8750 files. Vendor dispatch isolation and official optional system-library manifest declarations.",
+      "remaining": "Gemma3 weights need publisher authorization. No physical MediaTek inference test; Exynos/Kirin/UNISOC use CPU where no verified package/runtime combination is integrated."
+    }
+  },
+  "textQuality": [
+    {
+      "model": "gemma4-e2b-npu",
+      "device": "SM-S936U",
+      "cases": 94,
+      "runtimePassed": true,
+      "medianMs": 324,
+      "p95Ms": 444,
+      "maxMs": 477,
+      "flaggedCases": 1,
+      "flags": [
+        {
+          "id": "zh-en-3",
+          "reasons": [
+            "proximity_requires_review"
+          ],
+          "input": "最近的火车站在哪里？",
+          "output": "Where is the train station recently?",
+          "reference": "Where is the nearest train station?"
+        }
+      ],
+      "chrFpp": 87.53,
+      "scope": "94 short authored cases in 10 languages. chrF++ measures similarity to one reference, not general accuracy. Risk flags require review. Times are text inference, excluding ASR, load and streaming segmentation.",
+      "pairs": {
+        "en-zh": {
+          "cases": 5,
+          "chrFpp": 56.42,
+          "medianMs": 330
+        },
+        "zh-en": {
+          "cases": 5,
+          "chrFpp": 84.73,
+          "medianMs": 276
+        },
+        "en-ja": {
+          "cases": 5,
+          "chrFpp": 95.0,
+          "medianMs": 302
+        },
+        "ja-en": {
+          "cases": 5,
+          "chrFpp": 87.13,
+          "medianMs": 289
+        },
+        "en-ko": {
+          "cases": 5,
+          "chrFpp": 80.31,
+          "medianMs": 382
+        },
+        "ko-en": {
+          "cases": 5,
+          "chrFpp": 92.23,
+          "medianMs": 269
+        },
+        "en-es": {
+          "cases": 5,
+          "chrFpp": 88.55,
+          "medianMs": 389
+        },
+        "es-en": {
+          "cases": 5,
+          "chrFpp": 95.16,
+          "medianMs": 254
+        },
+        "en-fr": {
+          "cases": 5,
+          "chrFpp": 78.08,
+          "medianMs": 339
+        },
+        "fr-en": {
+          "cases": 5,
+          "chrFpp": 89.96,
+          "medianMs": 280
+        },
+        "en-de": {
+          "cases": 5,
+          "chrFpp": 95.07,
+          "medianMs": 375
+        },
+        "de-en": {
+          "cases": 5,
+          "chrFpp": 95.02,
+          "medianMs": 273
+        },
+        "en-pt": {
+          "cases": 5,
+          "chrFpp": 83.08,
+          "medianMs": 379
+        },
+        "pt-en": {
+          "cases": 5,
+          "chrFpp": 100.0,
+          "medianMs": 279
+        },
+        "en-ru": {
+          "cases": 5,
+          "chrFpp": 72.02,
+          "medianMs": 345
+        },
+        "ru-en": {
+          "cases": 5,
+          "chrFpp": 91.51,
+          "medianMs": 298
+        },
+        "en-ar": {
+          "cases": 5,
+          "chrFpp": 71.14,
+          "medianMs": 324
+        },
+        "ar-en": {
+          "cases": 5,
+          "chrFpp": 95.05,
+          "medianMs": 253
+        },
+        "ja-zh": {
+          "cases": 2,
+          "chrFpp": 79.81,
+          "medianMs": 342
+        },
+        "ko-zh": {
+          "cases": 2,
+          "chrFpp": 83.43,
+          "medianMs": 330
+        }
+      }
+    },
+    {
+      "model": "hy-mt2-1.8b-cpu",
+      "device": "SM-S936U",
+      "cases": 94,
+      "runtimePassed": true,
+      "medianMs": 1768,
+      "p95Ms": 2216,
+      "maxMs": 2624,
+      "flaggedCases": 4,
+      "flags": [
+        {
+          "id": "en-es-1",
+          "reasons": [
+            "possessive_requires_review"
+          ],
+          "input": "Please do not cancel my reservation.",
+          "output": "Por favor, no cancela su reserva.",
+          "reference": "Por favor, no canceles mi reserva."
+        },
+        {
+          "id": "de-en-3",
+          "reasons": [
+            "proximity_requires_review"
+          ],
+          "input": "Wo ist der nächste Bahnhof?",
+          "output": "Where is the next train station?",
+          "reference": "Where is the nearest train station?"
+        },
+        {
+          "id": "pt-en-4",
+          "reasons": [
+            "weekday_or_direction_requires_review"
+          ],
+          "input": "A reunião foi transferida de segunda-feira para quarta-feira.",
+          "output": "The meeting was moved from Monday to Thursday.",
+          "reference": "The meeting was moved from Monday to Wednesday."
+        },
+        {
+          "id": "en-ar-0",
+          "reasons": [
+            "added_religious_reference"
+          ],
+          "input": "Please speak slowly.",
+          "output": "من فضل الله، تكلم ببطء.",
+          "reference": "يرجى التحدث ببطء."
+        }
+      ],
+      "chrFpp": 84.61,
+      "scope": "94 short authored cases in 10 languages. chrF++ measures similarity to one reference, not general accuracy. Risk flags require review. Times are text inference, excluding ASR, load and streaming segmentation.",
+      "pairs": {
+        "en-zh": {
+          "cases": 5,
+          "chrFpp": 67.44,
+          "medianMs": 1240
+        },
+        "zh-en": {
+          "cases": 5,
+          "chrFpp": 100.0,
+          "medianMs": 1160
+        },
+        "en-ja": {
+          "cases": 5,
+          "chrFpp": 84.4,
+          "medianMs": 1619
+        },
+        "ja-en": {
+          "cases": 5,
+          "chrFpp": 77.99,
+          "medianMs": 1768
+        },
+        "en-ko": {
+          "cases": 5,
+          "chrFpp": 63.22,
+          "medianMs": 2124
+        },
+        "ko-en": {
+          "cases": 5,
+          "chrFpp": 84.79,
+          "medianMs": 1805
+        },
+        "en-es": {
+          "cases": 5,
+          "chrFpp": 77.45,
+          "medianMs": 1706
+        },
+        "es-en": {
+          "cases": 5,
+          "chrFpp": 91.06,
+          "medianMs": 1667
+        },
+        "en-fr": {
+          "cases": 5,
+          "chrFpp": 71.7,
+          "medianMs": 1872
+        },
+        "fr-en": {
+          "cases": 5,
+          "chrFpp": 97.38,
+          "medianMs": 1792
+        },
+        "en-de": {
+          "cases": 5,
+          "chrFpp": 81.97,
+          "medianMs": 1768
+        },
+        "de-en": {
+          "cases": 5,
+          "chrFpp": 90.15,
+          "medianMs": 1723
+        },
+        "en-pt": {
+          "cases": 5,
+          "chrFpp": 85.25,
+          "medianMs": 1811
+        },
+        "pt-en": {
+          "cases": 5,
+          "chrFpp": 90.2,
+          "medianMs": 1770
+        },
+        "en-ru": {
+          "cases": 5,
+          "chrFpp": 93.25,
+          "medianMs": 2040
+        },
+        "ru-en": {
+          "cases": 5,
+          "chrFpp": 88.4,
+          "medianMs": 2052
+        },
+        "en-ar": {
+          "cases": 5,
+          "chrFpp": 66.35,
+          "medianMs": 1822
+        },
+        "ar-en": {
+          "cases": 5,
+          "chrFpp": 91.63,
+          "medianMs": 1793
+        },
+        "ja-zh": {
+          "cases": 2,
+          "chrFpp": 54.05,
+          "medianMs": 2075
+        },
+        "ko-zh": {
+          "cases": 2,
+          "chrFpp": 65.64,
+          "medianMs": 2157
+        }
+      }
+    },
+    {
+      "model": "qwen3-1.7b-npu",
+      "device": "SM-S936U",
+      "cases": 94,
+      "runtimePassed": true,
+      "medianMs": 392,
+      "p95Ms": 652,
+      "maxMs": 1157,
+      "flaggedCases": 9,
+      "flags": [
+        {
+          "id": "ja-en-3",
+          "reasons": [
+            "critical_concept_not_found"
+          ],
+          "input": "最寄りの駅はどこですか？",
+          "output": "What is the nearest station?",
+          "reference": "Where is the nearest train station?"
+        },
+        {
+          "id": "ja-en-4",
+          "reasons": [
+            "weekday_or_direction_requires_review"
+          ],
+          "input": "会議は月曜日から水曜日に変更されました。",
+          "output": "The meeting was changed to Monday and Tuesday.",
+          "reference": "The meeting was moved from Monday to Wednesday."
+        },
+        {
+          "id": "en-ko-0",
+          "reasons": [
+            "unexpected_latin_words"
+          ],
+          "input": "Please speak slowly.",
+          "output": "please speak slowly.",
+          "reference": "천천히 말씀해 주세요."
+        },
+        {
+          "id": "ko-en-4",
+          "reasons": [
+            "weekday_or_direction_requires_review"
+          ],
+          "input": "회의가 월요일에서 수요일로 변경되었습니다.",
+          "output": "The meeting was changed to Monday from Wednesday.",
+          "reference": "The meeting was moved from Monday to Wednesday."
+        },
+        {
+          "id": "de-en-3",
+          "reasons": [
+            "proximity_requires_review"
+          ],
+          "input": "Wo ist der nächste Bahnhof?",
+          "output": "Where is the next train station?",
+          "reference": "Where is the nearest train station?"
+        },
+        {
+          "id": "pt-en-4",
+          "reasons": [
+            "weekday_or_direction_requires_review"
+          ],
+          "input": "A reunião foi transferida de segunda-feira para quarta-feira.",
+          "output": "The meeting was moved from Tuesday to Thursday.",
+          "reference": "The meeting was moved from Monday to Wednesday."
+        },
+        {
+          "id": "ar-en-4",
+          "reasons": [
+            "weekday_or_direction_requires_review"
+          ],
+          "input": "تم نقل الاجتماع من يوم الاثنين إلى يوم الأربعاء.",
+          "output": "The meeting was moved from Tuesday to Thursday.",
+          "reference": "The meeting was moved from Monday to Wednesday."
+        },
+        {
+          "id": "direct-ja-90",
+          "reasons": [
+            "critical_concept_not_found"
+          ],
+          "input": "明日の会議は中止ではなく、午後3時に延期されました。",
+          "output": "明天的会议取消，推迟到下午3点。",
+          "reference": "明天的会议没有取消，而是推迟到了下午3点。"
+        },
+        {
+          "id": "direct-ko-92",
+          "reasons": [
+            "critical_concept_not_found"
+          ],
+          "input": "내일 회의는 취소된 것이 아니라 오후 3시로 연기되었습니다.",
+          "output": "明天的会议改为下午3点。",
+          "reference": "明天的会议没有取消，而是推迟到了下午3点。"
+        }
+      ],
+      "chrFpp": 75.26,
+      "scope": "94 short authored cases in 10 languages. chrF++ measures similarity to one reference, not general accuracy. Risk flags require review. Times are text inference, excluding ASR, load and streaming segmentation.",
+      "pairs": {
+        "en-zh": {
+          "cases": 5,
+          "chrFpp": 59.12,
+          "medianMs": 296
+        },
+        "zh-en": {
+          "cases": 5,
+          "chrFpp": 82.67,
+          "medianMs": 332
+        },
+        "en-ja": {
+          "cases": 5,
+          "chrFpp": 75.85,
+          "medianMs": 391
+        },
+        "ja-en": {
+          "cases": 5,
+          "chrFpp": 76.46,
+          "medianMs": 321
+        },
+        "en-ko": {
+          "cases": 5,
+          "chrFpp": 41.85,
+          "medianMs": 475
+        },
+        "ko-en": {
+          "cases": 5,
+          "chrFpp": 75.66,
+          "medianMs": 346
+        },
+        "en-es": {
+          "cases": 5,
+          "chrFpp": 78.19,
+          "medianMs": 463
+        },
+        "es-en": {
+          "cases": 5,
+          "chrFpp": 95.16,
+          "medianMs": 343
+        },
+        "en-fr": {
+          "cases": 5,
+          "chrFpp": 63.28,
+          "medianMs": 492
+        },
+        "fr-en": {
+          "cases": 5,
+          "chrFpp": 89.27,
+          "medianMs": 333
+        },
+        "en-de": {
+          "cases": 5,
+          "chrFpp": 60.86,
+          "medianMs": 439
+        },
+        "de-en": {
+          "cases": 5,
+          "chrFpp": 90.15,
+          "medianMs": 327
+        },
+        "en-pt": {
+          "cases": 5,
+          "chrFpp": 76.04,
+          "medianMs": 463
+        },
+        "pt-en": {
+          "cases": 5,
+          "chrFpp": 88.23,
+          "medianMs": 348
+        },
+        "en-ru": {
+          "cases": 5,
+          "chrFpp": 74.99,
+          "medianMs": 606
+        },
+        "ru-en": {
+          "cases": 5,
+          "chrFpp": 85.61,
+          "medianMs": 373
+        },
+        "en-ar": {
+          "cases": 5,
+          "chrFpp": 41.91,
+          "medianMs": 428
+        },
+        "ar-en": {
+          "cases": 5,
+          "chrFpp": 77.32,
+          "medianMs": 366
+        },
+        "ja-zh": {
+          "cases": 2,
+          "chrFpp": 32.87,
+          "medianMs": 372
+        },
+        "ko-zh": {
+          "cases": 2,
+          "chrFpp": 27.26,
+          "medianMs": 320
+        }
+      }
+    }
+  ],
+  "qualityLimits": [
+    "chrF++ measures similarity to one reference, not translation accuracy. Review flags are prompts for inspection, not an error rate.",
+    "Gemma4 still translated Chinese 最近 as recently instead of nearest in one station question.",
+    "HY-MT2 changed Wednesday to Thursday in a Portuguese case and changed a Spanish possessive; an Arabic output added a religious reference.",
+    "Qwen 1.7B omitted negation in a Japanese-to-Chinese case and changed some dates/directions.",
+    "Two Japanese/Korean official audio fixtures per tested CPU recognizer were smoke checks. Whisper Japanese recognition errors propagated into the translation; direct routing does not eliminate recognition mistakes."
+  ],
+  "model": {
+    "id": "hy-mt2-1.8b-cpu",
+    "file": "Hy-MT2-1.8B-Q4_K_M.gguf",
+    "bytes": 1133080448,
+    "sha256": "dc5f44fcf1fa496ee7ad725982c0c8c553a4de00259b53af84c4b89fb0c06699"
+  },
+  "catalog": {
+    "chipRules": 23,
+    "profiles": 12,
+    "npuModelChipPairs": 35,
+    "manifestReferences": 40,
+    "simulatedHardwareCases": 48,
+    "physicalDeviceWhitelistRequired": false
+  },
+  "checks": {
+    "npuReadiness": {
+      "deviceLanguageRoutes": 14,
+      "chipsetCatalog": {
+        "passed": true,
+        "catalogRoutes": 28,
+        "physicalSm8850Tested": false,
+        "scope": "Documented eligibility, per-chip catalogs, paths, runtime packaging and negative guards"
+      },
+      "deviceModelJson": {
+        "passed": true,
+        "hardwareProfilesChecked": 48,
+        "jsonChipRules": 23,
+        "configOnlyModelRemovalPriorityAndChipAddition": true,
+        "noPhysicalPhoneWhitelist": true,
+        "invalidCatalogsRejected": true
+      },
+      "boundedQueueAndDraftCancellation": true,
+      "durableQueuePauseResumeDedup": true,
+      "rawModelInstallAndIntegrity": true,
+      "atomicRecovery": true,
+      "importHashRejectsCorruption": true,
+      "pathContainment": true,
+      "diagnosticsAllowlist": true,
+      "interfaceLocales": 10,
+      "automaticFallbackOn503": true,
+      "interruptedDownloadResumed": true,
+      "serverIgnoringRangeHandled": true,
+      "archiveHashFailureFallback": true,
+      "cancelHonored": true,
+      "passed": true
+    },
+    "portableReadiness": {
+      "deviceLanguageRoutes": 14,
+      "chipsetCatalog": {
+        "passed": true,
+        "catalogRoutes": 28,
+        "physicalSm8850Tested": false,
+        "scope": "Documented eligibility, per-chip catalogs, paths, runtime packaging and negative guards"
+      },
+      "deviceModelJson": {
+        "passed": true,
+        "hardwareProfilesChecked": 48,
+        "jsonChipRules": 23,
+        "configOnlyModelRemovalPriorityAndChipAddition": true,
+        "noPhysicalPhoneWhitelist": true,
+        "invalidCatalogsRejected": true
+      },
+      "boundedQueueAndDraftCancellation": true,
+      "durableQueuePauseResumeDedup": true,
+      "rawModelInstallAndIntegrity": true,
+      "atomicRecovery": true,
+      "importHashRejectsCorruption": true,
+      "pathContainment": true,
+      "diagnosticsAllowlist": true,
+      "interfaceLocales": 10,
+      "automaticFallbackOn503": true,
+      "interruptedDownloadResumed": true,
+      "serverIgnoringRangeHandled": true,
+      "archiveHashFailureFallback": true,
+      "cancelHonored": true,
+      "passed": true
+    },
+    "portableCpuIntegration": {
+      "version": "1.19.0-beta.1",
+      "device": "SM-S936U",
+      "runtime": "llama.cpp CPU",
+      "translations": [
+        {
+          "speechModel": "sensevoice-cpu",
+          "source": "ja",
+          "target": "zh",
+          "recognized": "うち の 中学 は 弁当 制 で 持っ て い けない 場 合は、50 円 の 学校 販売 の パン を 買う。 。",
+          "output": "我们中学实行便当制度，如果无法携带便当，就买50日元学校销售的面包。",
+          "recognitionIncludingLoadMs": 2363,
+          "translationIncludingLoadMs": 5119
+        },
+        {
+          "speechModel": "whisper-base",
+          "source": "ja",
+          "target": "zh",
+          "recognized": "うちの中学は当性で、持っていない場合は50円の学校のパンを買う",
+          "output": "我们中学是免费学校，没有的话就买50日元的小面包。",
+          "recognitionIncludingLoadMs": 4829,
+          "translationIncludingLoadMs": 4552
+        },
+        {
+          "speechModel": "sensevoice-cpu",
+          "source": "ko",
+          "target": "zh",
+          "recognized": "조금만 생각을 하면서 살면 훨씬 편할 거야.",
+          "output": "稍微思考一下就就能过下去了。",
+          "recognitionIncludingLoadMs": 2722,
+          "translationIncludingLoadMs": 3672
+        },
+        {
+          "speechModel": "whisper-base",
+          "source": "ko",
+          "target": "zh",
+          "recognized": "조만 생각을 하면서 살 훨씬 편할 거야.",
+          "output": "思考着这些事情的话，生活会轻松很多。",
+          "recognitionIncludingLoadMs": 2202,
+          "translationIncludingLoadMs": 3012
+        }
+      ],
+      "directRouter": "请不要取消预订。",
+      "backend": "hy-mt2-1.8b-cpu",
+      "cancelMs": 1491,
+      "cacheMs": 0,
+      "afterCancel": "不要取消订单 7890。",
+      "longInputChars": 380,
+      "longOutput": "请慢慢说。访问代码是 7890。请不要取消我的预订。请慢慢说。访问代码是 7890。请不要取消我的预订。请慢慢说。访问代码是 7890。请不要取消我的预订。请慢慢说。访问代码是 7890。请不要取消我的预订。 请慢慢说。访问代码是 7890。请不要取消我的预订。",
+      "rawChecksumRejected": true,
+      "documentPickerRequired": true,
+      "scope": "Real CPU router, cancellation/cache/chunking, import guards and Japanese/Korean official audio fixtures; script checks are not ASR accuracy scores.",
+      "passed": true
+    },
+    "npuCpuIntegration": {
+      "version": "1.19.0-beta.1-npu-test",
+      "device": "SM-S936U",
+      "runtime": "llama.cpp CPU",
+      "translations": [
+        {
+          "speechModel": "sensevoice-cpu",
+          "source": "ja",
+          "target": "zh",
+          "recognized": "うち の 中学 は 弁当 制 で 持っ て い けない 場 合は、50 円 の 学校 販売 の パン を 買う。 。",
+          "output": "我们中学实行便当制度，如果无法携带便当，就买50日元学校销售的面包。",
+          "recognitionIncludingLoadMs": 2803,
+          "translationIncludingLoadMs": 5842
+        },
+        {
+          "speechModel": "whisper-base",
+          "source": "ja",
+          "target": "zh",
+          "recognized": "うちの中学は当性で、持っていない場合は50円の学校のパンを買う",
+          "output": "我们中学是免费学校，没有的话就买50日元的小面包。",
+          "recognitionIncludingLoadMs": 4826,
+          "translationIncludingLoadMs": 4538
+        },
+        {
+          "speechModel": "sensevoice-cpu",
+          "source": "ko",
+          "target": "zh",
+          "recognized": "조금만 생각을 하면서 살면 훨씬 편할 거야.",
+          "output": "稍微思考一下就就能过下去了。",
+          "recognitionIncludingLoadMs": 2708,
+          "translationIncludingLoadMs": 3676
+        },
+        {
+          "speechModel": "whisper-base",
+          "source": "ko",
+          "target": "zh",
+          "recognized": "조만 생각을 하면서 살 훨씬 편할 거야.",
+          "output": "思考着这些事情的话，生活会轻松很多。",
+          "recognitionIncludingLoadMs": 2181,
+          "translationIncludingLoadMs": 3698
+        }
+      ],
+      "directRouter": "请不要取消预订。",
+      "backend": "hy-mt2-1.8b-cpu",
+      "cancelMs": 1493,
+      "cacheMs": 0,
+      "afterCancel": "不要取消订单 7890。",
+      "longInputChars": 380,
+      "longOutput": "请慢慢说。访问代码是 7890。请不要取消我的预订。请慢慢说。访问代码是 7890。请不要取消我的预订。请慢慢说。访问代码是 7890。请不要取消我的预订。请慢慢说。访问代码是 7890。请不要取消我的预订。 请慢慢说。访问代码是 7890。请不要取消我的预订。",
+      "rawChecksumRejected": true,
+      "documentPickerRequired": true,
+      "anonymousGatedDownloadBlocked": true,
+      "scope": "Real CPU router, cancellation/cache/chunking, import guards and Japanese/Korean official audio fixtures; script checks are not ASR accuracy scores.",
+      "passed": true
+    },
+    "outputCompletenessRecovery": {
+      "splitCoverageUnicodeBoundedRetryCancellation": true,
+      "forcedOutputLimit": {
+        "limit": 32,
+        "detectedLimits": 1,
+        "lastDecodeTokens": 29,
+        "output": "我们的会议上午九点开始。请带上蓝色文件夹和项目报告。 第一班火车是十点出发的。午饭后我们再讨论预算。最终的访问代码是 7890。",
+        "ms": 2398
+      },
+      "longInput": {
+        "characters": 884,
+        "tailPreserved": true
+      },
+      "textRecovery": {
+        "text": "opus",
+        "speech": "sensevoice",
+        "output": "店六点关门"
+      },
+      "speechRecovery": {
+        "speech": "sensevoice-cpu",
+        "output": "Hello everyone Welcome to our meeting We will discuss the new project today. Please speak slowly, Thank you for your help."
+      },
+      "systemReuseAndFailureCategories": true,
+      "recoveryLocales": 10,
+      "restoredText": "qwen3-1.7b-npu",
+      "restoredSpeech": "sensevoice",
+      "passed": true
+    },
+    "interfaceLanguages": {
+      "locales": [
+        {
+          "tag": "en",
+          "settings": "Settings",
+          "resources": 261,
+          "loading": "Loading Qwen3-4B NPU translation model…",
+          "activities": 4,
+          "pickerOpened": true,
+          "rtl": false
+        },
+        {
+          "tag": "zh-Hans",
+          "settings": "设置",
+          "resources": 261,
+          "loading": "正在加载 Qwen3-4B NPU 翻译模型…",
+          "activities": 4,
+          "pickerOpened": true,
+          "rtl": false
+        },
+        {
+          "tag": "es",
+          "settings": "Ajustes",
+          "resources": 261,
+          "loading": "Cargando Qwen3-4B · modelo de traducción NPU…",
+          "activities": 4,
+          "pickerOpened": true,
+          "rtl": false
+        },
+        {
+          "tag": "fr",
+          "settings": "Paramètres",
+          "resources": 261,
+          "loading": "Chargement de Qwen3-4B · modèle de traduction NPU…",
+          "activities": 4,
+          "pickerOpened": true,
+          "rtl": false
+        },
+        {
+          "tag": "de",
+          "settings": "Einstellungen",
+          "resources": 261,
+          "loading": "Laden: Qwen3-4B · NPU-Übersetzungsmodell…",
+          "activities": 4,
+          "pickerOpened": true,
+          "rtl": false
+        },
+        {
+          "tag": "pt",
+          "settings": "Configurações",
+          "resources": 261,
+          "loading": "Carregando Qwen3-4B · modelo de tradução NPU…",
+          "activities": 4,
+          "pickerOpened": true,
+          "rtl": false
+        },
+        {
+          "tag": "ru",
+          "settings": "Настройки",
+          "resources": 261,
+          "loading": "Загрузка: Qwen3-4B · модель перевода на NPU…",
+          "activities": 4,
+          "pickerOpened": true,
+          "rtl": false
+        },
+        {
+          "tag": "ja",
+          "settings": "設定",
+          "resources": 261,
+          "loading": "読み込み中：Qwen3-4B NPU 翻訳モデル…",
+          "activities": 4,
+          "pickerOpened": true,
+          "rtl": false
+        },
+        {
+          "tag": "ko",
+          "settings": "설정",
+          "resources": 261,
+          "loading": "로딩 중: Qwen3-4B NPU 번역 모델…",
+          "activities": 4,
+          "pickerOpened": true,
+          "rtl": false
+        },
+        {
+          "tag": "ar",
+          "settings": "الإعدادات",
+          "resources": 261,
+          "loading": "جارٍ تحميل Qwen3-4B · نموذج ترجمة NPU…",
+          "activities": 4,
+          "pickerOpened": true,
+          "rtl": true
+        }
+      ],
+      "englishFallback": true,
+      "regionalLocales": true,
+      "modelAndSpeechPreferencesUnchanged": true,
+      "passed": true
+    },
+    "authorizedImportUi": {
+      "version": "1.19.0-beta.1-npu-test",
+      "device": "SM-S936U",
+      "runtime": "llama.cpp CPU",
+      "translations": [],
+      "authorizedExactFileDialog": true,
+      "documentPickerPackage": "com.google.android.documentsui",
+      "downloadStarted": false,
+      "passed": true
+    }
+  },
+  "installed": {
+    "package": "com.localcaption.instant.npu",
+    "versionCode": 25,
+    "sha256": "30900c68466ece717c5786fdb73fcb36ea6c74de631e74347cfb6c6e3c3be3eb",
+    "matchesDeliveredTestApk": true,
+    "enginePreferencesUnchanged": true
+  },
+  "artifacts": [
+    {
+      "file": "instant-caption-1.19.0-beta.1-npu-release-candidate.apk",
+      "bytes": 110310377,
+      "sha256": "78096cc424c3f72e114375d05cc36f6140ccd87c74c0c4f66dbf425149a5c33f"
+    },
+    {
+      "file": "instant-caption-1.19.0-beta.1-portable-release.apk",
+      "bytes": 33710272,
+      "sha256": "924df7bbec5f0d3a801b614dafb517179f1ec8dce729918e10a2f2cffa536d13"
+    },
+    {
+      "file": "瞬译-1.19.0-beta.1-升级测试.apk",
+      "bytes": 122480986,
+      "sha256": "30900c68466ece717c5786fdb73fcb36ea6c74de631e74347cfb6c6e3c3be3eb"
+    }
+  ],
+  "packaging": {
+    "signedNpuAndPortable": true,
+    "elf16KbAlignmentChecked": true,
+    "actual16KbPageDeviceTested": false,
+    "portableVendorNpuLibrariesAbsent": true,
+    "vendorSystemLibrariesOptional": true,
+    "googlePlayServicesRequired": false
+  },
+  "failuresRetained": [
+    "LiteRT initially picked MediaTek dispatch on Qualcomm; per-vendor search directories fixed the failure and Gemma4 passed 94 cases afterward.",
+    "Longer HY-MT2 prompts worsened Korean/Arabic, including a timeout; final code retains the original publisher prompt.",
+    "Shell-copied portable QA model had 0660 permissions. Fixing the test fixture permissions restored loading; the actual importer/downloader creates app-owned files."
+  ],
+  "sources": [
+    "https://huggingface.co/tencent/Hy-MT2-1.8B-GGUF",
+    "https://github.com/ggml-org/llama.cpp/tree/620d2225cc436ab0b001e3200e590e3b286ef9ab",
+    "https://developers.google.com/edge/litert/next/litert_lm_npu",
+    "https://developers.google.com/edge/litert/next/mediatek",
+    "https://huggingface.co/litert-community/Gemma3-1B-IT"
+  ],
+  "releaseStatus": "Local signed artifacts prepared; not published to GitHub. Public NPU third-party terms, broader device/language reviews remain separate from this implementation."
+}

@@ -1,0 +1,169 @@
+{
+  "version": "1.17.0-beta.1",
+  "testedDevice": "SM-S936U",
+  "testedSoc": "SM8750",
+  "catalog": {
+    "passed": true,
+    "hardwareProfilesChecked": 45,
+    "jsonChipRules": 21,
+    "configOnlyModelRemovalPriorityAndChipAddition": true,
+    "noPhysicalPhoneWhitelist": true,
+    "invalidCatalogsRejected": true
+  },
+  "catalogRoutes": 23,
+  "downloadIntegrity": {
+    "rawModelInstallAndIntegrity": true,
+    "atomicRecovery": true,
+    "importHashRejectsCorruption": true,
+    "automaticFallbackOn503": true,
+    "interruptedDownloadResumed": true,
+    "archiveHashFailureFallback": true
+  },
+  "runtimeVersions": {
+    "GenieX": "0.8.0",
+    "QNN": "2.51.0",
+    "LiteRT-LM": "0.18.0",
+    "LiteRT-NPU": "2.3.0"
+  },
+  "qwen": {
+    "output": "会议从周一移到周三了。",
+    "loadAndRunMs": 6661
+  },
+  "senseVoice": {
+    "output": "Hello everyone Wecom to our meeting. We'll discuss the new project today Please speak slowly. Thank you for your help.",
+    "wordErrorRate": 0.047619047619047616,
+    "loadAndRunMs": 1670
+  },
+  "otherModels": [
+    {
+      "model": "qwen3-0.6b-npu",
+      "output": "请缓慢 speak.",
+      "loadAndRunMs": 3178
+    },
+    {
+      "model": "qwen3-4b-npu",
+      "output": "请慢点说。",
+      "loadAndRunMs": 14179
+    },
+    {
+      "model": "x-asr",
+      "output": "Hello everyone. Welcome to our meeting. We will discuss the new project today. Please speak slowly. Thank you for your help.",
+      "wordErrorRate": 0,
+      "loadAndRunMs": 1851
+    },
+    {
+      "model": "zipformer",
+      "output": "HELLO EVERYONE WELCOME TO OUR MEETING WE WILL DISCUSS THE NEW PROJECT TODAY PLEASE SPEAK SLOWLY THANK YOU FOR YOUR HELP",
+      "wordErrorRate": 0,
+      "loadAndRunMs": 855
+    },
+    {
+      "model": "nemotron",
+      "output": "Hello everyone, welcome to our meeting. We will discuss the new project today. Please speak slowly. Thank you for your help",
+      "wordErrorRate": 0,
+      "loadAndRunMs": 2986
+    }
+  ],
+  "gemmaLoadMs": 8034,
+  "gemmaSamples": [
+    {
+      "input": "Hello everyone, welcome to our meeting.",
+      "output": "大家好，欢迎参加我们的会议。",
+      "ms": 462
+    },
+    {
+      "input": "Please speak slowly.",
+      "output": "请慢慢说。",
+      "ms": 194
+    },
+    {
+      "input": "The meeting has been moved from Monday to Wednesday.",
+      "output": "会议已从周一改到周三。",
+      "ms": 330
+    },
+    {
+      "input": "I don't think we should cancel the order.",
+      "output": "我不认为我们应该取消订单。",
+      "ms": 299
+    },
+    {
+      "input": "Where is the nearest train station?",
+      "output": "最近的火车站是哪里？",
+      "ms": 286
+    }
+  ],
+  "gemmaCaptionPipeline": {
+    "audioSeconds": 10.52,
+    "elapsedMs": 10534,
+    "firstEnglishMs": 1320,
+    "firstChineseMs": 1439,
+    "english": "Hello everyone. Welcome to our meeting. We will discuss the new project today. Please speak slowly. Thank you for your help.",
+    "chinese": "大家好。\n欢迎参加我们的会议。\n我们今天会讨论新的项目。\n请慢慢说。\n感谢您的帮助。",
+    "lines": 5,
+    "admittedFrames": 264
+  },
+  "cancellationRecovery": "商店六点关门。",
+  "restoredTextModel": "qwen3-1.7b-npu",
+  "npuFastRpcObserved": true,
+  "physicalOtherChipTestsPerformed": false,
+  "limitations": [
+    "Hardware matching follows exact publisher packages, not handset certification.",
+    "Five English-to-Chinese Gemma text samples and one 10.52-second speech fixture are integration checks, not general accuracy/latency guarantees.",
+    "Qwen 0.6B still produces omissions/mixed-language output and remains experimental.",
+    "Tensor G5/G6 packages are publisher documented; no local Tensor handset test.",
+    "MediaTek Gemma3 download requires publisher authorization; not enabled.",
+    "Samsung/Huawei/UNISOC NPU packages are not enabled for this app.",
+    "AGP 8.10.1 lint reports Kotlin 2.4 metadata diagnostics; Java build and lint tasks complete successfully."
+  ],
+  "finalPackageGemmaCheck": {
+    "passed": true,
+    "loadMs": 5672,
+    "samples": [
+      {
+        "input": "Hello everyone, welcome to our meeting.",
+        "output": "大家好，欢迎参加我们的会议。",
+        "ms": 321
+      },
+      {
+        "input": "Please speak slowly.",
+        "output": "请慢慢说。",
+        "ms": 193
+      },
+      {
+        "input": "The meeting has been moved from Monday to Wednesday.",
+        "output": "会议已从周一改到周三。",
+        "ms": 346
+      },
+      {
+        "input": "I don't think we should cancel the order.",
+        "output": "我不认为我们应该取消订单。",
+        "ms": 315
+      },
+      {
+        "input": "Where is the nearest train station?",
+        "output": "最近的火车站是哪里？",
+        "ms": 296
+      }
+    ],
+    "pipeline": {
+      "audioSeconds": 10.52,
+      "elapsedMs": 10529,
+      "firstEnglishMs": 1326,
+      "firstChineseMs": 1446,
+      "english": "Hello everyone. Welcome to our meeting. We will discuss the new project today. Please speak slowly. Thank you for your help.",
+      "chinese": "大家好。\n欢迎参加我们的会议。\n我们今天会讨论新的项目。\n请慢慢说。\n感谢您的帮助。",
+      "lines": 5,
+      "admittedFrames": 264
+    },
+    "npuFastRpcObserved": true
+  },
+  "packageChecks": {
+    "npuSignedRelease": true,
+    "signingCertificatePreserved": true,
+    "npuElf16KbAlignment": true,
+    "portableBuildAndLint": true,
+    "portableElf16KbAlignment": true,
+    "bundledCatalogMatchesSource": true
+  },
+  "preferencesPreserved": true
+}

@@ -1,0 +1,1362 @@
+[
+  {
+    "id": 0,
+    "en": "Live offline captions",
+    "zh": "实时离线字幕"
+  },
+  {
+    "id": 1,
+    "en": "Instant Caption · offline captions",
+    "zh": "瞬译 · 正在显示离线字幕"
+  },
+  {
+    "id": 2,
+    "en": "Device audio → ",
+    "zh": "手机声音 → "
+  },
+  {
+    "id": 3,
+    "en": "Microphone → ",
+    "zh": "麦克风 → "
+  },
+  {
+    "id": 4,
+    "en": "Stop",
+    "zh": "停止"
+  },
+  {
+    "id": 5,
+    "en": "Waiting for speech in the selected language…",
+    "zh": "等待所选语言的人声…"
+  },
+  {
+    "id": 6,
+    "en": "Translating…",
+    "zh": "正在翻译…"
+  },
+  {
+    "id": 7,
+    "en": "Android 10 or newer is required",
+    "zh": "需要 Android 10 或更新版本"
+  },
+  {
+    "id": 8,
+    "en": "This build requires a 64-bit ARM Android device",
+    "zh": "当前安装包需要 64 位 ARM Android 设备"
+  },
+  {
+    "id": 9,
+    "en": "Unidentified chipset",
+    "zh": "未识别芯片"
+  },
+  {
+    "id": 10,
+    "en": "Dedicated NPU and portable CPU models available",
+    "zh": "支持专用 NPU 和通用 CPU 模型"
+  },
+  {
+    "id": 11,
+    "en": "Portable CPU models available",
+    "zh": "使用通用 CPU 模型"
+  },
+  {
+    "id": 12,
+    "en": "Requires Android 10 or newer",
+    "zh": "需要 Android 10 或更新版本"
+  },
+  {
+    "id": 13,
+    "en": "Requires a 64-bit ARM Android system",
+    "zh": "需要 64 位 ARM Android 系统"
+  },
+  {
+    "id": 14,
+    "en": "No model selected",
+    "zh": "未选择模型"
+  },
+  {
+    "id": 15,
+    "en": "These NPU files are for SM8750; use a portable CPU model on this device",
+    "zh": "此 NPU 文件仅适用于 SM8750；当前设备请选择通用 CPU 模型"
+  },
+  {
+    "id": 16,
+    "en": "Dedicated NPU model for SM8750",
+    "zh": "适用于 SM8750 的专用 NPU 模型"
+  },
+  {
+    "id": 17,
+    "en": "Portable CPU · smaller model recommended for this memory configuration",
+    "zh": "通用 CPU · 当前内存配置优先推荐此小模型"
+  },
+  {
+    "id": 18,
+    "en": "Portable CPU · no dedicated NPU or Google services required",
+    "zh": "通用 CPU · 无需专用 NPU 或 Google 服务"
+  },
+  {
+    "id": 19,
+    "en": "● Captions · drag to an edge to hide",
+    "zh": "● 瞬译 · 拖至边缘隐藏"
+  },
+  {
+    "id": 20,
+    "en": "Expand floating captions",
+    "zh": "展开悬浮字幕"
+  },
+  {
+    "id": 21,
+    "en": "Hide at left edge",
+    "zh": "隐藏到左边缘"
+  },
+  {
+    "id": 22,
+    "en": "Hide at right edge",
+    "zh": "隐藏到右边缘"
+  },
+  {
+    "id": 23,
+    "en": "Automatic",
+    "zh": "自动选择"
+  },
+  {
+    "id": 24,
+    "en": "System offline recognition",
+    "zh": "系统离线识别"
+  },
+  {
+    "id": 25,
+    "en": "System offline speech recognition",
+    "zh": "系统离线语音识别"
+  },
+  {
+    "id": 26,
+    "en": "Instant Caption",
+    "zh": "瞬译"
+  },
+  {
+    "id": 27,
+    "en": "Focus",
+    "zh": "全屏"
+  },
+  {
+    "id": 28,
+    "en": "Settings",
+    "zh": "设置"
+  },
+  {
+    "id": 29,
+    "en": "‹ Exit focus",
+    "zh": "‹ 退出全屏"
+  },
+  {
+    "id": 30,
+    "en": "Microphone",
+    "zh": "麦克风"
+  },
+  {
+    "id": 31,
+    "en": "Device audio",
+    "zh": "手机声音"
+  },
+  {
+    "id": 32,
+    "en": "Translated captions appear here\n\nChoose an audio source and tap Start.\nSpeech only · background noise is filtered.",
+    "zh": "翻译字幕会在这里出现\n\n选择声音来源，点击开始。\n只翻译人声，自动过滤环境音。"
+  },
+  {
+    "id": 33,
+    "en": "Models / Retry",
+    "zh": "打开模型管理 / 重试"
+  },
+  {
+    "id": 34,
+    "en": "Smaller captions",
+    "zh": "缩小字幕"
+  },
+  {
+    "id": 35,
+    "en": "Larger captions",
+    "zh": "放大字幕"
+  },
+  {
+    "id": 36,
+    "en": "Unable to start: ",
+    "zh": "无法开始："
+  },
+  {
+    "id": 37,
+    "en": "Ready · works offline",
+    "zh": "已就绪 · 可离线使用"
+  },
+  {
+    "id": 38,
+    "en": "■ Stop captions",
+    "zh": "■ 停止字幕"
+  },
+  {
+    "id": 39,
+    "en": "Start live captions",
+    "zh": "开始实时字幕"
+  },
+  {
+    "id": 40,
+    "en": "Prepare a model first",
+    "zh": "请先准备模型"
+  },
+  {
+    "id": 41,
+    "en": "Change speech / caption languages",
+    "zh": "更改说话 / 字幕语言"
+  },
+  {
+    "id": 42,
+    "en": " lines",
+    "zh": " 句"
+  },
+  {
+    "id": 43,
+    "en": "● Live draft",
+    "zh": "● 实时草稿"
+  },
+  {
+    "id": 44,
+    "en": "Model downloads",
+    "zh": "模型下载"
+  },
+  {
+    "id": 45,
+    "en": "Cancel",
+    "zh": "取消"
+  },
+  {
+    "id": 46,
+    "en": "Model center",
+    "zh": "模型中心"
+  },
+  {
+    "id": 47,
+    "en": "Text translation",
+    "zh": "文本翻译"
+  },
+  {
+    "id": 48,
+    "en": "Speech recognition",
+    "zh": "语音识别"
+  },
+  {
+    "id": 49,
+    "en": "Available",
+    "zh": "可用模型"
+  },
+  {
+    "id": 50,
+    "en": "Downloaded",
+    "zh": "已下载"
+  },
+  {
+    "id": 51,
+    "en": "Cancel download",
+    "zh": "取消下载"
+  },
+  {
+    "id": 52,
+    "en": " · more options",
+    "zh": " · 更多操作"
+  },
+  {
+    "id": 53,
+    "en": "This NPU file does not match this chipset",
+    "zh": "此 NPU 文件不适配本机芯片"
+  },
+  {
+    "id": 54,
+    "en": "Does not support the current spoken language",
+    "zh": "不支持当前说话语言"
+  },
+  {
+    "id": 55,
+    "en": "This translation route needs Whisper speech-to-English first",
+    "zh": "当前翻译路线需要 Whisper 先将语音转成英语"
+  },
+  {
+    "id": 56,
+    "en": "Automatic / system recognition  ▾",
+    "zh": "自动 / 系统离线识别  ▾"
+  },
+  {
+    "id": 57,
+    "en": "System speech pack and checks",
+    "zh": "系统语音包与检查"
+  },
+  {
+    "id": 58,
+    "en": "NPU models · recommended first",
+    "zh": "NPU 模型 · 优先推荐"
+  },
+  {
+    "id": 59,
+    "en": "CPU models",
+    "zh": "CPU 模型"
+  },
+  {
+    "id": 60,
+    "en": "Other languages / routes",
+    "zh": "其他语言 / 翻译路线"
+  },
+  {
+    "id": 61,
+    "en": "Stored files incompatible with this device",
+    "zh": "不适配本机的已存文件"
+  },
+  {
+    "id": 62,
+    "en": "Installed",
+    "zh": "已安装"
+  },
+  {
+    "id": 63,
+    "en": "Not installed",
+    "zh": "未安装"
+  },
+  {
+    "id": 64,
+    "en": " · Recommended",
+    "zh": " · 推荐"
+  },
+  {
+    "id": 65,
+    "en": " · Selected",
+    "zh": " · 已选择"
+  },
+  {
+    "id": 66,
+    "en": "Chinese, English, Japanese, Korean and Cantonese",
+    "zh": "中 / 英 / 日 / 韩 / 粤语识别"
+  },
+  {
+    "id": 67,
+    "en": "Streaming English recognition",
+    "zh": "英语流式识别"
+  },
+  {
+    "id": 68,
+    "en": "Multilingual speech recognition · English bridge available",
+    "zh": "多国语音识别 · 可用于英语中转"
+  },
+  {
+    "id": 69,
+    "en": "Streaming Chinese and English recognition",
+    "zh": "中英文流式识别"
+  },
+  {
+    "id": 70,
+    "en": "Unsupported",
+    "zh": "不支持"
+  },
+  {
+    "id": 71,
+    "en": "Download",
+    "zh": "下载"
+  },
+  {
+    "id": 72,
+    "en": "Unavailable",
+    "zh": "不适用"
+  },
+  {
+    "id": 73,
+    "en": "In use",
+    "zh": "使用中"
+  },
+  {
+    "id": 74,
+    "en": "Retry",
+    "zh": "重试"
+  },
+  {
+    "id": 75,
+    "en": "Use",
+    "zh": "使用"
+  },
+  {
+    "id": 76,
+    "en": "No downloaded speech models",
+    "zh": "暂无已下载的识别模型"
+  },
+  {
+    "id": 77,
+    "en": "Open Available to browse downloads.",
+    "zh": "切换到“可用模型”查看下载列表。"
+  },
+  {
+    "id": 78,
+    "en": "NPU text translation · recommended first",
+    "zh": "NPU 文本翻译 · 优先推荐"
+  },
+  {
+    "id": 79,
+    "en": "CPU text translation · OPUS-MT",
+    "zh": "CPU 文本翻译 · OPUS-MT"
+  },
+  {
+    "id": 80,
+    "en": "Per caption language · non-English speech needs Whisper",
+    "zh": "按字幕语言下载 · 非英语来源需 Whisper 中转"
+  },
+  {
+    "id": 81,
+    "en": "Other language packs",
+    "zh": "其他语言包"
+  },
+  {
+    "id": 82,
+    "en": "No downloaded translation models",
+    "zh": "暂无已下载的翻译模型"
+  },
+  {
+    "id": 83,
+    "en": "Selected",
+    "zh": "已选择"
+  },
+  {
+    "id": 84,
+    "en": "Cannot download",
+    "zh": "无法下载"
+  },
+  {
+    "id": 85,
+    "en": "Model details",
+    "zh": "模型详情"
+  },
+  {
+    "id": 86,
+    "en": "Task: text translation\nProcessor: Hexagon NPU / QAIRT\nQuantization: W4A16\nInstalled size: ",
+    "zh": "用途：文本翻译\n运行方式：Hexagon NPU / QAIRT\n量化：W4A16\n安装体积："
+  },
+  {
+    "id": 87,
+    "en": "\nThis small model may leave some words untranslated; compare with OPUS-MT.",
+    "zh": "\n小模型可能漏译部分词语；可与 OPUS-MT 切换比较。"
+  },
+  {
+    "id": 88,
+    "en": "Remove model and cache",
+    "zh": "删除模型及缓存"
+  },
+  {
+    "id": 89,
+    "en": " · Current caption language",
+    "zh": " · 当前字幕语言"
+  },
+  {
+    "id": 90,
+    "en": "Transcribe",
+    "zh": "仅转写"
+  },
+  {
+    "id": 91,
+    "en": "Use translation language pack",
+    "zh": "使用翻译语言包"
+  },
+  {
+    "id": 92,
+    "en": "Caption language will change to ",
+    "zh": "字幕语言将改为"
+  },
+  {
+    "id": 93,
+    "en": ". The spoken language stays the same.",
+    "zh": "。说话语言保持不变。"
+  },
+  {
+    "id": 94,
+    "en": "Task: text translation\nProcessor: CPU\nInstalled size: ",
+    "zh": "用途：文本翻译\n运行方式：CPU\n安装体积："
+  },
+  {
+    "id": 95,
+    "en": "Task: speech recognition\nProcessor: ",
+    "zh": "用途：语音识别\n运行方式："
+  },
+  {
+    "id": 96,
+    "en": "Recheck system recognition",
+    "zh": "重新检查系统识别"
+  },
+  {
+    "id": 97,
+    "en": "Prepare system speech pack",
+    "zh": "准备系统离线语音包"
+  },
+  {
+    "id": 98,
+    "en": "The system displays the size and installs the offline pack for this language.",
+    "zh": "由系统显示下载大小并安装当前语言离线包。"
+  },
+  {
+    "id": 99,
+    "en": "Continue",
+    "zh": "继续"
+  },
+  {
+    "id": 100,
+    "en": "OK",
+    "zh": "知道了"
+  },
+  {
+    "id": 101,
+    "en": "Download channel",
+    "zh": "下载通道"
+  },
+  {
+    "id": 102,
+    "en": "Automatic fallback · recommended",
+    "zh": "自动切换 · 推荐"
+  },
+  {
+    "id": 103,
+    "en": "Official only",
+    "zh": "仅官方源"
+  },
+  {
+    "id": 104,
+    "en": "Backup mirrors",
+    "zh": "备用镜像"
+  },
+  {
+    "id": 105,
+    "en": "About channels",
+    "zh": "通道说明"
+  },
+  {
+    "id": 106,
+    "en": "Download channels",
+    "zh": "下载通道"
+  },
+  {
+    "id": 107,
+    "en": "Official: GitHub / Hugging Face / Qualcomm AWS\nBackup: gh-proxy.org, ghfast.top / hf-mirror.com; alternate AWS endpoint for Qwen\nResumable downloads with SHA-256 verification. System speech packs are managed by the system.",
+    "zh": "官方：GitHub / Hugging Face / Qualcomm AWS\n备用：gh-proxy.org、ghfast.top / hf-mirror.com；Qwen 使用 AWS 备用入口\n支持断点续传，安装前校验 SHA-256。系统语音包由系统管理。"
+  },
+  {
+    "id": 108,
+    "en": "Download about ",
+    "zh": "下载约 "
+  },
+  {
+    "id": 109,
+    "en": "\nAfter download, tap Use to select the model.",
+    "zh": "\n下载完成后可点击“使用”切换。"
+  },
+  {
+    "id": 110,
+    "en": "Remove model?",
+    "zh": "删除模型？"
+  },
+  {
+    "id": 111,
+    "en": "\nRemove this model and its download cache. Download it again before using it.",
+    "zh": "\n删除此模型及下载缓存。再次使用时需要重新下载。"
+  },
+  {
+    "id": 112,
+    "en": "Keep",
+    "zh": "保留"
+  },
+  {
+    "id": 113,
+    "en": "Remove",
+    "zh": "删除"
+  },
+  {
+    "id": 114,
+    "en": "Current text translation",
+    "zh": "当前文本翻译"
+  },
+  {
+    "id": 115,
+    "en": "Current speech recognition",
+    "zh": "当前语音识别"
+  },
+  {
+    "id": 116,
+    "en": "Download channel: ",
+    "zh": "下载通道："
+  },
+  {
+    "id": 117,
+    "en": "Models",
+    "zh": "模型"
+  },
+  {
+    "id": 118,
+    "en": "Automatic fallback",
+    "zh": "自动切换"
+  },
+  {
+    "id": 119,
+    "en": "Official source",
+    "zh": "官方源"
+  },
+  {
+    "id": 120,
+    "en": "Backup mirror",
+    "zh": "备用镜像"
+  },
+  {
+    "id": 121,
+    "en": "Downloading",
+    "zh": "正在下载"
+  },
+  {
+    "id": 122,
+    "en": "Verifying and installing",
+    "zh": "校验并安装中"
+  },
+  {
+    "id": 123,
+    "en": "Removing model and cache",
+    "zh": "正在删除模型及缓存"
+  },
+  {
+    "id": 124,
+    "en": "Model and cache removed",
+    "zh": "模型及缓存已删除"
+  },
+  {
+    "id": 125,
+    "en": "Cancelled · tap download to resume",
+    "zh": "已取消，可重新下载"
+  },
+  {
+    "id": 126,
+    "en": "Failed · retry or choose another channel",
+    "zh": "操作失败，可重试或切换通道"
+  },
+  {
+    "id": 127,
+    "en": "Stop captions and wait for model loading",
+    "zh": "请先停止字幕，等待加载完成"
+  },
+  {
+    "id": 128,
+    "en": "Not enough storage space",
+    "zh": "存储空间不足，请释放空间后重试"
+  },
+  {
+    "id": 129,
+    "en": "en zh",
+    "zh": "中英流式 · NPU"
+  },
+  {
+    "id": 130,
+    "en": "en",
+    "zh": "英语流式 · NPU · 560 ms 分块"
+  },
+  {
+    "id": 131,
+    "en": "en zh ja ko yue",
+    "zh": "中英日韩粤语 · NPU"
+  },
+  {
+    "id": 132,
+    "en": "SM8750 · Android 15+ · at least ",
+    "zh": "适用于 SM8750 · Android 15+ · 至少 "
+  },
+  {
+    "id": 133,
+    "en": " GB RAM",
+    "zh": " GB 内存"
+  },
+  {
+    "id": 134,
+    "en": "Lightweight trial · more omissions; prefer 1.7B",
+    "zh": "轻量试用 · 容易漏译，优先选择 1.7B"
+  },
+  {
+    "id": 135,
+    "en": "More complete translations · higher memory, slower loading",
+    "zh": "译文更完整 · 内存占用高，加载较慢"
+  },
+  {
+    "id": 136,
+    "en": "Balanced choice · direct multilingual translation",
+    "zh": "均衡推荐 · 多国语言直接互译"
+  },
+  {
+    "id": 137,
+    "en": "Speech and translation languages",
+    "zh": "识别与翻译语言"
+  },
+  {
+    "id": 138,
+    "en": "Language and model choices are saved. Stop captions before making changes.",
+    "zh": "语言和模型选择会保存。请先停止字幕再修改。"
+  },
+  {
+    "id": 139,
+    "en": "Speech and translation models",
+    "zh": "识别与翻译模型"
+  },
+  {
+    "id": 140,
+    "en": "Caption display",
+    "zh": "字幕显示"
+  },
+  {
+    "id": 141,
+    "en": "Show recognized text",
+    "zh": "显示识别文字"
+  },
+  {
+    "id": 142,
+    "en": "Applies to main and floating captions; Whisper translation mode shows intermediate English text",
+    "zh": "主界面和悬浮字幕同时生效；Whisper 转译模式下显示英语中间结果"
+  },
+  {
+    "id": 143,
+    "en": "Floating captions",
+    "zh": "悬浮字幕"
+  },
+  {
+    "id": 144,
+    "en": "Drag anywhere · tuck at an edge, tap the handle to expand",
+    "zh": "整块可拖动 · 拖到屏幕边缘隐藏，点击把手展开"
+  },
+  {
+    "id": 145,
+    "en": "Fast captions",
+    "zh": "极速字幕"
+  },
+  {
+    "id": 146,
+    "en": "Updates drafts more often; stop captions before changing",
+    "zh": "更频繁更新草稿；停止字幕后可修改"
+  },
+  {
+    "id": 147,
+    "en": "App language",
+    "zh": "界面语言"
+  },
+  {
+    "id": 148,
+    "en": "Follows your system language by default, with English as the fallback. App, speech and subtitle languages are set independently.",
+    "zh": "默认跟随系统；不支持的系统语言使用英文。界面、语音和字幕语言分别设置。"
+  },
+  {
+    "id": 149,
+    "en": "Session transcript",
+    "zh": "字幕记录"
+  },
+  {
+    "id": 150,
+    "en": "Export",
+    "zh": "导出字幕"
+  },
+  {
+    "id": 151,
+    "en": "Clear",
+    "zh": "清空字幕"
+  },
+  {
+    "id": 152,
+    "en": "Clear the session transcript?",
+    "zh": "清空本次会话字幕？"
+  },
+  {
+    "id": 153,
+    "en": "Captions are kept for this app session only, up to 80 lines.",
+    "zh": "字幕仅保留在本次进程中，最多 80 句。"
+  },
+  {
+    "id": 154,
+    "en": "About",
+    "zh": "关于"
+  },
+  {
+    "id": 155,
+    "en": "Help and third-party licenses",
+    "zh": "使用说明与第三方许可"
+  },
+  {
+    "id": 156,
+    "en": "Welcome. Translated captions appear here.",
+    "zh": "欢迎，这里显示翻译字幕。"
+  },
+  {
+    "id": 157,
+    "en": "Floating caption size",
+    "zh": "悬浮字幕字号"
+  },
+  {
+    "id": 158,
+    "en": "Main caption size",
+    "zh": "主界面字幕字号"
+  },
+  {
+    "id": 159,
+    "en": "System default",
+    "zh": "跟随系统（默认）"
+  },
+  {
+    "id": 160,
+    "en": "English",
+    "zh": "简体中文"
+  },
+  {
+    "id": 161,
+    "en": "Subtitle language",
+    "zh": "字幕语言"
+  },
+  {
+    "id": 162,
+    "en": "Spoken language",
+    "zh": "说话语言"
+  },
+  {
+    "id": 163,
+    "en": "Text translation models  ›\n",
+    "zh": "文本翻译模型  ›\n"
+  },
+  {
+    "id": 164,
+    "en": "Speech recognition models  ›\nAudio → text · compatible NPU models first",
+    "zh": "语音识别模型  ›\n声音 → 文字 · NPU 优先推荐"
+  },
+  {
+    "id": 165,
+    "en": "Spoken language: ",
+    "zh": "说话语言："
+  },
+  {
+    "id": 166,
+    "en": "Subtitle language: ",
+    "zh": "字幕语言："
+  },
+  {
+    "id": 167,
+    "en": "App language: ",
+    "zh": "界面语言："
+  },
+  {
+    "id": 168,
+    "en": "Instant Caption ",
+    "zh": "瞬译 "
+  },
+  {
+    "id": 169,
+    "en": "\nSpeech recognition and AI translation run locally on your phone and work offline once models are ready.\nSpeech models recognize audio; Qwen NPU or OPUS-MT CPU translates text. Some OPUS-MT routes require a Whisper English bridge.\nModel downloads require a network connection; captions are not sent to an external translation service.",
+    "zh": "\n语音识别与 AI 翻译均在手机本地完成，模型准备好后支持断网使用。\n语音模型负责识别；Qwen NPU 或 OPUS-MT CPU 负责文字翻译。OPUS-MT 的部分路线需要 Whisper 英语中转。\n模型下载需要联网，字幕不发送给外部翻译服务。"
+  },
+  {
+    "id": 170,
+    "en": "Transcript exported",
+    "zh": "字幕已导出"
+  },
+  {
+    "id": 171,
+    "en": "Use Microphone for live speech, or Device audio for video and streaming apps. Some apps block audio capture. Floating captions work over other apps. Drag anywhere, tuck at either edge and tap the handle to expand.\n\nChoose speech, caption and interface languages and font sizes independently. Speech recognition and text translation have separate model pages with download, selection and removal. Choices are saved.\n\nQwen3-0.6B / 1.7B / 4B: selectable multilingual NPU text translation directly from recognized source text, without an English bridge. This bundle requires SM8750 / SM8850, Android 15+ and at least 8 GB RAM. The 4B model requires at least 12 GB RAM. See each model for its size. Loading takes a few seconds before recording.\n\nOPUS-MT: smaller CPU language packs for Chinese, German, French, Spanish, Russian, Arabic, Hindi, Italian and Portuguese. Non-English speech first uses Whisper to produce English; English captions use its output directly. Small bridge models may mistranslate.\n\nAutomatic recognition reuses installed system offline packs, otherwise a compatible local model. You can also select a speech model manually. If a changed translation route is incompatible with your manual speech choice, select a compatible model or Automatic.\n\nCompatible NPU models are labeled and recommended first. Portable CPU models serve other compatible phones. Downloading a spare model does not change the selection. All speech and captions are processed locally; only downloads need networking. Backup channels, resume and SHA-256 verification are supported.\n\nSpeech only: environmental sound labels are filtered, but background speech or singing can still be recognized. Drafts are revised; quality and latency vary by language, phone and recording conditions.",
+    "zh": "麦克风用于现场讲话，手机声音用于视频和直播；部分应用禁止捕获声音。悬浮字幕可在其他应用上显示。拖动任意位置移动，左右贴边隐藏，点击把手展开；回到主界面或通知栏可停止。\n\n在设置中独立选择说话语言、字幕语言、界面语言和字体大小。语音识别与文本翻译分别管理，两类模型都可自由下载、切换和删除；选择会保存。\n\nQwen3-0.6B / 1.7B / 4B：NPU 文本翻译，可按体积与内存需求选择，均支持多国语言互译，直接翻译识别原文，无需英语中转。当前 NPU 文件适配 SM8750 / SM8850、Android 15 以上及至少 8 GB 内存。4B 至少需要 12 GB 内存。下载及安装大小见各模型详情。模型加载需要数秒，开始录音前会先准备好。\n\nOPUS-MT：CPU 文本翻译，按目标语言下载较小的语言包，提供中文、德语、法语、西班牙语、俄语、阿拉伯语、印地语、意大利语和葡萄牙语。非英语语音需要 Whisper 先转成英语；英语目标直接使用 Whisper 转译结果。小模型中转可能错译。\n\n识别自动模式优先使用已有系统离线语音包，否则使用兼容的本地模型。也可手动选择识别模型。切换翻译路线后，手动选择的识别模型如果不兼容，需要另选兼容模型或自动模式。\n\n适配本机的 NPU 模型在下载列表中优先推荐并标注；CPU 模型供其他兼容手机使用。下载备用模型不会自动切换当前选择。所有声音和字幕均在手机本地处理；模型下载才需要联网，支持备用通道、断点续传及 SHA-256 校验。\n\n仅处理人声，过滤环境音标签；背景里的清晰讲话和歌声仍可能被识别。草稿会持续修正，效果及延迟随语言、手机及录音条件变化。"
+  },
+  {
+    "id": 172,
+    "en": "Help",
+    "zh": "使用说明"
+  },
+  {
+    "id": 173,
+    "en": "Licenses",
+    "zh": "许可"
+  },
+  {
+    "id": 174,
+    "en": "Third-party licenses",
+    "zh": "第三方许可"
+  },
+  {
+    "id": 175,
+    "en": "Close",
+    "zh": "关闭"
+  },
+  {
+    "id": 176,
+    "en": "English → ",
+    "zh": "英语 → "
+  },
+  {
+    "id": 177,
+    "en": "Back",
+    "zh": "返回"
+  },
+  {
+    "id": 178,
+    "en": " · NPU translation",
+    "zh": " · NPU 本地翻译"
+  },
+  {
+    "id": 179,
+    "en": "OPUS-MT · CPU translation",
+    "zh": "OPUS-MT · CPU 本地翻译"
+  },
+  {
+    "id": 180,
+    "en": "Whisper local speech-to-English translation",
+    "zh": "Whisper 本地语音转英语"
+  },
+  {
+    "id": 181,
+    "en": "Source transcript · no translation model",
+    "zh": "原文转写 · 无需翻译模型"
+  },
+  {
+    "id": 182,
+    "en": "Local models not ready",
+    "zh": "本地模型尚未就绪"
+  },
+  {
+    "id": 183,
+    "en": "No local translation model for this language pair",
+    "zh": "当前语言组合暂无本地翻译模型"
+  },
+  {
+    "id": 184,
+    "en": "No separate text model · Whisper speech translation",
+    "zh": "无需额外文本模型 · Whisper 语音转译"
+  },
+  {
+    "id": 185,
+    "en": " · not ready",
+    "zh": " · 未就绪"
+  },
+  {
+    "id": 186,
+    "en": "In use · ",
+    "zh": "使用中 · "
+  },
+  {
+    "id": 187,
+    "en": "Selected · ",
+    "zh": "已选择 · "
+  },
+  {
+    "id": 188,
+    "en": "Text translation: ",
+    "zh": "文本翻译："
+  },
+  {
+    "id": 189,
+    "en": "Recognition: ",
+    "zh": "识别："
+  },
+  {
+    "id": 190,
+    "en": " · automatic",
+    "zh": " · 自动"
+  },
+  {
+    "id": 191,
+    "en": " · manual",
+    "zh": " · 手动"
+  },
+  {
+    "id": 192,
+    "en": "Using system offline speech recognition automatically. No additional speech model download is needed.",
+    "zh": "已自动使用系统离线语音识别，无需下载额外识别模型。"
+  },
+  {
+    "id": 193,
+    "en": "This pair first needs speech-to-English translation, using ",
+    "zh": "此语言组合需要先将语音转成英语，自动使用 "
+  },
+  {
+    "id": 194,
+    "en": " automatically. System transcription and SenseVoice cannot perform this translation step.",
+    "zh": "。系统听写和 SenseVoice 不能完成此中转。"
+  },
+  {
+    "id": 195,
+    "en": "System offline speech pack is not ready",
+    "zh": "系统离线语音包尚未就绪"
+  },
+  {
+    "id": 196,
+    "en": "Google services are unavailable",
+    "zh": "未检测到可用的 Google 服务"
+  },
+  {
+    "id": 197,
+    "en": "This Android version does not support this offline audio interface",
+    "zh": "当前系统不支持此离线音频接口"
+  },
+  {
+    "id": 198,
+    "en": "Checking system offline recognition to avoid duplicate downloads.",
+    "zh": "正在检查系统离线识别，避免重复下载。"
+  },
+  {
+    "id": 199,
+    "en": "System offline recognition is currently unavailable",
+    "zh": "系统离线识别暂不可用"
+  },
+  {
+    "id": 200,
+    "en": ". Automatically using ",
+    "zh": "，自动使用 "
+  },
+  {
+    "id": 201,
+    "en": "A download is requested only if needed; existing models are reused.",
+    "zh": "仅在模型缺失时提示下载；已有模型直接复用。"
+  },
+  {
+    "id": 202,
+    "en": "Current models support Cantonese → Chinese transcription, but not Cantonese translation to other subtitle languages. Choose Chinese captions or change the spoken language in Settings.",
+    "zh": "当前模型支持粤语 → 中文转写，暂不支持粤语转其他字幕语言。请在设置中把字幕语言改为中文，或更换说话语言。"
+  },
+  {
+    "id": 203,
+    "en": "No local translation model is available for this pair. In Settings, choose English, Chinese, German, French, Spanish, Russian, Arabic, Hindi, Italian or Portuguese captions. Other languages remain available for same-language transcription.",
+    "zh": "当前语言组合暂无可用的本地翻译模型。请在设置中选择英语、中文、德语、法语、西班牙语、俄语、阿拉伯语、印地语、意大利语或葡萄牙语作为字幕语言。其他语言仍可选择同语言转写。"
+  },
+  {
+    "id": 204,
+    "en": "Displays the speech recognition result directly, without an additional text translation model.",
+    "zh": "直接显示语音识别结果，无需额外文字翻译模型。"
+  },
+  {
+    "id": 205,
+    "en": "Speech recognition produces source text; the selected Qwen model translates it directly on the NPU, without an English bridge. Works offline after model preparation.",
+    "zh": "语音模型输出识别原文，所选 Qwen 模型 通过 NPU 直接翻译为字幕语言，无需英语中转。模型准备好后可离线使用。"
+  },
+  {
+    "id": 206,
+    "en": "Whisper translates speech to English captions on your phone, without an additional text translation model.",
+    "zh": "Whisper 在手机本地把语音转成英语字幕，无需额外文字翻译模型。"
+  },
+  {
+    "id": 207,
+    "en": "Whisper first translates speech to English, then the local OPUS-MT AI model translates it to the caption language. Recognized text shows the intermediate English.",
+    "zh": "Whisper 先把语音转成英语，再由 OPUS-MT 本地 AI 模型翻译为字幕语言。显示识别文字时会显示英语中间结果。"
+  },
+  {
+    "id": 208,
+    "en": "\nSmall models can mistranslate speech, especially complex sentences.",
+    "zh": "\n小模型中转可能明显错译，尤其是复杂语句。"
+  },
+  {
+    "id": 209,
+    "en": "The speech recognition model transcribes audio; OPUS-MT translates that text to the caption language. Both run locally on your phone.",
+    "zh": "语音识别模型负责听写，OPUS-MT 负责把识别文字翻译为字幕语言。两者均在手机本地运行。"
+  },
+  {
+    "id": 210,
+    "en": "Preparing offline engine…",
+    "zh": "正在准备离线引擎…"
+  },
+  {
+    "id": 211,
+    "en": "Loading speech recognition…",
+    "zh": "正在加载英语识别模型…"
+  },
+  {
+    "id": 212,
+    "en": "Offline models ready",
+    "zh": "离线模型就绪 · 可以断网使用"
+  },
+  {
+    "id": 213,
+    "en": "Stopped · captions kept for this session",
+    "zh": "已停止 · 字幕保留在本次会话"
+  },
+  {
+    "id": 214,
+    "en": "Listening · speech only",
+    "zh": "正在聆听 · 仅翻译人声"
+  },
+  {
+    "id": 215,
+    "en": "Waiting for English speech · filtering noise",
+    "zh": "等待英语讲话 · 环境音过滤中"
+  },
+  {
+    "id": 216,
+    "en": "Waiting for speech · play an English video",
+    "zh": "等待人声 · 环境音过滤中；请播放英语视频"
+  },
+  {
+    "id": 217,
+    "en": "Audio capture permission ended · start again",
+    "zh": "手机声音授权已结束，请重新开始"
+  },
+  {
+    "id": 218,
+    "en": "Device audio permission cancelled",
+    "zh": "已取消手机声音授权"
+  },
+  {
+    "id": 219,
+    "en": "Microphone permission is required",
+    "zh": "需要麦克风权限才能识别英语声音"
+  },
+  {
+    "id": 220,
+    "en": "Model removed · download a model in Settings",
+    "zh": "本地模型已删除，请在设置中下载安装"
+  },
+  {
+    "id": 221,
+    "en": "Qwen3-1.7B · NPU translation",
+    "zh": "Qwen3-1.7B · NPU 本地翻译"
+  },
+  {
+    "id": 222,
+    "en": "Whisper direct English output",
+    "zh": "Whisper 直接输出英语"
+  },
+  {
+    "id": 223,
+    "en": "Direct output · no additional translation model",
+    "zh": "直接输出 · 无需额外翻译模型"
+  },
+  {
+    "id": 224,
+    "en": " (first setup may take minutes)",
+    "zh": "（首次编译可能需要数分钟）"
+  },
+  {
+    "id": 225,
+    "zh": "Zipformer 中英双语",
+    "en": "Zipformer Chinese / English"
+  },
+  {
+    "id": 226,
+    "zh": "正在准备本地语音模型…",
+    "en": "Preparing on-device speech models…"
+  },
+  {
+    "id": 227,
+    "zh": "等待人声 · 环境音过滤中",
+    "en": "Waiting for speech · filtering noise"
+  },
+  {
+    "id": 228,
+    "zh": "等待人声 · 环境音过滤中；请播放所选语言的视频",
+    "en": "Waiting for speech · play a video in the selected language"
+  },
+  {
+    "id": 229,
+    "zh": "正在检查本地翻译方式…",
+    "en": "Checking available on-device translation…"
+  },
+  {
+    "id": 230,
+    "zh": "正在检查系统离线语音识别…",
+    "en": "Checking system offline speech recognition…"
+  },
+  {
+    "id": 231,
+    "zh": "正在准备系统离线语音包…",
+    "en": "Preparing system offline speech pack…"
+  },
+  {
+    "id": 232,
+    "zh": "正在加载本地文字翻译模型…",
+    "en": "Loading OPUS-MT on-device translation…"
+  },
+  {
+    "id": 233,
+    "zh": "本地文字翻译模型已删除，请到模型管理下载安装",
+    "en": "OPUS-MT removed · prepare a translation model in Settings"
+  },
+  {
+    "id": 234,
+    "zh": "Qwen 模型已删除，请重新下载或选择 OPUS-MT",
+    "en": "Qwen removed · download it again or select OPUS-MT"
+  },
+  {
+    "id": 235,
+    "zh": "当前语言组合暂无本地 AI 翻译模型，请更换来源或目标语言",
+    "en": "No local translation model for this language pair · change languages in Settings"
+  },
+  {
+    "id": 236,
+    "zh": "所选系统离线识别不可用，请准备系统语音包或选择其他识别模型",
+    "en": "System recognition unavailable · prepare a speech pack or choose another model"
+  },
+  {
+    "id": 237,
+    "zh": "所选系统离线识别暂不可用，请选择其他识别模型",
+    "en": "System recognition unavailable · choose another speech model"
+  },
+  {
+    "id": 238,
+    "zh": "当前设备暂无支持此语言组合的语音模型，请更换语言",
+    "en": "No compatible speech model for this language pair · change languages"
+  },
+  {
+    "id": 239,
+    "zh": "语音识别模型未安装，请在模型管理下载安装",
+    "en": "Speech model missing · download it in Model center"
+  },
+  {
+    "id": 240,
+    "zh": "系统识别暂不可用，正在使用本地语音模型…",
+    "en": "System recognition unavailable · switching to a local model…"
+  },
+  {
+    "id": 241,
+    "zh": "人声检测模型尚未加载",
+    "en": "Speech detection model is not loaded"
+  },
+  {
+    "id": 242,
+    "zh": "NPU 模型尚未加载",
+    "en": "NPU model is not loaded"
+  },
+  {
+    "id": 243,
+    "zh": "请先准备离线模型",
+    "en": "Prepare offline models first"
+  },
+  {
+    "id": 244,
+    "zh": "尚未获得手机声音授权",
+    "en": "Device audio permission has not been granted"
+  },
+  {
+    "id": 245,
+    "zh": "需要麦克风权限",
+    "en": "Microphone permission is required"
+  },
+  {
+    "id": 246,
+    "zh": "无法打开音频输入",
+    "en": "Cannot open audio input"
+  },
+  {
+    "id": 247,
+    "zh": "录音未开始，请检查麦克风权限",
+    "en": "Recording did not start · check microphone permission"
+  },
+  {
+    "id": 248,
+    "zh": "悬浮字幕暂不可用，请检查悬浮窗权限",
+    "en": "Floating captions unavailable · check overlay permission"
+  },
+  {
+    "id": 249,
+    "zh": "语音处理积压，请停止后重试",
+    "en": "Speech processing is backlogged · stop and retry"
+  },
+  {
+    "id": 250,
+    "zh": "此语言没有可下载的系统离线语音包",
+    "en": "No system offline speech pack is available for this language"
+  },
+  {
+    "id": 251,
+    "zh": "系统语音包仍在准备，可稍后重新检查",
+    "en": "System speech pack is still being prepared · check again later"
+  },
+  {
+    "id": 252,
+    "zh": "正在加载 ",
+    "en": "Loading "
+  },
+  {
+    "id": 253,
+    "zh": " NPU 翻译模型…",
+    "en": " NPU translation model…"
+  },
+  {
+    "id": 254,
+    "zh": "模型准备失败：",
+    "en": "Model setup failed: "
+  },
+  {
+    "id": 255,
+    "zh": "启动失败：",
+    "en": "Unable to start: "
+  },
+  {
+    "id": 256,
+    "zh": "音频处理中断：",
+    "en": "Audio processing stopped: "
+  },
+  {
+    "id": 257,
+    "zh": "本地翻译失败：",
+    "en": "Local translation failed: "
+  },
+  {
+    "id": 258,
+    "zh": "语音识别失败：",
+    "en": "Speech recognition failed: "
+  },
+  {
+    "id": 259,
+    "zh": "系统语音包：",
+    "en": "System speech pack: "
+  },
+  {
+    "id": 260,
+    "zh": "正在准备系统离线语音包 · ",
+    "en": "Preparing system speech pack · "
+  },
+  {
+    "id": 261,
+    "zh": "请到模型管理准备 ",
+    "en": "Open Model center to prepare "
+  },
+  {
+    "id": 262,
+    "zh": "请到文本翻译页面下载 ",
+    "en": "Open Text translation to download "
+  },
+  {
+    "id": 263,
+    "zh": " NPU 模型",
+    "en": " NPU model"
+  },
+  {
+    "id": 264,
+    "zh": "音频输入已中断 (",
+    "en": "Audio input interrupted ("
+  },
+  {
+    "id": 265,
+    "zh": "语音识别失败",
+    "en": "Speech recognition failed"
+  },
+  {
+    "id": 266,
+    "zh": "需要麦克风权限才能识别语音",
+    "en": "Microphone permission is required"
+  },
+  {
+    "id": 267,
+    "zh": "正在加载语音识别模型…",
+    "en": "Loading speech recognition…"
+  },
+  {
+    "id": 268,
+    "zh": "正在翻译…",
+    "en": "Translating…"
+  },
+  {
+    "id": 269,
+    "zh": "离线模型就绪 · ",
+    "en": "Offline models ready · "
+  },
+  {
+    "id": 270,
+    "zh": "（首次编译可能需要数分钟）",
+    "en": " (first setup may take minutes)"
+  },
+  {
+    "id": 271,
+    "zh": "操作失败，请查看模型详情或重试",
+    "en": "Operation failed · check model details or retry"
+  }
+]

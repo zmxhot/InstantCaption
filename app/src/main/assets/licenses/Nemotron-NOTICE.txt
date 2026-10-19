@@ -1,0 +1,6 @@
+Nemotron Speech Streaming English 0.6B
+Original model: https://huggingface.co/nvidia/nemotron-speech-streaming-en-0.6b
+Governing terms: NVIDIA Open Model License Agreement
+https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-open-model-license/
+QNN export: k2-fsa/sherpa-onnx, official 1.13.4 QNN Android APK, 560 ms chunk variant.
+NVIDIA model weights are not licensed under the sherpa-onnx Apache 2.0 code license.

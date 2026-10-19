@@ -1,0 +1,19 @@
+{
+  "portable": {
+    "repo": "tencent/Hy-MT2-1.8B-GGUF",
+    "revision": "a0c709d9fac510f2c807aa3af52872340dc37a4a"
+  },
+  "authorizedImports": {
+    "repo": "litert-community/Gemma3-1B-IT",
+    "revision": "d448835d84411a08f577e25f3afebe528402d73b",
+    "chipsets": [
+      "SM8550",
+      "SM8650",
+      "SM8750",
+      "MT6989",
+      "MT6991"
+    ]
+  },
+  "physicalMediaTekTested": false,
+  "otherVendors": "Exynos, Kirin, UNISOC and unlisted MediaTek chips retain CPU models; no unverified NPU package is substituted."
+}

@@ -1,0 +1,134 @@
+{
+  "reviewed": "2026-10-18",
+  "scope": "License snapshots and artifact provenance; not a grant of additional rights or a certification that all obligations are satisfied.",
+  "files": {
+    "qnn-runtime-2.51.0-NOTICE.txt": {
+      "sha256": "0c5e8aad3506d0ab881cabaf0dae8de64e1784dc1ee6c873caf24a78fbf01924",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/com/qualcomm/qti/qnn-runtime/2.51.0/qnn-runtime-2.51.0.aar",
+      "artifactSha256": "6388face1d5aa5e8958d745e5a547e92b5bec6fc332dfb1b438b1e17ffa02861",
+      "entry": "NOTICE.txt"
+    },
+    "qnn-runtime-2.51.0-LICENSE.pdf": {
+      "sha256": "ec1dccfdcba5c6e64126e84199b8362bf4999107bfa567ebe831dbb4c461692b",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/com/qualcomm/qti/qnn-runtime/2.51.0/qnn-runtime-2.51.0.aar",
+      "artifactSha256": "6388face1d5aa5e8958d745e5a547e92b5bec6fc332dfb1b438b1e17ffa02861",
+      "entry": "LICENSE.pdf"
+    },
+    "litertlm-android-0.18.0-LICENSE.txt": {
+      "sha256": "ec40a2da15ab0e8b44a9f787ab210203d3cad32572f5f99744a88eb90ff9ba4e",
+      "artifactUrl": "https://dl.google.com/dl/android/maven2/com/google/ai/edge/litertlm/litertlm-android/0.18.0/litertlm-android-0.18.0.aar",
+      "artifactSha256": "706cbb8a87739b2818111bf3a19a78b8f7781586d10f80adf3415581fab7595f",
+      "entry": "LICENSE"
+    },
+    "litertlm-android-0.18.0-THIRD_PARTY_NOTICE.txt": {
+      "sha256": "52a70c82685debf85d4ea9d677615b8636ffd3b75435ce71f247bf5982fb2ba2",
+      "artifactUrl": "https://dl.google.com/dl/android/maven2/com/google/ai/edge/litertlm/litertlm-android/0.18.0/litertlm-android-0.18.0.aar",
+      "artifactSha256": "706cbb8a87739b2818111bf3a19a78b8f7781586d10f80adf3415581fab7595f",
+      "entry": "THIRD_PARTY_NOTICE.txt"
+    },
+    "litert-npu-runtime-google-tensor-2.3.0-LICENSE.txt": {
+      "sha256": "71c6915d04265772a0339bed47276942c678b45cc01534210ebe6984fd1aec65",
+      "artifactUrl": "https://dl.google.com/dl/android/maven2/com/google/ai/edge/litert/litert-npu-runtime-google-tensor/2.3.0/litert-npu-runtime-google-tensor-2.3.0.aar",
+      "artifactSha256": "5f38ab3de4b99ef75edf13c595cf0c090b10a82d9697f5b55703409757e786f7",
+      "entry": "LICENSE"
+    },
+    "litert-npu-runtime-google-tensor-2.3.0-THIRD_PARTY_NOTICE.txt": {
+      "sha256": "e1a57d3c031a43f9df1381bbb7806053f49b9ff7d770e69287160d77d387809e",
+      "artifactUrl": "https://dl.google.com/dl/android/maven2/com/google/ai/edge/litert/litert-npu-runtime-google-tensor/2.3.0/litert-npu-runtime-google-tensor-2.3.0.aar",
+      "artifactSha256": "5f38ab3de4b99ef75edf13c595cf0c090b10a82d9697f5b55703409757e786f7",
+      "entry": "THIRD_PARTY_NOTICE.txt"
+    },
+    "litert-npu-runtime-qualcomm-2.3.0-LICENSE.txt": {
+      "sha256": "71c6915d04265772a0339bed47276942c678b45cc01534210ebe6984fd1aec65",
+      "artifactUrl": "https://dl.google.com/dl/android/maven2/com/google/ai/edge/litert/litert-npu-runtime-qualcomm/2.3.0/litert-npu-runtime-qualcomm-2.3.0.aar",
+      "artifactSha256": "55aa22e89b7decb9e2f56548188b9e8c42cc8f7a828e2ec4a17715079b313679",
+      "entry": "LICENSE"
+    },
+    "litert-npu-runtime-qualcomm-2.3.0-THIRD_PARTY_NOTICE.txt": {
+      "sha256": "beaab45693de795de1b3a356a36d94623b40f49f6a618ca0653235bbcda4070b",
+      "artifactUrl": "https://dl.google.com/dl/android/maven2/com/google/ai/edge/litert/litert-npu-runtime-qualcomm/2.3.0/litert-npu-runtime-qualcomm-2.3.0.aar",
+      "artifactSha256": "55aa22e89b7decb9e2f56548188b9e8c42cc8f7a828e2ec4a17715079b313679",
+      "entry": "THIRD_PARTY_NOTICE.txt"
+    },
+    "litert-npu-runtime-mediatek-2.3.0-LICENSE.txt": {
+      "sha256": "71c6915d04265772a0339bed47276942c678b45cc01534210ebe6984fd1aec65",
+      "artifactUrl": "https://dl.google.com/dl/android/maven2/com/google/ai/edge/litert/litert-npu-runtime-mediatek/2.3.0/litert-npu-runtime-mediatek-2.3.0.aar",
+      "artifactSha256": "949fcd3a40d597f07473eb8d6b4d89ab6343b5a8fd2d21c118e2855e613c4587",
+      "entry": "LICENSE"
+    },
+    "litert-npu-runtime-mediatek-2.3.0-THIRD_PARTY_NOTICE.txt": {
+      "sha256": "4ade80138b7035c607b8fcd496a9534d263cf17c1b627ecae5f9379b7a75325a",
+      "artifactUrl": "https://dl.google.com/dl/android/maven2/com/google/ai/edge/litert/litert-npu-runtime-mediatek/2.3.0/litert-npu-runtime-mediatek-2.3.0.aar",
+      "artifactSha256": "949fcd3a40d597f07473eb8d6b4d89ab6343b5a8fd2d21c118e2855e613c4587",
+      "entry": "THIRD_PARTY_NOTICE.txt"
+    },
+    "qnn-runtime-2.51.0-LICENSE.txt": {
+      "sha256": "6a6d339ad3eadada1c89865bd8373ed900db2e0de399a9af2d27d9fdc37b9963",
+      "derivedFrom": "qnn-runtime-2.51.0-LICENSE.pdf",
+      "sourceSha256": "ec1dccfdcba5c6e64126e84199b8362bf4999107bfa567ebe831dbb4c461692b",
+      "conversion": "pypdf text extraction; PDF is authoritative"
+    },
+    "qnn-runtime-2.45.0-LICENSE.pdf": {
+      "sha256": "ec1dccfdcba5c6e64126e84199b8362bf4999107bfa567ebe831dbb4c461692b",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/com/qualcomm/qti/qnn-runtime/2.45.0/qnn-runtime-2.45.0.aar",
+      "artifactSha256": "4cc58d8b303bf157e8706aa53912c2ef548175b76ece5a5b38a7e1b45974cea4",
+      "entry": "LICENSE.pdf",
+      "scope": "Historical SDK reference; not a verified GenieX 0.8.0 dependency manifest"
+    },
+    "qnn-runtime-2.45.0-NOTICE.txt": {
+      "sha256": "c8a22fa8b9ed3e9266c4a3366965474cef5cb147ee2a1f33e488bbb24a071c09",
+      "artifactUrl": "https://repo.maven.apache.org/maven2/com/qualcomm/qti/qnn-runtime/2.45.0/qnn-runtime-2.45.0.aar",
+      "artifactSha256": "4cc58d8b303bf157e8706aa53912c2ef548175b76ece5a5b38a7e1b45974cea4",
+      "entry": "NOTICE.txt",
+      "scope": "Historical SDK reference; not a verified GenieX 0.8.0 dependency manifest"
+    },
+    "GENIEX-QAIRT-THIRD-PARTY.txt": {
+      "sha256": "89094c1f5c6558962ae967e4bb39312508b4080bddde2a01dcd17a732631605b",
+      "url": "https://raw.githubusercontent.com/qualcomm/geniex-qairt-plugin/main/THIRD_PARTY_NOTICES.md",
+      "retrieved": "2026-10-18",
+      "scope": "Publisher page snapshot; current repository notices do not establish the full binary dependency map"
+    },
+    "GENIEX-QAIRT-BSD.txt": {
+      "sha256": "b037d8583105b909a8eb6715b28d4f25f205bc889bb047e5680471ce945dcd30",
+      "url": "https://raw.githubusercontent.com/qualcomm/geniex-qairt-plugin/main/LICENSE.txt",
+      "retrieved": "2026-10-18",
+      "scope": "Publisher page snapshot; current repository notices do not establish the full binary dependency map"
+    },
+    "GENIEX-PROC-THIRD-PARTY.txt": {
+      "sha256": "de031b44f77301f2286271b4928347e581c5150f6381f09caec9ef481ea86354",
+      "url": "https://raw.githubusercontent.com/qualcomm/geniex-proc/main/THIRD_PARTY_NOTICES.md",
+      "retrieved": "2026-10-18",
+      "scope": "Publisher page snapshot; current repository notices do not establish the full binary dependency map"
+    },
+    "GENIEX-PROC-BSD.txt": {
+      "sha256": "8dccd2bf8fab3f113bfd6c52b1b38e2428dfb5267e3baa354729157e4965a414",
+      "url": "https://raw.githubusercontent.com/qualcomm/geniex-proc/main/LICENSE.txt",
+      "retrieved": "2026-10-18",
+      "scope": "Publisher page snapshot; current repository notices do not establish the full binary dependency map"
+    },
+    "QWEN-0.6B-MODEL-CARD.txt": {
+      "sha256": "d8a52e4cf7ee6649a3b55f5dc05b08d8673368684c3a793adab574a710a616b5",
+      "url": "https://huggingface.co/qualcomm/Qwen3-0.6B/raw/main/README.md",
+      "retrieved": "2026-10-18",
+      "scope": "Publisher page snapshot; current repository notices do not establish the full binary dependency map"
+    },
+    "QWEN-1.7B-MODEL-CARD.txt": {
+      "sha256": "e3f61f55f525e272d1a37370c6f115b15c682d0ba8ae5976ae1d92b15bd0b033",
+      "url": "https://huggingface.co/qualcomm/Qwen3-1.7B/raw/main/README.md",
+      "retrieved": "2026-10-18",
+      "scope": "Publisher page snapshot; current repository notices do not establish the full binary dependency map"
+    },
+    "QWEN-4B-MODEL-CARD.txt": {
+      "sha256": "c6424cbb9f6596c72aeed3b939fed15b6467fedecf58c25f3983d92182f4ee70",
+      "url": "https://huggingface.co/qualcomm/Qwen3-4B/raw/main/README.md",
+      "retrieved": "2026-10-18",
+      "scope": "Publisher page snapshot; current repository notices do not establish the full binary dependency map"
+    },
+    "GEMMA4-MODEL-CARD.txt": {
+      "sha256": "175391634f4fb0a633d150b7845ac315485263d59d420133b5e42c0c08e7160d",
+      "url": "https://huggingface.co/litert-community/gemma-4-E2B-it-litert-lm/raw/b3ca0d2f076785a8f4b2219ddbd2bdb99954eae1/README.md",
+      "retrieved": "2026-10-18",
+      "scope": "Publisher page snapshot; current repository notices do not establish the full binary dependency map"
+    }
+  }
+}

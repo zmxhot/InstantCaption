@@ -1,0 +1,61 @@
+Instant Caption / 瞬译
+Copyright 2026 Instant Caption contributors
+
+Original application source is licensed under Apache License 2.0 (LICENSE).
+This grant does not relicense downloaded models, native runtimes or fixtures.
+
+Runtime/source inventory:
+- sherpa-onnx 1.13.8: k2-fsa contributors, Apache-2.0.
+- ONNX Runtime: Microsoft contributors, MIT. Portable builds use the unmodified
+  Android 1.28.0 AAR and sherpa's statically linked CPU AAR. NPU builds use
+  sherpa's shared ORT 1.28.2 plus the 1.28.0 JNI binding with its ELF version
+  requirement adjusted to 1.28.2 (same C API 28). The exact transformation and
+  provenance are in prepare_translation_runtime.py and app/libs/*provenance.json.
+- GenieX 0.8.0 Java/API and repository code: Qualcomm BSD-3-Clause notice.
+  NPU builds also package QAIRT/QNN native files unchanged from the official
+  Maven AARs. Common QNN files use version 2.51.0; GenieX/plugins use 0.8.0.
+  The embedded QNN AI Stack License section 1(iv) grants conditional object-code
+  redistribution incorporated in an application, excluding standalone distribution.
+  Its original LICENSE.pdf and NOTICE.txt are retained, with hash provenance.
+  Do not assume the repository BSD license grants unrestricted redistribution
+  of every proprietary native component or removes model usage restrictions.
+  Portable builds do not package Qualcomm native libraries.
+- Kotlin, Apache Commons Compress and its dependencies retain their notices in
+  the APK's assets/licenses and KOTLIN-LICENSE.txt.
+- LiteRT-LM 0.18.0: Google AI Edge contributors, Apache-2.0. Standalone
+  LiteRT NPU dispatch plugins 2.3.0 support the integrated Tensor/Qualcomm/MediaTek targets.
+  First-party Apache licensing does not resolve every transitive binary component.
+  Full upstream AAR LICENSE/THIRD_PARTY_NOTICE files are retained in assets/licenses.
+  See docs/NPU-DISTRIBUTION.md for the unresolved binary component mapping.
+  Portable builds exclude the LiteRT-LM Java API and native plugins.
+- Silero VAD: MIT. Model is bundled for speech activity detection.
+
+Model notices: X-ASR and Zipformer (Apache-2.0), SenseVoice (FunASR model
+agreement), NVIDIA Nemotron (NVIDIA Open Model License), Whisper (MIT),
+Qwen3 originals (Apache-2.0; optimized exports additionally have publisher
+usage limitations), Gemma4-E2B optimized exports (publisher declares Apache-2.0), OPUS-MT (Apache-2.0 except en-de, CC BY 4.0).
+Authors, source URLs, conversion details and full available license snapshots
+are in app/src/main/assets/licenses and X-ASR-LICENSE.txt. Model downloads are
+separate from the APK; archive/file hashes are pinned in its catalogs.
+
+Test audio is excluded from the clean source export. To run audio evaluations,
+prepare licensed fixtures according to docs/TESTING.md. Existing private test
+assets retain their own attribution and are not relicensed by this project.
+
+License snapshots are dated and hashed in assets/licenses/snapshot-sources.json.
+Qualcomm terms: https://www.qualcomm.com/site/terms-of-use
+GenieX: https://github.com/qualcomm/GenieX
+Model and runtime licenses must be checked separately for the intended release.
+
+1.19 additions:
+- llama.cpp CPU runtime: ggml-org contributors, MIT; source commit
+  620d2225cc436ab0b001e3200e590e3b286ef9ab, built locally with Android NDK.
+- HY-MT2-1.8B: Tencent Hy, Apache-2.0; separate Q4_K_M GGUF download.
+- Gemma3-1B-IT: Google Gemma / LiteRT Community, Gemma Terms of Use.
+  No weights are bundled or mirrored; publisher authorization is required.
+See assets/licenses/LLAMA-CPP-LICENSE.txt, HY-MT2-LICENSE.txt,
+HY-MT2-NOTICE.txt and GEMMA3-NOTICE.txt.
+
+2026-10-18 review and artifact-bound notices: docs/NPU-DISTRIBUTION.md and
+assets/licenses/runtime-license-sources.json. This is a bounded technical review,
+not individualized vendor approval or a legal opinion.

@@ -1,0 +1,6 @@
+Instant Caption 1.14.0 beta.
+
+The .npu suffix preserves upgrades from device-test builds.
+Current sources, model licenses, binary provenance, CPU/NPU scope and limitations
+are documented in licenses/NPU-MULTI-MODEL-NOTICE.txt in the APK and NOTICE
+in the source repository. No Google translation SDK is included.

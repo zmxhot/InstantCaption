@@ -1,0 +1,30 @@
+{
+  "id": "gemma4-e2b-npu",
+  "chipset": "SM8750",
+  "runtime": "litert-lm",
+  "entryFile": "model.litertlm",
+  "source": "https://huggingface.co/litert-community/gemma-4-E2B-it-litert-lm/tree/b3ca0d2f076785a8f4b2219ddbd2bdb99954eae1",
+  "revision": "b3ca0d2f076785a8f4b2219ddbd2bdb99954eae1",
+  "files": [
+    {
+      "name": "model.litertlm",
+      "size": 3016294400,
+      "sha256": "41dd675fbe735b6029012b5576a5716bac614fd8156de0128db4c9dff3cebd4e"
+    }
+  ],
+  "download": {
+    "format": "raw",
+    "size": 3016294400,
+    "sha256": "41dd675fbe735b6029012b5576a5716bac614fd8156de0128db4c9dff3cebd4e",
+    "urls": [
+      {
+        "name": "Hugging Face",
+        "url": "https://huggingface.co/litert-community/gemma-4-E2B-it-litert-lm/resolve/b3ca0d2f076785a8f4b2219ddbd2bdb99954eae1/gemma-4-E2B-it_qualcomm_sm8750.litertlm"
+      },
+      {
+        "name": "HF mirror · hf-mirror.com",
+        "url": "https://hf-mirror.com/litert-community/gemma-4-E2B-it-litert-lm/resolve/b3ca0d2f076785a8f4b2219ddbd2bdb99954eae1/gemma-4-E2B-it_qualcomm_sm8750.litertlm"
+      }
+    ]
+  }
+}

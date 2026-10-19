@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.qualcomm.qti</groupId>
+  <artifactId>qnn-runtime</artifactId>
+  <version>2.51.0</version>
+  <packaging>aar</packaging>
+  <name>QNN Runtime</name>
+  <description>QNN Runtime</description>
+  <url>https://www.qualcomm.com</url>
+  <licenses>
+    <license>
+      <name>Qualcomm AI Hub Model License</name>
+      <url>https://softwarecenter.qualcomm.com/api/download/software/licenses/ai_model_hub/v1/LICENSE.pdf</url>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <name>Qualcomm QNN Developers</name>
+      <email>qai-hub-support@qti.qualcomm.com</email>
+      <url>https://developer.qualcomm.com</url>
+      <organization>Qualcomm Technologies, Inc.</organization>
+    </developer>
+  </developers>
+  <scm>
+    <connection>scm:not_public</connection>
+    <url>https://not_public</url>
+  </scm>
+</project>

@@ -1,0 +1,35 @@
+LiteRT-LM 0.18.0 and Gemma4-E2B local text translation
+
+LiteRT-LM API and runtime: Google AI Edge contributors, Apache-2.0.
+https://github.com/google-ai-edge/LiteRT-LM/tree/v0.18.0
+https://dl.google.com/dl/android/maven2/com/google/ai/edge/litertlm/litertlm-android/0.18.0/
+
+Standalone LiteRT NPU dispatch/compiler plugins 2.3.0:
+https://developers.google.com/edge/litert/next/npu
+https://dl.google.com/dl/android/maven2/com/google/ai/edge/litert/
+Google Tensor, MediaTek and Qualcomm plugins are included only in NPU builds.
+No Google Play Services API, Google Translate SDK or network inference is used.
+
+Gemma4-E2B optimized models are downloaded separately from:
+https://huggingface.co/litert-community/gemma-4-E2B-it-litert-lm
+Publisher metadata declares Apache-2.0 at revision b3ca0d2f076785a8f4b2219ddbd2bdb99954eae1.
+The catalog pins separate SM8750, Tensor G5 and Tensor G6 files and SHA-256 hashes.
+The 3.02/3.11/3.31 GB packages are not interchangeable across these targets.
+
+Qualcomm common QNN 2.51.0 libraries and V68/V69/V73/V75/V79/V81 stub/skeletons:
+https://repo.maven.apache.org/maven2/com/qualcomm/qti/qnn-runtime/2.51.0/
+The QNN Maven license metadata is preserved in QNN-2.51.0-POM.xml.
+GenieX API/plugin remains version 0.8.0; see QWEN-NPU-NOTICE.txt.
+Vendor native-runtime terms remain separate from application/model source licenses.
+
+Runtime downloads are hash-pinned in prepare_litert_runtime.py and prepare_qwen_runtime.py.
+
+Distribution review (2026-10-18): the first-party Apache license does not
+establish all transitive binary licenses. Original AAR LICENSE and
+THIRD_PARTY_NOTICE files are retained with their full contents and hashes in
+runtime-license-sources.json. The LM and Tensor notices include a Google
+Runtime Environment GPL entry whose relationship to the shipped Android
+binaries is unresolved. This is not a finding that GPL code is linked.
+Full NPU builds remain release candidates pending component/source mapping.
+Portable builds contain neither LiteRT-LM Java API nor its native plugins.
+See docs/NPU-DISTRIBUTION.md for the review scope and upstream evidence.

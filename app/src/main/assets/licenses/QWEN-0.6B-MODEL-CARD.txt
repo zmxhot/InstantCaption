@@ -1,0 +1,185 @@
+---
+library_name: pytorch
+license: apache-2.0
+tags:
+- llm
+- generative_ai
+- android
+pipeline_tag: text-generation
+
+---
+
+![](https://qaihub-public-assets.s3.us-west-2.amazonaws.com/qai-hub-models/models/qwen3_0_6b/web-assets/model_demo.png)
+
+# Qwen3-0.6B: Optimized for Qualcomm Devices
+
+The Qwen3-0.6B is a state-of-the-art multilingual language model with 0.6 billion parameters, excelling in language understanding, generation, coding, and mathematics.
+
+This is based on the implementation of Qwen3-0.6B found [here](https://github.com/QwenLM/Qwen3).
+This repository contains pre-exported model files optimized for Qualcomm® devices. You can use the [Qualcomm® AI Hub Models](https://github.com/qualcomm/ai-hub-models/blob/v0.64.0/src/qai_hub_models/models/qwen3_0_6b) library to export with custom configurations. More details on model performance across various devices, can be found [here](#performance-summary).
+
+Qualcomm AI Hub Models uses [Qualcomm AI Hub Workbench](https://workbench.aihub.qualcomm.com) to compile, profile, and evaluate this model. [Sign up](https://myaccount.qualcomm.com/signup) to run these models on a hosted Qualcomm® device.
+
+## Deploying Qwen3-0.6B on-device
+
+Follow the [GenieX quickstart](https://geniex.aihub.qualcomm.com/en/get-started/quickstart) to install GenieX and deploy the model on a target device.
+
+See the [LLM-on-Genie](https://github.com/qualcomm/ai-hub-apps/tree/main/tutorials/llm_on_genie) tutorial to run with the Genie runtime. Note: Genie support will be deprecated soon.
+
+## Getting Started
+There are two ways to deploy this model on your device:
+
+### Option 1: Download Pre-Exported Models
+
+Below are pre-exported model assets ready for deployment.
+
+| Runtime | Precision | Chipset | SDK Versions | Download |
+|---|---|---|---|---|
+| GENIE | w4a16 | Snapdragon® 8 Elite Gen 5 For Galaxy Mobile | QAIRT 2.45 | [Download](https://qaihub-public-assets.s3.us-west-2.amazonaws.com/qai-hub-models/models/qwen3_0_6b/releases/v0.64.0/qwen3_0_6b-genie-w4a16-qualcomm_snapdragon_8_elite_gen5_for_galaxy.zip)
+| GENIE | w4a16 | Snapdragon® 8 Elite For Galaxy Mobile | QAIRT 2.45 | [Download](https://qaihub-public-assets.s3.us-west-2.amazonaws.com/qai-hub-models/models/qwen3_0_6b/releases/v0.64.0/qwen3_0_6b-genie-w4a16-qualcomm_snapdragon_8_elite_for_galaxy.zip)
+| GENIE | w4a16 | Snapdragon® X2 Elite | QAIRT 2.45 | [Download](https://qaihub-public-assets.s3.us-west-2.amazonaws.com/qai-hub-models/models/qwen3_0_6b/releases/v0.64.0/qwen3_0_6b-genie-w4a16-qualcomm_snapdragon_x2_elite.zip)
+| GENIE | w4a16 | Snapdragon® X Elite | QAIRT 2.45 | [Download](https://qaihub-public-assets.s3.us-west-2.amazonaws.com/qai-hub-models/models/qwen3_0_6b/releases/v0.64.0/qwen3_0_6b-genie-w4a16-qualcomm_snapdragon_x_elite.zip)
+| GENIE | w4a16 | Qualcomm® Dragonwing™ IQ-8275 | QAIRT 2.45 | [Download](https://qaihub-public-assets.s3.us-west-2.amazonaws.com/qai-hub-models/models/qwen3_0_6b/releases/v0.64.0/qwen3_0_6b-genie-w4a16-qualcomm_qcs8275.zip)
+| GENIE | w4a16 | Qualcomm® SA8775P | QAIRT 2.45 | [Download](https://qaihub-public-assets.s3.us-west-2.amazonaws.com/qai-hub-models/models/qwen3_0_6b/releases/v0.64.0/qwen3_0_6b-genie-w4a16-qualcomm_sa8775p.zip)
+| GENIE | w4a16 | Qualcomm® Dragonwing™ IQ-9075 | QAIRT 2.45 | [Download](https://qaihub-public-assets.s3.us-west-2.amazonaws.com/qai-hub-models/models/qwen3_0_6b/releases/v0.64.0/qwen3_0_6b-genie-w4a16-qualcomm_qcs9075.zip)
+| GENIEX_LLAMACPP | q4_0 | Universal |  | [Download](https://huggingface.co/ggml-org/Qwen3-0.6B-GGUF/resolve/main/Qwen3-0.6B-Q4_0.gguf)
+| GENIEX_QAIRT | w4a16 | Snapdragon® 8 Elite Gen 5 For Galaxy Mobile | QAIRT 2.45 | [Download](https://qaihub-public-assets.s3.us-west-2.amazonaws.com/qai-hub-models/models/qwen3_0_6b/releases/v0.64.0/qwen3_0_6b-geniex_qairt-w4a16-qualcomm_snapdragon_8_elite_gen5_for_galaxy.zip)
+| GENIEX_QAIRT | w4a16 | Snapdragon® 8 Elite For Galaxy Mobile | QAIRT 2.45 | [Download](https://qaihub-public-assets.s3.us-west-2.amazonaws.com/qai-hub-models/models/qwen3_0_6b/releases/v0.64.0/qwen3_0_6b-geniex_qairt-w4a16-qualcomm_snapdragon_8_elite_for_galaxy.zip)
+| GENIEX_QAIRT | w4a16 | Snapdragon® X2 Elite | QAIRT 2.45 | [Download](https://qaihub-public-assets.s3.us-west-2.amazonaws.com/qai-hub-models/models/qwen3_0_6b/releases/v0.64.0/qwen3_0_6b-geniex_qairt-w4a16-qualcomm_snapdragon_x2_elite.zip)
+| GENIEX_QAIRT | w4a16 | Snapdragon® X Elite | QAIRT 2.45 | [Download](https://qaihub-public-assets.s3.us-west-2.amazonaws.com/qai-hub-models/models/qwen3_0_6b/releases/v0.64.0/qwen3_0_6b-geniex_qairt-w4a16-qualcomm_snapdragon_x_elite.zip)
+| GENIEX_QAIRT | w4a16 | Qualcomm® Dragonwing™ IQ-8275 | QAIRT 2.45 | [Download](https://qaihub-public-assets.s3.us-west-2.amazonaws.com/qai-hub-models/models/qwen3_0_6b/releases/v0.64.0/qwen3_0_6b-geniex_qairt-w4a16-qualcomm_qcs8275.zip)
+| GENIEX_QAIRT | w4a16 | Qualcomm® Dragonwing™ IQ-9075 | QAIRT 2.45 | [Download](https://qaihub-public-assets.s3.us-west-2.amazonaws.com/qai-hub-models/models/qwen3_0_6b/releases/v0.64.0/qwen3_0_6b-geniex_qairt-w4a16-qualcomm_qcs9075.zip)
+
+For more device-specific assets and performance metrics, visit **[Qwen3-0.6B on Qualcomm® AI Hub](https://aihub.qualcomm.com/models/qwen3_0_6b)**.
+
+
+### Option 2: Export with Custom Configurations
+
+Use the [Qualcomm® AI Hub Models](https://github.com/qualcomm/ai-hub-models/blob/v0.64.0/src/qai_hub_models/models/qwen3_0_6b) Python library to compile and export the model with your own:
+- Custom weights (e.g., fine-tuned checkpoints)
+- Custom input shapes
+- Target device and runtime configurations
+
+This option is ideal if you need to customize the model beyond the default configuration provided here.
+
+See our repository for [Qwen3-0.6B on GitHub](https://github.com/qualcomm/ai-hub-models/blob/v0.64.0/src/qai_hub_models/models/qwen3_0_6b) for usage instructions.
+
+## Model Details
+
+**Model Type:** Model_use_case.text_generation
+
+**Model Stats:**
+- Response Rate: Rate of response generation after the first response token.
+- Supported languages: 100+ languages and dialects.
+- TTFT: Time To First Token is the time it takes to generate the first response token. This is expressed as a range because it varies based on the length of the prompt. The lower bound is for a short prompt (up to 128 tokens, i.e., one iteration of the prompt processor) and the upper bound is for a prompt using the full context length (4096 tokens).
+
+## Performance Summary
+| Model | Runtime | Precision | Chipset | Context Length | Response Rate (tokens per second) | Time To First Token (range, seconds)
+|---|---|---|---|---|---|---
+| Qwen3-0.6B | GENIE | w4a16 | Snapdragon® 8 Elite Gen 5 For Galaxy Mobile | 4096 | 132.8021240234375 | 0.013457 - 0.430624
+| Qwen3-0.6B | GENIE | w4a16 | Snapdragon® 8 Elite For Galaxy Mobile | 4096 | 125.03125762939453 | 0.01592 - 0.50944
+| Qwen3-0.6B | GENIE | w4a16 | Snapdragon® X2 Elite | 4096 | 135.66680908203125 | 0.01384 - 0.44288
+| Qwen3-0.6B | GENIE | w4a16 | Snapdragon® X Elite | 4096 | 39.60709762573242 | 0.034756999999999996 - 1.1122239999999999
+| Qwen3-0.6B | GENIE | w4a16 | Qualcomm® Dragonwing™ IQ-8275 | 4096 | 77.11884307861328 | 0.040802 - 1.305664
+| Qwen3-0.6B | GENIE | w4a16 | Qualcomm® Dragonwing™ IQ-9075 | 4096 | 88.24567413330078 | 0.028715 - 0.91888
+| Qwen3-0.6B | GENIE | w4a16 | Qualcomm® Dragonwing™ IQ-X7181 | 4096 | 39.60709762573242 | 0.034756999999999996 - 1.1122239999999999
+| Qwen3-0.6B | GENIE | w4a16 | Qualcomm® Dragonwing™ Q-8750 | 4096 | 125.03125762939453 | 0.01592 - 0.50944
+| Qwen3-0.6B | GENIEX_LLAMACPP | q4_0 | Snapdragon® 8 Elite Gen 5 For Galaxy Mobile | 512 | 122.952198 | 0.129031 - 0.516124
+| Qwen3-0.6B | GENIEX_LLAMACPP | q4_0 | Snapdragon® 8 Elite Gen 5 For Galaxy Mobile | 512 | 94.120485 | 0.07067033333333334 - 0.28268133333333334
+| Qwen3-0.6B | GENIEX_LLAMACPP | q4_0 | Snapdragon® 8 Elite Gen 5 For Galaxy Mobile | 512 | 93.451871 | 0.028585999999999997 - 0.11434399999999999
+| Qwen3-0.6B | GENIEX_LLAMACPP | q4_0 | Snapdragon® 8 Elite Gen 5 For Galaxy Mobile | 4096 | 18.715294 | 0.683848064516129 - 21.883138064516128
+| Qwen3-0.6B | GENIEX_LLAMACPP | q4_0 | Snapdragon® 8 Elite Gen 5 For Galaxy Mobile | 4096 | 38.709393 | 0.18713370967741938 - 5.98827870967742
+| Qwen3-0.6B | GENIEX_LLAMACPP | q4_0 | Snapdragon® 8 Elite Gen 5 For Galaxy Mobile | 4096 | 41.335979 | 0.03385203225806452 - 1.0832650322580646
+| Qwen3-0.6B | GENIEX_LLAMACPP | q4_0 | Snapdragon® 8 Elite For Galaxy Mobile | 512 | 104.435404 | 0.14879466666666666 - 0.5951786666666666
+| Qwen3-0.6B | GENIEX_LLAMACPP | q4_0 | Snapdragon® 8 Elite For Galaxy Mobile | 512 | 89.183131 | 0.07693666666666667 - 0.30774666666666667
+| Qwen3-0.6B | GENIEX_LLAMACPP | q4_0 | Snapdragon® 8 Elite For Galaxy Mobile | 512 | 86.831171 | 0.032433 - 0.129732
+| Qwen3-0.6B | GENIEX_LLAMACPP | q4_0 | Snapdragon® 8 Elite For Galaxy Mobile | 4096 | 15.782394 | 0.7385865806451614 - 23.634770580645164
+| Qwen3-0.6B | GENIEX_LLAMACPP | q4_0 | Snapdragon® 8 Elite For Galaxy Mobile | 4096 | 32.94201 | 0.25413412903225807 - 8.132292129032258
+| Qwen3-0.6B | GENIEX_LLAMACPP | q4_0 | Snapdragon® 8 Elite For Galaxy Mobile | 4096 | 30.781958 | 0.046029258064516125 - 1.472936258064516
+| Qwen3-0.6B | GENIEX_LLAMACPP | q4_0 | Snapdragon® X2 Elite | 512 | 174.245436 | 0.21687933333333334 - 0.8675173333333334
+| Qwen3-0.6B | GENIEX_LLAMACPP | q4_0 | Snapdragon® X2 Elite | 512 | 101.206892 | 0.04785266666666666 - 0.19141066666666665
+| Qwen3-0.6B | GENIEX_LLAMACPP | q4_0 | Snapdragon® X2 Elite | 512 | 105.960967 | 0.026188999999999997 - 0.10475599999999999
+| Qwen3-0.6B | GENIEX_LLAMACPP | q4_0 | Snapdragon® X2 Elite | 4096 | 55.848908 | 0.16073335483870968 - 5.14346735483871
+| Qwen3-0.6B | GENIEX_LLAMACPP | q4_0 | Snapdragon® X2 Elite | 4096 | 48.900839 | 0.1405927741935484 - 4.498968774193549
+| Qwen3-0.6B | GENIEX_LLAMACPP | q4_0 | Snapdragon® X2 Elite | 4096 | 48.153103 | 0.04143135483870968 - 1.3258033548387098
+| Qwen3-0.6B | GENIEX_LLAMACPP | q4_0 | Snapdragon® X Elite | 512 | 112.441671 | 0.103547 - 0.414188
+| Qwen3-0.6B | GENIEX_LLAMACPP | q4_0 | Snapdragon® X Elite | 512 | 57.687697 | 0.11620533333333333 - 0.4648213333333333
+| Qwen3-0.6B | GENIEX_LLAMACPP | q4_0 | Snapdragon® X Elite | 512 | 54.779653 | 0.060453999999999994 - 0.24181599999999998
+| Qwen3-0.6B | GENIEX_LLAMACPP | q4_0 | Snapdragon® X Elite | 4096 | 27.205228 | 0.39615774193548386 - 12.677047741935484
+| Qwen3-0.6B | GENIEX_LLAMACPP | q4_0 | Snapdragon® X Elite | 4096 | 28.264775 | 0.4457638064516129 - 14.264441806451613
+| Qwen3-0.6B | GENIEX_LLAMACPP | q4_0 | Snapdragon® X Elite | 4096 | 24.194512 | 0.09941512903225806 - 3.181284129032258
+| Qwen3-0.6B | GENIEX_LLAMACPP | q4_0 | Qualcomm® Dragonwing™ IQ-8275 | 512 | 18.560212 | 0.655443 - 2.621772
+| Qwen3-0.6B | GENIEX_LLAMACPP | q4_0 | Qualcomm® Dragonwing™ IQ-8275 | 512 | 12.514923 | 1.1844186666666665 - 4.737674666666666
+| Qwen3-0.6B | GENIEX_LLAMACPP | q4_0 | Qualcomm® Dragonwing™ IQ-8275 | 512 | 44.939165 | 0.07890799999999999 - 0.31563199999999997
+| Qwen3-0.6B | GENIEX_LLAMACPP | q4_0 | Qualcomm® Dragonwing™ IQ-8275 | 4096 | 3.066862 | 1.879429741935484 - 60.14175174193549
+| Qwen3-0.6B | GENIEX_LLAMACPP | q4_0 | Qualcomm® Dragonwing™ IQ-8275 | 4096 | 5.91564 | 2.364673516129032 - 75.66955251612903
+| Qwen3-0.6B | GENIEX_LLAMACPP | q4_0 | Qualcomm® Dragonwing™ IQ-8275 | 4096 | 24.061426 | 0.1033392258064516 - 3.3068552258064514
+| Qwen3-0.6B | GENIEX_LLAMACPP | q4_0 | Qualcomm® Dragonwing™ IQ-9075 | 512 | 80.733005 | 0.26653925 - 1.066157
+| Qwen3-0.6B | GENIEX_LLAMACPP | q4_0 | Qualcomm® Dragonwing™ IQ-9075 | 512 | 74.240385 | 0.26632825000000004 - 1.0653130000000002
+| Qwen3-0.6B | GENIEX_LLAMACPP | q4_0 | Qualcomm® Dragonwing™ IQ-9075 | 512 | 34.673153 | 0.10991074999999999 - 0.43964299999999995
+| Qwen3-0.6B | GENIEX_LLAMACPP | q4_0 | Qualcomm® Dragonwing™ IQ-X7181 | 512 | 112.441671 | 0.103547 - 0.414188
+| Qwen3-0.6B | GENIEX_LLAMACPP | q4_0 | Qualcomm® Dragonwing™ IQ-X7181 | 512 | 57.687697 | 0.11620533333333333 - 0.4648213333333333
+| Qwen3-0.6B | GENIEX_LLAMACPP | q4_0 | Qualcomm® Dragonwing™ IQ-X7181 | 512 | 54.779653 | 0.060453999999999994 - 0.24181599999999998
+| Qwen3-0.6B | GENIEX_LLAMACPP | q4_0 | Qualcomm® Dragonwing™ Q-8750 | 512 | 104.435404 | 0.14879466666666666 - 0.5951786666666666
+| Qwen3-0.6B | GENIEX_LLAMACPP | q4_0 | Qualcomm® Dragonwing™ Q-8750 | 512 | 89.183131 | 0.07693666666666667 - 0.30774666666666667
+| Qwen3-0.6B | GENIEX_LLAMACPP | q4_0 | Qualcomm® Dragonwing™ Q-8750 | 512 | 86.831171 | 0.032433 - 0.129732
+| Qwen3-0.6B | GENIEX_LLAMACPP | q4_0 | Qualcomm® Dragonwing™ IQ-9075 | 4096 | 30.105746 | 0.70822534375 - 22.663211
+| Qwen3-0.6B | GENIEX_LLAMACPP | q4_0 | Qualcomm® Dragonwing™ IQ-9075 | 4096 | 29.97025 | 0.70882696875 - 22.682463
+| Qwen3-0.6B | GENIEX_LLAMACPP | q4_0 | Qualcomm® Dragonwing™ IQ-9075 | 4096 | 18.282076 | 0.1902083125 - 6.086666
+| Qwen3-0.6B | GENIEX_LLAMACPP | q4_0 | Qualcomm® Dragonwing™ IQ-X7181 | 4096 | 27.205228 | 0.39615774193548386 - 12.677047741935484
+| Qwen3-0.6B | GENIEX_LLAMACPP | q4_0 | Qualcomm® Dragonwing™ IQ-X7181 | 4096 | 28.264775 | 0.4457638064516129 - 14.264441806451613
+| Qwen3-0.6B | GENIEX_LLAMACPP | q4_0 | Qualcomm® Dragonwing™ IQ-X7181 | 4096 | 24.194512 | 0.09941512903225806 - 3.181284129032258
+| Qwen3-0.6B | GENIEX_LLAMACPP | q4_0 | Qualcomm® Dragonwing™ Q-8750 | 4096 | 15.782394 | 0.7385865806451614 - 23.634770580645164
+| Qwen3-0.6B | GENIEX_LLAMACPP | q4_0 | Qualcomm® Dragonwing™ Q-8750 | 4096 | 32.94201 | 0.25413412903225807 - 8.132292129032258
+| Qwen3-0.6B | GENIEX_LLAMACPP | q4_0 | Qualcomm® Dragonwing™ Q-8750 | 4096 | 30.781958 | 0.046029258064516125 - 1.472936258064516
+| Qwen3-0.6B | GENIEX_QAIRT | w4a16 | Snapdragon® 8 Elite Gen 5 For Galaxy Mobile | 512 | 42.772857 | 0.03178533333333333 - 0.12714133333333333
+| Qwen3-0.6B | GENIEX_QAIRT | w4a16 | Snapdragon® 8 Elite Gen 5 For Galaxy Mobile | 1024 | 41.966264 | 0.034817 - 0.278536
+| Qwen3-0.6B | GENIEX_QAIRT | w4a16 | Snapdragon® 8 Elite Gen 5 For Galaxy Mobile | 4096 | 30.713076 | 0.051084032258064516 - 1.6346890322580645
+| Qwen3-0.6B | GENIEX_QAIRT | w4a16 | Snapdragon® 8 Elite For Galaxy Mobile | 512 | 42.057119 | 0.037545 - 0.15018
+| Qwen3-0.6B | GENIEX_QAIRT | w4a16 | Snapdragon® 8 Elite For Galaxy Mobile | 1024 | 42.314651 | 0.03852685714285714 - 0.3082148571428571
+| Qwen3-0.6B | GENIEX_QAIRT | w4a16 | Snapdragon® 8 Elite For Galaxy Mobile | 4096 | 30.531372 | 0.05752596774193548 - 1.8408309677419354
+| Qwen3-0.6B | GENIEX_QAIRT | w4a16 | Snapdragon® X2 Elite | 512 | 112.146618 | 0.016165999999999996 - 0.06466399999999999
+| Qwen3-0.6B | GENIEX_QAIRT | w4a16 | Snapdragon® X2 Elite | 1024 | 110.239245 | 0.019858 - 0.158864
+| Qwen3-0.6B | GENIEX_QAIRT | w4a16 | Snapdragon® X2 Elite | 4096 | 63.187659 | 0.029846806451612903 - 0.9550978064516129
+| Qwen3-0.6B | GENIEX_QAIRT | w4a16 | Snapdragon® X Elite | 4096 | 89.913693 | 0.029908 - 0.957056
+| Qwen3-0.6B | GENIEX_QAIRT | w4a16 | Qualcomm® Dragonwing™ IQ-8275 | 4096 | 75.429571 | 0.02953 - 0.94496
+| Qwen3-0.6B | GENIEX_QAIRT | w4a16 | Qualcomm® Dragonwing™ IQ-9075 | 512 | 70.804293 | 0.030378 - 0.121512
+| Qwen3-0.6B | GENIEX_QAIRT | w4a16 | Qualcomm® Dragonwing™ Q-8750 | 512 | 42.057119 | 0.037545 - 0.15018
+| Qwen3-0.6B | GENIEX_QAIRT | w4a16 | Qualcomm® Dragonwing™ IQ-9075 | 1024 | 49.885264 | 0.03394442857142857 - 0.27155542857142856
+| Qwen3-0.6B | GENIEX_QAIRT | w4a16 | Qualcomm® Dragonwing™ Q-8750 | 1024 | 42.314651 | 0.03852685714285714 - 0.3082148571428571
+| Qwen3-0.6B | GENIEX_QAIRT | w4a16 | Qualcomm® Dragonwing™ IQ-9075 | 4096 | 30.140426 | 0.05653651612903226 - 1.8091685161290323
+| Qwen3-0.6B | GENIEX_QAIRT | w4a16 | Qualcomm® Dragonwing™ IQ-X7181 | 4096 | 89.913693 | 0.029908 - 0.957056
+| Qwen3-0.6B | GENIEX_QAIRT | w4a16 | Qualcomm® Dragonwing™ Q-8750 | 4096 | 30.531372 | 0.05752596774193548 - 1.8408309677419354
+
+## License
+* The license for the original implementation of Qwen3-0.6B can be found
+  [here](https://huggingface.co/Qwen/Qwen3-0.6B/blob/main/LICENSE).
+
+## References
+* [Qwen3 Technical Report](https://arxiv.org/abs/2505.09388)
+* [Source Model Implementation](https://github.com/QwenLM/Qwen3)
+
+## Community
+* Join [our AI Hub Slack community](https://aihub.qualcomm.com/community/slack) to collaborate, post questions and learn more about on-device AI.
+* For questions or feedback please [reach out to us](mailto:ai-hub-support@qti.qualcomm.com).
+
+## Usage and Limitations
+
+This model may not be used for or in connection with any of the following applications:
+
+- Accessing essential private and public services and benefits;
+- Administration of justice and democratic processes;
+- Assessing or recognizing the emotional state of a person;
+- Biometric and biometrics-based systems, including categorization of persons based on sensitive characteristics;
+- Education and vocational training;
+- Employment and workers management;
+- Exploitation of the vulnerabilities of persons resulting in harmful behavior;
+- General purpose social scoring;
+- Law enforcement;
+- Management and operation of critical infrastructure;
+- Migration, asylum and border control management;
+- Predictive policing;
+- Real-time remote biometric identification in public spaces;
+- Recommender systems of social media platforms;
+- Scraping of facial images (from the internet or otherwise); and/or
+- Subliminal manipulation

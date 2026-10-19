@@ -1,0 +1,768 @@
+{
+  "zh": {
+    "id": "opus-mt-en-zh",
+    "revision": "046f55aec303cdee3e0318604406d4df20f1e8ea",
+    "license": "Apache-2.0",
+    "files": [
+      {
+        "name": "encoder_model_quantized.onnx",
+        "size": 52899742,
+        "sha256": "d3b7912bf6a9bd27e4c074c2df91d4ff3d5b4bc5f7f6c8d7cc9c805c98fbafee",
+        "urls": [
+          {
+            "name": "Hugging Face",
+            "url": "https://huggingface.co/Xenova/opus-mt-en-zh/resolve/046f55aec303cdee3e0318604406d4df20f1e8ea/onnx/encoder_model_quantized.onnx"
+          },
+          {
+            "name": "HF Mirror",
+            "url": "https://hf-mirror.com/Xenova/opus-mt-en-zh/resolve/046f55aec303cdee3e0318604406d4df20f1e8ea/onnx/encoder_model_quantized.onnx"
+          }
+        ]
+      },
+      {
+        "name": "decoder_model_merged.onnx",
+        "size": 235912391,
+        "sha256": "ad8d042c31fd5d92b2a76c6f5ba35d8adee2f4f9d7e0b87b2cda8860b3dcd931",
+        "urls": [
+          {
+            "name": "Hugging Face",
+            "url": "https://huggingface.co/onnx-community/opus-mt-en-zh/resolve/4dc37afc6deb160f4c9048260d48019ee497658e/onnx/decoder_model_merged.onnx"
+          },
+          {
+            "name": "HF Mirror",
+            "url": "https://hf-mirror.com/onnx-community/opus-mt-en-zh/resolve/4dc37afc6deb160f4c9048260d48019ee497658e/onnx/decoder_model_merged.onnx"
+          }
+        ]
+      },
+      {
+        "name": "source.spm",
+        "size": 806435,
+        "sha256": "5775ddc9e3ff2fae91554da56468ad35ff56edaba870fea74447bc7234bfdaa8",
+        "urls": [
+          {
+            "name": "Hugging Face",
+            "url": "https://huggingface.co/Xenova/opus-mt-en-zh/resolve/046f55aec303cdee3e0318604406d4df20f1e8ea/source.spm"
+          },
+          {
+            "name": "HF Mirror",
+            "url": "https://hf-mirror.com/Xenova/opus-mt-en-zh/resolve/046f55aec303cdee3e0318604406d4df20f1e8ea/source.spm"
+          }
+        ]
+      },
+      {
+        "name": "vocab.json",
+        "size": 1747795,
+        "sha256": "22c957348eed495ee925afc40a36da3e387c8a34a734c8486967c2dca271613e",
+        "urls": [
+          {
+            "name": "Hugging Face",
+            "url": "https://huggingface.co/Xenova/opus-mt-en-zh/resolve/046f55aec303cdee3e0318604406d4df20f1e8ea/vocab.json"
+          },
+          {
+            "name": "HF Mirror",
+            "url": "https://hf-mirror.com/Xenova/opus-mt-en-zh/resolve/046f55aec303cdee3e0318604406d4df20f1e8ea/vocab.json"
+          }
+        ]
+      }
+    ],
+    "precision": "INT8 encoder, FP32 decoder",
+    "decoderRevision": "4dc37afc6deb160f4c9048260d48019ee497658e",
+    "directory": "translation-opus-en-zh",
+    "target": "zh",
+    "model": "Helsinki-NLP/opus-mt-en-zh",
+    "modelCard": "https://huggingface.co/Helsinki-NLP/opus-mt-en-zh",
+    "runtime": {
+      "encoder": "encoder_model_quantized.onnx",
+      "decoder": "decoder_model_merged.onnx",
+      "decoderAttentionHeads": 8,
+      "decoderHeadDim": 64,
+      "decoderLayers": 6,
+      "vocabSize": 65001,
+      "decoderStartTokenId": 65000,
+      "eosTokenId": 0,
+      "padTokenId": 65000,
+      "sourcePrefix": ">>cmn_Hans<< ",
+      "joinWithSpace": false
+    }
+  },
+  "de": {
+    "id": "opus-mt-en-de",
+    "directory": "translation-opus-en-de",
+    "target": "de",
+    "revision": "1ca130c44c4c5441ef16d48aae521a424ab644f7",
+    "model": "Helsinki-NLP/opus-mt-en-de",
+    "license": "cc-by-4.0",
+    "modelCard": "https://huggingface.co/Helsinki-NLP/opus-mt-en-de",
+    "precision": "INT8 encoder, FP32 decoder",
+    "runtime": {
+      "encoder": "encoder_model_quantized.onnx",
+      "decoder": "decoder_model_merged.onnx",
+      "decoderAttentionHeads": 8,
+      "decoderHeadDim": 64,
+      "decoderLayers": 6,
+      "vocabSize": 58101,
+      "decoderStartTokenId": 58100,
+      "eosTokenId": 0,
+      "padTokenId": 58100,
+      "sourcePrefix": "",
+      "joinWithSpace": true
+    },
+    "files": [
+      {
+        "name": "encoder_model_quantized.onnx",
+        "size": 49366942,
+        "sha256": "15834b45fabd2dfb8c6c029b3ca3e7289aeefd90ece798ce42bcf548d1bd3b8d",
+        "urls": [
+          {
+            "name": "Hugging Face",
+            "url": "https://huggingface.co/Xenova/opus-mt-en-de/resolve/1ca130c44c4c5441ef16d48aae521a424ab644f7/onnx/encoder_model_quantized.onnx"
+          },
+          {
+            "name": "HF Mirror",
+            "url": "https://hf-mirror.com/Xenova/opus-mt-en-de/resolve/1ca130c44c4c5441ef16d48aae521a424ab644f7/onnx/encoder_model_quantized.onnx"
+          }
+        ]
+      },
+      {
+        "name": "decoder_model_merged.onnx",
+        "size": 221680436,
+        "sha256": "bea9bca485118db5f5300bd1c77e8e07c9163215b9b5e1cf36d1e81b39cb57cb",
+        "urls": [
+          {
+            "name": "Hugging Face",
+            "url": "https://huggingface.co/Xenova/opus-mt-en-de/resolve/1ca130c44c4c5441ef16d48aae521a424ab644f7/onnx/decoder_model_merged.onnx"
+          },
+          {
+            "name": "HF Mirror",
+            "url": "https://hf-mirror.com/Xenova/opus-mt-en-de/resolve/1ca130c44c4c5441ef16d48aae521a424ab644f7/onnx/decoder_model_merged.onnx"
+          }
+        ]
+      },
+      {
+        "name": "source.spm",
+        "size": 768489,
+        "sha256": "678f2a1177d8389f67b66299762dcc4fc567e89b07e212ba91b0c56daecf47ce",
+        "urls": [
+          {
+            "name": "Hugging Face",
+            "url": "https://huggingface.co/Xenova/opus-mt-en-de/resolve/1ca130c44c4c5441ef16d48aae521a424ab644f7/source.spm"
+          },
+          {
+            "name": "HF Mirror",
+            "url": "https://hf-mirror.com/Xenova/opus-mt-en-de/resolve/1ca130c44c4c5441ef16d48aae521a424ab644f7/source.spm"
+          }
+        ]
+      },
+      {
+        "name": "vocab.json",
+        "size": 1389436,
+        "sha256": "d5acea957b265a78554999144459c5e391e0df525864edc8287bc090290baa44",
+        "urls": [
+          {
+            "name": "Hugging Face",
+            "url": "https://huggingface.co/Xenova/opus-mt-en-de/resolve/1ca130c44c4c5441ef16d48aae521a424ab644f7/vocab.json"
+          },
+          {
+            "name": "HF Mirror",
+            "url": "https://hf-mirror.com/Xenova/opus-mt-en-de/resolve/1ca130c44c4c5441ef16d48aae521a424ab644f7/vocab.json"
+          }
+        ]
+      }
+    ]
+  },
+  "fr": {
+    "id": "opus-mt-en-fr",
+    "directory": "translation-opus-en-fr",
+    "target": "fr",
+    "revision": "28726206f80896b90035bd99cccd5cc1e151f916",
+    "model": "Helsinki-NLP/opus-mt-en-fr",
+    "license": "apache-2.0",
+    "modelCard": "https://huggingface.co/Helsinki-NLP/opus-mt-en-fr",
+    "precision": "INT8 encoder, FP32 decoder",
+    "runtime": {
+      "encoder": "encoder_model_quantized.onnx",
+      "decoder": "decoder_model_merged.onnx",
+      "decoderAttentionHeads": 8,
+      "decoderHeadDim": 64,
+      "decoderLayers": 6,
+      "vocabSize": 59514,
+      "decoderStartTokenId": 59513,
+      "eosTokenId": 0,
+      "padTokenId": 59513,
+      "sourcePrefix": "",
+      "joinWithSpace": true
+    },
+    "files": [
+      {
+        "name": "encoder_model_quantized.onnx",
+        "size": 50090398,
+        "sha256": "0a81bdba62f53223740a8c6c6f58e716eba8ea1f92dfa569caf27ed5e3b6a0f7",
+        "urls": [
+          {
+            "name": "Hugging Face",
+            "url": "https://huggingface.co/Xenova/opus-mt-en-fr/resolve/28726206f80896b90035bd99cccd5cc1e151f916/onnx/encoder_model_quantized.onnx"
+          },
+          {
+            "name": "HF Mirror",
+            "url": "https://hf-mirror.com/Xenova/opus-mt-en-fr/resolve/28726206f80896b90035bd99cccd5cc1e151f916/onnx/encoder_model_quantized.onnx"
+          }
+        ]
+      },
+      {
+        "name": "decoder_model_merged.onnx",
+        "size": 224579912,
+        "sha256": "d87fdd0e4f16e9ea2b58148624bf58ed64cec7c2c0e8d87bb82f4142b80bad57",
+        "urls": [
+          {
+            "name": "Hugging Face",
+            "url": "https://huggingface.co/Xenova/opus-mt-en-fr/resolve/28726206f80896b90035bd99cccd5cc1e151f916/onnx/decoder_model_merged.onnx"
+          },
+          {
+            "name": "HF Mirror",
+            "url": "https://hf-mirror.com/Xenova/opus-mt-en-fr/resolve/28726206f80896b90035bd99cccd5cc1e151f916/onnx/decoder_model_merged.onnx"
+          }
+        ]
+      },
+      {
+        "name": "source.spm",
+        "size": 778395,
+        "sha256": "173e9f493a668fe396d599e28d414a201193094e6ffd7a4678e5aab0f6d3d838",
+        "urls": [
+          {
+            "name": "Hugging Face",
+            "url": "https://huggingface.co/Xenova/opus-mt-en-fr/resolve/28726206f80896b90035bd99cccd5cc1e151f916/source.spm"
+          },
+          {
+            "name": "HF Mirror",
+            "url": "https://hf-mirror.com/Xenova/opus-mt-en-fr/resolve/28726206f80896b90035bd99cccd5cc1e151f916/source.spm"
+          }
+        ]
+      },
+      {
+        "name": "vocab.json",
+        "size": 1458196,
+        "sha256": "f2ba9c69ae20f96b8bd821239a9152be422394f980350b77907cffc183db5f2d",
+        "urls": [
+          {
+            "name": "Hugging Face",
+            "url": "https://huggingface.co/Xenova/opus-mt-en-fr/resolve/28726206f80896b90035bd99cccd5cc1e151f916/vocab.json"
+          },
+          {
+            "name": "HF Mirror",
+            "url": "https://hf-mirror.com/Xenova/opus-mt-en-fr/resolve/28726206f80896b90035bd99cccd5cc1e151f916/vocab.json"
+          }
+        ]
+      }
+    ]
+  },
+  "es": {
+    "id": "opus-mt-en-es",
+    "directory": "translation-opus-en-es",
+    "target": "es",
+    "revision": "4b002a4c7edd54a7ced58877258b87f7efd3f892",
+    "model": "Helsinki-NLP/opus-mt-en-es",
+    "license": "apache-2.0",
+    "modelCard": "https://huggingface.co/Helsinki-NLP/opus-mt-en-es",
+    "precision": "INT8 encoder, FP32 decoder",
+    "runtime": {
+      "encoder": "encoder_model_quantized.onnx",
+      "decoder": "decoder_model_merged.onnx",
+      "decoderAttentionHeads": 8,
+      "decoderHeadDim": 64,
+      "decoderLayers": 6,
+      "vocabSize": 65001,
+      "decoderStartTokenId": 65000,
+      "eosTokenId": 0,
+      "padTokenId": 65000,
+      "sourcePrefix": "",
+      "joinWithSpace": true
+    },
+    "files": [
+      {
+        "name": "encoder_model_quantized.onnx",
+        "size": 52899742,
+        "sha256": "03434edd1147e6c49e22066e9dc5888235e99cc35a6711d1c4ea5b06455d5da9",
+        "urls": [
+          {
+            "name": "Hugging Face",
+            "url": "https://huggingface.co/Xenova/opus-mt-en-es/resolve/4b002a4c7edd54a7ced58877258b87f7efd3f892/onnx/encoder_model_quantized.onnx"
+          },
+          {
+            "name": "HF Mirror",
+            "url": "https://hf-mirror.com/Xenova/opus-mt-en-es/resolve/4b002a4c7edd54a7ced58877258b87f7efd3f892/onnx/encoder_model_quantized.onnx"
+          }
+        ]
+      },
+      {
+        "name": "decoder_model_merged.onnx",
+        "size": 235839236,
+        "sha256": "543a46ff7d2e45897770f24df97d21a8b0a50cf312f5ee3754df587c1883e957",
+        "urls": [
+          {
+            "name": "Hugging Face",
+            "url": "https://huggingface.co/Xenova/opus-mt-en-es/resolve/4b002a4c7edd54a7ced58877258b87f7efd3f892/onnx/decoder_model_merged.onnx"
+          },
+          {
+            "name": "HF Mirror",
+            "url": "https://hf-mirror.com/Xenova/opus-mt-en-es/resolve/4b002a4c7edd54a7ced58877258b87f7efd3f892/onnx/decoder_model_merged.onnx"
+          }
+        ]
+      },
+      {
+        "name": "source.spm",
+        "size": 801636,
+        "sha256": "4dd547c24816a335e7b0b2e63376a8f1b3cbfc671eda5ab808dd44fdadaa8791",
+        "urls": [
+          {
+            "name": "Hugging Face",
+            "url": "https://huggingface.co/Xenova/opus-mt-en-es/resolve/4b002a4c7edd54a7ced58877258b87f7efd3f892/source.spm"
+          },
+          {
+            "name": "HF Mirror",
+            "url": "https://hf-mirror.com/Xenova/opus-mt-en-es/resolve/4b002a4c7edd54a7ced58877258b87f7efd3f892/source.spm"
+          }
+        ]
+      },
+      {
+        "name": "vocab.json",
+        "size": 1720044,
+        "sha256": "b074b4cca0036ade5a39ea97faabd534e1015482c480fc2cb02c6481983eb163",
+        "urls": [
+          {
+            "name": "Hugging Face",
+            "url": "https://huggingface.co/Xenova/opus-mt-en-es/resolve/4b002a4c7edd54a7ced58877258b87f7efd3f892/vocab.json"
+          },
+          {
+            "name": "HF Mirror",
+            "url": "https://hf-mirror.com/Xenova/opus-mt-en-es/resolve/4b002a4c7edd54a7ced58877258b87f7efd3f892/vocab.json"
+          }
+        ]
+      }
+    ]
+  },
+  "ru": {
+    "id": "opus-mt-en-ru",
+    "directory": "translation-opus-en-ru",
+    "target": "ru",
+    "revision": "e050376e960175e8ddc5cff85025dc8436cddd68",
+    "model": "Helsinki-NLP/opus-mt-en-ru",
+    "license": "apache-2.0",
+    "modelCard": "https://huggingface.co/Helsinki-NLP/opus-mt-en-ru",
+    "precision": "INT8 encoder, FP32 decoder",
+    "runtime": {
+      "encoder": "encoder_model_quantized.onnx",
+      "decoder": "decoder_model_merged.onnx",
+      "decoderAttentionHeads": 8,
+      "decoderHeadDim": 64,
+      "decoderLayers": 6,
+      "vocabSize": 62518,
+      "decoderStartTokenId": 62517,
+      "eosTokenId": 0,
+      "padTokenId": 62517,
+      "sourcePrefix": "",
+      "joinWithSpace": true
+    },
+    "files": [
+      {
+        "name": "encoder_model_quantized.onnx",
+        "size": 51628446,
+        "sha256": "97f28d8295d231b7da721ded06fa8c034787df2122cd8f85b904abdc4d15bd53",
+        "urls": [
+          {
+            "name": "Hugging Face",
+            "url": "https://huggingface.co/Xenova/opus-mt-en-ru/resolve/e050376e960175e8ddc5cff85025dc8436cddd68/onnx/encoder_model_quantized.onnx"
+          },
+          {
+            "name": "HF Mirror",
+            "url": "https://hf-mirror.com/Xenova/opus-mt-en-ru/resolve/e050376e960175e8ddc5cff85025dc8436cddd68/onnx/encoder_model_quantized.onnx"
+          }
+        ]
+      },
+      {
+        "name": "decoder_model_merged.onnx",
+        "size": 230744120,
+        "sha256": "0686150fa652d177b0a9eee70f81851d921d2ad169535697a109e3c9878be581",
+        "urls": [
+          {
+            "name": "Hugging Face",
+            "url": "https://huggingface.co/Xenova/opus-mt-en-ru/resolve/e050376e960175e8ddc5cff85025dc8436cddd68/onnx/decoder_model_merged.onnx"
+          },
+          {
+            "name": "HF Mirror",
+            "url": "https://hf-mirror.com/Xenova/opus-mt-en-ru/resolve/e050376e960175e8ddc5cff85025dc8436cddd68/onnx/decoder_model_merged.onnx"
+          }
+        ]
+      },
+      {
+        "name": "source.spm",
+        "size": 802781,
+        "sha256": "16bebef1389a0b8ab452772c4e35b9e605e5713f8ac7baa71ca701394eaa086d",
+        "urls": [
+          {
+            "name": "Hugging Face",
+            "url": "https://huggingface.co/Xenova/opus-mt-en-ru/resolve/e050376e960175e8ddc5cff85025dc8436cddd68/source.spm"
+          },
+          {
+            "name": "HF Mirror",
+            "url": "https://hf-mirror.com/Xenova/opus-mt-en-ru/resolve/e050376e960175e8ddc5cff85025dc8436cddd68/source.spm"
+          }
+        ]
+      },
+      {
+        "name": "vocab.json",
+        "size": 2726796,
+        "sha256": "5cf0d95d930d8d3e783c9e2f46a72f08b43a18060dab4ddefbcb66a733efedcb",
+        "urls": [
+          {
+            "name": "Hugging Face",
+            "url": "https://huggingface.co/Xenova/opus-mt-en-ru/resolve/e050376e960175e8ddc5cff85025dc8436cddd68/vocab.json"
+          },
+          {
+            "name": "HF Mirror",
+            "url": "https://hf-mirror.com/Xenova/opus-mt-en-ru/resolve/e050376e960175e8ddc5cff85025dc8436cddd68/vocab.json"
+          }
+        ]
+      }
+    ]
+  },
+  "ar": {
+    "id": "opus-mt-en-ar",
+    "directory": "translation-opus-en-ar",
+    "target": "ar",
+    "revision": "034a684356c19021a187cda4d7f823298b913921",
+    "model": "Helsinki-NLP/opus-mt-en-ar",
+    "license": "apache-2.0",
+    "modelCard": "https://huggingface.co/Helsinki-NLP/opus-mt-en-ar",
+    "precision": "INT8 encoder, FP32 decoder",
+    "runtime": {
+      "encoder": "encoder_model_quantized.onnx",
+      "decoder": "decoder_model_merged.onnx",
+      "decoderAttentionHeads": 8,
+      "decoderHeadDim": 64,
+      "decoderLayers": 6,
+      "vocabSize": 62802,
+      "decoderStartTokenId": 62801,
+      "eosTokenId": 0,
+      "padTokenId": 62801,
+      "sourcePrefix": "",
+      "joinWithSpace": true
+    },
+    "files": [
+      {
+        "name": "encoder_model_quantized.onnx",
+        "size": 51773854,
+        "sha256": "53c354d87ced44b39085fe8a46a25f09ea4578d442dbce9663f3977228f8a04e",
+        "urls": [
+          {
+            "name": "Hugging Face",
+            "url": "https://huggingface.co/Xenova/opus-mt-en-ar/resolve/034a684356c19021a187cda4d7f823298b913921/onnx/encoder_model_quantized.onnx"
+          },
+          {
+            "name": "HF Mirror",
+            "url": "https://hf-mirror.com/Xenova/opus-mt-en-ar/resolve/034a684356c19021a187cda4d7f823298b913921/onnx/encoder_model_quantized.onnx"
+          }
+        ]
+      },
+      {
+        "name": "decoder_model_merged.onnx",
+        "size": 231326888,
+        "sha256": "eaaff5593905594e6712d18b8fcdf22da0a6320dea7f0b3696c362b823dd7876",
+        "urls": [
+          {
+            "name": "Hugging Face",
+            "url": "https://huggingface.co/Xenova/opus-mt-en-ar/resolve/034a684356c19021a187cda4d7f823298b913921/onnx/decoder_model_merged.onnx"
+          },
+          {
+            "name": "HF Mirror",
+            "url": "https://hf-mirror.com/Xenova/opus-mt-en-ar/resolve/034a684356c19021a187cda4d7f823298b913921/onnx/decoder_model_merged.onnx"
+          }
+        ]
+      },
+      {
+        "name": "source.spm",
+        "size": 801074,
+        "sha256": "81ac8f4d4ee271f4109eac67560a31f9c2d555463ba5eb95c32c6deee8ae819d",
+        "urls": [
+          {
+            "name": "Hugging Face",
+            "url": "https://huggingface.co/Xenova/opus-mt-en-ar/resolve/034a684356c19021a187cda4d7f823298b913921/source.spm"
+          },
+          {
+            "name": "HF Mirror",
+            "url": "https://hf-mirror.com/Xenova/opus-mt-en-ar/resolve/034a684356c19021a187cda4d7f823298b913921/source.spm"
+          }
+        ]
+      },
+      {
+        "name": "vocab.json",
+        "size": 2243581,
+        "sha256": "8b74af9e4c1ec122b8d06362db6c38795e10ca2b0156b2110cf08d4716744b76",
+        "urls": [
+          {
+            "name": "Hugging Face",
+            "url": "https://huggingface.co/Xenova/opus-mt-en-ar/resolve/034a684356c19021a187cda4d7f823298b913921/vocab.json"
+          },
+          {
+            "name": "HF Mirror",
+            "url": "https://hf-mirror.com/Xenova/opus-mt-en-ar/resolve/034a684356c19021a187cda4d7f823298b913921/vocab.json"
+          }
+        ]
+      }
+    ]
+  },
+  "hi": {
+    "id": "opus-mt-en-hi",
+    "directory": "translation-opus-en-hi",
+    "target": "hi",
+    "revision": "7aad72006a1588a9c3485ed6203aed99eebbc872",
+    "model": "Helsinki-NLP/opus-mt-en-hi",
+    "license": "apache-2.0",
+    "modelCard": "https://huggingface.co/Helsinki-NLP/opus-mt-en-hi",
+    "precision": "INT8 encoder, FP32 decoder",
+    "runtime": {
+      "encoder": "encoder_model_quantized.onnx",
+      "decoder": "decoder_model_merged.onnx",
+      "decoderAttentionHeads": 8,
+      "decoderHeadDim": 64,
+      "decoderLayers": 6,
+      "vocabSize": 61950,
+      "decoderStartTokenId": 61949,
+      "eosTokenId": 0,
+      "padTokenId": 61949,
+      "sourcePrefix": "",
+      "joinWithSpace": true
+    },
+    "files": [
+      {
+        "name": "encoder_model_quantized.onnx",
+        "size": 51337630,
+        "sha256": "3045cd6eaf06db96cff853204d6f0ffeb0c5af238a4f5a87a19fcaa94f7493c4",
+        "urls": [
+          {
+            "name": "Hugging Face",
+            "url": "https://huggingface.co/Xenova/opus-mt-en-hi/resolve/7aad72006a1588a9c3485ed6203aed99eebbc872/onnx/encoder_model_quantized.onnx"
+          },
+          {
+            "name": "HF Mirror",
+            "url": "https://hf-mirror.com/Xenova/opus-mt-en-hi/resolve/7aad72006a1588a9c3485ed6203aed99eebbc872/onnx/encoder_model_quantized.onnx"
+          }
+        ]
+      },
+      {
+        "name": "decoder_model_merged.onnx",
+        "size": 229578584,
+        "sha256": "756edc56805b3a0cacb6b3b1388182f5ac4cd26d926d585e4ec5bea79830b7c1",
+        "urls": [
+          {
+            "name": "Hugging Face",
+            "url": "https://huggingface.co/Xenova/opus-mt-en-hi/resolve/7aad72006a1588a9c3485ed6203aed99eebbc872/onnx/decoder_model_merged.onnx"
+          },
+          {
+            "name": "HF Mirror",
+            "url": "https://hf-mirror.com/Xenova/opus-mt-en-hi/resolve/7aad72006a1588a9c3485ed6203aed99eebbc872/onnx/decoder_model_merged.onnx"
+          }
+        ]
+      },
+      {
+        "name": "source.spm",
+        "size": 812240,
+        "sha256": "fd4e951487aed00bae6a6c2ee4ef5d8d1db05fd098b19b608046c9334b58d24d",
+        "urls": [
+          {
+            "name": "Hugging Face",
+            "url": "https://huggingface.co/Xenova/opus-mt-en-hi/resolve/7aad72006a1588a9c3485ed6203aed99eebbc872/source.spm"
+          },
+          {
+            "name": "HF Mirror",
+            "url": "https://hf-mirror.com/Xenova/opus-mt-en-hi/resolve/7aad72006a1588a9c3485ed6203aed99eebbc872/source.spm"
+          }
+        ]
+      },
+      {
+        "name": "vocab.json",
+        "size": 2221738,
+        "sha256": "be02f5dfb85054d4f25089f6b347b69d32e98ed4c3d181ed0c789904eb1e3d3b",
+        "urls": [
+          {
+            "name": "Hugging Face",
+            "url": "https://huggingface.co/Xenova/opus-mt-en-hi/resolve/7aad72006a1588a9c3485ed6203aed99eebbc872/vocab.json"
+          },
+          {
+            "name": "HF Mirror",
+            "url": "https://hf-mirror.com/Xenova/opus-mt-en-hi/resolve/7aad72006a1588a9c3485ed6203aed99eebbc872/vocab.json"
+          }
+        ]
+      }
+    ]
+  },
+  "it": {
+    "id": "opus-mt-en-it",
+    "directory": "translation-opus-en-it",
+    "target": "it",
+    "revision": "075406e3c8c2c30634d4a1bd8f00c21d9e162011",
+    "model": "Helsinki-NLP/opus-mt-en-it",
+    "license": "apache-2.0",
+    "modelCard": "https://huggingface.co/Helsinki-NLP/opus-mt-en-it",
+    "precision": "INT8 encoder, FP32 decoder",
+    "runtime": {
+      "encoder": "encoder_model_quantized.onnx",
+      "decoder": "decoder_model_merged.onnx",
+      "decoderAttentionHeads": 8,
+      "decoderHeadDim": 64,
+      "decoderLayers": 6,
+      "vocabSize": 80035,
+      "decoderStartTokenId": 80034,
+      "eosTokenId": 0,
+      "padTokenId": 80034,
+      "sourcePrefix": "",
+      "joinWithSpace": true
+    },
+    "files": [
+      {
+        "name": "encoder_model_quantized.onnx",
+        "size": 60597150,
+        "sha256": "b51c5110c7ba356ef01ee400d427afe162e657de1d7a2e9a40deedd811b49e6f",
+        "urls": [
+          {
+            "name": "Hugging Face",
+            "url": "https://huggingface.co/Xenova/opus-mt-en-it/resolve/075406e3c8c2c30634d4a1bd8f00c21d9e162011/onnx/encoder_model_quantized.onnx"
+          },
+          {
+            "name": "HF Mirror",
+            "url": "https://hf-mirror.com/Xenova/opus-mt-en-it/resolve/075406e3c8c2c30634d4a1bd8f00c21d9e162011/onnx/encoder_model_quantized.onnx"
+          }
+        ]
+      },
+      {
+        "name": "decoder_model_merged.onnx",
+        "size": 266689004,
+        "sha256": "afd25b3921ea9404fe998ff5927890f3eea6e34d4f2fa67693fc476d4c79f6b2",
+        "urls": [
+          {
+            "name": "Hugging Face",
+            "url": "https://huggingface.co/Xenova/opus-mt-en-it/resolve/075406e3c8c2c30634d4a1bd8f00c21d9e162011/onnx/decoder_model_merged.onnx"
+          },
+          {
+            "name": "HF Mirror",
+            "url": "https://hf-mirror.com/Xenova/opus-mt-en-it/resolve/075406e3c8c2c30634d4a1bd8f00c21d9e162011/onnx/decoder_model_merged.onnx"
+          }
+        ]
+      },
+      {
+        "name": "source.spm",
+        "size": 789468,
+        "sha256": "2efff2c37e51842c2817a6770280979b5dd803cebbe2928e576d42a888f89537",
+        "urls": [
+          {
+            "name": "Hugging Face",
+            "url": "https://huggingface.co/Xenova/opus-mt-en-it/resolve/075406e3c8c2c30634d4a1bd8f00c21d9e162011/source.spm"
+          },
+          {
+            "name": "HF Mirror",
+            "url": "https://hf-mirror.com/Xenova/opus-mt-en-it/resolve/075406e3c8c2c30634d4a1bd8f00c21d9e162011/source.spm"
+          }
+        ]
+      },
+      {
+        "name": "vocab.json",
+        "size": 2511647,
+        "sha256": "40c98ffc0013f2f09ed9127418131738ad9c2de4d8f7f52d52532332bb2bf78c",
+        "urls": [
+          {
+            "name": "Hugging Face",
+            "url": "https://huggingface.co/Xenova/opus-mt-en-it/resolve/075406e3c8c2c30634d4a1bd8f00c21d9e162011/vocab.json"
+          },
+          {
+            "name": "HF Mirror",
+            "url": "https://hf-mirror.com/Xenova/opus-mt-en-it/resolve/075406e3c8c2c30634d4a1bd8f00c21d9e162011/vocab.json"
+          }
+        ]
+      }
+    ]
+  },
+  "pt": {
+    "id": "opus-mt-en-pt",
+    "directory": "translation-opus-en-pt",
+    "target": "pt",
+    "revision": "9d2ba69ac80c8e8453c3d9a1e2323a0e7b8ca3cd",
+    "model": "Helsinki-NLP/opus-mt-en-ROMANCE",
+    "license": "apache-2.0",
+    "modelCard": "https://huggingface.co/Helsinki-NLP/opus-mt-en-ROMANCE",
+    "precision": "INT8 encoder, FP32 decoder",
+    "runtime": {
+      "encoder": "encoder_model_quantized.onnx",
+      "decoder": "decoder_model_merged.onnx",
+      "decoderAttentionHeads": 8,
+      "decoderHeadDim": 64,
+      "decoderLayers": 6,
+      "vocabSize": 65001,
+      "decoderStartTokenId": 65000,
+      "eosTokenId": 0,
+      "padTokenId": 65000,
+      "sourcePrefix": ">>pt<< ",
+      "joinWithSpace": true
+    },
+    "files": [
+      {
+        "name": "encoder_model_quantized.onnx",
+        "size": 52899742,
+        "sha256": "b4ddfd9338ba3d7c6b9c2d1410ed94fb7e06741226918cef6148031101bbd019",
+        "urls": [
+          {
+            "name": "Hugging Face",
+            "url": "https://huggingface.co/Xenova/opus-mt-en-ROMANCE/resolve/9d2ba69ac80c8e8453c3d9a1e2323a0e7b8ca3cd/onnx/encoder_model_quantized.onnx"
+          },
+          {
+            "name": "HF Mirror",
+            "url": "https://hf-mirror.com/Xenova/opus-mt-en-ROMANCE/resolve/9d2ba69ac80c8e8453c3d9a1e2323a0e7b8ca3cd/onnx/encoder_model_quantized.onnx"
+          }
+        ]
+      },
+      {
+        "name": "decoder_model_merged.onnx",
+        "size": 235839236,
+        "sha256": "2d3fbdb1de708ceb3531b47dcd460e73f0861a7e1e3bb60faff8ca1a0e4f8cf7",
+        "urls": [
+          {
+            "name": "Hugging Face",
+            "url": "https://huggingface.co/Xenova/opus-mt-en-ROMANCE/resolve/9d2ba69ac80c8e8453c3d9a1e2323a0e7b8ca3cd/onnx/decoder_model_merged.onnx"
+          },
+          {
+            "name": "HF Mirror",
+            "url": "https://hf-mirror.com/Xenova/opus-mt-en-ROMANCE/resolve/9d2ba69ac80c8e8453c3d9a1e2323a0e7b8ca3cd/onnx/decoder_model_merged.onnx"
+          }
+        ]
+      },
+      {
+        "name": "source.spm",
+        "size": 779155,
+        "sha256": "b1f89e7b05828846baf19109a61029a36838f1c4f3defc218e6aee0ee2787864",
+        "urls": [
+          {
+            "name": "Hugging Face",
+            "url": "https://huggingface.co/Xenova/opus-mt-en-ROMANCE/resolve/9d2ba69ac80c8e8453c3d9a1e2323a0e7b8ca3cd/source.spm"
+          },
+          {
+            "name": "HF Mirror",
+            "url": "https://hf-mirror.com/Xenova/opus-mt-en-ROMANCE/resolve/9d2ba69ac80c8e8453c3d9a1e2323a0e7b8ca3cd/source.spm"
+          }
+        ]
+      },
+      {
+        "name": "vocab.json",
+        "size": 1587364,
+        "sha256": "d9c3b6b01d3a9c9403befa60fd17e4a50dc4929698e3d6b9c2e7f066a9d1f041",
+        "urls": [
+          {
+            "name": "Hugging Face",
+            "url": "https://huggingface.co/Xenova/opus-mt-en-ROMANCE/resolve/9d2ba69ac80c8e8453c3d9a1e2323a0e7b8ca3cd/vocab.json"
+          },
+          {
+            "name": "HF Mirror",
+            "url": "https://hf-mirror.com/Xenova/opus-mt-en-ROMANCE/resolve/9d2ba69ac80c8e8453c3d9a1e2323a0e7b8ca3cd/vocab.json"
+          }
+        ]
+      }
+    ]
+  }
+}

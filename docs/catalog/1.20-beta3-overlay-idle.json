@@ -1,0 +1,17 @@
+{
+  "silenceDoesNotRefresh": true,
+  "voiceSignalsBeforeRecognition": true,
+  "confirmedVoiceEvents": 187,
+  "realWaitMs": 60520,
+  "clearsBothRowsAfter60Seconds": true,
+  "mainHistoryPreserved": true,
+  "tuckedCaptionCleared": true,
+  "meterAndTranslationDoNotResetDeadline": true,
+  "lateTranslationStaysCleared": true,
+  "reopenAndRotationStayCleared": true,
+  "newSpeechResumesIncludingRepeatedWords": true,
+  "passed": true,
+  "version": "1.20.0-beta.3",
+  "device": "Samsung S25+ SM-S936U",
+  "scope": "Native VAD fixture and real 60-second service rendering timer with synthetic captions; no microphone capture."
+}

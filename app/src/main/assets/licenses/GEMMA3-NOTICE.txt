@@ -1,0 +1,8 @@
+Gemma3-1B-IT LiteRT-LM
+Model publisher: Google Gemma / LiteRT Community
+Model: https://huggingface.co/litert-community/Gemma3-1B-IT
+Pinned revision: d448835d84411a08f577e25f3afebe528402d73b
+Gemma Terms of Use: https://ai.google.dev/gemma/terms
+The publisher requires account authorization and acceptance of its model terms. Use the official page, download the exact per-chip file, then import it. The app neither reads account credentials nor bypasses access controls. No weights are bundled or mirrored.
+Runtime: standalone LiteRT-LM 0.18.0 / LiteRT NPU dispatch 2.3.0, Apache-2.0. No Google Play services dependency. See LITERT-LM-APACHE-2.0.txt.
+Gemma3 translation is experimental; it has not been measured on a MediaTek phone in this project.

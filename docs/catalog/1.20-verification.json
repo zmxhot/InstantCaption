@@ -1,0 +1,202 @@
+{
+  "version": "1.20.0-beta.1",
+  "device": "Samsung Galaxy S25+ / SM-S936U / SDK 37",
+  "scope": "Caption UI and floating-window appearance; previous inference benchmarks are unchanged.",
+  "changes": [
+    "Independent main and floating source-text switches",
+    "Floating text transparency 0-100%; automatic or 120-400 dp panel height with screen/font constraints",
+    "Dedicated main/floating Caption style tabs and shared live preview",
+    "Persistent current-model summary; full-width model descriptions",
+    "Landscape main screen uses side controls and a larger caption area",
+    "Grouped three-step setup, consistent spacing and ten-language controls"
+  ],
+  "overlay": {
+    "settingsControlsAndLivePreview": true,
+    "settingsPersistAfterReopen": true,
+    "independentSourceSwitch": true,
+    "customHeight240dp": true,
+    "textTransparency40Percent": true,
+    "dragFromSubtitle": true,
+    "dragFromSource": true,
+    "dragFromPadding": true,
+    "leftHandleBounds": "[0,1358][135,1538]",
+    "leftHandleContent": "[0,1358][90,1538]",
+    "latestTextOnExpand": true,
+    "appearanceUpdatesWhileTucked": true,
+    "rotationPreservesHandle": true,
+    "landscapeHeightClamped": true,
+    "largeFontMinimumHeight": true,
+    "largeFontLocales": [
+      "en",
+      "zh",
+      "es",
+      "fr",
+      "de",
+      "pt",
+      "ru",
+      "ja",
+      "ko",
+      "ar"
+    ],
+    "noFoldOrStopControls": true,
+    "passed": true,
+    "displayPreferencesRestored": true
+  },
+  "interfaceLanguages": {
+    "locales": [
+      {
+        "tag": "en",
+        "settings": "Settings",
+        "resources": 261,
+        "loading": "Loading Qwen3-4B NPU translation model…",
+        "activities": 7,
+        "pickerOpened": true,
+        "rtl": false
+      },
+      {
+        "tag": "zh-Hans",
+        "settings": "设置",
+        "resources": 261,
+        "loading": "正在加载 Qwen3-4B NPU 翻译模型…",
+        "activities": 7,
+        "pickerOpened": true,
+        "rtl": false
+      },
+      {
+        "tag": "es",
+        "settings": "Ajustes",
+        "resources": 261,
+        "loading": "Cargando Qwen3-4B · modelo de traducción NPU…",
+        "activities": 7,
+        "pickerOpened": true,
+        "rtl": false
+      },
+      {
+        "tag": "fr",
+        "settings": "Paramètres",
+        "resources": 261,
+        "loading": "Chargement de Qwen3-4B · modèle de traduction NPU…",
+        "activities": 7,
+        "pickerOpened": true,
+        "rtl": false
+      },
+      {
+        "tag": "de",
+        "settings": "Einstellungen",
+        "resources": 261,
+        "loading": "Laden: Qwen3-4B · NPU-Übersetzungsmodell…",
+        "activities": 7,
+        "pickerOpened": true,
+        "rtl": false
+      },
+      {
+        "tag": "pt",
+        "settings": "Configurações",
+        "resources": 261,
+        "loading": "Carregando Qwen3-4B · modelo de tradução NPU…",
+        "activities": 7,
+        "pickerOpened": true,
+        "rtl": false
+      },
+      {
+        "tag": "ru",
+        "settings": "Настройки",
+        "resources": 261,
+        "loading": "Загрузка: Qwen3-4B · модель перевода на NPU…",
+        "activities": 7,
+        "pickerOpened": true,
+        "rtl": false
+      },
+      {
+        "tag": "ja",
+        "settings": "設定",
+        "resources": 261,
+        "loading": "読み込み中：Qwen3-4B NPU 翻訳モデル…",
+        "activities": 7,
+        "pickerOpened": true,
+        "rtl": false
+      },
+      {
+        "tag": "ko",
+        "settings": "설정",
+        "resources": 261,
+        "loading": "로딩 중: Qwen3-4B NPU 번역 모델…",
+        "activities": 7,
+        "pickerOpened": true,
+        "rtl": false
+      },
+      {
+        "tag": "ar",
+        "settings": "الإعدادات",
+        "resources": 261,
+        "loading": "جارٍ تحميل Qwen3-4B · نموذج ترجمة NPU…",
+        "activities": 7,
+        "pickerOpened": true,
+        "rtl": true
+      }
+    ],
+    "englishFallback": true,
+    "regionalLocales": true,
+    "modelAndSpeechPreferencesUnchanged": true,
+    "passed": true
+  },
+  "finalArabicReview": {
+    "locales": [
+      {
+        "tag": "ar",
+        "settings": "الإعدادات",
+        "resources": 261,
+        "loading": "جارٍ تحميل Qwen3-4B · نموذج ترجمة NPU…",
+        "activities": 7,
+        "pickerOpened": true,
+        "rtl": true
+      }
+    ],
+    "englishFallback": true,
+    "regionalLocales": true,
+    "modelAndSpeechPreferencesUnchanged": true,
+    "passed": true
+  },
+  "installed": {
+    "package": "com.localcaption.instant.npu",
+    "versionCode": 27,
+    "versionName": "1.20.0-beta.1-npu-test",
+    "sha256": "63d547773f712cb59fcb20332efb0ed6c69f2911a6732ee2b3f6e225877b35ac",
+    "matchesDeliveredApk": true
+  },
+  "artifacts": [
+    {
+      "file": "instant-caption-1.20.0-beta.1-npu-release-candidate.apk",
+      "bytes": 110330761,
+      "sha256": "3f80d3085c00ee9e2b0b48bfc6201777b09d7a431e45f8cd8b3eb00b8755ebda"
+    },
+    {
+      "file": "instant-caption-1.20.0-beta.1-portable-release.apk",
+      "bytes": 33730660,
+      "sha256": "efea0b3ff9d4f955c92aa6457ac9e97bc9153dba67e11530100c2d8087ef6fe4"
+    },
+    {
+      "file": "瞬译-1.20.0-beta.1-升级测试.apk",
+      "bytes": 119963118,
+      "sha256": "63d547773f712cb59fcb20332efb0ed6c69f2911a6732ee2b3f6e225877b35ac"
+    }
+  ],
+  "packaging": {
+    "releaseSignaturesVerified": true,
+    "matchingReleaseCertificates": true,
+    "zipAndElf16KbAlignment": true,
+    "portableVendorNpuLibrariesAbsent": true
+  },
+  "fixedDuringVerification": [
+    "System notification shade initially intercepted injected overlay gestures; closed it before a clean rerun.",
+    "Measured real text rows to avoid clipping at small panel heights and large fonts.",
+    "Returned icon padding to zero to fit its 48 dp touch target.",
+    "Localized both model headings and corrected the RTL slider direction hint."
+  ],
+  "limits": [
+    "Short panels ellipsize long captions; increase the height or reduce text size to show more.",
+    "Whisper speech-to-English routes display intermediate English in the recognized-text row.",
+    "Tests are UI checks on the S25+, not new translation-quality or cross-device performance claims."
+  ],
+  "releaseStatus": "Local signed artifacts and clean source archive; not published to GitHub."
+}

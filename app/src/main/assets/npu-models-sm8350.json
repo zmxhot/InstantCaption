@@ -1,0 +1,42 @@
+{
+  "sensevoice": {
+    "directory": "qnn-sensevoice-sm8350-5s",
+    "upstream": {
+      "release": "https://api.github.com/repos/k2-fsa/sherpa-onnx/releases/tags/asr-models-qnn-binary",
+      "assetId": 326288997,
+      "chipset": "SM8350",
+      "modelFormat": "qnn-context-binary"
+    },
+    "files": [
+      {
+        "name": "model.bin",
+        "size": 250286080,
+        "sha256": "da104d68970bbfa9f8d279988468bb285a9c6e2dc12745abc34d5b209e13915c"
+      },
+      {
+        "name": "tokens.txt",
+        "size": 315894,
+        "sha256": "f449eb28dc567533d7fa59be34e2abca8784f771850c78a47fb731a31429a1dc"
+      }
+    ],
+    "download": {
+      "format": "tar.bz2",
+      "size": 161608251,
+      "sha256": "f370dc492e5116a5eb7a4a684a1655c2ca825eab4cbb53263ec0cfa685bcd051",
+      "urls": [
+        {
+          "name": "GitHub",
+          "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models-qnn-binary/sherpa-onnx-qnn-SM8350-binary-5-seconds-sense-voice-zh-en-ja-ko-yue-2024-07-17-int8.tar.bz2"
+        },
+        {
+          "name": "GitHub mirror · gh-proxy.org",
+          "url": "https://gh-proxy.org/https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models-qnn-binary/sherpa-onnx-qnn-SM8350-binary-5-seconds-sense-voice-zh-en-ja-ko-yue-2024-07-17-int8.tar.bz2"
+        },
+        {
+          "name": "GitHub mirror · ghfast.top",
+          "url": "https://ghfast.top/https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models-qnn-binary/sherpa-onnx-qnn-SM8350-binary-5-seconds-sense-voice-zh-en-ja-ko-yue-2024-07-17-int8.tar.bz2"
+        }
+      ]
+    }
+  }
+}

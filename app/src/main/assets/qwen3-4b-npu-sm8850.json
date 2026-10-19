@@ -1,0 +1,99 @@
+{
+  "id": "qwen3-4b-npu",
+  "label": "Qwen3-4B",
+  "precision": "W4A16",
+  "chipset": "SM8850",
+  "qairt": "2.45",
+  "download": {
+    "size": 2540048693,
+    "sha256": "ba2170ae68705bbbaf4ed119300b22465ee19fd43cb7ce5047b099fe6d0bd752",
+    "format": "zip",
+    "urls": [
+      {
+        "name": "Qualcomm / AWS US West",
+        "url": "https://qaihub-public-assets.s3.us-west-2.amazonaws.com/qai-hub-models/models/qwen3_4b/releases/v0.64.0/qwen3_4b-geniex_qairt-w4a16-qualcomm_snapdragon_8_elite_gen5_for_galaxy.zip"
+      },
+      {
+        "name": "Qualcomm / AWS global",
+        "url": "https://qaihub-public-assets.s3.amazonaws.com/qai-hub-models/models/qwen3_4b/releases/v0.64.0/qwen3_4b-geniex_qairt-w4a16-qualcomm_snapdragon_8_elite_gen5_for_galaxy.zip"
+      }
+    ]
+  },
+  "files": [
+    {
+      "name": "tokenizer.json",
+      "size": 11422654,
+      "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+    },
+    {
+      "name": "metadata.json",
+      "size": 70380,
+      "sha256": "fef69fafab30b3207b500090b5158bce3143cfab6250914feaef1cf3c8a51acd"
+    },
+    {
+      "name": "part4_of_4.bin",
+      "size": 1068048384,
+      "sha256": "88f76f8130c60b8f008a6471bf14beb99bda25fd7f47d53a60cf9c8554b261e0"
+    },
+    {
+      "name": "htp_backend_ext_config.json",
+      "size": 217,
+      "sha256": "3ce32a5c9e100ae98e846c6f071b843210571c541d39422a74f278c2b61c79d8"
+    },
+    {
+      "name": "tokenizer_config.json",
+      "size": 9778,
+      "sha256": "09bcf8816bf906edb9dfa5dd9dcd0e25ec2e2ed1da2d33622618bf3f03e27d2d"
+    },
+    {
+      "name": "genie_config.json",
+      "size": 1597,
+      "sha256": "a7443df0b1e90a9498cece1c8d2abb45f2541e4f8262d3b77c96475a61183dbd"
+    },
+    {
+      "name": "part1_of_4.bin",
+      "size": 778174464,
+      "sha256": "c248d24fe96994cc6a797bd05cee9e429a0567daef7717a7b6320c035c760d78"
+    },
+    {
+      "name": "part2_of_4.bin",
+      "size": 666492928,
+      "sha256": "5a954d9e89b1b3b4d48d964aa6552c6f9cba5b485448f4aa37e43dedeaa67297"
+    },
+    {
+      "name": "vocab.json",
+      "size": 2776833,
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+    },
+    {
+      "name": "merges.txt",
+      "size": 1671853,
+      "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+    },
+    {
+      "name": "special_tokens_map.json",
+      "size": 610,
+      "sha256": "c9b84b84227d009b296d633a6a4dc1c8aa318d851cbe308186014121e0cd1a46"
+    },
+    {
+      "name": "config.json",
+      "size": 728,
+      "sha256": "7a78c9c10129e5fef1aff80f3bc55c114a39189036f9a9b94752aeb21d533a4b"
+    },
+    {
+      "name": "part3_of_4.bin",
+      "size": 666525696,
+      "sha256": "930991da7f2d6f4653791d276cbcde4032421a23e816c47a61195007002f49ac"
+    },
+    {
+      "name": "added_tokens.json",
+      "size": 707,
+      "sha256": "c0284b582e14987fbd3d5a2cb2bd139084371ed9acbae488829a1c900833c680"
+    },
+    {
+      "name": "sample_prompt.txt",
+      "size": 179,
+      "sha256": "bcba092776d028282fad37d8778d128834a309691f8118c08a762ccd0c4f54ac"
+    }
+  ]
+}

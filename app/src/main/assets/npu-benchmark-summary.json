@@ -1,0 +1,66 @@
+{
+  "x-asr": {
+    "model": "x-asr",
+    "werPercent": 8.947368421052632,
+    "rawWerPercent": 6.842105263157896,
+    "readingWerPercent": 5.072463768115942,
+    "firstChineseMs": 1241,
+    "firstChineseRangeMs": [
+      1239,
+      1252
+    ],
+    "endWaitMs": 23.0,
+    "rawRealTimeFactor": 0.16537974683544304,
+    "referenceWords": 190,
+    "negativeScenesPassed": 7,
+    "modelLoadMs": 1202
+  },
+  "nemotron": {
+    "model": "nemotron",
+    "werPercent": 12.105263157894736,
+    "rawWerPercent": 4.736842105263158,
+    "readingWerPercent": 7.246376811594203,
+    "firstChineseMs": 1054,
+    "firstChineseRangeMs": [
+      1044,
+      1074
+    ],
+    "endWaitMs": 219.0,
+    "rawRealTimeFactor": 0.6176962025316456,
+    "referenceWords": 190,
+    "negativeScenesPassed": 7,
+    "modelLoadMs": 24316
+  },
+  "sensevoice": {
+    "model": "sensevoice",
+    "werPercent": 7.894736842105263,
+    "rawWerPercent": 9.473684210526317,
+    "readingWerPercent": 3.6231884057971016,
+    "firstChineseMs": 1407,
+    "firstChineseRangeMs": [
+      1376,
+      1409
+    ],
+    "endWaitMs": 17.0,
+    "rawRealTimeFactor": 0.07789873417721518,
+    "referenceWords": 190,
+    "negativeScenesPassed": 7,
+    "modelLoadMs": 901
+  },
+  "zipformer": {
+    "model": "zipformer",
+    "werPercent": 16.315789473684212,
+    "rawWerPercent": 14.210526315789473,
+    "readingWerPercent": 5.797101449275362,
+    "firstChineseMs": 503,
+    "firstChineseRangeMs": [
+      502,
+      508
+    ],
+    "endWaitMs": 21.0,
+    "rawRealTimeFactor": 0.15750632911392404,
+    "referenceWords": 190,
+    "negativeScenesPassed": 7,
+    "modelLoadMs": 1120
+  }
+}

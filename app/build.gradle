@@ -1,0 +1,94 @@
+plugins { id 'com.android.application' }
+def portable = providers.gradleProperty('portable').map { it.toBoolean() }.getOrElse(false)
+android {
+    namespace 'com.localcaption.instant'
+    compileSdk 36
+    defaultConfig {
+        applicationId project.findProperty('applicationId') ?: 'com.localcaption.instant'
+        minSdk 29
+        targetSdk 36
+        versionCode 30
+        versionName '1.20.1-beta.1'
+        buildConfigField 'boolean', 'NPU_BUILD', (!portable).toString()
+        ndk { abiFilters 'arm64-v8a' }
+        testInstrumentationRunner 'com.localcaption.instant.OfflineTest'
+    }
+    signingConfigs {
+        publicRelease {
+            if (System.getenv('CAPTION_KEYSTORE')) {
+                storeFile file(System.getenv('CAPTION_KEYSTORE'))
+                storePassword System.getenv('CAPTION_STORE_PASSWORD')
+                keyAlias System.getenv('CAPTION_KEY_ALIAS')
+                keyPassword System.getenv('CAPTION_KEY_PASSWORD')
+            }
+        }
+    }
+    buildTypes {
+        debug { }
+        npu {
+            initWith debug
+            applicationIdSuffix '.npu'
+            versionNameSuffix '-npu-test'
+            buildConfigField 'boolean', 'NPU_BUILD', (!portable).toString()
+            signingConfig signingConfigs.debug
+            matchingFallbacks = ['debug']
+        }
+        npuNoNetwork {
+            initWith npu
+            versionNameSuffix '-offline-proof'
+            matchingFallbacks = ['npu', 'debug']
+        }
+        offline {
+            initWith debug
+            signingConfig signingConfigs.debug
+            matchingFallbacks = ['debug']
+        }
+        release {
+            minifyEnabled false
+            debuggable false
+            signingConfig signingConfigs.publicRelease
+        }
+    }
+    lint { abortOnError true }
+    testBuildType project.findProperty('testBuildType') ?: 'debug'
+    bundle { language { enableSplit = false } }
+    buildFeatures { buildConfig true }
+    compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }
+    packaging { jniLibs {
+        useLegacyPackaging = true
+        excludes += ['lib/x86/**', 'lib/x86_64/**', 'lib/armeabi-v7a/**']
+    } }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = portable ? ['src/cpu/jniLibs'] : ['src/cpu/jniLibs','src/npu/jniLibs']
+            java.srcDir portable ? 'src/portable/java' : 'src/full/java'
+        }
+        npu { jniLibs.srcDirs = [] }
+    }
+}
+tasks.configureEach { task ->
+    if (task.name == 'validateSigningRelease') {
+        task.doFirst {
+            ['CAPTION_KEYSTORE','CAPTION_STORE_PASSWORD','CAPTION_KEY_ALIAS','CAPTION_KEY_PASSWORD'].each {
+                if (!System.getenv(it)) throw new GradleException('Release signing requires ' + it)
+            }
+        }
+    }
+}
+dependencies {
+    implementation 'org.apache.commons:commons-compress:1.28.0'
+    implementation files(portable ? 'libs/sherpa-onnx-static-link-onnxruntime-1.13.8.aar' : 'libs/sherpa-onnx-1.13.8-api.aar')
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib:2.4.0'
+    implementation 'org.jetbrains.kotlin:kotlin-reflect:2.4.0'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.11.0'
+    implementation 'com.google.code.gson:gson:2.14.0'
+    // Java JNI API uses the existing shared ONNX Runtime 1.28.2 from sherpa.
+    implementation files(portable ? 'libs/onnxruntime-android-1.28.0.aar' : 'libs/onnxruntime-android-1.28.0-api.aar')
+    implementation files('libs/geniex-android-0.8.0-api.aar')
+    if (!portable) {
+        implementation files('libs/litertlm-android-0.18.0-api.aar')
+        implementation files('libs/litert-npu-runtime-qualcomm-2.3.0-manifest.aar',
+            'libs/litert-npu-runtime-google-tensor-2.3.0-manifest.aar',
+            'libs/litert-npu-runtime-mediatek-2.3.0-manifest.aar')
+    }
+}

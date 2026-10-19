@@ -1,0 +1,52 @@
+{
+  "FunASR-MODEL-LICENSE.txt": {
+    "url": "https://api.github.com/repos/modelscope/FunASR/contents/MODEL_LICENSE",
+    "sha256": "7dba975a2069691db4992b0592d70828b330d2f8a30a71450f4e152a554e84f8",
+    "retrieved": "2026-10-18"
+  },
+  "CC-BY-4.0.txt": {
+    "url": "https://creativecommons.org/licenses/by/4.0/legalcode.txt",
+    "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411",
+    "retrieved": "2026-10-18"
+  },
+  "GENIEX-0.8.0-POM.xml": {
+    "url": "https://repo.maven.apache.org/maven2/com/qualcomm/qti/geniex-android/0.8.0/geniex-android-0.8.0.pom",
+    "sha256": "9f2db5e0b4d6f81714120652185b7776a2088757474a2826967633434c106625",
+    "retrieved": "2026-10-18"
+  },
+  "GENIEX-BSD-3-Clause.txt": {
+    "url": "https://raw.githubusercontent.com/qualcomm/GenieX/main/LICENSE",
+    "sha256": "3a1d5f5b391581a14dd06df9859a327ca26f07452a0aa2cfd2008f173d3acbba",
+    "retrieved": "2026-10-18"
+  },
+  "LITERT-LM-APACHE-2.0.txt": {
+    "url": "https://raw.githubusercontent.com/google-ai-edge/LiteRT-LM/v0.18.0/LICENSE",
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "retrieved": "2026-10-18"
+  },
+  "QNN-2.45.0-POM.xml": {
+    "url": "https://repo.maven.apache.org/maven2/com/qualcomm/qti/qnn-runtime/2.45.0/qnn-runtime-2.45.0.pom",
+    "sha256": "fc7b6be638812bfbd82a099719a0ee6bb176a4f5fa1b38f04bcd9dc6547ebe1a",
+    "retrieved": "2026-10-18"
+  },
+  "LITERT-LM-0.18.0-POM.xml": {
+    "url": "https://dl.google.com/dl/android/maven2/com/google/ai/edge/litertlm/litertlm-android/0.18.0/litertlm-android-0.18.0.pom",
+    "sha256": "3c631cd8e04fe4289818d41675c0f6b1f26a7a37db63606699a51e2c95695a54",
+    "retrieved": "2026-10-18"
+  },
+  "QNN-2.51.0-POM.xml": {
+    "url": "https://repo.maven.apache.org/maven2/com/qualcomm/qti/qnn-runtime/2.51.0/qnn-runtime-2.51.0.pom",
+    "sha256": "fe766d673be1dde25f8543c334ad27914e41d09c5b3bc644e399c1883f68d886",
+    "retrieved": "2026-10-18"
+  },
+  "HY-MT2-LICENSE.txt": {
+    "url": "https://huggingface.co/tencent/Hy-MT2-1.8B/resolve/9a341cd1b679d3efd23b46e847b01745a71ed792/LICENSE.txt",
+    "sha256": "1af3c6dc0c697277cbb6b68720787c1caa43a79c5626bf9f19cd8c00de9c8cd4",
+    "retrieved": "2026-10-18"
+  },
+  "LLAMA-CPP-LICENSE.txt": {
+    "url": "https://github.com/ggml-org/llama.cpp/blob/620d2225cc436ab0b001e3200e590e3b286ef9ab/LICENSE",
+    "sha256": "94f29bbed6a22c35b992c5c6ebf0e7c92f13b836b90f36f461c9cf2f0f1d010d",
+    "retrieved": "2026-10-18"
+  }
+}

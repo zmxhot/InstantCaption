@@ -1,0 +1,142 @@
+{
+  "x-asr": {
+    "directory": "qnn-x-asr-sm8550-480ms",
+    "upstream": {
+      "release": "https://api.github.com/repos/k2-fsa/sherpa-onnx/releases/tags/asr-models-qnn-binary",
+      "assetId": 460937876,
+      "chipset": "SM8550",
+      "modelFormat": "qnn-context-binary"
+    },
+    "files": [
+      {
+        "name": "encoder.bin",
+        "size": 325705728,
+        "sha256": "45764a5aea5e05dab3815817a3e85ce4d7ffecbd01e9c34f27cc52169b2438a3"
+      },
+      {
+        "name": "decoder.bin",
+        "size": 5763072,
+        "sha256": "c7418a1686fca05e3c91f9bd96236c0f42f369e572c69831bcc8abcc777afbbb"
+      },
+      {
+        "name": "joiner.bin",
+        "size": 5238784,
+        "sha256": "760da671bb2fbcbc848de3cf6d5351a1e348378f802214c8bbff1a0be84e4e93"
+      },
+      {
+        "name": "tokens.txt",
+        "size": 58806,
+        "sha256": "b818a60878b9aae978cbb8ad594acbd403d76d1af2e31ef4197c84e2dbdba27c"
+      }
+    ],
+    "download": {
+      "format": "tar.bz2",
+      "size": 277169943,
+      "sha256": "4c18d7d83472cc9d6e37c1d9bcba828377fa6da7faf7407eea5a1512120f1d4d",
+      "urls": [
+        {
+          "name": "GitHub",
+          "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models-qnn-binary/sherpa-onnx-qnn-SM8550-binary-x-asr-streaming-zipformer-transducer-zh-en-punct-2026-06-05-chunk-size-480ms.tar.bz2"
+        },
+        {
+          "name": "GitHub mirror · gh-proxy.org",
+          "url": "https://gh-proxy.org/https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models-qnn-binary/sherpa-onnx-qnn-SM8550-binary-x-asr-streaming-zipformer-transducer-zh-en-punct-2026-06-05-chunk-size-480ms.tar.bz2"
+        },
+        {
+          "name": "GitHub mirror · ghfast.top",
+          "url": "https://ghfast.top/https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models-qnn-binary/sherpa-onnx-qnn-SM8550-binary-x-asr-streaming-zipformer-transducer-zh-en-punct-2026-06-05-chunk-size-480ms.tar.bz2"
+        }
+      ]
+    }
+  },
+  "sensevoice": {
+    "directory": "qnn-sensevoice-sm8550-5s",
+    "upstream": {
+      "release": "https://api.github.com/repos/k2-fsa/sherpa-onnx/releases/tags/asr-models-qnn-binary",
+      "assetId": 326292835,
+      "chipset": "SM8550",
+      "modelFormat": "qnn-context-binary"
+    },
+    "files": [
+      {
+        "name": "model.bin",
+        "size": 253124608,
+        "sha256": "8889e23be1988ee4159c707b2a2c59852ad4964be6ce7cd99a6c0e04112d825b"
+      },
+      {
+        "name": "tokens.txt",
+        "size": 315894,
+        "sha256": "f449eb28dc567533d7fa59be34e2abca8784f771850c78a47fb731a31429a1dc"
+      }
+    ],
+    "download": {
+      "format": "tar.bz2",
+      "size": 161631942,
+      "sha256": "2963224d4f816e0b1d64868dcf8e78a38c20b99196564d7d26c62cd834f2ac39",
+      "urls": [
+        {
+          "name": "GitHub",
+          "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models-qnn-binary/sherpa-onnx-qnn-SM8550-binary-5-seconds-sense-voice-zh-en-ja-ko-yue-2024-07-17-int8.tar.bz2"
+        },
+        {
+          "name": "GitHub mirror · gh-proxy.org",
+          "url": "https://gh-proxy.org/https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models-qnn-binary/sherpa-onnx-qnn-SM8550-binary-5-seconds-sense-voice-zh-en-ja-ko-yue-2024-07-17-int8.tar.bz2"
+        },
+        {
+          "name": "GitHub mirror · ghfast.top",
+          "url": "https://ghfast.top/https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models-qnn-binary/sherpa-onnx-qnn-SM8550-binary-5-seconds-sense-voice-zh-en-ja-ko-yue-2024-07-17-int8.tar.bz2"
+        }
+      ]
+    }
+  },
+  "zipformer": {
+    "directory": "qnn-zipformer-sm8550-32",
+    "upstream": {
+      "release": "https://api.github.com/repos/k2-fsa/sherpa-onnx/releases/tags/asr-models-qnn-binary",
+      "assetId": 435865171,
+      "chipset": "SM8550",
+      "modelFormat": "qnn-context-binary"
+    },
+    "files": [
+      {
+        "name": "encoder.bin",
+        "size": 150802432,
+        "sha256": "b65d2c408911d80b87294a31f9510aebe42627d839430a7f10b31e43c594b9f5"
+      },
+      {
+        "name": "decoder.bin",
+        "size": 7049216,
+        "sha256": "e84d5f313f0930fce14e6887d81eae17967c93e08d8fbcc59e312a69b79c44a0"
+      },
+      {
+        "name": "joiner.bin",
+        "size": 6529024,
+        "sha256": "70544e3c39bb2ba569cfa4453b7bff96802b8bc0f0529c03426c69bf5f4f0381"
+      },
+      {
+        "name": "tokens.txt",
+        "size": 56317,
+        "sha256": "a8e0e4ec53810e433789b54a5c0134a7eaa2ffca595a6334d54c00da858841d3"
+      }
+    ],
+    "download": {
+      "format": "tar.bz2",
+      "size": 128187298,
+      "sha256": "7a6a30bf7f218dd25794a42ecf9bfb1872ac345759f8f9adadc2a4e792b75093",
+      "urls": [
+        {
+          "name": "GitHub",
+          "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models-qnn-binary/sherpa-onnx-qnn-SM8550-binary-streaming-zipformer-transducer-zh-en-2023-03-20-chunk-size-32.tar.bz2"
+        },
+        {
+          "name": "GitHub mirror · gh-proxy.org",
+          "url": "https://gh-proxy.org/https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models-qnn-binary/sherpa-onnx-qnn-SM8550-binary-streaming-zipformer-transducer-zh-en-2023-03-20-chunk-size-32.tar.bz2"
+        },
+        {
+          "name": "GitHub mirror · ghfast.top",
+          "url": "https://ghfast.top/https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models-qnn-binary/sherpa-onnx-qnn-SM8550-binary-streaming-zipformer-transducer-zh-en-2023-03-20-chunk-size-32.tar.bz2"
+        }
+      ]
+    }
+  }
+}

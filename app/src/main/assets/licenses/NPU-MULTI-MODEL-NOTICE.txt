@@ -1,0 +1,71 @@
+Instant Caption 1.14.0 beta - model and runtime attribution
+
+Application code, inference framework, runtime binaries and model weights have
+separate licenses. This notice is not a grant of additional third-party rights.
+
+Speech recognition:
+- X-ASR: Gilgamesh-J / X-ASR, Apache-2.0; Chinese/English, 2026-06-05 QNN
+  punctuation export, 480 ms chunk. See X-ASR-LICENSE.txt.
+- Zipformer: k2-fsa / icefall, Apache-2.0; Chinese/English, 2023-03-20 QNN
+  export, chunk 32. See Zipformer-LICENSE.txt.
+- SenseVoice Small: FunAudioLLM / Alibaba, 2024-07-17 QNN and INT8 CPU
+  exports; Chinese, English, Japanese, Korean and Cantonese.
+  See SenseVoice-LICENSE.txt and the full FunASR-MODEL-LICENSE.txt snapshot.
+- Nemotron Speech Streaming English 0.6B: NVIDIA Open Model License;
+  560 ms QNN export. See Nemotron-LICENSE.txt and Nemotron-NOTICE.txt.
+- Whisper Tiny/Base INT8: OpenAI Whisper, MIT; sherpa-onnx ONNX conversions.
+  See whisper-MIT.txt. Current exports expose 30 language choices, not Cantonese.
+- Silero VAD: MIT; see SILERO-LICENSE.txt. Non-speech suppression is imperfect.
+
+Text translation:
+- Qwen3 0.6B, 1.7B and 4B: Alibaba original models under Apache-2.0;
+  Qualcomm W4A16 SM8750 / SM8850 exports have additional publisher usage limitations.
+  See QWEN-NPU-NOTICE.txt and linked model cards. 0.6B is experimental.
+- OPUS-MT: University of Helsinki / OPUS-MT; ONNX conversions by Xenova and
+  onnx-community. Nine targets: zh, de, fr, es, ru, ar, hi, it, pt.
+  German en-de is CC BY 4.0; other catalog models are Apache-2.0.
+  See OPUS-MULTILINGUAL-NOTICE.txt, OPUS-MT-LICENSE.txt and CC-BY-4.0.txt.
+- Non-English CPU translation uses Whisper speech-to-English, optionally
+  followed by OPUS. Quality can degrade in this pivot. Same-language captions
+  bypass text translation. Unsupported routes are unavailable.
+
+Runtime provenance:
+- sherpa-onnx 1.13.8: Apache-2.0. Portable build uses the official static CPU AAR.
+- ONNX Runtime: MIT. Portable build uses the official Android 1.28.0 AAR.
+  NPU build uses the shared 1.28.2 library from the upstream sherpa Android APK,
+  with the 1.28.0 Java JNI ELF symbol-version requirement adjusted to 1.28.2.
+  The transformation, source URLs and SHA-256 values are recorded in
+  prepare_translation_runtime.py and tools/bootstrap_runtime.py.
+- Common QNN host libraries and V68/V69/V73/V75/V79/V81 stub/skeleton files
+  come unchanged from the official QNN 2.51.0 AAR. GenieX JNI/API/plugins and
+  NetRunExtensions come from GenieX 0.8.0. See prepare_qwen_runtime.py for exact
+  file mapping, and the embedded QNN LICENSE/NOTICE for its conditional grant.
+  The portable APK excludes Qualcomm native components and LiteRT-LM entirely.
+- Kotlin and Apache Commons dependencies retain notices in KOTLIN-LICENSE.txt
+  and COMMONS-LICENSE.txt.
+
+Sources:
+https://github.com/k2-fsa/sherpa-onnx
+https://github.com/k2-fsa/sherpa-onnx/releases/tag/asr-models-qnn-binary
+https://github.com/k2-fsa/sherpa-onnx/releases/tag/asr-models
+https://huggingface.co/FunAudioLLM/SenseVoiceSmall
+https://github.com/qualcomm/GenieX
+https://repo.maven.apache.org/maven2/com/qualcomm/qti/geniex-android/0.8.0/
+https://www.qualcomm.com/site/terms-of-use
+
+No Google translation SDK or cloud inference client is included. Optional
+Android on-device speech recognition requires a suitable installed system
+provider and pack; it does not require detecting a Google-services package.
+Downloaded local speech and text models can be selected independently.
+
+Dedicated NPU targets are listed in device-model-catalog.json, with separate
+Android/RAM requirements. Unknown targets use portable CPU models. Actual
+phone/OS/model-load validation is distinct from eligibility and language quality.
+
+Downloads use catalog-pinned SHA-256 verification and atomic installation.
+Third-party mirrors provide alternate transport. Both Qwen AWS endpoints use
+the same hosting provider; they are not independent regional infrastructure.
+Local folder import requires the same fixed model filenames and hashes.
+
+Model licenses do not imply universal permission for proprietary runtimes.
+Retain applicable notices and review component terms for the intended distribution.

@@ -1,0 +1,8 @@
+HY-MT2-1.8B Q4_K_M
+Model publisher: Tencent Hy
+Model: https://huggingface.co/tencent/Hy-MT2-1.8B-GGUF
+Pinned revision: a0c709d9fac510f2c807aa3af52872340dc37a4a
+Model license: Apache License 2.0 (see HY-MT2-LICENSE.txt).
+Runtime: llama.cpp, MIT (see LLAMA-CPP-LICENSE.txt).
+The weights are downloaded separately; they are not bundled in the APK.
+No Google Play services are used by this CPU backend.

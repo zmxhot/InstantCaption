@@ -1,0 +1,67 @@
+{
+  "version": "1.20.1-beta.1",
+  "versionCode": 30,
+  "date": "2026-10-18",
+  "npuDistributionReviewComplete": false,
+  "licenseReview": "../NPU-DISTRIBUTION.md",
+  "licenseSnapshots": 21,
+  "exactArtifactEntryMatches": 12,
+  "publicCertificateSha256": "a6aa749a42a4914e6b4bfdf16b6061a3f09e967cbb2917daaded58b89452bedc",
+  "catalog": {
+    "chipsetRules": 23,
+    "modelProfiles": 12,
+    "packageReferences": 40,
+    "passed": true
+  },
+  "lint": {
+    "errors": 0,
+    "warnings": 30,
+    "limitation": "AGP lint also emits Kotlin 2.4 metadata compatibility diagnostics; this is not a warning-free lint result."
+  },
+  "deviceSmoke": {
+    "device": "SM-S936U",
+    "soc": "SM8750",
+    "originalSpeechChoice": "x-asr",
+    "internetPermission": true,
+    "deviceEligibilityGuards": true,
+    "restartPersistsQwen": true,
+    "translation": "火车将在5分钟后到达。",
+    "finalSpeechChoice": "x-asr",
+    "finalTranslation": "qwen3-1.7b-npu",
+    "passed": true
+  },
+  "deviceInstalledVersion": "1.20.1-beta.1-npu-test",
+  "validationLimits": [
+    "The signed APKs were statically inspected; the physical phone smoke used the matching NPU test build.",
+    "Portable has no LiteRT-LM Java API or vendor native runtime; no fresh portable audio benchmark was run in this packaging change.",
+    "This is a public beta, not a multi-device stable release."
+  ],
+  "packages": [
+    {
+      "file": "instant-caption-1.20.1-beta.1-portable-release.apk",
+      "bytes": 34283635,
+      "sha256": "0082321569ab00599ad1fc2937198bac3d4735cca4be1e7e7e0eb4df325453ea",
+      "signedRelease": true,
+      "debuggable": false,
+      "elf16KbAlignment": true,
+      "zipAlignment": true,
+      "licenseSnapshotsVerified": true,
+      "portable": true,
+      "npuCandidateOnly": false
+    },
+    {
+      "file": "instant-caption-1.20.1-beta.1-npu-release-candidate.apk",
+      "bytes": 111066400,
+      "sha256": "196cac2530dbc728a54b95d30bcab0e179195c24aa5c92d55fbd9ff04a00b1db",
+      "signedRelease": true,
+      "debuggable": false,
+      "elf16KbAlignment": true,
+      "zipAlignment": true,
+      "licenseSnapshotsVerified": true,
+      "portable": false,
+      "npuCandidateOnly": true
+    }
+  ],
+  "publicationStateAtVerification": "not_yet_published",
+  "publicRepository": "https://github.com/zmxhot/InstantCaption"
+}

@@ -1,0 +1,912 @@
+{
+  "schemaVersion": 1,
+  "revision": "2026-10-18",
+  "minimumAndroid": 29,
+  "abi": "arm64-v8a",
+  "defaultProfile": "portable",
+  "legacyStorageProfile": "sm8750",
+  "description": "Local processor-to-model catalog. Exact SoC matches precede family/manufacturer matches. NPU requires a chip-specific profile; generic families only inherit portable models. Physical handset tests do not gate downloads.",
+  "sources": [
+    "https://developer.android.com/reference/android/os/Build#SOC_MODEL",
+    "https://github.com/qualcomm/GenieX/blob/main/docs/en/get-started/platforms.mdx",
+    "https://docs.qualcomm.com/nav/home/QNN_general_overview.html?product=924033590759186372",
+    "https://www.qualcomm.com/smartphones/product-list",
+    "https://www.mediatek.com/products/smartphones/dimensity-5g",
+    "https://semiconductor.samsung.com/processor/mobile-processor/",
+    "https://store.google.com/gb/magazine/google-tensor-pixel-smartphone?hl=en-GB",
+    "https://consumer.huawei.com/ae-en/campaign/kirin-990-series/",
+    "https://www.unisoc.com/en/product/SmartPhone",
+    "https://api.github.com/repos/k2-fsa/sherpa-onnx/releases/tags/asr-models-qnn-binary",
+    "https://developers.google.com/edge/litert/next/mediatek",
+    "https://developers.google.com/edge/litert/next/litert_lm_npu",
+    "https://huggingface.co/tencent/Hy-MT2-1.8B-GGUF"
+  ],
+  "profiles": [
+    {
+      "id": "portable",
+      "models": [
+        {
+          "id": "whisper-base",
+          "task": "speech",
+          "runtime": "cpu",
+          "manifest": "npu-models.json",
+          "directory": "sherpa-whisper-base-int8",
+          "priority": 100,
+          "recommendMinRamBytes": 6442450944,
+          "recommendOnLowRam": false,
+          "androidVersion": "10"
+        },
+        {
+          "id": "whisper-tiny",
+          "task": "speech",
+          "runtime": "cpu",
+          "manifest": "npu-models.json",
+          "directory": "sherpa-whisper-tiny-int8",
+          "priority": 110,
+          "androidVersion": "10"
+        },
+        {
+          "id": "sensevoice-cpu",
+          "task": "speech",
+          "runtime": "cpu",
+          "manifest": "npu-models.json",
+          "directory": "sherpa-sensevoice-small-int8",
+          "priority": 120,
+          "androidVersion": "10"
+        },
+        {
+          "id": "opus",
+          "task": "text",
+          "runtime": "cpu",
+          "manifest": "translation-models.json",
+          "directory": "translation-opus-en-{target}",
+          "priority": 100,
+          "androidVersion": "10"
+        },
+        {
+          "id": "hy-mt2-1.8b-cpu",
+          "task": "text",
+          "runtime": "llama-cpu",
+          "manifest": "hy-mt2-1.8b-cpu.json",
+          "directory": "translation-hy-mt2-1.8b-cpu",
+          "priority": 80,
+          "minAndroid": 29,
+          "androidVersion": "10",
+          "minRamBytes": 3500000000,
+          "nominalRamGb": 4,
+          "allowLowRam": false,
+          "recommendMinRamBytes": 5500000000
+        }
+      ]
+    },
+    {
+      "id": "sm8750",
+      "extends": "portable",
+      "npuChip": "SM8750",
+      "documentationBased": false,
+      "requiredLibraries": [
+        "libQnnHtpV79Stub.so",
+        "libQnnHtpV79Skel.so",
+        "libQnnHtp.so",
+        "libQnnSystem.so",
+        "libgeniex_plugin_qairt.so",
+        "liblitertlm_jni.so",
+        "libLiteRtDispatch_Qualcomm.so"
+      ],
+      "models": [
+        {
+          "id": "x-asr",
+          "task": "speech",
+          "runtime": "qnn",
+          "manifest": "npu-models.json",
+          "directory": "qnn-x-asr-sm8750-480ms",
+          "priority": 0,
+          "androidVersion": "10"
+        },
+        {
+          "id": "nemotron",
+          "task": "speech",
+          "runtime": "qnn",
+          "manifest": "npu-models.json",
+          "directory": "qnn-nemotron-560ms",
+          "priority": 10,
+          "androidVersion": "10"
+        },
+        {
+          "id": "sensevoice",
+          "task": "speech",
+          "runtime": "qnn",
+          "manifest": "npu-models.json",
+          "directory": "qnn-sensevoice-sm8750-5s",
+          "priority": 20,
+          "androidVersion": "10"
+        },
+        {
+          "id": "zipformer",
+          "task": "speech",
+          "runtime": "qnn",
+          "manifest": "npu-models.json",
+          "directory": "qnn-zipformer-sm8750-32",
+          "priority": 30,
+          "androidVersion": "10"
+        },
+        {
+          "id": "qwen3-1.7b-npu",
+          "task": "text",
+          "runtime": "qairt",
+          "manifest": "qwen-translation.json",
+          "directory": "translation-qwen3-1.7b-sm8750",
+          "priority": 0,
+          "minAndroid": 35,
+          "minRamBytes": 7000000000,
+          "nominalRamGb": 8,
+          "allowLowRam": false,
+          "androidVersion": "15"
+        },
+        {
+          "id": "qwen3-0.6b-npu",
+          "task": "text",
+          "runtime": "qairt",
+          "manifest": "qwen3-0.6b-npu.json",
+          "directory": "translation-qwen3-0.6b-sm8750",
+          "priority": 10,
+          "minAndroid": 35,
+          "minRamBytes": 7000000000,
+          "nominalRamGb": 8,
+          "allowLowRam": false,
+          "androidVersion": "15"
+        },
+        {
+          "id": "qwen3-4b-npu",
+          "task": "text",
+          "runtime": "qairt",
+          "manifest": "qwen3-4b-npu.json",
+          "directory": "translation-qwen3-4b-sm8750",
+          "priority": 20,
+          "minAndroid": 35,
+          "minRamBytes": 11000000000,
+          "nominalRamGb": 12,
+          "allowLowRam": false,
+          "androidVersion": "15"
+        },
+        {
+          "id": "gemma4-e2b-npu",
+          "task": "text",
+          "runtime": "litert-lm",
+          "manifest": "gemma4-e2b-npu-sm8750.json",
+          "directory": "translation-gemma4-e2b-sm8750",
+          "priority": 30,
+          "minAndroid": 35,
+          "androidVersion": "15",
+          "minRamBytes": 11000000000,
+          "nominalRamGb": 12,
+          "allowLowRam": false
+        },
+        {
+          "id": "gemma3-1b-npu",
+          "task": "text",
+          "runtime": "litert-lm",
+          "manifest": "gemma3-1b-npu-sm8750.json",
+          "directory": "translation-gemma3-1b-sm8750",
+          "priority": 70,
+          "minAndroid": 35,
+          "androidVersion": "15",
+          "minRamBytes": 5500000000,
+          "nominalRamGb": 6,
+          "allowLowRam": false
+        }
+      ]
+    },
+    {
+      "id": "sm8850",
+      "extends": "portable",
+      "npuChip": "SM8850",
+      "documentationBased": true,
+      "requiredLibraries": [
+        "libQnnHtpV81Stub.so",
+        "libQnnHtpV81Skel.so",
+        "libQnnHtp.so",
+        "libQnnSystem.so",
+        "libgeniex_plugin_qairt.so"
+      ],
+      "models": [
+        {
+          "id": "x-asr",
+          "task": "speech",
+          "runtime": "qnn",
+          "manifest": "npu-models-sm8850.json",
+          "directory": "qnn-x-asr-sm8850-480ms",
+          "priority": 0,
+          "androidVersion": "10"
+        },
+        {
+          "id": "nemotron",
+          "task": "speech",
+          "runtime": "qnn",
+          "manifest": "npu-models-sm8850.json",
+          "directory": "qnn-nemotron-560ms-sm8850",
+          "priority": 10,
+          "androidVersion": "10"
+        },
+        {
+          "id": "sensevoice",
+          "task": "speech",
+          "runtime": "qnn",
+          "manifest": "npu-models-sm8850.json",
+          "directory": "qnn-sensevoice-sm8850-5s",
+          "priority": 20,
+          "androidVersion": "10"
+        },
+        {
+          "id": "zipformer",
+          "task": "speech",
+          "runtime": "qnn",
+          "manifest": "npu-models-sm8850.json",
+          "directory": "qnn-zipformer-sm8850-32",
+          "priority": 30,
+          "androidVersion": "10"
+        },
+        {
+          "id": "qwen3-1.7b-npu",
+          "task": "text",
+          "runtime": "qairt",
+          "manifest": "qwen3-1.7b-npu-sm8850.json",
+          "directory": "translation-qwen3-1.7b-sm8850",
+          "priority": 0,
+          "minAndroid": 35,
+          "minRamBytes": 7000000000,
+          "nominalRamGb": 8,
+          "allowLowRam": false,
+          "androidVersion": "15"
+        },
+        {
+          "id": "qwen3-0.6b-npu",
+          "task": "text",
+          "runtime": "qairt",
+          "manifest": "qwen3-0.6b-npu-sm8850.json",
+          "directory": "translation-qwen3-0.6b-sm8850",
+          "priority": 10,
+          "minAndroid": 35,
+          "minRamBytes": 7000000000,
+          "nominalRamGb": 8,
+          "allowLowRam": false,
+          "androidVersion": "15"
+        },
+        {
+          "id": "qwen3-4b-npu",
+          "task": "text",
+          "runtime": "qairt",
+          "manifest": "qwen3-4b-npu-sm8850.json",
+          "directory": "translation-qwen3-4b-sm8850",
+          "priority": 20,
+          "minAndroid": 35,
+          "minRamBytes": 11000000000,
+          "nominalRamGb": 12,
+          "allowLowRam": false,
+          "androidVersion": "15"
+        }
+      ]
+    },
+    {
+      "id": "sm8350",
+      "extends": "portable",
+      "npuChip": "SM8350",
+      "documentationBased": true,
+      "requiredLibraries": [
+        "libQnnHtpV68Stub.so",
+        "libQnnHtpV68Skel.so",
+        "libQnnHtp.so",
+        "libQnnSystem.so"
+      ],
+      "models": [
+        {
+          "id": "sensevoice",
+          "task": "speech",
+          "runtime": "qnn",
+          "manifest": "npu-models-sm8350.json",
+          "directory": "qnn-sensevoice-sm8350-5s",
+          "priority": 20,
+          "androidVersion": "12",
+          "minAndroid": 31
+        }
+      ]
+    },
+    {
+      "id": "sm8450",
+      "extends": "portable",
+      "npuChip": "SM8450",
+      "documentationBased": true,
+      "requiredLibraries": [
+        "libQnnHtpV69Stub.so",
+        "libQnnHtpV69Skel.so",
+        "libQnnHtp.so",
+        "libQnnSystem.so"
+      ],
+      "models": [
+        {
+          "id": "x-asr",
+          "task": "speech",
+          "runtime": "qnn",
+          "manifest": "npu-models-sm8450.json",
+          "directory": "qnn-x-asr-sm8450-480ms",
+          "priority": 0,
+          "androidVersion": "12",
+          "minAndroid": 31
+        },
+        {
+          "id": "sensevoice",
+          "task": "speech",
+          "runtime": "qnn",
+          "manifest": "npu-models-sm8450.json",
+          "directory": "qnn-sensevoice-sm8450-5s",
+          "priority": 20,
+          "androidVersion": "12",
+          "minAndroid": 31
+        },
+        {
+          "id": "zipformer",
+          "task": "speech",
+          "runtime": "qnn",
+          "manifest": "npu-models-sm8450.json",
+          "directory": "qnn-zipformer-sm8450-32",
+          "priority": 30,
+          "androidVersion": "12",
+          "minAndroid": 31
+        }
+      ]
+    },
+    {
+      "id": "sm8475",
+      "extends": "portable",
+      "npuChip": "SM8475",
+      "documentationBased": true,
+      "requiredLibraries": [
+        "libQnnHtpV69Stub.so",
+        "libQnnHtpV69Skel.so",
+        "libQnnHtp.so",
+        "libQnnSystem.so"
+      ],
+      "models": [
+        {
+          "id": "x-asr",
+          "task": "speech",
+          "runtime": "qnn",
+          "manifest": "npu-models-sm8475.json",
+          "directory": "qnn-x-asr-sm8475-480ms",
+          "priority": 0,
+          "androidVersion": "12",
+          "minAndroid": 31
+        },
+        {
+          "id": "sensevoice",
+          "task": "speech",
+          "runtime": "qnn",
+          "manifest": "npu-models-sm8475.json",
+          "directory": "qnn-sensevoice-sm8475-5s",
+          "priority": 20,
+          "androidVersion": "12",
+          "minAndroid": 31
+        },
+        {
+          "id": "zipformer",
+          "task": "speech",
+          "runtime": "qnn",
+          "manifest": "npu-models-sm8475.json",
+          "directory": "qnn-zipformer-sm8475-32",
+          "priority": 30,
+          "androidVersion": "12",
+          "minAndroid": 31
+        }
+      ]
+    },
+    {
+      "id": "sm8550",
+      "extends": "portable",
+      "npuChip": "SM8550",
+      "documentationBased": true,
+      "requiredLibraries": [
+        "libQnnHtpV73Stub.so",
+        "libQnnHtpV73Skel.so",
+        "libQnnHtp.so",
+        "libQnnSystem.so",
+        "liblitertlm_jni.so",
+        "libLiteRtDispatch_Qualcomm.so"
+      ],
+      "models": [
+        {
+          "id": "x-asr",
+          "task": "speech",
+          "runtime": "qnn",
+          "manifest": "npu-models-sm8550.json",
+          "directory": "qnn-x-asr-sm8550-480ms",
+          "priority": 0,
+          "androidVersion": "12",
+          "minAndroid": 31
+        },
+        {
+          "id": "sensevoice",
+          "task": "speech",
+          "runtime": "qnn",
+          "manifest": "npu-models-sm8550.json",
+          "directory": "qnn-sensevoice-sm8550-5s",
+          "priority": 20,
+          "androidVersion": "12",
+          "minAndroid": 31
+        },
+        {
+          "id": "zipformer",
+          "task": "speech",
+          "runtime": "qnn",
+          "manifest": "npu-models-sm8550.json",
+          "directory": "qnn-zipformer-sm8550-32",
+          "priority": 30,
+          "androidVersion": "12",
+          "minAndroid": 31
+        },
+        {
+          "id": "gemma3-1b-npu",
+          "task": "text",
+          "runtime": "litert-lm",
+          "manifest": "gemma3-1b-npu-sm8550.json",
+          "directory": "translation-gemma3-1b-sm8550",
+          "priority": 70,
+          "minAndroid": 35,
+          "androidVersion": "15",
+          "minRamBytes": 5500000000,
+          "nominalRamGb": 6,
+          "allowLowRam": false
+        }
+      ]
+    },
+    {
+      "id": "sm8650",
+      "extends": "portable",
+      "npuChip": "SM8650",
+      "documentationBased": true,
+      "requiredLibraries": [
+        "libQnnHtpV75Stub.so",
+        "libQnnHtpV75Skel.so",
+        "libQnnHtp.so",
+        "libQnnSystem.so",
+        "liblitertlm_jni.so",
+        "libLiteRtDispatch_Qualcomm.so"
+      ],
+      "models": [
+        {
+          "id": "x-asr",
+          "task": "speech",
+          "runtime": "qnn",
+          "manifest": "npu-models-sm8650.json",
+          "directory": "qnn-x-asr-sm8650-480ms",
+          "priority": 0,
+          "androidVersion": "12",
+          "minAndroid": 31
+        },
+        {
+          "id": "sensevoice",
+          "task": "speech",
+          "runtime": "qnn",
+          "manifest": "npu-models-sm8650.json",
+          "directory": "qnn-sensevoice-sm8650-5s",
+          "priority": 20,
+          "androidVersion": "12",
+          "minAndroid": 31
+        },
+        {
+          "id": "zipformer",
+          "task": "speech",
+          "runtime": "qnn",
+          "manifest": "npu-models-sm8650.json",
+          "directory": "qnn-zipformer-sm8650-32",
+          "priority": 30,
+          "androidVersion": "12",
+          "minAndroid": 31
+        },
+        {
+          "id": "gemma3-1b-npu",
+          "task": "text",
+          "runtime": "litert-lm",
+          "manifest": "gemma3-1b-npu-sm8650.json",
+          "directory": "translation-gemma3-1b-sm8650",
+          "priority": 70,
+          "minAndroid": 35,
+          "androidVersion": "15",
+          "minRamBytes": 5500000000,
+          "nominalRamGb": 6,
+          "allowLowRam": false
+        }
+      ]
+    },
+    {
+      "id": "tensor-g5",
+      "extends": "portable",
+      "npuChip": "Tensor_G5",
+      "documentationBased": true,
+      "requiredLibraries": [
+        "liblitertlm_jni.so",
+        "libLiteRtDispatch_GoogleTensor.so"
+      ],
+      "models": [
+        {
+          "id": "gemma4-e2b-npu",
+          "task": "text",
+          "runtime": "litert-lm",
+          "manifest": "gemma4-e2b-npu-tensor-g5.json",
+          "directory": "translation-gemma4-e2b-tensor-g5",
+          "priority": 30,
+          "minAndroid": 35,
+          "androidVersion": "15",
+          "minRamBytes": 11000000000,
+          "nominalRamGb": 12,
+          "allowLowRam": false
+        }
+      ]
+    },
+    {
+      "id": "tensor-g6",
+      "extends": "portable",
+      "npuChip": "Tensor_G6",
+      "documentationBased": true,
+      "requiredLibraries": [
+        "liblitertlm_jni.so",
+        "libLiteRtDispatch_GoogleTensor.so"
+      ],
+      "models": [
+        {
+          "id": "gemma4-e2b-npu",
+          "task": "text",
+          "runtime": "litert-lm",
+          "manifest": "gemma4-e2b-npu-tensor-g6.json",
+          "directory": "translation-gemma4-e2b-tensor-g6",
+          "priority": 30,
+          "minAndroid": 35,
+          "androidVersion": "15",
+          "minRamBytes": 11000000000,
+          "nominalRamGb": 12,
+          "allowLowRam": false
+        }
+      ]
+    },
+    {
+      "id": "mt6989",
+      "extends": "portable",
+      "npuChip": "MT6989",
+      "documentationBased": true,
+      "requiredLibraries": [
+        "liblitertlm_jni.so",
+        "libLiteRtDispatch_MediaTek.so"
+      ],
+      "models": [
+        {
+          "id": "gemma3-1b-npu",
+          "task": "text",
+          "runtime": "litert-lm",
+          "manifest": "gemma3-1b-npu-mt6989.json",
+          "directory": "translation-gemma3-1b-mt6989",
+          "priority": 70,
+          "minAndroid": 35,
+          "androidVersion": "15",
+          "minRamBytes": 5500000000,
+          "nominalRamGb": 6,
+          "allowLowRam": false
+        }
+      ]
+    },
+    {
+      "id": "mt6991",
+      "extends": "portable",
+      "npuChip": "MT6991",
+      "documentationBased": true,
+      "requiredLibraries": [
+        "liblitertlm_jni.so",
+        "libLiteRtDispatch_MediaTek.so"
+      ],
+      "models": [
+        {
+          "id": "gemma3-1b-npu",
+          "task": "text",
+          "runtime": "litert-lm",
+          "manifest": "gemma3-1b-npu-mt6991.json",
+          "directory": "translation-gemma3-1b-mt6991",
+          "priority": 70,
+          "minAndroid": 35,
+          "androidVersion": "15",
+          "minRamBytes": 5500000000,
+          "nominalRamGb": 6,
+          "allowLowRam": false
+        }
+      ]
+    }
+  ],
+  "chipsets": [
+    {
+      "id": "mt6991",
+      "name": "MediaTek Dimensity 9400",
+      "profile": "mt6991",
+      "match": {
+        "soc": [
+          "MT6991(?:[A-Z][A-Z0-9._/-]*|[ _/-][A-Z0-9._/-]+)?",
+          "(?:MEDIATEK[ _-]+)?(?:DIMENSITY|D)[ _-]*9400(?:\\+|[ _-]+PLUS)?"
+        ]
+      }
+    },
+    {
+      "id": "mt6989",
+      "name": "MediaTek Dimensity 9300",
+      "profile": "mt6989",
+      "match": {
+        "soc": [
+          "MT6989(?:[A-Z][A-Z0-9._/-]*|[ _/-][A-Z0-9._/-]+)?",
+          "(?:MEDIATEK[ _-]+)?(?:DIMENSITY|D)[ _-]*9300(?:\\+|[ _-]+PLUS)?"
+        ]
+      }
+    },
+    {
+      "id": "tensor-g6",
+      "name": "Google Tensor G6",
+      "profile": "tensor-g6",
+      "match": {
+        "soc": [
+          "(?:GOOGLE[ _])?TENSOR[ _]G6"
+        ]
+      }
+    },
+    {
+      "id": "tensor-g5",
+      "name": "Google Tensor G5",
+      "profile": "tensor-g5",
+      "match": {
+        "soc": [
+          "(?:GOOGLE[ _])?TENSOR[ _]G5"
+        ]
+      }
+    },
+    {
+      "id": "snapdragon-888",
+      "name": "Snapdragon 888",
+      "profile": "sm8350",
+      "match": {
+        "soc": [
+          "(?:QUALCOMM(?: TECHNOLOGIES,? INC\\.?)? |QTI )?SM8350(?:-[A-Z0-9]+)*",
+          "(?:QUALCOMM )?SNAPDRAGON 888(?: FOR GALAXY)?(?: MOBILE PLATFORM)?"
+        ]
+      }
+    },
+    {
+      "id": "snapdragon-8-gen1",
+      "name": "Snapdragon 8 Gen 1",
+      "profile": "sm8450",
+      "match": {
+        "soc": [
+          "(?:QUALCOMM(?: TECHNOLOGIES,? INC\\.?)? |QTI )?SM8450(?:-[A-Z0-9]+)*",
+          "(?:QUALCOMM )?SNAPDRAGON 8 GEN 1(?: FOR GALAXY)?(?: MOBILE PLATFORM)?"
+        ]
+      }
+    },
+    {
+      "id": "snapdragon-8-plus-gen1",
+      "name": "Snapdragon 8+ Gen 1",
+      "profile": "sm8475",
+      "match": {
+        "soc": [
+          "(?:QUALCOMM(?: TECHNOLOGIES,? INC\\.?)? |QTI )?SM8475(?:-[A-Z0-9]+)*",
+          "(?:QUALCOMM )?SNAPDRAGON 8\\+ GEN 1(?: FOR GALAXY)?(?: MOBILE PLATFORM)?"
+        ]
+      }
+    },
+    {
+      "id": "snapdragon-8-gen2",
+      "name": "Snapdragon 8 Gen 2",
+      "profile": "sm8550",
+      "match": {
+        "soc": [
+          "(?:QUALCOMM(?: TECHNOLOGIES,? INC\\.?)? |QTI )?SM8550(?:-[A-Z0-9]+)*",
+          "(?:QUALCOMM )?SNAPDRAGON 8 GEN 2(?: FOR GALAXY)?(?: MOBILE PLATFORM)?"
+        ]
+      }
+    },
+    {
+      "id": "snapdragon-8-gen3",
+      "name": "Snapdragon 8 Gen 3",
+      "profile": "sm8650",
+      "match": {
+        "soc": [
+          "(?:QUALCOMM(?: TECHNOLOGIES,? INC\\.?)? |QTI )?SM8650(?:-[A-Z0-9]+)*",
+          "(?:QUALCOMM )?SNAPDRAGON 8 GEN 3(?: FOR GALAXY)?(?: MOBILE PLATFORM)?"
+        ]
+      }
+    },
+    {
+      "id": "snapdragon-8-elite-gen5",
+      "name": "Snapdragon 8 Elite Gen 5",
+      "profile": "sm8850",
+      "match": {
+        "soc": [
+          "(?:QUALCOMM(?: TECHNOLOGIES,? INC\\.?)? |QTI )?SM8850(?:-[A-Z0-9]+)*",
+          "(?:QUALCOMM )?SNAPDRAGON 8 ELITE GEN 5(?: FOR GALAXY)?(?: MOBILE PLATFORM)?"
+        ]
+      }
+    },
+    {
+      "id": "snapdragon-8-elite",
+      "name": "Snapdragon 8 Elite",
+      "profile": "sm8750",
+      "match": {
+        "soc": [
+          "(?:QUALCOMM(?: TECHNOLOGIES,? INC\\.?)? |QTI )?SM8750(?:-[A-Z0-9]+)*",
+          "(?:QUALCOMM )?SNAPDRAGON 8 ELITE(?: FOR GALAXY)?(?: MOBILE PLATFORM)?"
+        ]
+      }
+    },
+    {
+      "id": "snapdragon-8",
+      "name": "Snapdragon 8 series",
+      "profile": "portable",
+      "match": {
+        "soc": [
+          "(?:QUALCOMM(?: TECHNOLOGIES,? INC\\.?)? |QTI )?SM8[0-9]{3}(?:-[A-Z0-9]+)*",
+          "(?:QUALCOMM )?SNAPDRAGON 8[A-Z0-9 +.\\-]*(?: MOBILE PLATFORM)?"
+        ]
+      }
+    },
+    {
+      "id": "snapdragon-7",
+      "name": "Snapdragon 7 series",
+      "profile": "portable",
+      "match": {
+        "soc": [
+          "(?:QUALCOMM(?: TECHNOLOGIES,? INC\\.?)? |QTI )?SM7[0-9]{3}(?:-[A-Z0-9]+)*",
+          "(?:QUALCOMM )?SNAPDRAGON 7[A-Z0-9 +.\\-]*(?: MOBILE PLATFORM)?"
+        ]
+      }
+    },
+    {
+      "id": "snapdragon-6",
+      "name": "Snapdragon 6 series",
+      "profile": "portable",
+      "match": {
+        "soc": [
+          "(?:QUALCOMM(?: TECHNOLOGIES,? INC\\.?)? |QTI )?SM6[0-9]{3}(?:-[A-Z0-9]+)*",
+          "(?:QUALCOMM )?SNAPDRAGON 6[A-Z0-9 +.\\-]*(?: MOBILE PLATFORM)?"
+        ]
+      }
+    },
+    {
+      "id": "snapdragon-4",
+      "name": "Snapdragon 4 series",
+      "profile": "portable",
+      "match": {
+        "soc": [
+          "(?:QUALCOMM(?: TECHNOLOGIES,? INC\\.?)? |QTI )?SM4[0-9]{3}(?:-[A-Z0-9]+)*",
+          "(?:QUALCOMM )?SNAPDRAGON 4[A-Z0-9 +.\\-]*(?: MOBILE PLATFORM)?"
+        ]
+      }
+    },
+    {
+      "id": "dimensity",
+      "name": "MediaTek Dimensity",
+      "profile": "portable",
+      "match": {
+        "soc": [
+          "(?:MEDIATEK )?DIMENSITY [0-9]{3,4}[A-Z0-9 +\\-]*"
+        ]
+      }
+    },
+    {
+      "id": "helio",
+      "name": "MediaTek Helio",
+      "profile": "portable",
+      "match": {
+        "soc": [
+          "(?:MEDIATEK )?HELIO [A-Z][0-9]{2,3}[A-Z0-9 +\\-]*"
+        ]
+      }
+    },
+    {
+      "id": "mediatek",
+      "name": "MediaTek",
+      "profile": "portable",
+      "match": {
+        "soc": [
+          "(?:MEDIATEK )?MT[0-9]{4}[A-Z0-9/_\\-]*"
+        ],
+        "socManufacturer": [
+          "MEDIATEK(?: INC\\.?)?",
+          "MTK"
+        ],
+        "hardware": [
+          "MT[0-9]{4}[A-Z0-9_\\-]*"
+        ]
+      }
+    },
+    {
+      "id": "tensor",
+      "name": "Google Tensor",
+      "profile": "portable",
+      "match": {
+        "soc": [
+          "(?:GOOGLE )?TENSOR(?: G[0-9]+)?",
+          "GS[0-9]{3}"
+        ],
+        "socManufacturer": [
+          "GOOGLE"
+        ],
+        "hardware": [
+          "(?:GOOGLE )?TENSOR(?: G[0-9]+)?"
+        ]
+      }
+    },
+    {
+      "id": "exynos",
+      "name": "Samsung Exynos",
+      "profile": "portable",
+      "match": {
+        "soc": [
+          "(?:SAMSUNG )?EXYNOS[ _]?[0-9]{3,4}[A-Z]?",
+          "S5E[0-9]{4}"
+        ],
+        "socManufacturer": [
+          "SAMSUNG(?: ELECTRONICS)?"
+        ],
+        "hardware": [
+          "(?:SAMSUNG)?EXYNOS[0-9]{3,4}",
+          "S5E[0-9]{4}"
+        ]
+      }
+    },
+    {
+      "id": "kirin",
+      "name": "HiSilicon Kirin",
+      "profile": "portable",
+      "match": {
+        "soc": [
+          "(?:(?:HISILICON|HUAWEI) )?KIRIN[ _]?[0-9]{3,4}[A-Z]?",
+          "HI[0-9]{4}"
+        ],
+        "socManufacturer": [
+          "HISILICON",
+          "HUAWEI"
+        ],
+        "hardware": [
+          "KIRIN[0-9]{3,4}[A-Z]?",
+          "HI[0-9]{4}"
+        ]
+      }
+    },
+    {
+      "id": "unisoc",
+      "name": "UNISOC",
+      "profile": "portable",
+      "match": {
+        "soc": [
+          "(?:UNISOC |SPREADTRUM )?(?:T[0-9]{3,4}|TIGER T[0-9]{3,4}|TANGULA T[0-9]{3,4}|UMS[0-9]{3,4}|SC[0-9]{4})[A-Z0-9_\\-]*"
+        ],
+        "socManufacturer": [
+          "UNISOC",
+          "SPREADTRUM"
+        ],
+        "hardware": [
+          "(?:UMS[0-9]{3,4}|SPRD|SC[0-9]{4})[A-Z0-9_\\-]*"
+        ]
+      }
+    },
+    {
+      "id": "qualcomm",
+      "name": "Qualcomm Snapdragon",
+      "profile": "portable",
+      "match": {
+        "soc": [
+          "(?:QUALCOMM(?: TECHNOLOGIES,? INC\\.?)? |QTI )?(?:MSM|SDM)[0-9]{3,4}[A-Z0-9_\\-]*"
+        ],
+        "socManufacturer": [
+          "QUALCOMM(?: TECHNOLOGIES,? INC\\.?)?",
+          "QTI"
+        ],
+        "hardware": [
+          "QCOM",
+          "(?:MSM|SDM)[0-9]{3,4}[A-Z0-9_\\-]*"
+        ]
+      }
+    }
+  ]
+}

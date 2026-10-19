@@ -1,0 +1,738 @@
+{
+  "schemaVersion": 1,
+  "retrievedAt": "2026-10-18T23:24:25.655553+00:00",
+  "sources": {
+    "litert-models": {
+      "url": "https://developers.google.com/edge/litert/next/litert_lm_npu",
+      "resolvedUrl": "https://developers.google.com/edge/litert/next/litert_lm_npu",
+      "sha256": "e5691940d116ee11c11614fd2f47441741a963df556756c77de720dae6883476",
+      "status": "fetched"
+    },
+    "mediatek-runtime": {
+      "url": "https://developers.google.com/edge/litert/next/mediatek",
+      "resolvedUrl": "https://developers.google.com/edge/litert/next/mediatek",
+      "sha256": "5191b78027cf54cb61958049d2614a75067112dea15821d109d64f2e0ba6462a",
+      "status": "fetched"
+    },
+    "samsung-runtime": {
+      "url": "https://developers.google.com/edge/litert/next/samsung",
+      "resolvedUrl": "https://developers.google.com/edge/litert/next/samsung",
+      "sha256": "21e1aee585aecfa3d62b80bf847d9dfcd4cb4dd33c4f23cb6c51de24767f1631",
+      "status": "fetched"
+    },
+    "huawei-runtime": {
+      "url": "https://developer.huawei.com/consumer/en/hiai/",
+      "resolvedUrl": "https://developer.huawei.com/consumer/en/hiai/",
+      "sha256": "f8bb76f18ca82fba2fc1780344237d620d2986e56e03565d022a5cd04c73b2db",
+      "status": "fetched"
+    },
+    "unisoc-platforms": {
+      "url": "https://www.unisoc.com/en/product/SmartPhone",
+      "resolvedUrl": "https://www.unisoc.com/en/product/SmartPhone",
+      "sha256": "ae05510f9cb50d5dc31913952b7278b0248575e85efd42509146394beef43c6e",
+      "status": "fetched"
+    },
+    "geniex-platforms": {
+      "url": "https://raw.githubusercontent.com/qualcomm/GenieX/main/docs/en/get-started/platforms.mdx",
+      "resolvedUrl": "https://raw.githubusercontent.com/qualcomm/GenieX/main/docs/en/get-started/platforms.mdx",
+      "sha256": "ea94b267c726f3fab21d89554e155cc4603e5e559d1b76d90bbf14f8d104208c",
+      "status": "fetched"
+    },
+    "qwen-0.6b": {
+      "url": "https://raw.githubusercontent.com/qualcomm/ai-hub-models/v0.64.0/src/qai_hub_models/models/qwen3_0_6b/release-assets.yaml",
+      "resolvedUrl": "https://raw.githubusercontent.com/qualcomm/ai-hub-models/v0.64.0/src/qai_hub_models/models/qwen3_0_6b/release-assets.yaml",
+      "sha256": "49b127e757600cb166361970be7d8116f4fa9299a92b529f580c286f11dc8fc9",
+      "status": "fetched"
+    },
+    "qwen-1.7b": {
+      "url": "https://raw.githubusercontent.com/qualcomm/ai-hub-models/v0.64.0/src/qai_hub_models/models/qwen3_1_7b/release-assets.yaml",
+      "resolvedUrl": "https://raw.githubusercontent.com/qualcomm/ai-hub-models/v0.64.0/src/qai_hub_models/models/qwen3_1_7b/release-assets.yaml",
+      "sha256": "1e458d5f7bab4c8a1f1941e64a0812aad221d28c1a2bd0a915608d063ed9d1ff",
+      "status": "fetched"
+    },
+    "qwen-4b": {
+      "url": "https://raw.githubusercontent.com/qualcomm/ai-hub-models/v0.64.0/src/qai_hub_models/models/qwen3_4b/release-assets.yaml",
+      "resolvedUrl": "https://raw.githubusercontent.com/qualcomm/ai-hub-models/v0.64.0/src/qai_hub_models/models/qwen3_4b/release-assets.yaml",
+      "sha256": "b86050a30b95a78f83610c575d45d4debf3ca4c2f986e900605e5b5f9814561d",
+      "status": "fetched"
+    },
+    "gemma3-files": {
+      "url": "https://huggingface.co/api/models/litert-community/Gemma3-1B-IT/tree/main?recursive=true",
+      "resolvedUrl": "https://huggingface.co/api/models/litert-community/Gemma3-1B-IT/tree/main?recursive=true",
+      "sha256": "4f4a05f9782a78e35cdae6201c7d0943d1a0eb39bf4b551ef1834ceae6047c75",
+      "status": "fetched"
+    },
+    "gemma3-metadata": {
+      "url": "https://huggingface.co/api/models/litert-community/Gemma3-1B-IT",
+      "resolvedUrl": "https://huggingface.co/api/models/litert-community/Gemma3-1B-IT",
+      "sha256": "c181ffe3eebc81acf0be644beb8c7723be6e198a6d2f7de30188c0d3d4152ffe",
+      "status": "fetched"
+    },
+    "gemma4-files": {
+      "url": "https://huggingface.co/api/models/litert-community/gemma-4-E2B-it-litert-lm/tree/main?recursive=true",
+      "resolvedUrl": "https://huggingface.co/api/models/litert-community/gemma-4-E2B-it-litert-lm/tree/main?recursive=true",
+      "sha256": "122b2d3ded6822807368626626b27bb309c1dc06e694442ad72282229d082e22",
+      "status": "fetched"
+    },
+    "gemma4-metadata": {
+      "url": "https://huggingface.co/api/models/litert-community/gemma-4-E2B-it-litert-lm",
+      "resolvedUrl": "https://huggingface.co/api/models/litert-community/gemma-4-E2B-it-litert-lm",
+      "sha256": "dc35e97c4ca5407dfdbd351fce6e4298c95e4bfcf6e31eb779b825def3320ab9",
+      "status": "fetched"
+    }
+  },
+  "runtimeSupport": [
+    {
+      "vendor": "mediatek",
+      "runtime": "litert",
+      "chipsets": [
+        "MT6878",
+        "MT6897",
+        "MT6983",
+        "MT6985",
+        "MT6989",
+        "MT6990",
+        "MT6991"
+      ],
+      "evidence": "mediatek-runtime",
+      "scope": "Runtime support only; not model compatibility"
+    },
+    {
+      "vendor": "samsung",
+      "runtime": "litert",
+      "chipsets": [
+        "E9955",
+        "E9965"
+      ],
+      "evidence": "samsung-runtime",
+      "scope": "Runtime support only; not model compatibility"
+    }
+  ],
+  "upstreamModels": [
+    {
+      "label": "Gemma4-E2B",
+      "task": "text",
+      "vendor": "google",
+      "chipset": "Tensor_G6",
+      "runtime": "litert-lm",
+      "source": "litert-models",
+      "modelPage": "https://huggingface.co/litert-community/gemma-4-E2B-it-litert-lm",
+      "appStatus": "integrated",
+      "downloadEnabled": true,
+      "authorizedImportEnabled": false,
+      "requiresPublisherAuthorization": false
+    },
+    {
+      "label": "Gemma3-1B",
+      "task": "text",
+      "vendor": "google",
+      "chipset": "Tensor_G6",
+      "runtime": "litert-lm",
+      "source": "litert-models",
+      "modelPage": "https://huggingface.co/litert-community/Gemma3-1B-IT",
+      "appStatus": "publisher_authorization_required",
+      "downloadEnabled": false
+    },
+    {
+      "label": "Gemma3-1B",
+      "task": "text",
+      "vendor": "google",
+      "chipset": "Tensor_G5",
+      "runtime": "litert-lm",
+      "source": "litert-models",
+      "modelPage": "https://huggingface.co/litert-community/Gemma3-1B-IT",
+      "appStatus": "publisher_authorization_required",
+      "downloadEnabled": false
+    },
+    {
+      "label": "Gemma3-1B",
+      "task": "text",
+      "vendor": "qualcomm",
+      "chipset": "SM8750",
+      "runtime": "litert-lm",
+      "source": "litert-models",
+      "modelPage": "https://huggingface.co/litert-community/Gemma3-1B-IT/blob/main/Gemma3-1B-IT_q4_ekv1280_sm8750.litertlm",
+      "appStatus": "integrated_authorized_import",
+      "downloadEnabled": false,
+      "authorizedImportEnabled": true,
+      "requiresPublisherAuthorization": true
+    },
+    {
+      "label": "Gemma3-1B",
+      "task": "text",
+      "vendor": "qualcomm",
+      "chipset": "SM8650",
+      "runtime": "litert-lm",
+      "source": "litert-models",
+      "modelPage": "https://huggingface.co/litert-community/Gemma3-1B-IT/blob/main/Gemma3-1B-IT_q4_ekv1280_sm8650.litertlm",
+      "appStatus": "integrated_authorized_import",
+      "downloadEnabled": false,
+      "authorizedImportEnabled": true,
+      "requiresPublisherAuthorization": true
+    },
+    {
+      "label": "Gemma3-1B",
+      "task": "text",
+      "vendor": "qualcomm",
+      "chipset": "SM8550",
+      "runtime": "litert-lm",
+      "source": "litert-models",
+      "modelPage": "https://huggingface.co/litert-community/Gemma3-1B-IT/blob/main/Gemma3-1B-IT_q4_ekv1280_sm8550.litertlm",
+      "appStatus": "integrated_authorized_import",
+      "downloadEnabled": false,
+      "authorizedImportEnabled": true,
+      "requiresPublisherAuthorization": true
+    },
+    {
+      "label": "Gemma3-1B",
+      "task": "text",
+      "vendor": "mediatek",
+      "chipset": "MT6989",
+      "runtime": "litert-lm",
+      "source": "litert-models",
+      "modelPage": "https://huggingface.co/litert-community/Gemma3-1B-IT/blob/main/Gemma3-1B-IT_q4_ekv1280_mt6989.litertlm",
+      "appStatus": "integrated_authorized_import",
+      "downloadEnabled": false,
+      "authorizedImportEnabled": true,
+      "requiresPublisherAuthorization": true
+    },
+    {
+      "label": "Gemma3-1B",
+      "task": "text",
+      "vendor": "mediatek",
+      "chipset": "MT6991",
+      "runtime": "litert-lm",
+      "source": "litert-models",
+      "modelPage": "https://huggingface.co/litert-community/Gemma3-1B-IT/blob/main/Gemma3-1B-IT_q4_ekv1280_mt6991.litertlm",
+      "appStatus": "integrated_authorized_import",
+      "downloadEnabled": false,
+      "authorizedImportEnabled": true,
+      "requiresPublisherAuthorization": true
+    },
+    {
+      "label": "Gemma3-1B",
+      "task": "text",
+      "vendor": "mediatek",
+      "chipset": "MT6989",
+      "runtime": "litert-lm",
+      "source": "gemma3-files",
+      "revision": "d448835d84411a08f577e25f3afebe528402d73b",
+      "modelPage": "https://huggingface.co/litert-community/Gemma3-1B-IT/blob/d448835d84411a08f577e25f3afebe528402d73b/Gemma3-1B-IT_q4_ekv1280_mt6989.litertlm",
+      "downloadUrl": "https://huggingface.co/litert-community/Gemma3-1B-IT/resolve/d448835d84411a08f577e25f3afebe528402d73b/Gemma3-1B-IT_q4_ekv1280_mt6989.litertlm",
+      "size": 1032830976,
+      "sha256": null,
+      "requiresPublisherAuthorization": true,
+      "appStatus": "integrated_authorized_import",
+      "downloadEnabled": false,
+      "authorizedImportEnabled": true
+    },
+    {
+      "label": "Gemma3-1B",
+      "task": "text",
+      "vendor": "mediatek",
+      "chipset": "MT6991",
+      "runtime": "litert-lm",
+      "source": "gemma3-files",
+      "revision": "d448835d84411a08f577e25f3afebe528402d73b",
+      "modelPage": "https://huggingface.co/litert-community/Gemma3-1B-IT/blob/d448835d84411a08f577e25f3afebe528402d73b/Gemma3-1B-IT_q4_ekv1280_mt6991.litertlm",
+      "downloadUrl": "https://huggingface.co/litert-community/Gemma3-1B-IT/resolve/d448835d84411a08f577e25f3afebe528402d73b/Gemma3-1B-IT_q4_ekv1280_mt6991.litertlm",
+      "size": 1033814016,
+      "sha256": null,
+      "requiresPublisherAuthorization": true,
+      "appStatus": "integrated_authorized_import",
+      "downloadEnabled": false,
+      "authorizedImportEnabled": true
+    },
+    {
+      "label": "Gemma3-1B",
+      "task": "text",
+      "vendor": "mediatek",
+      "chipset": "MT6993",
+      "runtime": "litert-lm",
+      "source": "gemma3-files",
+      "revision": "d448835d84411a08f577e25f3afebe528402d73b",
+      "modelPage": "https://huggingface.co/litert-community/Gemma3-1B-IT/blob/d448835d84411a08f577e25f3afebe528402d73b/Gemma3-1B-IT_q4_ekv1280_mt6993.litertlm",
+      "downloadUrl": "https://huggingface.co/litert-community/Gemma3-1B-IT/resolve/d448835d84411a08f577e25f3afebe528402d73b/Gemma3-1B-IT_q4_ekv1280_mt6993.litertlm",
+      "size": 1020411904,
+      "sha256": null,
+      "requiresPublisherAuthorization": true,
+      "appStatus": "publisher_authorization_required",
+      "downloadEnabled": false
+    },
+    {
+      "label": "Gemma3-1B",
+      "task": "text",
+      "vendor": "qualcomm",
+      "chipset": "SM8550",
+      "runtime": "litert-lm",
+      "source": "gemma3-files",
+      "revision": "d448835d84411a08f577e25f3afebe528402d73b",
+      "modelPage": "https://huggingface.co/litert-community/Gemma3-1B-IT/blob/d448835d84411a08f577e25f3afebe528402d73b/Gemma3-1B-IT_q4_ekv1280_sm8550.litertlm",
+      "downloadUrl": "https://huggingface.co/litert-community/Gemma3-1B-IT/resolve/d448835d84411a08f577e25f3afebe528402d73b/Gemma3-1B-IT_q4_ekv1280_sm8550.litertlm",
+      "size": 690143232,
+      "sha256": null,
+      "requiresPublisherAuthorization": true,
+      "appStatus": "integrated_authorized_import",
+      "downloadEnabled": false,
+      "authorizedImportEnabled": true
+    },
+    {
+      "label": "Gemma3-1B",
+      "task": "text",
+      "vendor": "qualcomm",
+      "chipset": "SM8650",
+      "runtime": "litert-lm",
+      "source": "gemma3-files",
+      "revision": "d448835d84411a08f577e25f3afebe528402d73b",
+      "modelPage": "https://huggingface.co/litert-community/Gemma3-1B-IT/blob/d448835d84411a08f577e25f3afebe528402d73b/Gemma3-1B-IT_q4_ekv1280_sm8650.litertlm",
+      "downloadUrl": "https://huggingface.co/litert-community/Gemma3-1B-IT/resolve/d448835d84411a08f577e25f3afebe528402d73b/Gemma3-1B-IT_q4_ekv1280_sm8650.litertlm",
+      "size": 690094080,
+      "sha256": null,
+      "requiresPublisherAuthorization": true,
+      "appStatus": "integrated_authorized_import",
+      "downloadEnabled": false,
+      "authorizedImportEnabled": true
+    },
+    {
+      "label": "Gemma3-1B",
+      "task": "text",
+      "vendor": "qualcomm",
+      "chipset": "SM8750",
+      "runtime": "litert-lm",
+      "source": "gemma3-files",
+      "revision": "d448835d84411a08f577e25f3afebe528402d73b",
+      "modelPage": "https://huggingface.co/litert-community/Gemma3-1B-IT/blob/d448835d84411a08f577e25f3afebe528402d73b/Gemma3-1B-IT_q4_ekv1280_sm8750.litertlm",
+      "downloadUrl": "https://huggingface.co/litert-community/Gemma3-1B-IT/resolve/d448835d84411a08f577e25f3afebe528402d73b/Gemma3-1B-IT_q4_ekv1280_sm8750.litertlm",
+      "size": 689291264,
+      "sha256": null,
+      "requiresPublisherAuthorization": true,
+      "appStatus": "integrated_authorized_import",
+      "downloadEnabled": false,
+      "authorizedImportEnabled": true
+    },
+    {
+      "label": "Gemma3-1B",
+      "task": "text",
+      "vendor": "qualcomm",
+      "chipset": "SM8850",
+      "runtime": "litert-lm",
+      "source": "gemma3-files",
+      "revision": "d448835d84411a08f577e25f3afebe528402d73b",
+      "modelPage": "https://huggingface.co/litert-community/Gemma3-1B-IT/blob/d448835d84411a08f577e25f3afebe528402d73b/Gemma3-1B-IT_q4_ekv1280_sm8850.litertlm",
+      "downloadUrl": "https://huggingface.co/litert-community/Gemma3-1B-IT/resolve/d448835d84411a08f577e25f3afebe528402d73b/Gemma3-1B-IT_q4_ekv1280_sm8850.litertlm",
+      "size": 693747712,
+      "sha256": null,
+      "requiresPublisherAuthorization": true,
+      "appStatus": "publisher_authorization_required",
+      "downloadEnabled": false
+    },
+    {
+      "label": "Gemma3-1B",
+      "task": "text",
+      "vendor": "google",
+      "chipset": "Tensor_G5",
+      "runtime": "litert-lm",
+      "source": "gemma3-files",
+      "revision": "d448835d84411a08f577e25f3afebe528402d73b",
+      "modelPage": "https://huggingface.co/litert-community/Gemma3-1B-IT/blob/d448835d84411a08f577e25f3afebe528402d73b/Gemma3-1B-IT_q8_ekv1280_Google_Tensor_G5.litertlm",
+      "downloadUrl": "https://huggingface.co/litert-community/Gemma3-1B-IT/resolve/d448835d84411a08f577e25f3afebe528402d73b/Gemma3-1B-IT_q8_ekv1280_Google_Tensor_G5.litertlm",
+      "size": 1678542365,
+      "sha256": null,
+      "requiresPublisherAuthorization": true,
+      "appStatus": "publisher_authorization_required",
+      "downloadEnabled": false
+    },
+    {
+      "label": "Gemma3-1B",
+      "task": "text",
+      "vendor": "google",
+      "chipset": "Tensor_G6",
+      "runtime": "litert-lm",
+      "source": "gemma3-files",
+      "revision": "d448835d84411a08f577e25f3afebe528402d73b",
+      "modelPage": "https://huggingface.co/litert-community/Gemma3-1B-IT/blob/d448835d84411a08f577e25f3afebe528402d73b/Gemma3-1B-IT_q8_ekv1280_Google_Tensor_G6.litertlm",
+      "downloadUrl": "https://huggingface.co/litert-community/Gemma3-1B-IT/resolve/d448835d84411a08f577e25f3afebe528402d73b/Gemma3-1B-IT_q8_ekv1280_Google_Tensor_G6.litertlm",
+      "size": 2043971366,
+      "sha256": null,
+      "requiresPublisherAuthorization": true,
+      "appStatus": "publisher_authorization_required",
+      "downloadEnabled": false
+    },
+    {
+      "label": "Gemma4-E2B",
+      "task": "text",
+      "vendor": "google",
+      "chipset": "Tensor_G5",
+      "runtime": "litert-lm",
+      "source": "gemma4-files",
+      "revision": "b3ca0d2f076785a8f4b2219ddbd2bdb99954eae1",
+      "modelPage": "https://huggingface.co/litert-community/gemma-4-E2B-it-litert-lm/blob/b3ca0d2f076785a8f4b2219ddbd2bdb99954eae1/gemma-4-E2B-it_Google_Tensor_G5.litertlm",
+      "downloadUrl": "https://huggingface.co/litert-community/gemma-4-E2B-it-litert-lm/resolve/b3ca0d2f076785a8f4b2219ddbd2bdb99954eae1/gemma-4-E2B-it_Google_Tensor_G5.litertlm",
+      "size": 3113545589,
+      "sha256": "af1082986639ecde7db95d91be6fe54f8b6b458104734c5bafc204e69d6852dc",
+      "requiresPublisherAuthorization": false,
+      "appStatus": "integrated",
+      "downloadEnabled": true,
+      "authorizedImportEnabled": false
+    },
+    {
+      "label": "Gemma4-E2B",
+      "task": "text",
+      "vendor": "google",
+      "chipset": "Tensor_G6",
+      "runtime": "litert-lm",
+      "source": "gemma4-files",
+      "revision": "b3ca0d2f076785a8f4b2219ddbd2bdb99954eae1",
+      "modelPage": "https://huggingface.co/litert-community/gemma-4-E2B-it-litert-lm/blob/b3ca0d2f076785a8f4b2219ddbd2bdb99954eae1/gemma-4-E2B-it_Google_Tensor_G6.litertlm",
+      "downloadUrl": "https://huggingface.co/litert-community/gemma-4-E2B-it-litert-lm/resolve/b3ca0d2f076785a8f4b2219ddbd2bdb99954eae1/gemma-4-E2B-it_Google_Tensor_G6.litertlm",
+      "size": 3313938293,
+      "sha256": "f86c7c19c736e9307267946edef58b0a45494a9127036d54d90dd6b7617c95b7",
+      "requiresPublisherAuthorization": false,
+      "appStatus": "integrated",
+      "downloadEnabled": true,
+      "authorizedImportEnabled": false
+    },
+    {
+      "label": "Gemma4-E2B",
+      "task": "text",
+      "vendor": "qualcomm",
+      "chipset": "SM8750",
+      "runtime": "litert-lm",
+      "source": "gemma4-files",
+      "revision": "b3ca0d2f076785a8f4b2219ddbd2bdb99954eae1",
+      "modelPage": "https://huggingface.co/litert-community/gemma-4-E2B-it-litert-lm/blob/b3ca0d2f076785a8f4b2219ddbd2bdb99954eae1/gemma-4-E2B-it_qualcomm_sm8750.litertlm",
+      "downloadUrl": "https://huggingface.co/litert-community/gemma-4-E2B-it-litert-lm/resolve/b3ca0d2f076785a8f4b2219ddbd2bdb99954eae1/gemma-4-E2B-it_qualcomm_sm8750.litertlm",
+      "size": 3016294400,
+      "sha256": "41dd675fbe735b6029012b5576a5716bac614fd8156de0128db4c9dff3cebd4e",
+      "requiresPublisherAuthorization": false,
+      "appStatus": "integrated",
+      "downloadEnabled": true,
+      "authorizedImportEnabled": false
+    },
+    {
+      "label": "Qwen3-0.6B",
+      "task": "text",
+      "vendor": "qualcomm",
+      "chipset": "qualcomm-snapdragon-8-elite-for-galaxy",
+      "runtime": "qairt",
+      "source": "qwen-0.6b",
+      "appStatus": "integrated",
+      "downloadEnabled": true
+    },
+    {
+      "label": "Qwen3-0.6B",
+      "task": "text",
+      "vendor": "qualcomm",
+      "chipset": "qualcomm-snapdragon-8-elite-gen5-for-galaxy",
+      "runtime": "qairt",
+      "source": "qwen-0.6b",
+      "appStatus": "integrated",
+      "downloadEnabled": true
+    },
+    {
+      "label": "Qwen3-1.7B",
+      "task": "text",
+      "vendor": "qualcomm",
+      "chipset": "qualcomm-snapdragon-8-elite-for-galaxy",
+      "runtime": "qairt",
+      "source": "qwen-1.7b",
+      "appStatus": "integrated",
+      "downloadEnabled": true
+    },
+    {
+      "label": "Qwen3-1.7B",
+      "task": "text",
+      "vendor": "qualcomm",
+      "chipset": "qualcomm-snapdragon-8-elite-gen5-for-galaxy",
+      "runtime": "qairt",
+      "source": "qwen-1.7b",
+      "appStatus": "integrated",
+      "downloadEnabled": true
+    },
+    {
+      "label": "Qwen3-4B",
+      "task": "text",
+      "vendor": "qualcomm",
+      "chipset": "qualcomm-snapdragon-8-elite-for-galaxy",
+      "runtime": "qairt",
+      "source": "qwen-4b",
+      "appStatus": "integrated",
+      "downloadEnabled": true
+    },
+    {
+      "label": "Qwen3-4B",
+      "task": "text",
+      "vendor": "qualcomm",
+      "chipset": "qualcomm-snapdragon-8-elite-gen5-for-galaxy",
+      "runtime": "qairt",
+      "source": "qwen-4b",
+      "appStatus": "integrated",
+      "downloadEnabled": true
+    }
+  ],
+  "appDownloads": [
+    {
+      "modelId": "x-asr",
+      "task": "speech",
+      "chipset": "SM8750",
+      "manifest": "npu-models.json",
+      "runtime": "qnn"
+    },
+    {
+      "modelId": "nemotron",
+      "task": "speech",
+      "chipset": "SM8750",
+      "manifest": "npu-models.json",
+      "runtime": "qnn"
+    },
+    {
+      "modelId": "sensevoice",
+      "task": "speech",
+      "chipset": "SM8750",
+      "manifest": "npu-models.json",
+      "runtime": "qnn"
+    },
+    {
+      "modelId": "zipformer",
+      "task": "speech",
+      "chipset": "SM8750",
+      "manifest": "npu-models.json",
+      "runtime": "qnn"
+    },
+    {
+      "modelId": "qwen3-1.7b-npu",
+      "task": "text",
+      "chipset": "SM8750",
+      "manifest": "qwen-translation.json",
+      "runtime": "qairt"
+    },
+    {
+      "modelId": "qwen3-0.6b-npu",
+      "task": "text",
+      "chipset": "SM8750",
+      "manifest": "qwen3-0.6b-npu.json",
+      "runtime": "qairt"
+    },
+    {
+      "modelId": "qwen3-4b-npu",
+      "task": "text",
+      "chipset": "SM8750",
+      "manifest": "qwen3-4b-npu.json",
+      "runtime": "qairt"
+    },
+    {
+      "modelId": "gemma4-e2b-npu",
+      "task": "text",
+      "chipset": "SM8750",
+      "manifest": "gemma4-e2b-npu-sm8750.json",
+      "runtime": "litert-lm"
+    },
+    {
+      "modelId": "gemma3-1b-npu",
+      "task": "text",
+      "chipset": "SM8750",
+      "manifest": "gemma3-1b-npu-sm8750.json",
+      "runtime": "litert-lm"
+    },
+    {
+      "modelId": "x-asr",
+      "task": "speech",
+      "chipset": "SM8850",
+      "manifest": "npu-models-sm8850.json",
+      "runtime": "qnn"
+    },
+    {
+      "modelId": "nemotron",
+      "task": "speech",
+      "chipset": "SM8850",
+      "manifest": "npu-models-sm8850.json",
+      "runtime": "qnn"
+    },
+    {
+      "modelId": "sensevoice",
+      "task": "speech",
+      "chipset": "SM8850",
+      "manifest": "npu-models-sm8850.json",
+      "runtime": "qnn"
+    },
+    {
+      "modelId": "zipformer",
+      "task": "speech",
+      "chipset": "SM8850",
+      "manifest": "npu-models-sm8850.json",
+      "runtime": "qnn"
+    },
+    {
+      "modelId": "qwen3-1.7b-npu",
+      "task": "text",
+      "chipset": "SM8850",
+      "manifest": "qwen3-1.7b-npu-sm8850.json",
+      "runtime": "qairt"
+    },
+    {
+      "modelId": "qwen3-0.6b-npu",
+      "task": "text",
+      "chipset": "SM8850",
+      "manifest": "qwen3-0.6b-npu-sm8850.json",
+      "runtime": "qairt"
+    },
+    {
+      "modelId": "qwen3-4b-npu",
+      "task": "text",
+      "chipset": "SM8850",
+      "manifest": "qwen3-4b-npu-sm8850.json",
+      "runtime": "qairt"
+    },
+    {
+      "modelId": "sensevoice",
+      "task": "speech",
+      "chipset": "SM8350",
+      "manifest": "npu-models-sm8350.json",
+      "runtime": "qnn"
+    },
+    {
+      "modelId": "x-asr",
+      "task": "speech",
+      "chipset": "SM8450",
+      "manifest": "npu-models-sm8450.json",
+      "runtime": "qnn"
+    },
+    {
+      "modelId": "sensevoice",
+      "task": "speech",
+      "chipset": "SM8450",
+      "manifest": "npu-models-sm8450.json",
+      "runtime": "qnn"
+    },
+    {
+      "modelId": "zipformer",
+      "task": "speech",
+      "chipset": "SM8450",
+      "manifest": "npu-models-sm8450.json",
+      "runtime": "qnn"
+    },
+    {
+      "modelId": "x-asr",
+      "task": "speech",
+      "chipset": "SM8475",
+      "manifest": "npu-models-sm8475.json",
+      "runtime": "qnn"
+    },
+    {
+      "modelId": "sensevoice",
+      "task": "speech",
+      "chipset": "SM8475",
+      "manifest": "npu-models-sm8475.json",
+      "runtime": "qnn"
+    },
+    {
+      "modelId": "zipformer",
+      "task": "speech",
+      "chipset": "SM8475",
+      "manifest": "npu-models-sm8475.json",
+      "runtime": "qnn"
+    },
+    {
+      "modelId": "x-asr",
+      "task": "speech",
+      "chipset": "SM8550",
+      "manifest": "npu-models-sm8550.json",
+      "runtime": "qnn"
+    },
+    {
+      "modelId": "sensevoice",
+      "task": "speech",
+      "chipset": "SM8550",
+      "manifest": "npu-models-sm8550.json",
+      "runtime": "qnn"
+    },
+    {
+      "modelId": "zipformer",
+      "task": "speech",
+      "chipset": "SM8550",
+      "manifest": "npu-models-sm8550.json",
+      "runtime": "qnn"
+    },
+    {
+      "modelId": "gemma3-1b-npu",
+      "task": "text",
+      "chipset": "SM8550",
+      "manifest": "gemma3-1b-npu-sm8550.json",
+      "runtime": "litert-lm"
+    },
+    {
+      "modelId": "x-asr",
+      "task": "speech",
+      "chipset": "SM8650",
+      "manifest": "npu-models-sm8650.json",
+      "runtime": "qnn"
+    },
+    {
+      "modelId": "sensevoice",
+      "task": "speech",
+      "chipset": "SM8650",
+      "manifest": "npu-models-sm8650.json",
+      "runtime": "qnn"
+    },
+    {
+      "modelId": "zipformer",
+      "task": "speech",
+      "chipset": "SM8650",
+      "manifest": "npu-models-sm8650.json",
+      "runtime": "qnn"
+    },
+    {
+      "modelId": "gemma3-1b-npu",
+      "task": "text",
+      "chipset": "SM8650",
+      "manifest": "gemma3-1b-npu-sm8650.json",
+      "runtime": "litert-lm"
+    },
+    {
+      "modelId": "gemma4-e2b-npu",
+      "task": "text",
+      "chipset": "Tensor_G5",
+      "manifest": "gemma4-e2b-npu-tensor-g5.json",
+      "runtime": "litert-lm"
+    },
+    {
+      "modelId": "gemma4-e2b-npu",
+      "task": "text",
+      "chipset": "Tensor_G6",
+      "manifest": "gemma4-e2b-npu-tensor-g6.json",
+      "runtime": "litert-lm"
+    },
+    {
+      "modelId": "gemma3-1b-npu",
+      "task": "text",
+      "chipset": "MT6989",
+      "manifest": "gemma3-1b-npu-mt6989.json",
+      "runtime": "litert-lm"
+    },
+    {
+      "modelId": "gemma3-1b-npu",
+      "task": "text",
+      "chipset": "MT6991",
+      "manifest": "gemma3-1b-npu-mt6991.json",
+      "runtime": "litert-lm"
+    }
+  ],
+  "unresolvedVendors": [
+    {
+      "vendor": "samsung",
+      "source": "samsung-runtime",
+      "appStatus": "no_ready_caption_package_found_in_checked_sources"
+    },
+    {
+      "vendor": "huawei",
+      "source": "huawei-runtime",
+      "appStatus": "no_ready_caption_package_found_in_checked_sources"
+    },
+    {
+      "vendor": "unisoc",
+      "source": "unisoc-platforms",
+      "appStatus": "no_ready_caption_package_found_in_checked_sources"
+    }
+  ],
+  "policy": "Only appDownloads are selectable. Hardware/runtime support alone is not a downloadable model. No physical handset whitelist."
+}

@@ -1,0 +1,29 @@
+Qwen3-0.6B, Qwen3-1.7B and Qwen3-4B text translation (not Qwen3-ASR)
+Original model: Alibaba Qwen, Apache-2.0
+https://huggingface.co/Qwen/Qwen3-1.7B
+Qualcomm optimized model: W4A16, SM8750 / SM8850, QAIRT 2.45, AI Hub Models v0.64.0
+https://huggingface.co/qualcomm/Qwen3-1.7B
+https://github.com/qualcomm/ai-hub-models
+The original model license and Qualcomm model usage limitations are published on these model cards.
+Runtime: Qualcomm GenieX Android 0.8.0 with common QNN 2.51.0 libraries.
+The retained NetRunExtensions library comes from the GenieX 0.8.0 AAR.
+https://github.com/qualcomm/GenieX
+https://repo.maven.apache.org/maven2/com/qualcomm/qti/geniex-android/0.8.0/
+The Android Java API and QAIRT runtime libraries are extracted from the official AAR. Unused llama.cpp and GPU runtime libraries are not included. Model weights are downloaded separately, with pinned SHA-256 checksums.
+No Google translation SDK and no network inference are used.
+
+Additional original/optimized model cards:
+https://huggingface.co/Qwen/Qwen3-0.6B
+https://huggingface.co/Qwen/Qwen3-4B
+https://huggingface.co/qualcomm/Qwen3-0.6B
+https://huggingface.co/qualcomm/Qwen3-4B
+Full GenieX BSD notice and Maven license metadata: GENIEX-BSD-3-Clause.txt, GENIEX-0.8.0-POM.xml.
+Portable builds include the Java API but no Qualcomm native libraries; NPU execution is unavailable there.
+
+From 1.17, common QNN libraries and V68/V69/V73/V75/V79/V81 Stub/Skel files come from the official QNN 2.51.0 AAR; GenieX API/plugin still comes from 0.8.0. See QNN-2.51.0-POM.xml and prepare_qwen_runtime.py.
+
+The optimized publisher model cards include additional use restrictions. Full snapshots:
+QWEN-0.6B-MODEL-CARD.txt, QWEN-1.7B-MODEL-CARD.txt, QWEN-4B-MODEL-CARD.txt.
+See qnn-runtime-2.51.0-LICENSE.pdf (authoritative AI Stack License), its readable
+.txt companion and qnn-runtime-2.51.0-NOTICE.txt.
+Full-binary dependency/licensing closure remains pending; see docs/NPU-DISTRIBUTION.md.

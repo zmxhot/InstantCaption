@@ -1,0 +1,19 @@
+SenseVoice Small model license reference and attribution
+
+Model: SenseVoice Small, 2024-07-17 export used by the app's QNN and INT8 CPU
+recognizers. Model authors/source: FunAudioLLM / Alibaba Group.
+https://huggingface.co/FunAudioLLM/SenseVoiceSmall
+https://github.com/FunAudioLLM/SenseVoice
+
+The model card refers to the FunASR Model Open Source License Agreement.
+Model license text and its publisher's revisions:
+https://github.com/modelscope/FunASR/blob/main/MODEL_LICENSE
+https://raw.githubusercontent.com/modelscope/FunASR/main/MODEL_LICENSE
+
+The Apache-2.0 license of inference code is not a substitute for this model
+license. This attribution/reference notice does not change the upstream
+license or add a permission grant. Retain model attribution and the applicable
+upstream license when distributing model weights or derivatives.
+
+Original reference supplied with the model distribution:
+Ref to https://github.com/modelscope/FunASR?tab=readme-ov-file#license

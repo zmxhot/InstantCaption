@@ -1,0 +1,246 @@
+{
+  "version": "1.18.0-beta.1",
+  "testedDevice": "Samsung S25+ SM-S936U",
+  "testedSoc": "SM8750",
+  "testedAndroidSdk": 37,
+  "outputCompleteness": {
+    "splitCoverageUnicodeBoundedRetryCancellation": true,
+    "forcedOutputLimit": {
+      "limit": 32,
+      "detectedLimits": 1,
+      "lastDecodeTokens": 29,
+      "output": "我们的会议上午九点开始。请带上蓝色文件夹和项目报告。 第一班火车是十点出发的。午饭后我们再讨论预算。最终的访问代码是 7890。",
+      "ms": 12517
+    },
+    "longInput": {
+      "characters": 884,
+      "tailPreserved": true
+    }
+  },
+  "modelRecovery": {
+    "textRecovery": {
+      "text": "opus",
+      "speech": "sensevoice",
+      "output": "店六点关门"
+    },
+    "speechRecovery": {
+      "speech": "sensevoice-cpu",
+      "output": "Hello everyone Welcome to our meeting We will discuss the new project today. Please speak slowly, Thank you for your help."
+    },
+    "systemReuseAndFailureCategories": true,
+    "recoveryLocales": 10
+  },
+  "continuousInference": {
+    "passed": true,
+    "elapsedMs": 1800131,
+    "iterations": 120,
+    "textModel": "gemma4-e2b-npu",
+    "speechModel": "sensevoice",
+    "cacheClearedEveryIteration": true,
+    "firstCaptionFromAudioStart": {
+      "medianMs": 1461.0,
+      "p95Ms": 1469,
+      "p99Ms": 1472,
+      "maxMs": 1475
+    },
+    "firstSourceFromAudioStart": {
+      "medianMs": 1333.0,
+      "p95Ms": 1336,
+      "p99Ms": 1338,
+      "maxMs": 1338
+    },
+    "screenOffIterations": 38,
+    "backgroundIterations": 80,
+    "maxAndroidThermalStatus": 0,
+    "peakPssMiB": 1641.0,
+    "initialPssMiB": 1630.1,
+    "finalPssMiB": 1390.6,
+    "peakJavaHeapMiB": 29.4,
+    "batteryBefore": {
+      "level": 68,
+      "scale": 100,
+      "temperatureTenthsC": 343,
+      "plugged": 0
+    },
+    "batteryAfter": {
+      "level": 64,
+      "scale": 100,
+      "temperatureTenthsC": 334,
+      "plugged": 0
+    },
+    "translationFailures": 0,
+    "queueOverflows": 0
+  },
+  "realUiAndCapture": {
+    "recoveryButton": "使用已安装模型：OPUS-MT + SenseVoice Small",
+    "recoveredText": "opus",
+    "backgroundMicMs": 120188,
+    "screenOffAudioUpdates": 2919,
+    "allAudioUpdates": 2920,
+    "screenOffSamples": 240,
+    "foregroundSamples": 0,
+    "textModel": "gemma4-e2b-npu",
+    "speechModel": "sensevoice",
+    "thermal": 0,
+    "passed": true
+  },
+  "allInstalledNpuRuntimesPassed": true,
+  "readinessPassed": true,
+  "userEnginePreferencesPreserved": true,
+  "runtimeRegression": {
+    "qwenRegression": {
+      "output": "会议从周一移到周三了。",
+      "loadAndRunMs": 6619
+    },
+    "additionalRuntimeRegression": [
+      {
+        "model": "qwen3-0.6b-npu",
+        "output": "请缓慢 speak.",
+        "loadAndRunMs": 2893
+      },
+      {
+        "model": "qwen3-4b-npu",
+        "output": "请慢点说。",
+        "loadAndRunMs": 12149
+      },
+      {
+        "model": "x-asr",
+        "output": "Hello everyone. Welcome to our meeting. We will discuss the new project today. Please speak slowly. Thank you for your help.",
+        "wordErrorRate": 0,
+        "loadAndRunMs": 2160
+      },
+      {
+        "model": "zipformer",
+        "output": "HELLO EVERYONE WELCOME TO OUR MEETING WE WILL DISCUSS THE NEW PROJECT TODAY PLEASE SPEAK SLOWLY THANK YOU FOR YOUR HELP",
+        "wordErrorRate": 0,
+        "loadAndRunMs": 1617
+      },
+      {
+        "model": "nemotron",
+        "output": "Hello everyone, welcome to our meeting. We will discuss the new project today. Please speak slowly. Thank you for your help",
+        "wordErrorRate": 0,
+        "loadAndRunMs": 9016
+      }
+    ],
+    "senseVoiceRegression": {
+      "output": "Hello everyone Wecom to our meeting. We'll discuss the new project today Please speak slowly. Thank you for your help.",
+      "wordErrorRate": 0.047619047619047616,
+      "loadAndRunMs": 1214
+    },
+    "gemmaLoadMs": 7635,
+    "gemmaSamples": [
+      {
+        "input": "Hello everyone, welcome to our meeting.",
+        "output": "大家好，欢迎参加我们的会议。",
+        "ms": 460
+      },
+      {
+        "input": "Please speak slowly.",
+        "output": "请慢慢说。",
+        "ms": 208
+      },
+      {
+        "input": "The meeting has been moved from Monday to Wednesday.",
+        "output": "会议已从周一改到周三。",
+        "ms": 336
+      },
+      {
+        "input": "I don't think we should cancel the order.",
+        "output": "我不认为我们应该取消订单。",
+        "ms": 333
+      },
+      {
+        "input": "Where is the nearest train station?",
+        "output": "最近的火车站是哪里？",
+        "ms": 324
+      }
+    ],
+    "cancellationRecovery": "商店六点关门。",
+    "gemmaCaptionPipeline": {
+      "audioSeconds": 10.52,
+      "elapsedMs": 10539,
+      "firstEnglishMs": 1321,
+      "firstChineseMs": 1441,
+      "english": "Hello everyone. Welcome to our meeting. We will discuss the new project today. Please speak slowly. Thank you for your help.",
+      "chinese": "大家好。\n欢迎参加我们的会议。\n我们今天会讨论新的项目。\n请慢慢说。\n感谢您的帮助。",
+      "lines": 5,
+      "admittedFrames": 264
+    },
+    "restoredTextModel": "qwen3-1.7b-npu"
+  },
+  "readiness": {
+    "deviceLanguageRoutes": 10,
+    "chipsetCatalog": {
+      "passed": true,
+      "catalogRoutes": 23,
+      "physicalSm8850Tested": false,
+      "scope": "Documented eligibility, per-chip catalogs, paths, runtime packaging and negative guards"
+    },
+    "deviceModelJson": {
+      "passed": true,
+      "hardwareProfilesChecked": 45,
+      "jsonChipRules": 21,
+      "configOnlyModelRemovalPriorityAndChipAddition": true,
+      "noPhysicalPhoneWhitelist": true,
+      "invalidCatalogsRejected": true
+    },
+    "boundedQueueAndDraftCancellation": true,
+    "durableQueuePauseResumeDedup": true,
+    "rawModelInstallAndIntegrity": true,
+    "atomicRecovery": true,
+    "importHashRejectsCorruption": true,
+    "pathContainment": true,
+    "diagnosticsAllowlist": true,
+    "interfaceLocales": 10,
+    "automaticFallbackOn503": true,
+    "interruptedDownloadResumed": true,
+    "serverIgnoringRangeHandled": true,
+    "archiveHashFailureFallback": true,
+    "cancelHonored": true,
+    "passed": true
+  },
+  "qualityObservations": [
+    "Runtime regression success means the engines loaded and met the listed checks, not that every translation was accurate. Qwen3-0.6B returned mixed-language text (请缓慢 speak.) for Please speak slowly.; it remains experimental. SenseVoice single-utterance regression had word error rate 0.047619 on the synthetic English fixture; the paced sustained test is a different segmentation path."
+  ],
+  "fixture": {
+    "description": "Repeated 10.52-second synthetic English meeting announcement; no real microphone recording is exported.",
+    "sha256": "76be16d6fa92a51f47b0dfaa0e1b252d25526115249ac09e49b4e094832c48de"
+  },
+  "validationHistory": [
+    "Initial microphone UI test failed the screen-off audio update assertion; it did not record enough screen-state detail to determine the cause. The test instrumentation was extended to record screen-off/background samples and all audio updates. The repeat passed on the same production APK with 240 screen-off samples and 2919 screen-off audio updates; no production code was changed for this repeat."
+  ],
+  "builds": {
+    "npu": true,
+    "portable": true,
+    "lintErrors": 0,
+    "lintWarnings": 29,
+    "signatureVerified": true,
+    "elf16KbAlignment": true,
+    "releaseCertificateSha256": "a6aa749a42a4914e6b4bfdf16b6061a3f09e967cbb2917daaded58b89452bedc"
+  },
+  "artifacts": [
+    {
+      "file": "瞬译-1.18.0-beta.1-升级测试.apk",
+      "bytes": 117287068,
+      "sha256": "721b08a91da977603366c59b3149fa5a47dc78f00cbd2f75a651bb31e54e3c04"
+    },
+    {
+      "file": "instant-caption-1.18.0-beta.1-npu-release-candidate.apk",
+      "bytes": 107867368,
+      "sha256": "21560daaa800d21b66cd785fb22dce6698873c780d4930e905fc85820dede71f"
+    },
+    {
+      "file": "instant-caption-1.18.0-beta.1-portable-release.apk",
+      "bytes": 31577063,
+      "sha256": "238271266d1042c56f80ffcd4ecf8c6af2556683134f6c7b7e756db899d90c64"
+    }
+  ],
+  "limitations": [
+    "One physical phone; this is not physical validation of other chipsets or Android versions.",
+    "Thirty-minute test feeds a repeated 10.52-second English fixture through the real VAD/ASR/translation pipeline at normal pace every 15 seconds; it does not prove translation quality on other speech.",
+    "Battery/temperature measurements describe the entire unplugged phone under this workload, not isolated app power consumption.",
+    "The foreground microphone service test is shorter than the inference soak; no 30-minute MediaProjection capture or all-day/OEM background survival claim.",
+    "Output-token exhaustion protection cannot detect semantic omissions in otherwise normally terminated model output.",
+    "AGP 8.10.1 lint emits Kotlin 2.4 metadata diagnostics; Java compilation and lint tasks complete, with existing lint warnings retained."
+  ]
+}

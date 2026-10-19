@@ -1,0 +1,28 @@
+{
+  "id": "gemma3-1b-npu",
+  "chipset": "SM8750",
+  "runtime": "litert-lm",
+  "entryFile": "Gemma3-1B-IT_q4_ekv1280_sm8750.litertlm",
+  "revision": "d448835d84411a08f577e25f3afebe528402d73b",
+  "source": "https://huggingface.co/litert-community/Gemma3-1B-IT/tree/d448835d84411a08f577e25f3afebe528402d73b",
+  "files": [
+    {
+      "name": "Gemma3-1B-IT_q4_ekv1280_sm8750.litertlm",
+      "size": 689291264,
+      "sha256": "1904ceff9591e7a140df3a672c800e8e7bee8337526484b00f69ccef4fa2d60a"
+    }
+  ],
+  "download": {
+    "format": "raw",
+    "size": 689291264,
+    "sha256": "1904ceff9591e7a140df3a672c800e8e7bee8337526484b00f69ccef4fa2d60a",
+    "urls": [
+      {
+        "name": "Hugging Face",
+        "url": "https://huggingface.co/litert-community/Gemma3-1B-IT/resolve/d448835d84411a08f577e25f3afebe528402d73b/Gemma3-1B-IT_q4_ekv1280_sm8750.litertlm"
+      }
+    ],
+    "requiresAuthorization": true,
+    "authorizationUrl": "https://huggingface.co/litert-community/Gemma3-1B-IT/blob/d448835d84411a08f577e25f3afebe528402d73b/Gemma3-1B-IT_q4_ekv1280_sm8750.litertlm"
+  }
+}
