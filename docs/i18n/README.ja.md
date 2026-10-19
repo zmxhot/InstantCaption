@@ -2,9 +2,9 @@
 
 [English](../../README.md) · [简体中文](../../README.zh-CN.md) · [Español](README.es.md) · [Français](README.fr.md) · [Deutsch](README.de.md) · [Português](README.pt.md) · [Русский](README.ru.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [العربية](README.ar.md)
 
-## 低遅延 · スマートフォン上の言語モデル · Android
+## Android 向けオフライン翻訳 · リアルタイム字幕 · 低遅延
 
-音声をリアルタイムの翻訳字幕に変換します。AI 言語モデルはスマートフォン上で動作します。無料で利用でき、サブスクリプションやクラウド翻訳の API キーは不要です。寄付は任意です。
+Instant Caption は、Android 向けの無料・オープンソースの AI 同時通訳・音声翻訳アプリです。スマートフォン上で動くローカル大規模言語モデル（LLM）を使い、リアルタイム翻訳字幕やフローティング字幕を表示します。モデルのダウンロード後は、音声認識と翻訳をオフラインで実行できます。マイク音声や録音を許可する動画・アプリの音声を低遅延で翻訳します。サブスクリプション、クラウド翻訳の API キー、Google Play 開発者サービスは不要です。寄付は任意です。
 
 [**APK をダウンロード**](https://github.com/zmxhot/InstantCaption/releases/tag/v1.20.1-beta.1)
 

@@ -2,9 +2,9 @@
 
 [English](../../README.md) · [简体中文](../../README.zh-CN.md) · [Español](README.es.md) · [Français](README.fr.md) · [Deutsch](README.de.md) · [Português](README.pt.md) · [Русский](README.ru.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [العربية](README.ar.md)
 
-## Geringe Latenz · Lokale Sprachmodelle · Android
+## Offline-Übersetzer für Android · Live-Untertitel · Geringe Latenz
 
-Sprache wird in Echtzeit als übersetzter Untertitel angezeigt. Die KI-Modelle laufen auf deinem Smartphone. Kostenlos, ohne Abo und ohne API-Schlüssel für Cloud-Übersetzung. Spenden sind freiwillig.
+Instant Caption ist eine kostenlose Open-Source-App für KI-Simultanübersetzung und Sprachübersetzung auf Android. Lokale große Sprachmodelle (LLMs) erzeugen Live-Untertitel und schwebende Übersetzungen direkt auf deinem Smartphone. Nach dem Herunterladen der Modelle funktionieren Spracherkennung und Übersetzung offline. Übersetze Mikrofoneingaben oder den Ton unterstützter Videos und Apps mit geringer Latenz. Ohne Abo, API-Schlüssel für Cloud-Übersetzung oder Abhängigkeit von Google Play Services. Spenden sind freiwillig.
 
 [**APK herunterladen**](https://github.com/zmxhot/InstantCaption/releases/tag/v1.20.1-beta.1)
 

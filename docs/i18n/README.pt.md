@@ -2,9 +2,9 @@
 
 [English](../../README.md) · [简体中文](../../README.zh-CN.md) · [Español](README.es.md) · [Français](README.fr.md) · [Deutsch](README.de.md) · [Português](README.pt.md) · [Русский](README.ru.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [العربية](README.ar.md)
 
-## Baixa latência · Modelos de linguagem locais · Android
+## Tradutor offline para Android · Legendas em tempo real · Baixa latência
 
-Transforme a fala em legendas traduzidas em tempo real, com modelos de IA executados no celular. Grátis, sem assinatura e sem chave de API de tradução na nuvem. Doações são opcionais.
+Instant Caption é um aplicativo gratuito e de código aberto de tradução de voz e interpretação simultânea com IA para Android. Oferece legendas em tempo real e legendas flutuantes usando grandes modelos de linguagem (LLMs) executados no celular. Após baixar os modelos, o reconhecimento de fala e a tradução funcionam offline. Traduza o microfone ou o áudio de vídeos e aplicativos compatíveis com baixa latência. Sem assinatura, chave de API de tradução na nuvem ou dependência do Google Play Services. Doações são opcionais.
 
 [**Baixar APK**](https://github.com/zmxhot/InstantCaption/releases/tag/v1.20.1-beta.1)
 

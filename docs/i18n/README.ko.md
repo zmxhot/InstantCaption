@@ -2,9 +2,9 @@
 
 [English](../../README.md) · [简体中文](../../README.zh-CN.md) · [Español](README.es.md) · [Français](README.fr.md) · [Deutsch](README.de.md) · [Português](README.pt.md) · [Русский](README.ru.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [العربية](README.ar.md)
 
-## 낮은 지연 시간 · 휴대폰 로컬 언어 모델 · Android
+## Android 오프라인 번역기 · 실시간 자막 · 낮은 지연 시간
 
-음성을 실시간 번역 자막으로 바꿉니다. AI 언어 모델이 휴대폰에서 실행되며, 무료로 사용할 수 있습니다. 구독이나 클라우드 번역 API 키가 필요하지 않습니다. 후원은 선택 사항입니다.
+Instant Caption은 Android용 무료 오픈 소스 AI 동시통역 및 음성 번역 앱입니다. 휴대폰에서 실행되는 로컬 대규모 언어 모델(LLM)로 실시간 번역 자막과 플로팅 자막을 표시합니다. 모델을 다운로드한 뒤에는 음성 인식과 번역이 오프라인으로 작동합니다. 마이크 음성이나 오디오 캡처를 허용하는 동영상 및 앱의 소리를 낮은 지연 시간으로 번역합니다. 구독, 클라우드 번역 API 키 또는 Google Play 서비스가 필요하지 않습니다. 후원은 선택 사항입니다.
 
 [**APK 다운로드**](https://github.com/zmxhot/InstantCaption/releases/tag/v1.20.1-beta.1)
 

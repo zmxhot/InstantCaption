@@ -1,8 +1,8 @@
-# Instant Caption · 瞬译
+# Instant Caption · Free Offline AI Translator for Android
 
-## Free AI simultaneous interpretation. Low latency. Local language models.
+## Live translated captions · Low latency · Local LLMs
 
-**A free Android AI interpretation app that turns speech into live translated captions — powered by language models running on your phone.** Microphone and device-audio input, floating subtitles, and chipset-aware NPU integration. No subscription or cloud translation API key.
+**Instant Caption (瞬译) is a free, open-source AI simultaneous interpretation app for Android: real-time speech translation with live captions and floating subtitles, powered by local large language models (LLMs).** Speech recognition and translation run offline on your phone after a one-time model download. Translate microphone input or supported device audio with low-latency streaming. No subscription, cloud translation API key or Google Play services required. The source includes chipset-aware NPU integration; the public APK uses portable CPU models.
 
 [**Download APK**](https://github.com/zmxhot/InstantCaption/releases/tag/v1.20.1-beta.1) · [Get started](#get-started) · [Compatibility](docs/COMPATIBILITY.md) · [Optional donations](docs/SUPPORT.md)
 
@@ -53,6 +53,20 @@ Historical development measurements on **Samsung Galaxy S25+ / SM8750**:
 Text inference excludes speech recognition, loading and segmentation. NPU figures **do not describe the downloadable portable APK** and are not promises for other devices. [Streaming evidence](docs/catalog/1.18-verification.json) · [Text results](docs/catalog/1.19-verification.json) · [Quality cases](docs/catalog/1.19-text-quality.json) · [Latest package checks](docs/catalog/1.20.1-release.json).
 
 ## Practical limits and privacy
+
+### Can I translate speech and video audio offline?
+
+Yes. Once the required speech-recognition and translation models are downloaded, both stages run on your Android device. Use the microphone for conversations and talks, or device-audio mode for videos and other apps that allow audio capture. Floating translated subtitles can appear over the app you are watching; optional original-language captions help with language learning.
+
+### Is this a free live-caption app or a voice-dubbing app?
+
+Instant Caption provides speech-to-text recognition and real-time translated text subtitles. It does not speak a translated voice track. The app is free to download and use, with no subscription or paid model-selection unlocks; donations are optional.
+
+### Can every Android phone use NPU acceleration?
+
+NPU acceleration requires a matching processor, runtime and model export. The public APK currently provides offline CPU inference; NPU integration is available in the source. Check [device compatibility](docs/COMPATIBILITY.md) and [NPU distribution status](docs/NPU-DISTRIBUTION.md) before choosing a build.
+
+### Capture, privacy and accuracy
 
 Device-audio mode uses Android's screen-sharing consent API to obtain playback **audio**. This app captures no screen images or video. Calls, protected media and apps that prohibit capture may be unavailable.
 
