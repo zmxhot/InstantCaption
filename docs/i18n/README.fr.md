@@ -19,6 +19,15 @@ Transformez la parole en sous-titres traduits en temps réel grâce à des modè
 - Gestion séparée des modèles vocaux et textuels, reprise des téléchargements, import et vérification d’intégrité.
 - Dix langues d’interface ; les langues de parole et de traduction dépendent des modèles.
 
+### Captures d’écran
+
+<p>
+  <img src="../assets/screenshots/fr/main.png" width="245" alt="Écran principal en français" />
+  <img src="../assets/screenshots/fr/caption-style.png" width="245" alt="Réglages des sous-titres flottants en français" />
+</p>
+
+*Interface en français, capturée sur un Galaxy S25+ avec la version NPU de développement. L’aperçu affiche la traduction et le texte source en anglais. L’APK public utilise des modèles CPU.*
+
 ### Démarrage
 
 1. Installez `instant-caption-1.20.1-beta.1-portable-release.apk`, sans compilation.

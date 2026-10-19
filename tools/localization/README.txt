@@ -25,5 +25,12 @@ Validation:
   Gradle assembleNpu assembleNpuAndroidTest lintNpu -PtestBuildType=npu
   Instrumentation mode: interface-languages
   Optional phase: resources (skips activity recreation and screenshots)
+  Optional phase: readme (captures the ready main screen and floating-caption
+  style page for each locale, waiting for activity animations to settle).
+  Prepare the selected models before using readme; it does not download models.
+  Output: app external files/language-<tag>-main.png and
+  language-<tag>-floating-style.png. Keep screenshots unmodified and label the
+  build type in documentation; changing UI language does not change the speech
+  or subtitle language, and the style preview retains its English source text.
 The device test restores the original interface language and checks that speech,
 translation model and target-language settings are unchanged.

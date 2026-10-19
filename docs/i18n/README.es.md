@@ -19,6 +19,15 @@ Convierte la voz en subtítulos traducidos en tiempo real con IA ejecutada en tu
 - Listas independientes de modelos de voz y traducción, con descargas reanudables, importación y comprobación de integridad.
 - Diez idiomas de interfaz; los idiomas de voz y destino dependen del modelo.
 
+### Capturas de pantalla
+
+<p>
+  <img src="../assets/screenshots/es/main.png" width="245" alt="Pantalla principal en español" />
+  <img src="../assets/screenshots/es/caption-style.png" width="245" alt="Ajustes de subtítulos flotantes en español" />
+</p>
+
+*Interfaz en español, capturada en un Galaxy S25+ con la versión NPU de desarrollo. La vista previa muestra la traducción y el texto original en inglés. El APK público utiliza modelos de CPU.*
+
 ### Primer uso
 
 1. Descarga e instala `instant-caption-1.20.1-beta.1-portable-release.apk`. No necesitas compilar.

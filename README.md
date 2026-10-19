@@ -22,11 +22,11 @@
 - **Ten interface languages:** English, Chinese, Spanish, French, German, Portuguese, Russian, Japanese, Korean and Arabic. Follow the system with English fallback. Available speech/subtitle languages depend on the selected models.
 
 <p>
-  <img src="docs/assets/caption-screen.png" width="245" alt="Caption screen with active text and speech models" />
-  <img src="docs/assets/caption-style.png" width="245" alt="Floating caption font, transparency and height settings" />
+  <img src="docs/assets/screenshots/en/main.png" width="245" alt="Caption screen in English" />
+  <img src="docs/assets/screenshots/en/caption-style.png" width="245" alt="Floating caption settings in English" />
 </p>
 
-*Screenshots from the development NPU build. The public portable APK has the same caption UI with CPU-compatible model choices.*
+*English interface, captured on a Galaxy S25+ with the NPU development build. The preview shows translated text and its English source. The public portable APK uses CPU models.*
 
 ## Get started
 

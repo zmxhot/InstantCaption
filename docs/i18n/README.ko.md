@@ -19,6 +19,15 @@
 - 음성 모델과 텍스트 모델을 별도로 관리하고 다운로드 재개, 가져오기, 무결성 검사를 지원합니다.
 - 인터페이스 언어는 10개이며, 음성 및 번역 언어는 선택한 모델에 따라 달라집니다.
 
+### 스크린샷
+
+<p>
+  <img src="../assets/screenshots/ko/main.png" width="245" alt="한국어 메인 화면" />
+  <img src="../assets/screenshots/ko/caption-style.png" width="245" alt="한국어 플로팅 자막 설정" />
+</p>
+
+*Galaxy S25+의 NPU 개발 버전에서 촬영한 한국어 화면입니다. 미리보기에는 번역문과 영어 원문이 표시됩니다. 공개 APK는 CPU 모델을 사용합니다.*
+
 ### 시작하기
 
 1. `instant-caption-1.20.1-beta.1-portable-release.apk`를 설치합니다. 직접 컴파일할 필요가 없습니다.

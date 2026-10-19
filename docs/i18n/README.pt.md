@@ -19,6 +19,15 @@ Transforme a fala em legendas traduzidas em tempo real, com modelos de IA execut
 - Listas separadas de modelos de fala e texto, downloads retomáveis, importação e verificação de integridade.
 - Interface em dez idiomas; os idiomas de fala e tradução dependem dos modelos.
 
+### Capturas de tela
+
+<p>
+  <img src="../assets/screenshots/pt/main.png" width="245" alt="Tela principal em português" />
+  <img src="../assets/screenshots/pt/caption-style.png" width="245" alt="Configurações de legendas flutuantes em português" />
+</p>
+
+*Interface em português, capturada em um Galaxy S25+ com a versão NPU de desenvolvimento. A prévia mostra a tradução e o texto original em inglês. O APK público usa modelos de CPU.*
+
 ### Como começar
 
 1. Instale `instant-caption-1.20.1-beta.1-portable-release.apk`. Não é preciso compilar.

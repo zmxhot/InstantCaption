@@ -19,6 +19,15 @@
 - 音声認識モデルと翻訳モデルを別々に管理。ダウンロード再開、インポート、整合性確認に対応。
 - 10 言語の画面表示。音声と字幕の対応言語はモデルによって異なります。
 
+### スクリーンショット
+
+<p>
+  <img src="../assets/screenshots/ja/main.png" width="245" alt="日本語のメイン画面" />
+  <img src="../assets/screenshots/ja/caption-style.png" width="245" alt="日本語のフローティング字幕設定" />
+</p>
+
+*Galaxy S25+ の NPU 開発版で撮影した日本語の実機画面です。プレビューには翻訳文と英語の原文が表示されます。公開 APK は CPU モデルを使用します。*
+
 ### 使い方
 
 1. `instant-caption-1.20.1-beta.1-portable-release.apk` をインストールします。自分でビルドする必要はありません。

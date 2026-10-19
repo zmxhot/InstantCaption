@@ -19,6 +19,7 @@ final class InterfaceLanguageVerification {
         Map<String,?> engineBefore=new HashMap<>(c.getSharedPreferences("engine",0).getAll());
         Map<String,?> displayBefore=new HashMap<>(AppPrefs.prefs(c).getAll());
         JSONObject report=new JSONObject();JSONArray locales=new JSONArray();Throwable failure=null;Activity active=null;
+        boolean readme="readme".equals(options.getString("phase"));
         try{
             require(AppLanguage.TAGS.length==11,"Expected ten interface languages and system default");
             for(int i=1;i<AppLanguage.TAGS.length;i++){
@@ -37,8 +38,19 @@ final class InterfaceLanguageVerification {
                     active=test.startActivitySync(new Intent(c,MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
                     Thread.sleep(500);final Activity main=active;final String expectedSettings=SETTINGS[i-1];
                     onMain(test,()->{View settingsButton=find(main.getWindow().getDecorView(),expectedSettings);require(settingsButton!=null,"Main screen did not switch to "+tag);require(((TextView)settingsButton).getLineCount()==1,"Settings label must not split a word: "+tag);});
+                    if(readme){
+                        long deadline=SystemClock.elapsedRealtime()+120000;
+                        while(!CaptionState.S.ready&&SystemClock.elapsedRealtime()<deadline)Thread.sleep(200);
+                        require(CaptionState.S.ready,"Prepare the selected models before capturing README screenshots");
+                    }
                     capture(test,c,"language-"+tag+"-main");checkLayout(test,active,tag+" main");
                     onMain(test,active::finish);active=null;
+                    if(readme){
+                        active=test.startActivitySync(new Intent(c,AppearanceActivity.class).putExtra("floating",true).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+                        capture(test,c,"language-"+tag+"-floating-style");checkLayout(test,active,tag+" appearance");
+                        onMain(test,active::finish);active=null;
+                        item.put("activities",2).put("modelsReady",true).put("rtl",tag.equals("ar"));locales.put(item);continue;
+                    }
                     active=test.startActivitySync(new Intent(c,SettingsActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));Thread.sleep(250);
                     capture(test,c,"language-"+tag+"-settings");checkLayout(test,active,tag+" settings");
                     final Activity settings=active;
@@ -91,7 +103,7 @@ final class InterfaceLanguageVerification {
         }
         if(view instanceof ViewGroup){ViewGroup group=(ViewGroup)view;for(int i=0;i<group.getChildCount();i++)check(group.getChildAt(i),label);}
     }
-    private static void capture(Instrumentation test,Context c,String name)throws Exception{Bitmap b=test.getUiAutomation().takeScreenshot();require(b!=null,"Screenshot unavailable");try(FileOutputStream out=new FileOutputStream(new File(c.getExternalFilesDir(null),name+".png"))){b.compress(Bitmap.CompressFormat.PNG,100,out);}finally{b.recycle();}}
+    private static void capture(Instrumentation test,Context c,String name)throws Exception{test.waitForIdleSync();Thread.sleep(900);test.waitForIdleSync();Bitmap b=test.getUiAutomation().takeScreenshot();require(b!=null,"Screenshot unavailable");try(FileOutputStream out=new FileOutputStream(new File(c.getExternalFilesDir(null),name+".png"))){b.compress(Bitmap.CompressFormat.PNG,100,out);}finally{b.recycle();}}
     private static void onMain(Instrumentation test,Runnable action){
         final Throwable[] failure={null};test.runOnMainSync(()->{try{action.run();}catch(Throwable e){failure[0]=e;}});
         if(failure[0]!=null)throw new AssertionError("UI verification failed",failure[0]);

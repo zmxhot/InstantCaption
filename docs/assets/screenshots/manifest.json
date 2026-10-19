@@ -1,0 +1,181 @@
+{
+  "capturedDate": "2026-10-18",
+  "captureTimezone": "America/Los_Angeles",
+  "device": "Samsung Galaxy S25+ (SM-S936U)",
+  "appVersion": "1.20.1-beta.1-npu-test",
+  "buildType": "NPU development build; public portable APK uses CPU models",
+  "method": "Android UiAutomation.takeScreenshot after model readiness and activity animation settling",
+  "imageEdits": "None. Original device PNGs.",
+  "screens": [
+    "main",
+    "caption-style"
+  ],
+  "note": "Interface language is independent of speech/subtitle languages. The style preview retains its English source text. No microphone recording or live transcript is included.",
+  "verification": {
+    "allTenInterfaceLanguagesPassed": true,
+    "modelAndSpeechPreferencesUnchanged": true,
+    "arabicLayoutDirection": "RTL"
+  },
+  "files": [
+    {
+      "locale": "en",
+      "file": "en/main.png",
+      "width": 1080,
+      "height": 2340,
+      "bytes": 135151,
+      "sha256": "90986f41d1f29f6f36e5bf8f1c258154c009a5c660cb78038d76bb2c973ecf78"
+    },
+    {
+      "locale": "en",
+      "file": "en/caption-style.png",
+      "width": 1080,
+      "height": 2340,
+      "bytes": 181586,
+      "sha256": "52533c31329054be6fc564a6f44ee68ad651680db6d8308925248fb75906b021"
+    },
+    {
+      "locale": "zh-CN",
+      "file": "zh-CN/main.png",
+      "width": 1080,
+      "height": 2340,
+      "bytes": 136028,
+      "sha256": "9d004bac0e1f808ff96a97dd21f69c22cba45ff8355484e36d987b8a2e9958bf"
+    },
+    {
+      "locale": "zh-CN",
+      "file": "zh-CN/caption-style.png",
+      "width": 1080,
+      "height": 2340,
+      "bytes": 192492,
+      "sha256": "51d95a4356d25cc02e2f82b0900417b4b0f6418ba2697b955682c4dda40a45c3"
+    },
+    {
+      "locale": "es",
+      "file": "es/main.png",
+      "width": 1080,
+      "height": 2340,
+      "bytes": 122193,
+      "sha256": "456070c26c96cf032fde23632783bddc3f749eeb857e0840746485098321f779"
+    },
+    {
+      "locale": "es",
+      "file": "es/caption-style.png",
+      "width": 1080,
+      "height": 2340,
+      "bytes": 194281,
+      "sha256": "d6c70b7a44df8d527a18e327d35bdac61ed3a81ad868bb1e975f8c401a061cdf"
+    },
+    {
+      "locale": "fr",
+      "file": "fr/main.png",
+      "width": 1080,
+      "height": 2340,
+      "bytes": 127642,
+      "sha256": "e370f4cf25fb30dde63b51e521acdfbba2b256ed8feb3a403a48fae58f97276c"
+    },
+    {
+      "locale": "fr",
+      "file": "fr/caption-style.png",
+      "width": 1080,
+      "height": 2340,
+      "bytes": 187234,
+      "sha256": "f2427232cb4f5f6790f31b42d73fa7870bfb59d34a8cb43d75e2d6ab942eb9f3"
+    },
+    {
+      "locale": "de",
+      "file": "de/main.png",
+      "width": 1080,
+      "height": 2340,
+      "bytes": 129704,
+      "sha256": "741fe9d31842abfbbe20f1f056824ba18ff6cc5e5ba8c06af45bdaee9a28494e"
+    },
+    {
+      "locale": "de",
+      "file": "de/caption-style.png",
+      "width": 1080,
+      "height": 2340,
+      "bytes": 197052,
+      "sha256": "5f2eca993cd3a9db9157350e0e6393de765dc2cbd6f0b10259107ada07e44a12"
+    },
+    {
+      "locale": "pt",
+      "file": "pt/main.png",
+      "width": 1080,
+      "height": 2340,
+      "bytes": 122781,
+      "sha256": "4772afafcb6b02feaff9c9eb79698e5111c8ef267e0c3eb068289fe195089471"
+    },
+    {
+      "locale": "pt",
+      "file": "pt/caption-style.png",
+      "width": 1080,
+      "height": 2340,
+      "bytes": 186930,
+      "sha256": "d866878f6a5b188bc0e3469533bd1138a2835b7145146972b7a5fc6b974162d0"
+    },
+    {
+      "locale": "ru",
+      "file": "ru/main.png",
+      "width": 1080,
+      "height": 2340,
+      "bytes": 134907,
+      "sha256": "aacb1026638c6982144d95290bfabdf7e4ac747b4eb40d1defd0083865520ccf"
+    },
+    {
+      "locale": "ru",
+      "file": "ru/caption-style.png",
+      "width": 1080,
+      "height": 2340,
+      "bytes": 219819,
+      "sha256": "b17589189118a36f79fc3f338cc7d3ae986058d07ea8a314a57926090f278c4e"
+    },
+    {
+      "locale": "ja",
+      "file": "ja/main.png",
+      "width": 1080,
+      "height": 2340,
+      "bytes": 166907,
+      "sha256": "fe7e1a7d6d4ae6459e26c3d97e6e55801eb16f0988f53c9e55bbbb97eeb4bc79"
+    },
+    {
+      "locale": "ja",
+      "file": "ja/caption-style.png",
+      "width": 1080,
+      "height": 2340,
+      "bytes": 246969,
+      "sha256": "cad9893d876860155b17ea7e2d0cfe7525650779aede0302998ab6df8f4bf36b"
+    },
+    {
+      "locale": "ko",
+      "file": "ko/main.png",
+      "width": 1080,
+      "height": 2340,
+      "bytes": 117913,
+      "sha256": "1e97d2aafb769a9c130e5cd84d9b4ad45df53019d26908cd913aecf2c14b139c"
+    },
+    {
+      "locale": "ko",
+      "file": "ko/caption-style.png",
+      "width": 1080,
+      "height": 2340,
+      "bytes": 166038,
+      "sha256": "220b4b1246ecb10a4d1c4018d80391be0740a52a212f918c72822f6a5d415329"
+    },
+    {
+      "locale": "ar",
+      "file": "ar/main.png",
+      "width": 1080,
+      "height": 2340,
+      "bytes": 142600,
+      "sha256": "7d53bcdddb39e94d285a3987fed9156e87c586ad405cc3c96d341b7d33b99e05"
+    },
+    {
+      "locale": "ar",
+      "file": "ar/caption-style.png",
+      "width": 1080,
+      "height": 2340,
+      "bytes": 184266,
+      "sha256": "83c7be6281c56efa83c44599d946d37c4eb201a5089f655a51029510bd6c8c58"
+    }
+  ]
+}

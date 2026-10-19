@@ -22,11 +22,11 @@
 - **10 种界面语言**：英、中、西、法、德、葡、俄、日、韩、阿拉伯语。默认跟随系统，未支持语言回退英文；语音和字幕语言范围由所选模型决定。
 
 <p>
-  <img src="docs/assets/caption-screen.png" width="245" alt="主屏显示当前翻译与识别模型" />
-  <img src="docs/assets/caption-style.png" width="245" alt="悬浮字幕原文、字号、透明度和高度设置" />
+  <img src="docs/assets/screenshots/zh-CN/main.png" width="245" alt="简体中文主屏" />
+  <img src="docs/assets/screenshots/zh-CN/caption-style.png" width="245" alt="简体中文悬浮字幕设置" />
 </p>
 
-*截图来自开发用 NPU 构建。公开通用版使用相同字幕界面，提供 CPU 可运行模型选项。*
+*简体中文界面，使用 Galaxy S25+ 上的 NPU 开发版实机截图。预览展示译文与英文原文；公开通用 APK 使用 CPU 模型。*
 
 ## 下载与使用
 

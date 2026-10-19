@@ -19,6 +19,15 @@ Sprache wird in Echtzeit als übersetzter Untertitel angezeigt. Die KI-Modelle l
 - Getrennte Verwaltung von Sprach- und Textmodellen, fortsetzbare Downloads, Import und Integritätsprüfung.
 - Zehn Oberflächensprachen; Sprach- und Übersetzungsoptionen hängen vom Modell ab.
 
+### Screenshots
+
+<p>
+  <img src="../assets/screenshots/de/main.png" width="245" alt="Hauptbildschirm auf Deutsch" />
+  <img src="../assets/screenshots/de/caption-style.png" width="245" alt="Einstellungen für schwebende Untertitel auf Deutsch" />
+</p>
+
+*Deutsche Oberfläche, aufgenommen auf einem Galaxy S25+ mit dem NPU-Entwicklungsbuild. Die Vorschau zeigt die Übersetzung und den englischen Ausgangstext. Das öffentliche APK verwendet CPU-Modelle.*
+
 ### Erste Schritte
 
 1. `instant-caption-1.20.1-beta.1-portable-release.apk` herunterladen und installieren. Kein eigenes Kompilieren nötig.
